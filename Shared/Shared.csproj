@@ -45,6 +45,7 @@
     <Compile Include="Models\Aranzman.cs" />
     <Compile Include="Models\Karta.cs" />
     <Compile Include="Models\Korisnik.cs" />
+    <Compile Include="Models\KursnaLista.cs" />
     <Compile Include="Models\Lokacija.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
