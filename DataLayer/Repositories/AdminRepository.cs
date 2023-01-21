@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    public class Admin
+    public class AdminRepository
     {
         string connectionString = Constants.ConnectionString;
 
-        public List<KursnaLista> Ge
+        
     }
 }
