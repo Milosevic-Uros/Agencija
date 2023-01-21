@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Models
 {
-    public class KursnaLista
+    public class ExchangeRate
     {
         public string valutaId { get; set; }
         public string oznakaValute { get; set; }

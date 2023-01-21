@@ -41,16 +41,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Models\Administrator.cs" />
-    <Compile Include="Models\Aranzman.cs" />
-    <Compile Include="Models\Karta.cs" />
-    <Compile Include="Models\Korisnik.cs" />
-    <Compile Include="Models\KursnaLista.cs" />
-    <Compile Include="Models\Lokacija.cs" />
+    <Compile Include="Interfaces\IAdminBusiness.cs" />
+    <Compile Include="Interfaces\IAdminRepository.cs" />
+    <Compile Include="Interfaces\IUserBusiness.cs" />
+    <Compile Include="Interfaces\IUserRepository.cs" />
+    <Compile Include="Models\Admin.cs" />
+    <Compile Include="Models\Arrangement.cs" />
+    <Compile Include="Models\Ticket.cs" />
+    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\ExchangeRate.cs" />
+    <Compile Include="Models\Location.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Interfaces\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

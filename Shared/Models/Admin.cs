@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Models
 {
-    public class Administrator
+    public class Admin
     {
         public int adminId { get; set; }
         public string ime { get; set; }

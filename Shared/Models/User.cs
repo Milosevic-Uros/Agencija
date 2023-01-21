@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Shared.Models
 {
-    public class Korisnik
+    public class User
     {
         public int korisnikId { get; set; }
         public string ime { get; set; }
