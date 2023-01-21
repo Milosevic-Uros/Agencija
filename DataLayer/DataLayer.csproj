@@ -41,9 +41,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Repositories\AdminRepository.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AdminRepository.Arrangements.cs" />
+    <Compile Include="Repositories\AdminRepository.cs" />
+    <Compile Include="Repositories\AdminRepository.ExchangeRate.cs" />
+    <Compile Include="Repositories\AdminRepository.Locations.cs" />
+    <Compile Include="Repositories\AdminRepository.Tickets.cs" />
+    <Compile Include="Repositories\UserRepository.Arrangements.cs" />
+    <Compile Include="Repositories\UserRepository.cs" />
+    <Compile Include="Repositories\UserRepository.ExchangeRate.cs" />
+    <Compile Include="Repositories\UserRepository.Tickets.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{B732ED8E-8195-421E-B5BD-EF8EB2634F0F}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

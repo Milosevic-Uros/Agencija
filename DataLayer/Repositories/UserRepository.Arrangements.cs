@@ -8,29 +8,21 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Repositories
 {
-    public partial class AdminRepository
+    public partial class UserRepository : IUserRepository
     {
-        public int UpdateAdmin(Admin admin)
+        public List<Arrangement> GetAllArrangements() 
         {
             throw new NotImplementedException();
         }
-        public List<User> GetAllUsers()
+        public List<Arrangement> GetArrangementsOfType(string type)
         {
             throw new NotImplementedException();
         }
-        public int UpdateUser(User user)
+        public Arrangement GetArrangement(int arrangementId)
         {
             throw new NotImplementedException();
         }
-        public int InsertUser(User user)
-        {
-            throw new NotImplementedException();
-        }
-        public User GetUser(string email, string password)
-        {
-            throw new NotImplementedException();
-        }
-        public int DeleteUser(int userId)
+        public int BookAnArrangement(int arrangementId, int numberOfPeople)
         {
             throw new NotImplementedException();
         }

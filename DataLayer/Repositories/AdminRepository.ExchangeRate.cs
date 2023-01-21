@@ -8,29 +8,25 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Repositories
 {
-    public partial class AdminRepository
+    public partial class AdminRepository : IAdminRepository
     {
-        public int UpdateAdmin(Admin admin)
+        public List<ExchangeRate> GetExchangeRates()
         {
             throw new NotImplementedException();
         }
-        public List<User> GetAllUsers()
+        public int UpdateExchangeRateItem(ExchangeRate exchangeRate)
         {
             throw new NotImplementedException();
         }
-        public int UpdateUser(User user)
+        public int InsertExchangeRateItem(ExchangeRate exchangeRate)
+        { 
+            throw new NotImplementedException(); 
+        }
+        public ExchangeRate GetExchangeRate(int currencyId)
         {
             throw new NotImplementedException();
         }
-        public int InsertUser(User user)
-        {
-            throw new NotImplementedException();
-        }
-        public User GetUser(string email, string password)
-        {
-            throw new NotImplementedException();
-        }
-        public int DeleteUser(int userId)
+        public int DeleteExchangeRateItem(int currencyId)
         {
             throw new NotImplementedException();
         }

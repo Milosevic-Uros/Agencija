@@ -8,29 +8,25 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Repositories
 {
-    public partial class AdminRepository
+    public partial class AdminRepository : IAdminRepository
     {
-        public int UpdateAdmin(Admin admin)
+        public List<Location> GetLocations()
         {
             throw new NotImplementedException();
         }
-        public List<User> GetAllUsers()
+        public int UpdateLocation(Location location)
         {
             throw new NotImplementedException();
         }
-        public int UpdateUser(User user)
+        public int InsertLocation(Location location)
         {
             throw new NotImplementedException();
         }
-        public int InsertUser(User user)
+        public Location GetLocation(int locationId)
         {
             throw new NotImplementedException();
         }
-        public User GetUser(string email, string password)
-        {
-            throw new NotImplementedException();
-        }
-        public int DeleteUser(int userId)
+        public int DeleteLocation(int locationId)
         {
             throw new NotImplementedException();
         }
