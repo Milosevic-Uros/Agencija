@@ -10,8 +10,8 @@ namespace Shared.Interfaces
     public interface IClientRepository
     {
         //Self edit
-        int UpdateUser(Client user);
-        int DeleteUser(int userId);
+        int UpdateClient(Client client);
+        int DeleteClient(int clientId);
 
 
         //Arrangements

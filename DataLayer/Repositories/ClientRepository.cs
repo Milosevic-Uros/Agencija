@@ -10,11 +10,11 @@ namespace DataLayer.Repositories
 {
     public partial class ClientRepository : IClientRepository
     {
-        public int UpdateUser(Client user) 
+        public int UpdateClient(Client client) 
         {
             throw new NotImplementedException();
         }
-        public int DeleteUser(int userId) 
+        public int DeleteClient(int clientId) 
         {
             throw new NotImplementedException();
         }

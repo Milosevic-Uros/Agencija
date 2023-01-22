@@ -11,11 +11,11 @@ namespace Shared.Interfaces
     {
         //Admin and users
         string UpdateAdmin(Admin admin);
-        List<Client> GetAllUsers();
-        string UpdateUser(Client user);
-        string InsertUser(Client user);
-        Client GetUser(string email, string password);
-        string DeleteUser(int userId);
+        List<Client> GetAllClients();
+        string UpdateClient(Client client);
+        string InsertClient(Client client);
+        Client GetClient(string email, string password);
+        string DeleteClient(int clientId);
 
         //Arrangements
         List<Arrangement> GetAllArrangements();

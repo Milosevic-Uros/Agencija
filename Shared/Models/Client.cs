@@ -8,7 +8,7 @@ namespace Shared.Models
 {
     public class Client
     {
-        public int userId { get; set; }
+        public int clientId { get; set; }
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string idNumber { get; set; }

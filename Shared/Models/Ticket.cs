@@ -15,7 +15,7 @@ namespace Shared.Models
         public int locationId { get; set; }
         public string typeOfTransport { get; set; }
         public string typeOfArrangement { get; set; }
-        public int number_of_vacancies { get; set; }
+        public int numberOfVacancies { get; set; }
         public decimal price { get; set; }
     }
 }
