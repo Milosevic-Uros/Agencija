@@ -43,12 +43,12 @@
   <ItemGroup>
     <Compile Include="Interfaces\IAdminBusiness.cs" />
     <Compile Include="Interfaces\IAdminRepository.cs" />
-    <Compile Include="Interfaces\IUserBusiness.cs" />
-    <Compile Include="Interfaces\IUserRepository.cs" />
+    <Compile Include="Interfaces\IClientBusiness.cs" />
+    <Compile Include="Interfaces\IClientRepository.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Arrangement.cs" />
     <Compile Include="Models\Ticket.cs" />
-    <Compile Include="Models\User.cs" />
+    <Compile Include="Models\Client.cs" />
     <Compile Include="Models\ExchangeRate.cs" />
     <Compile Include="Models\Location.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Shared.Interfaces
 {
-    public interface IUserRepository
+    public interface IClientRepository
     {
         //Self edit
-        int UpdateUser(User user);
+        int UpdateUser(Client user);
         int DeleteUser(int userId);
 
 

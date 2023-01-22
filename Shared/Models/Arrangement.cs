@@ -8,15 +8,15 @@ namespace Shared.Models
 {
     public class Arrangement
     {
-        public int aranzmanId { get; set; }
-        public string naziv { get; set; }
-        public DateTime datumPolaska { get; set; }
-        public DateTime datumPovratka { get; set; }
-        public int lokacijaId { get; set; }
-        public string tipPrevoza { get; set; }
-        public string tipAranzmana { get; set; }
-        public int brojmesta { get; set; }
-        public string opis { get; set; }
-        public decimal cena { get; set; }
+        public int arrangementId { get; set; }
+        public string name { get; set; }
+        public DateTime dateOfDeparture { get; set; }
+        public DateTime returnDate { get; set; }
+        public int locationId { get; set; }
+        public string typeofTransport { get; set; }
+        public string typeOfArrangement { get; set; }
+        public int numberOfVacancies { get; set; }
+        public string description { get; set; }
+        public decimal price { get; set; }
     }
 }

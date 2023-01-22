@@ -8,7 +8,7 @@ namespace Shared.Models
 {
     public class Location
     {
-        public int lokacijaId { get; set; }
-        public string nazivLokacije { get; set; }
+        public int locationId { get; set; }
+        public string locationName { get; set; }
     }
 }

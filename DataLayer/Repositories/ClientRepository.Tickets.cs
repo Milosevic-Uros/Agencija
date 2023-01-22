@@ -8,21 +8,17 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Repositories
 {
-    public partial class UserRepository : IUserRepository
+    public partial class ClientRepository : IClientRepository
     {
-        public List<Arrangement> GetAllArrangements() 
+        public List<Ticket> GetAllTickets() 
         {
             throw new NotImplementedException();
         }
-        public List<Arrangement> GetArrangementsOfType(string type)
+        public Ticket GetTicket(int ticketId)
         {
             throw new NotImplementedException();
         }
-        public Arrangement GetArrangement(int arrangementId)
-        {
-            throw new NotImplementedException();
-        }
-        public int BookAnArrangement(int arrangementId, int numberOfPeople)
+        public int BookATicket(int ticketId, int numberOfPeople)
         {
             throw new NotImplementedException();
         }

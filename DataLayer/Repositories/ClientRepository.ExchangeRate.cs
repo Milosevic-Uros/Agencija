@@ -8,17 +8,13 @@ using System.Threading.Tasks;
 
 namespace DataLayer.Repositories
 {
-    public partial class UserRepository : IUserRepository
+    public partial class ClientRepository : IClientRepository
     {
-        public List<Ticket> GetAllTickets() 
+        public List<ExchangeRate> GetExchangeRates() 
         {
             throw new NotImplementedException();
         }
-        public Ticket GetTicket(int ticketId)
-        {
-            throw new NotImplementedException();
-        }
-        public int BookATicket(int ticketId, int numberOfPeople)
+        public ExchangeRate GetExchangeRate(int currencyId)
         {
             throw new NotImplementedException();
         }

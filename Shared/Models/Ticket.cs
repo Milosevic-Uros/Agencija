@@ -8,14 +8,14 @@ namespace Shared.Models
 {
     public class Ticket
     {
-        public int kartaId { get; set; }
-        public string naziv { get; set; }
-        public DateTime datumPolaska { get; set; }
-        public DateTime datumPovratka { get; set; }
-        public int lokacijaId { get; set; }
-        public string tipPrevoza { get; set; }
-        public string tipAranzmana { get; set; }
-        public int brojmesta { get; set; }
-        public decimal cena { get; set; }
+        public int ticketId { get; set; }
+        public string name { get; set; }
+        public DateTime dateOfDeparture { get; set; }
+        public DateTime returnDate { get; set; }
+        public int locationId { get; set; }
+        public string typeOfTransport { get; set; }
+        public string typeOfArrangement { get; set; }
+        public int number_of_vacancies { get; set; }
+        public decimal price { get; set; }
     }
 }

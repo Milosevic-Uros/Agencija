@@ -2,16 +2,15 @@
 using Shared.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataLayer.Repositories
 {
-    public partial class AdminRepository : IAdminRepository
+    public partial class ClientRepository : IClientRepository
     {
-        public List<Arrangement> GetAllArrangements()
+        public List<Arrangement> GetAllArrangements() 
         {
             throw new NotImplementedException();
         }
@@ -19,19 +18,11 @@ namespace DataLayer.Repositories
         {
             throw new NotImplementedException();
         }
-        public int UpdateArrangement(Arrangement arrangement)
-        {
-            throw new NotImplementedException();
-        }
-        public int InsertArrangement(Arrangement arrangement)
-        {
-            throw new NotImplementedException();
-        }
         public Arrangement GetArrangement(int arrangementId)
         {
             throw new NotImplementedException();
         }
-        public int DeleteArrangement(int arrangementId)
+        public int BookAnArrangement(int arrangementId, int numberOfPeople)
         {
             throw new NotImplementedException();
         }

@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace Shared.Interfaces
 {
-    public interface IUserBusiness
+    public interface IClientBusiness
     {
         //Self edit
-        string UpdateUser(User user);
+        string UpdateUser(Client user);
         string DeleteUser(int userId);
 
 

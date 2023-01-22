@@ -9,9 +9,9 @@ namespace Shared.Models
     public class Admin
     {
         public int adminId { get; set; }
-        public string ime { get; set; }
-        public string prezime { get; set; }
+        public string name { get; set; }
+        public string lastName { get; set; }
         public string email { get; set; }
-        public string sifra { get; set; }
+        public string password { get; set; }
     }
 }

@@ -8,9 +8,9 @@ namespace Shared.Models
 {
     public class ExchangeRate
     {
-        public string valutaId { get; set; }
-        public string oznakaValute { get; set; }
-        public string nazivZemlje { get; set; }
-        public decimal srednjiKurs { get; set; }
+        public string currencyId { get; set; }
+        public string currencyCode { get; set; }
+        public string countryName { get; set; }
+        public decimal meanExchangeRate { get; set; }
     }
 }

@@ -48,10 +48,10 @@
     <Compile Include="Repositories\AdminRepository.ExchangeRate.cs" />
     <Compile Include="Repositories\AdminRepository.Locations.cs" />
     <Compile Include="Repositories\AdminRepository.Tickets.cs" />
-    <Compile Include="Repositories\UserRepository.Arrangements.cs" />
-    <Compile Include="Repositories\UserRepository.cs" />
-    <Compile Include="Repositories\UserRepository.ExchangeRate.cs" />
-    <Compile Include="Repositories\UserRepository.Tickets.cs" />
+    <Compile Include="Repositories\ClientRepository.Arrangements.cs" />
+    <Compile Include="Repositories\ClientRepository.cs" />
+    <Compile Include="Repositories\ClientRepository.ExchangeRate.cs" />
+    <Compile Include="Repositories\ClientRepository.Tickets.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Shared\Shared.csproj">
