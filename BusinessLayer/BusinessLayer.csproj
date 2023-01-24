@@ -41,7 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdminBusiness.Arrangements.cs" />
+    <Compile Include="AdminBusiness.cs" />
+    <Compile Include="AdminBusiness.ExchangeRate.cs" />
+    <Compile Include="AdminBusiness.Locations.cs" />
+    <Compile Include="AdminBusiness.Tickets.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{1cf2c8d8-35c9-4531-8898-6cb9e536c1dc}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{B732ED8E-8195-421E-B5BD-EF8EB2634F0F}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

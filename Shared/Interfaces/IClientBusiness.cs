@@ -11,19 +11,22 @@ namespace Shared.Interfaces
     {
         //Self edit
         string updateInfo(Client user);
+        string ChangePassword(Client client);
         string DeleteUser(int userId);
 
 
         //Arrangements
         List<Arrangement> GetAllArrangements();
+        List<Arrangement> GetAllClientArrangements(Client client);
         List<Arrangement> GetArrangementsOfType(string type);
-        Arrangement GetArrangement(int arrangementId);
-        string BookAnArrangement(int arrangementId, int numberOfPeople);
+        Arrangement GetAClientArrangement(Client client, int arrangementId);
+        string BookAnArrangement(int clientId, int arrangementId, int numberOfPeople);
 
         //Tickets
         List<Ticket> GetAllTickets();
+        List<Ticket> GetAllClientTickets(Client client);
         Ticket GetTicket(int ticketId);
-        string BookATicket(int ticketId, int numberOfPeople);
+        string BookATicket(Client client, int ticketId, int numberOfPeople);
 
         //Exchange Rate
         List<ExchangeRate> GetExchangeRates();
