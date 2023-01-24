@@ -16,7 +16,7 @@ namespace DataLayer.Repositories
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE ADMIN SET email=@email, @password=@password WHERE admin_id=@admin_id";
+                string query = "UPDATE ADMINS SET email=@email, @password=@password WHERE admin_id=@admin_id";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@email", admin.email);
                 command.Parameters.AddWithValue("@password", admin.password);

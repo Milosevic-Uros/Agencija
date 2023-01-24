@@ -17,7 +17,7 @@ namespace DataLayer.Repositories
             List<Arrangement> ListOfArrangements = new List<Arrangement>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT * FROM ARRANGEMENTS";
+                string query = "SELECT a.arrangement_id,a.name,a.date_of_departure,a.return_date,l.location_id,a.type_of_transport,a.type_of_arrangement,a.number_of_vacancies,a.description,a.price\r\nFROM ARRANGEMENTS a JOIN LOCATIONS l ON a.location_id=l.location_id";
                 SqlCommand command = new SqlCommand(query, connection);
                 connection.Open();
 
@@ -48,7 +48,7 @@ namespace DataLayer.Repositories
             List<Arrangement> ListOfArrangements = new List<Arrangement>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT * FROM ARRANGEMENTS WHERE type_of_arrangement=@typeOfArrangement";
+                string query = "SELECT a.arrangement_id,a.name,a.date_of_departure,a.return_date,l.location_id,a.type_of_transport,a.type_of_arrangement,a.number_of_vacancies,a.description,a.price FROM ARRANGEMENTS a JOIN LOCATIONS l ON a.location_id=l.location_id WHERE type_of_arrangement=@typeOfArrangement";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@typeOfArrangement", type);
                 connection.Open();
@@ -84,7 +84,7 @@ namespace DataLayer.Repositories
                 command.Parameters.AddWithValue("@name", arrangement.name);
                 command.Parameters.AddWithValue("@date_of_departure", arrangement.dateOfDeparture);
                 command.Parameters.AddWithValue("@return_date", arrangement.returnDate);
-                command.Parameters.AddWithValue("@location_id", arrangement.locationId);
+                command.Parameters.AddWithValue("@location", arrangement.locationId);
                 command.Parameters.AddWithValue("@type_of_transport", arrangement.typeofTransport);
                 command.Parameters.AddWithValue("@type_of_arrangement", arrangement.typeOfArrangement);
                 command.Parameters.AddWithValue("@number_of_vacancies", arrangement.numberOfVacancies);

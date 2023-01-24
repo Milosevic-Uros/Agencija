@@ -10,20 +10,23 @@ namespace Shared.Interfaces
     public interface IClientRepository
     {
         //Self edit
-        int UpdateClient(Client client);
+        int UpdateInfo(Client client);
+        int ChangePassword(Client client);
         int DeleteClient(int clientId);
 
 
         //Arrangements
         List<Arrangement> GetAllArrangements();
+        List<Arrangement> GetAllClientArrangements(Client client);
         List<Arrangement> GetArrangementsOfType(string type);
-        Arrangement GetArrangement(int arrangementId);
-        int BookAnArrangement(int arrangementId,int numberOfPeople);
+        Arrangement GetAClientArrangement(Client client,int arrangementId);
+        int BookAnArrangement(int clientId, int arrangementId,int numberOfPeople);
 
         //Tickets
         List<Ticket> GetAllTickets();
+        List<Ticket> GetAllClientTickets(Client client);
         Ticket GetTicket(int ticketId);
-        int BookATicket(int ticketId, int numberOfPeople);
+        int BookATicket(Client client,int ticketId, int numberOfPeople);
 
         //Exchange Rate
         List<ExchangeRate> GetExchangeRates();
