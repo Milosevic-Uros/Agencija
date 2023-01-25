@@ -10,20 +10,23 @@ namespace Shared.Interfaces
     public interface IClientBusiness
     {
         //Self edit
-        string updateInfo(Client user);
-        string DeleteUser(int userId);
+        string UpdateInfo(Client client);
+        string ChangePassword(Client client);
+        string DeleteClient(int clientId);
 
 
         //Arrangements
         List<Arrangement> GetAllArrangements();
+        List<Arrangement> GetAllClientArrangements(Client client);
         List<Arrangement> GetArrangementsOfType(string type);
-        Arrangement GetArrangement(int arrangementId);
-        string BookAnArrangement(int arrangementId, int numberOfPeople);
+        Arrangement GetAClientArrangement(Client client, int arrangementId);
+        string BookAnArrangement(int clientId, int arrangementId, int numberOfPeople);
 
         //Tickets
         List<Ticket> GetAllTickets();
+        List<Ticket> GetAllClientTickets(Client client);
         Ticket GetTicket(int ticketId);
-        string BookATicket(int ticketId, int numberOfPeople);
+        string BookATicket(Client client, int ticketId, int numberOfPeople);
 
         //Exchange Rate
         List<ExchangeRate> GetExchangeRates();
