@@ -10,9 +10,9 @@ namespace Shared.Interfaces
     public interface IClientBusiness
     {
         //Self edit
-        string updateInfo(Client user);
+        string UpdateInfo(Client client);
         string ChangePassword(Client client);
-        string DeleteUser(int userId);
+        string DeleteClient(int clientId);
 
 
         //Arrangements

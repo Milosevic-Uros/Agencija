@@ -46,6 +46,10 @@
     <Compile Include="AdminBusiness.ExchangeRate.cs" />
     <Compile Include="AdminBusiness.Locations.cs" />
     <Compile Include="AdminBusiness.Tickets.cs" />
+    <Compile Include="ClientBusiness.Arrangements.cs" />
+    <Compile Include="ClientBusiness.cs" />
+    <Compile Include="ClientBusiness.ExchangeRate.cs" />
+    <Compile Include="ClientBusiness.Tickets.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
