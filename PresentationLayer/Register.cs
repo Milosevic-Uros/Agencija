@@ -86,5 +86,10 @@ namespace PresentationLayer
             // potrebna insert user metoda koja ce da kupi samo ove podatke i mapira ih u bazu
 
         }
+
+        private void Register_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -32,12 +32,17 @@
             System.Windows.Forms.Label labelEmail;
             System.Windows.Forms.Label labelSurname;
             System.Windows.Forms.Label labelName;
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             System.Windows.Forms.Label labelPhone;
             System.Windows.Forms.Label labelIdNum;
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Register));
             this.panelAgency = new System.Windows.Forms.Panel();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxPhone = new System.Windows.Forms.TextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.textBoxID = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.textBoxPassword = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
@@ -48,11 +53,6 @@
             this.buttonRegister = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.labelSignUp = new System.Windows.Forms.Label();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.textBoxPhone = new System.Windows.Forms.TextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.textBoxID = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
             labelPassword = new System.Windows.Forms.Label();
             labelEmail = new System.Windows.Forms.Label();
             labelSurname = new System.Windows.Forms.Label();
@@ -60,9 +60,9 @@
             labelPhone = new System.Windows.Forms.Label();
             labelIdNum = new System.Windows.Forms.Label();
             this.panelAgency.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
             // labelPassword
@@ -105,6 +105,27 @@
             labelName.TabIndex = 31;
             labelName.Text = "Name";
             // 
+            // labelPhone
+            // 
+            labelPhone.AutoSize = true;
+            labelPhone.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            labelPhone.Location = new System.Drawing.Point(258, 187);
+            labelPhone.Name = "labelPhone";
+            labelPhone.Size = new System.Drawing.Size(127, 23);
+            labelPhone.TabIndex = 47;
+            labelPhone.Text = "Phone number";
+            // 
+            // labelIdNum
+            // 
+            labelIdNum.AutoSize = true;
+            labelIdNum.Cursor = System.Windows.Forms.Cursors.Default;
+            labelIdNum.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            labelIdNum.Location = new System.Drawing.Point(64, 187);
+            labelIdNum.Name = "labelIdNum";
+            labelIdNum.Size = new System.Drawing.Size(95, 23);
+            labelIdNum.TabIndex = 44;
+            labelIdNum.Text = "ID number";
+            // 
             // panelAgency
             // 
             this.panelAgency.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
@@ -114,6 +135,16 @@
             this.panelAgency.Name = "panelAgency";
             this.panelAgency.Size = new System.Drawing.Size(441, 504);
             this.panelAgency.TabIndex = 2;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(72, 266);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(318, 208);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 2;
+            this.pictureBox2.TabStop = false;
             // 
             // pictureBox1
             // 
@@ -152,6 +183,40 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(459, 489);
             this.panel1.TabIndex = 3;
+            // 
+            // textBoxPhone
+            // 
+            this.textBoxPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxPhone.Location = new System.Drawing.Point(262, 219);
+            this.textBoxPhone.Name = "textBoxPhone";
+            this.textBoxPhone.Size = new System.Drawing.Size(111, 20);
+            this.textBoxPhone.TabIndex = 45;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
+            this.panel3.Location = new System.Drawing.Point(262, 232);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(111, 10);
+            this.panel3.TabIndex = 46;
+            // 
+            // textBoxID
+            // 
+            this.textBoxID.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxID.Location = new System.Drawing.Point(68, 219);
+            this.textBoxID.Name = "textBoxID";
+            this.textBoxID.Size = new System.Drawing.Size(100, 20);
+            this.textBoxID.TabIndex = 42;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
+            this.panel4.Location = new System.Drawing.Point(68, 232);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(100, 10);
+            this.panel4.TabIndex = 43;
             // 
             // textBoxPassword
             // 
@@ -244,71 +309,6 @@
             this.labelSignUp.TabIndex = 29;
             this.labelSignUp.Text = "REGISTER";
             // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(72, 266);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(318, 208);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 2;
-            this.pictureBox2.TabStop = false;
-            // 
-            // textBoxPhone
-            // 
-            this.textBoxPhone.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxPhone.Location = new System.Drawing.Point(262, 219);
-            this.textBoxPhone.Name = "textBoxPhone";
-            this.textBoxPhone.Size = new System.Drawing.Size(111, 20);
-            this.textBoxPhone.TabIndex = 45;
-            // 
-            // labelPhone
-            // 
-            labelPhone.AutoSize = true;
-            labelPhone.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            labelPhone.Location = new System.Drawing.Point(258, 187);
-            labelPhone.Name = "labelPhone";
-            labelPhone.Size = new System.Drawing.Size(127, 23);
-            labelPhone.TabIndex = 47;
-            labelPhone.Text = "Phone number";
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
-            this.panel3.Location = new System.Drawing.Point(262, 232);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(111, 10);
-            this.panel3.TabIndex = 46;
-            // 
-            // textBoxID
-            // 
-            this.textBoxID.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBoxID.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBoxID.Location = new System.Drawing.Point(68, 219);
-            this.textBoxID.Name = "textBoxID";
-            this.textBoxID.Size = new System.Drawing.Size(100, 20);
-            this.textBoxID.TabIndex = 42;
-            // 
-            // labelIdNum
-            // 
-            labelIdNum.AutoSize = true;
-            labelIdNum.Cursor = System.Windows.Forms.Cursors.Default;
-            labelIdNum.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            labelIdNum.Location = new System.Drawing.Point(64, 187);
-            labelIdNum.Name = "labelIdNum";
-            labelIdNum.Size = new System.Drawing.Size(95, 23);
-            labelIdNum.TabIndex = 44;
-            labelIdNum.Text = "ID number";
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
-            this.panel4.Location = new System.Drawing.Point(68, 232);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(100, 10);
-            this.panel4.TabIndex = 43;
-            // 
             // Register
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -320,11 +320,12 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Register";
             this.Text = "Banja Travel";
+            this.Load += new System.EventHandler(this.Register_Load);
             this.panelAgency.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
 
         }

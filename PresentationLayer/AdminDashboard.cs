@@ -18,7 +18,7 @@ namespace PresentationLayer
         private readonly IAdminBusiness adminBusiness;
         private readonly IClientBusiness clientBusiness;
         Admin admin;
-        public AdminDashboard(AdminBusiness _adminBusiness, ClientBusiness _clientBusiness)
+        public AdminDashboard(IAdminBusiness _adminBusiness, IClientBusiness _clientBusiness)
         {
             adminBusiness= _adminBusiness;
             clientBusiness= _clientBusiness;
@@ -34,7 +34,7 @@ namespace PresentationLayer
         {
             //textBoxBroj.Text = adminBusiness.GetAllClients().Count.ToString();
         }
-        public Form1 RefLoginForm { get; set; }
+        public Login RefLoginForm { get; set; }
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
             this.RefLoginForm.Show();
