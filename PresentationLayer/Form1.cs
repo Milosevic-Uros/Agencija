@@ -38,10 +38,10 @@ namespace PresentationLayer
 
         private void RegisterLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
+            this.Hide();
             Register r = new Register();
             r.ShowDialog();
-            Form1 f = new Form1();
-            f.Hide();
+           
         }
 
 

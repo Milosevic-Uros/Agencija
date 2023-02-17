@@ -66,9 +66,9 @@ namespace PresentationLayer
             }
 
             Ticket ticket = new Ticket();
-            ticket.ticketId = Convert.ToInt32(TextBoxTicketID.Text);
-            ticket.dateOfDeparture = dateTimePickerDeparture.Text;
-            ticket.returnDate = dateTimePickerReturnDate.Text;
+            ticket.ticketId = Convert.ToInt32(textBoxTicketID.Text);
+            ticket.dateOfDeparture = dateTimePickerDeparture.Value;
+            ticket.returnDate = dateTimePickerDeparture.Value;
 
             if (comboBoxTransport.SelectedItem.ToString() == "Autobus")
                 ticket.typeOfTransport = "Autobus";
@@ -103,7 +103,7 @@ namespace PresentationLayer
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
-            //InsertTicket insertTicket = new InsertTicket();
+            InsertTicket insertTicket = new InsertTicket();
             insertTicket.Show();
         }
     }

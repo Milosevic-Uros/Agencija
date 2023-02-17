@@ -52,8 +52,8 @@ namespace PresentationLayer
             Arrangement arrangement = new Arrangement();
             arrangement.arrangementId = Convert.ToInt32(textBoxArrangementID.Text);
             arrangement.name = textBoxName.Text;
-            arrangement.dateOfDeparture = dateTimePickerDeparture.Text;
-            arrangement.returnDate = dateTimePickerReturn.Text;
+            arrangement.dateOfDeparture = dateTimePickerDeparture.Value;
+            arrangement.returnDate = dateTimePickerReturn.Value;
             arrangement.locationId = Convert.ToInt32(textBoxLocationID.Text);
             arrangement.typeofTransport = textBoxTransportType.Text;
             arrangement.typeOfArrangement = textBoxArrangement.Text;

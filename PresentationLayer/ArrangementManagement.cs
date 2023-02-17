@@ -89,8 +89,8 @@ namespace PresentationLayer
             Arrangement arrangement = new Arrangement();
             arrangement.arrangementId = Convert.ToInt32(textBoxArrangementID.Text);
             arrangement.locationId = Convert.ToInt32(textBoxLocationID.Text);
-            arrangement.dateOfDeparture = dateTimePickerDeparture.Text;
-            arrangement.returnDate = dateTimePickerReturnDate.Text;
+            arrangement.dateOfDeparture = dateTimePickerDeparture.Value;
+            arrangement.returnDate = dateTimePickerReturnDate.Value;
             string result = adminBusiness.UpdateArrangement(arrangement);
             MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dataGridViewArrangemet.DataSource = adminBusiness.GetAllClients();
