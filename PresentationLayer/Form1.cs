@@ -1,4 +1,5 @@
 ﻿using BusinessLayer;
+using Shared.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,9 @@ namespace PresentationLayer
     {
 
         public static string user;
+        private readonly IAdminBusiness adminBusiness;
+        private readonly IClientBusiness clientBusiness;
+
 
         public Form1()
         {
