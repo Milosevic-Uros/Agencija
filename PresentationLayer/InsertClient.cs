@@ -30,7 +30,10 @@ namespace PresentationLayer
                textBoxIdNum.Text == "" ||
                textBoxPhoneNum.Text == "" ||
                textBoxEmail.Text == "" ||
-               textBoxPassword.Text == "")
+               textBoxPassword.Text == "" ||
+               textBoxJMBG.Text == "" ||
+               textBoxAddress.Text == "" ||
+               textBoxPassportNum.Text == "")
             {
                 MessageBox.Show("Fill in all required fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxName.Focus();
@@ -71,11 +74,24 @@ namespace PresentationLayer
                 return;
             }
 
-
             else if (!Regex.Match(textBoxPassword.Text, "^[a-zA-Z][a-zA-Z0-9]{5,15}").Success)
             {
                 MessageBox.Show("The password field is not filled in correctly! The length of the password must be between 10 and 20 characters!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxPassword.Focus();
+                return;
+            }
+
+            else if (!Regex.Match(textBoxJMBG.Text, "^^(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[012])[0-9]{9}$").Success)
+            {
+                MessageBox.Show("13 characters required for JMBG field!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxJMBG.Focus();
+                return;
+            }
+
+            else if (!Regex.Match(textBoxPassportNum.Text, "^\\d{9}$").Success)
+            {
+                MessageBox.Show("The passport number field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxPassportNum.Focus();
                 return;
             }
             else 

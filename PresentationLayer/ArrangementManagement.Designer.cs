@@ -41,6 +41,7 @@
             this.labelArrangementID = new System.Windows.Forms.Label();
             this.dataGridViewArrangemet = new System.Windows.Forms.DataGridView();
             this.comboBoxLocation = new System.Windows.Forms.ComboBox();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.panelClientManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArrangemet)).BeginInit();
             this.SuspendLayout();
@@ -48,6 +49,7 @@
             // panelClientManagement
             // 
             this.panelClientManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
+            this.panelClientManagement.Controls.Add(this.buttonClose);
             this.panelClientManagement.Controls.Add(this.comboBoxLocation);
             this.panelClientManagement.Controls.Add(this.dateTimePickerReturnDate);
             this.panelClientManagement.Controls.Add(this.dateTimePickerDeparture);
@@ -65,6 +67,7 @@
             this.panelClientManagement.Name = "panelClientManagement";
             this.panelClientManagement.Size = new System.Drawing.Size(803, 446);
             this.panelClientManagement.TabIndex = 1;
+            this.panelClientManagement.Paint += new System.Windows.Forms.PaintEventHandler(this.panelClientManagement_Paint);
             // 
             // dateTimePickerReturnDate
             // 
@@ -86,7 +89,7 @@
             // 
             this.buttonDelete.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(499, 354);
+            this.buttonDelete.Location = new System.Drawing.Point(547, 341);
             this.buttonDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(145, 57);
@@ -99,7 +102,7 @@
             // 
             this.buttonUpdate.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.Location = new System.Drawing.Point(307, 354);
+            this.buttonUpdate.Location = new System.Drawing.Point(355, 341);
             this.buttonUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(145, 57);
@@ -112,7 +115,7 @@
             // 
             this.buttonInsert.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonInsert.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsert.Location = new System.Drawing.Point(115, 354);
+            this.buttonInsert.Location = new System.Drawing.Point(163, 341);
             this.buttonInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(145, 57);
@@ -192,6 +195,19 @@
             this.comboBoxLocation.TabIndex = 30;
             this.comboBoxLocation.SelectedIndexChanged += new System.EventHandler(this.comboBoxLocation_SelectedIndexChanged);
             // 
+            // buttonClose
+            // 
+            this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClose.Location = new System.Drawing.Point(13, 388);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(81, 49);
+            this.buttonClose.TabIndex = 32;
+            this.buttonClose.Text = "Close";
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
             // ArrangementManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -225,5 +241,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePickerReturnDate;
         private System.Windows.Forms.DateTimePicker dateTimePickerDeparture;
         private System.Windows.Forms.ComboBox comboBoxLocation;
+        private System.Windows.Forms.Button buttonClose;
     }
 }

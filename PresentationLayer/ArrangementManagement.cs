@@ -17,6 +17,7 @@ namespace PresentationLayer
     public partial class ArrangementManagement : Form
     {
         private readonly IAdminBusiness adminBusiness;
+
         public ArrangementManagement(IAdminBusiness _adminBusiness)
         {
             adminBusiness= _adminBusiness;
@@ -105,6 +106,21 @@ namespace PresentationLayer
         private void comboBoxLocation_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void panelClientManagement_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void RegisterLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

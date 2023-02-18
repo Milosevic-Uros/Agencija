@@ -30,7 +30,7 @@ namespace PresentationLayer
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+                
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -116,6 +116,16 @@ namespace PresentationLayer
 
         }
 
+        private void Login_Load(object sender, EventArgs e)
+        {
+            //comboBoxLogin.SelectedItem = true;
+            comboBoxLogin.SelectedItem = null;
+            comboBoxLogin.SelectedText = "--select--";
+        }
 
+        private void comboBoxLogin_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
