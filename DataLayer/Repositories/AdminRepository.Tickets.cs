@@ -66,10 +66,10 @@ namespace DataLayer.Repositories
                 string query = "INSERT INTO TICKETS (name,date_of_departure,return_date,location_id,type_of_transport,price,number_of_vacancies) VALUES(@name,@dateOfDeparture,@returnDate,@locationId,@typeOfTransport,@price,@numberOfVacancies)";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@name", ticket.name);
-                command.Parameters.AddWithValue("@date_of_departure", ticket.dateOfDeparture);
-                command.Parameters.AddWithValue("@return_date", ticket.returnDate);
-                command.Parameters.AddWithValue("@location_id", ticket.locationId);
-                command.Parameters.AddWithValue("@type_of_transport", ticket.typeOfTransport);
+                command.Parameters.AddWithValue("@dateOfDeparture", ticket.dateOfDeparture);
+                command.Parameters.AddWithValue("@returnDate", ticket.returnDate);
+                command.Parameters.AddWithValue("@locationId", ticket.locationId);
+                command.Parameters.AddWithValue("@typeOfTransport", ticket.typeOfTransport);
                 command.Parameters.AddWithValue("@price", ticket.price);
                 command.Parameters.AddWithValue("@numberOfVacancies", ticket.numberOfVacancies);
 

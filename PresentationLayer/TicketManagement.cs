@@ -93,6 +93,7 @@ namespace PresentationLayer
         {
             InsertTicket insertTicket = new InsertTicket(adminBusiness);
             insertTicket.Show();
+            this.Close();
         }
 
         private void dataGridViewTickets_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)

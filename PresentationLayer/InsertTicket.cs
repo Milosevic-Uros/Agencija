@@ -32,6 +32,8 @@ namespace PresentationLayer
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            TicketManagement ticketManagement = new TicketManagement(adminBusiness);
+            ticketManagement.ShowDialog();
         }
 
         private void buttonInsert_Click(object sender, EventArgs e)
@@ -48,7 +50,7 @@ namespace PresentationLayer
             ticket.name = textBoxName.Text;
             ticket.dateOfDeparture = dateTimePickerDeparture.Value;
             ticket.returnDate = dateTimePickerReturn.Value;
-            ticket.locationId = Convert.ToInt32(comboBoxLocation.ValueMember);
+            ticket.locationId = Convert.ToInt32(comboBoxLocation.SelectedValue);
             ticket.typeOfTransport = comboBoxTransport.SelectedItem.ToString();
             ticket.price = Convert.ToInt32(textBoxPrice.Text);
             ticket.numberOfVacancies = Convert.ToInt32(textBoxVacancies.Text);
@@ -59,8 +61,6 @@ namespace PresentationLayer
             textBoxName.Text = "";
             dateTimePickerDeparture.Text = "";
             dateTimePickerReturn.Text = "";
-            comboBoxLocation.DisplayMember = "";
-            comboBoxTransport.DisplayMember = "";
             textBoxPrice.Text = "";
             textBoxVacancies.Text = "";
 
