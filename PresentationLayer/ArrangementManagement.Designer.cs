@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panelClientManagement = new System.Windows.Forms.Panel();
+            this.buttonClose = new System.Windows.Forms.Button();
+            this.comboBoxLocation = new System.Windows.Forms.ComboBox();
             this.dateTimePickerReturnDate = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerDeparture = new System.Windows.Forms.DateTimePicker();
             this.buttonDelete = new System.Windows.Forms.Button();
@@ -40,8 +42,6 @@
             this.textBoxArrangementID = new System.Windows.Forms.TextBox();
             this.labelArrangementID = new System.Windows.Forms.Label();
             this.dataGridViewArrangemet = new System.Windows.Forms.DataGridView();
-            this.comboBoxLocation = new System.Windows.Forms.ComboBox();
-            this.buttonClose = new System.Windows.Forms.Button();
             this.panelClientManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArrangemet)).BeginInit();
             this.SuspendLayout();
@@ -68,6 +68,29 @@
             this.panelClientManagement.Size = new System.Drawing.Size(803, 446);
             this.panelClientManagement.TabIndex = 1;
             this.panelClientManagement.Paint += new System.Windows.Forms.PaintEventHandler(this.panelClientManagement_Paint);
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClose.Location = new System.Drawing.Point(13, 388);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(81, 49);
+            this.buttonClose.TabIndex = 32;
+            this.buttonClose.Text = "Close";
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+            // 
+            // comboBoxLocation
+            // 
+            this.comboBoxLocation.FormattingEnabled = true;
+            this.comboBoxLocation.Location = new System.Drawing.Point(609, 273);
+            this.comboBoxLocation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBoxLocation.Name = "comboBoxLocation";
+            this.comboBoxLocation.Size = new System.Drawing.Size(148, 24);
+            this.comboBoxLocation.TabIndex = 30;
+            this.comboBoxLocation.SelectedIndexChanged += new System.EventHandler(this.comboBoxLocation_SelectedIndexChanged);
             // 
             // dateTimePickerReturnDate
             // 
@@ -130,7 +153,7 @@
             this.labelLocationID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLocationID.Location = new System.Drawing.Point(605, 242);
             this.labelLocationID.Name = "labelLocationID";
-            this.labelLocationID.Size = new System.Drawing.Size(98, 28);
+            this.labelLocationID.Size = new System.Drawing.Size(78, 22);
             this.labelLocationID.TabIndex = 7;
             this.labelLocationID.Text = "Location";
             // 
@@ -185,36 +208,15 @@
             this.dataGridViewArrangemet.TabIndex = 0;
             this.dataGridViewArrangemet.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewArrangemet_CellContentClick);
             // 
-            // comboBoxLocation
-            // 
-            this.comboBoxLocation.FormattingEnabled = true;
-            this.comboBoxLocation.Location = new System.Drawing.Point(609, 273);
-            this.comboBoxLocation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxLocation.Name = "comboBoxLocation";
-            this.comboBoxLocation.Size = new System.Drawing.Size(148, 24);
-            this.comboBoxLocation.TabIndex = 30;
-            this.comboBoxLocation.SelectedIndexChanged += new System.EventHandler(this.comboBoxLocation_SelectedIndexChanged);
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
-            this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(13, 388);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(81, 49);
-            this.buttonClose.TabIndex = 32;
-            this.buttonClose.Text = "Close";
-            this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
             // ArrangementManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelClientManagement);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.MaximizeBox = false;
             this.Name = "ArrangementManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ArrangementManagement";
