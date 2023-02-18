@@ -43,7 +43,7 @@
             this.panel1.Location = new System.Drawing.Point(220, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(515, 402);
+            this.panel1.Size = new System.Drawing.Size(567, 441);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -63,7 +63,7 @@
             // 
             this.buttonLogOut.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogOut.Location = new System.Drawing.Point(-1, 345);
+            this.buttonLogOut.Location = new System.Drawing.Point(-1, 373);
             this.buttonLogOut.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonLogOut.Name = "buttonLogOut";
             this.buttonLogOut.Size = new System.Drawing.Size(203, 50);
@@ -76,7 +76,7 @@
             // 
             this.buttonTransactionManagement.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonTransactionManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTransactionManagement.Location = new System.Drawing.Point(-1, 249);
+            this.buttonTransactionManagement.Location = new System.Drawing.Point(-1, 266);
             this.buttonTransactionManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonTransactionManagement.Name = "buttonTransactionManagement";
             this.buttonTransactionManagement.Size = new System.Drawing.Size(203, 50);
@@ -89,7 +89,7 @@
             // 
             this.buttonTicketManagement.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonTicketManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTicketManagement.Location = new System.Drawing.Point(-1, 170);
+            this.buttonTicketManagement.Location = new System.Drawing.Point(-1, 187);
             this.buttonTicketManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonTicketManagement.Name = "buttonTicketManagement";
             this.buttonTicketManagement.Size = new System.Drawing.Size(203, 50);
@@ -102,7 +102,7 @@
             // 
             this.buttonArrangement.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonArrangement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonArrangement.Location = new System.Drawing.Point(0, 89);
+            this.buttonArrangement.Location = new System.Drawing.Point(0, 106);
             this.buttonArrangement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonArrangement.Name = "buttonArrangement";
             this.buttonArrangement.Size = new System.Drawing.Size(203, 50);
@@ -115,7 +115,7 @@
             // 
             this.buttonClientManagement.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClientManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClientManagement.Location = new System.Drawing.Point(0, 10);
+            this.buttonClientManagement.Location = new System.Drawing.Point(0, 27);
             this.buttonClientManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonClientManagement.Name = "buttonClientManagement";
             this.buttonClientManagement.Size = new System.Drawing.Size(200, 50);
@@ -129,7 +129,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(735, 410);
+            this.ClientSize = new System.Drawing.Size(791, 446);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;

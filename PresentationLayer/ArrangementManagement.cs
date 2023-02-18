@@ -99,5 +99,10 @@ namespace PresentationLayer
 
             }
         }
+
+        private void dataGridViewArrangemet_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

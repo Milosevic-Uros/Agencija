@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.panelClientManagement = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
-            this.lOCATIONSBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.aGENCIJADataSet = new PresentationLayer.AGENCIJADataSet();
             this.dateTimePickerReturnDate = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerDeparture = new System.Windows.Forms.DateTimePicker();
             this.buttonDelete = new System.Windows.Forms.Button();
@@ -43,11 +41,13 @@
             this.textBoxArrangementID = new System.Windows.Forms.TextBox();
             this.labelArrangementID = new System.Windows.Forms.Label();
             this.dataGridViewArrangemet = new System.Windows.Forms.DataGridView();
+            this.lOCATIONSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aGENCIJADataSet = new PresentationLayer.AGENCIJADataSet();
             this.lOCATIONSTableAdapter = new PresentationLayer.AGENCIJADataSetTableAdapters.LOCATIONSTableAdapter();
             this.panelClientManagement.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArrangemet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOCATIONSBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArrangemet)).BeginInit();
             this.SuspendLayout();
             // 
             // panelClientManagement
@@ -83,16 +83,6 @@
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
-            // 
-            // lOCATIONSBindingSource
-            // 
-            this.lOCATIONSBindingSource.DataMember = "LOCATIONS";
-            this.lOCATIONSBindingSource.DataSource = this.aGENCIJADataSet;
-            // 
-            // aGENCIJADataSet
-            // 
-            this.aGENCIJADataSet.DataSetName = "AGENCIJADataSet";
-            this.aGENCIJADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dateTimePickerReturnDate
             // 
@@ -200,7 +190,18 @@
             this.dataGridViewArrangemet.RowTemplate.Height = 24;
             this.dataGridViewArrangemet.Size = new System.Drawing.Size(796, 177);
             this.dataGridViewArrangemet.TabIndex = 0;
+            this.dataGridViewArrangemet.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewArrangemet_CellContentClick);
             this.dataGridViewArrangemet.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewArrangemet_RowHeaderMouseClick);
+            // 
+            // lOCATIONSBindingSource
+            // 
+            this.lOCATIONSBindingSource.DataMember = "LOCATIONS";
+            this.lOCATIONSBindingSource.DataSource = this.aGENCIJADataSet;
+            // 
+            // aGENCIJADataSet
+            // 
+            this.aGENCIJADataSet.DataSetName = "AGENCIJADataSet";
+            this.aGENCIJADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // lOCATIONSTableAdapter
             // 
@@ -219,9 +220,9 @@
             this.Load += new System.EventHandler(this.ArrangementManagement_Load);
             this.panelClientManagement.ResumeLayout(false);
             this.panelClientManagement.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArrangemet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOCATIONSBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArrangemet)).EndInit();
             this.ResumeLayout(false);
 
         }

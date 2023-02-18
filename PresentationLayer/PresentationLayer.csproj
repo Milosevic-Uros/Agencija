@@ -152,6 +152,9 @@
     <EmbeddedResource Include="ClientManagement.resx">
       <DependentUpon>ClientManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExchangeOffice.resx">
+      <DependentUpon>ExchangeOffice.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
