@@ -80,7 +80,7 @@
             this.panel1.Controls.Add(this.textBoxArrangementID);
             this.panel1.Controls.Add(this.labelArrangementID);
             this.panel1.Location = new System.Drawing.Point(1, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(598, 366);
             this.panel1.TabIndex = 1;
@@ -88,7 +88,7 @@
             // dateTimePickerReturn
             // 
             this.dateTimePickerReturn.Location = new System.Drawing.Point(66, 192);
-            this.dateTimePickerReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerReturn.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerReturn.Name = "dateTimePickerReturn";
             this.dateTimePickerReturn.Size = new System.Drawing.Size(151, 20);
             this.dateTimePickerReturn.TabIndex = 25;
@@ -96,7 +96,7 @@
             // dateTimePickerDeparture
             // 
             this.dateTimePickerDeparture.Location = new System.Drawing.Point(401, 125);
-            this.dateTimePickerDeparture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerDeparture.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerDeparture.Name = "dateTimePickerDeparture";
             this.dateTimePickerDeparture.Size = new System.Drawing.Size(151, 20);
             this.dateTimePickerDeparture.TabIndex = 24;
@@ -106,7 +106,7 @@
             this.buttonInsert.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonInsert.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInsert.Location = new System.Drawing.Point(314, 295);
-            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(109, 54);
             this.buttonInsert.TabIndex = 23;
@@ -119,7 +119,7 @@
             this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.Location = new System.Drawing.Point(152, 295);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(109, 54);
             this.buttonClose.TabIndex = 22;
@@ -132,7 +132,7 @@
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.labelINSERT);
             this.panel2.Location = new System.Drawing.Point(2, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(596, 72);
             this.panel2.TabIndex = 21;
@@ -151,7 +151,7 @@
             // textBoxPrice
             // 
             this.textBoxPrice.Location = new System.Drawing.Point(401, 251);
-            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(111, 20);
             this.textBoxPrice.TabIndex = 20;
@@ -171,7 +171,7 @@
             // textBoxTransportType
             // 
             this.textBoxTransportType.Location = new System.Drawing.Point(401, 192);
-            this.textBoxTransportType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTransportType.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTransportType.Name = "textBoxTransportType";
             this.textBoxTransportType.Size = new System.Drawing.Size(111, 20);
             this.textBoxTransportType.TabIndex = 18;
@@ -201,7 +201,7 @@
             // textBoxVacancies
             // 
             this.textBoxVacancies.Location = new System.Drawing.Point(239, 251);
-            this.textBoxVacancies.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxVacancies.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxVacancies.Name = "textBoxVacancies";
             this.textBoxVacancies.Size = new System.Drawing.Size(111, 20);
             this.textBoxVacancies.TabIndex = 14;
@@ -220,7 +220,7 @@
             // textBoxLocationID
             // 
             this.textBoxLocationID.Location = new System.Drawing.Point(239, 192);
-            this.textBoxLocationID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxLocationID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxLocationID.Name = "textBoxLocationID";
             this.textBoxLocationID.Size = new System.Drawing.Size(111, 20);
             this.textBoxLocationID.TabIndex = 12;
@@ -239,7 +239,7 @@
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(239, 125);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(111, 20);
             this.textBoxName.TabIndex = 10;
@@ -258,7 +258,7 @@
             // textBoxArrangement
             // 
             this.textBoxArrangement.Location = new System.Drawing.Point(66, 251);
-            this.textBoxArrangement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxArrangement.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxArrangement.Name = "textBoxArrangement";
             this.textBoxArrangement.Size = new System.Drawing.Size(111, 20);
             this.textBoxArrangement.TabIndex = 8;
@@ -288,7 +288,7 @@
             // textBoxArrangementID
             // 
             this.textBoxArrangementID.Location = new System.Drawing.Point(66, 125);
-            this.textBoxArrangementID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxArrangementID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxArrangementID.Name = "textBoxArrangementID";
             this.textBoxArrangementID.Size = new System.Drawing.Size(111, 20);
             this.textBoxArrangementID.TabIndex = 4;
@@ -310,8 +310,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(598, 364);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InsertArrangement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InsertArrangement";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

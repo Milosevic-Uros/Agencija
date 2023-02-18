@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panelClientManagement = new System.Windows.Forms.Panel();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
@@ -196,17 +195,21 @@
             this.dataGridViewClients.Size = new System.Drawing.Size(597, 144);
             this.dataGridViewClients.TabIndex = 0;
             this.dataGridViewClients.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewClients_RowHeaderMouseClick);
-
+            // 
+            // ClientManagement
+            // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 358);
             this.Controls.Add(this.panelClientManagement);
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ClientManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ClientManagement";
             this.Load += new System.EventHandler(this.ClientManagement_Load);
             this.panelClientManagement.ResumeLayout(false);
             this.panelClientManagement.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClients)).EndInit();
             this.ResumeLayout(false);
 
         }

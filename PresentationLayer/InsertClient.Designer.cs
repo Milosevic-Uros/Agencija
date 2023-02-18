@@ -80,7 +80,7 @@
             this.panel1.Controls.Add(this.textBoxName);
             this.panel1.Controls.Add(this.labelName);
             this.panel1.Location = new System.Drawing.Point(0, 1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(598, 366);
             this.panel1.TabIndex = 0;
@@ -90,7 +90,7 @@
             this.buttonInsert.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonInsert.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInsert.Location = new System.Drawing.Point(314, 295);
-            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(109, 40);
             this.buttonInsert.TabIndex = 10;
@@ -103,7 +103,7 @@
             this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.Location = new System.Drawing.Point(152, 295);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(109, 40);
             this.buttonClose.TabIndex = 11;
@@ -116,7 +116,7 @@
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.labelINSERT);
             this.panel2.Location = new System.Drawing.Point(2, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(596, 72);
             this.panel2.TabIndex = 21;
@@ -135,7 +135,7 @@
             // textBoxPassword
             // 
             this.textBoxPassword.Location = new System.Drawing.Point(401, 251);
-            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPassword.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(111, 20);
             this.textBoxPassword.TabIndex = 9;
@@ -155,7 +155,7 @@
             // textBoxPhoneNum
             // 
             this.textBoxPhoneNum.Location = new System.Drawing.Point(401, 192);
-            this.textBoxPhoneNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPhoneNum.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPhoneNum.Name = "textBoxPhoneNum";
             this.textBoxPhoneNum.Size = new System.Drawing.Size(111, 20);
             this.textBoxPhoneNum.TabIndex = 6;
@@ -174,7 +174,7 @@
             // textBoxIdNum
             // 
             this.textBoxIdNum.Location = new System.Drawing.Point(401, 125);
-            this.textBoxIdNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxIdNum.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxIdNum.Name = "textBoxIdNum";
             this.textBoxIdNum.Size = new System.Drawing.Size(111, 20);
             this.textBoxIdNum.TabIndex = 3;
@@ -193,7 +193,7 @@
             // textBoxEmail
             // 
             this.textBoxEmail.Location = new System.Drawing.Point(239, 251);
-            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxEmail.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(111, 20);
             this.textBoxEmail.TabIndex = 8;
@@ -212,7 +212,7 @@
             // textBoxPassportNum
             // 
             this.textBoxPassportNum.Location = new System.Drawing.Point(239, 192);
-            this.textBoxPassportNum.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPassportNum.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPassportNum.Name = "textBoxPassportNum";
             this.textBoxPassportNum.Size = new System.Drawing.Size(111, 20);
             this.textBoxPassportNum.TabIndex = 5;
@@ -231,7 +231,7 @@
             // textBoxLastName
             // 
             this.textBoxLastName.Location = new System.Drawing.Point(239, 125);
-            this.textBoxLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxLastName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(111, 20);
             this.textBoxLastName.TabIndex = 2;
@@ -250,7 +250,7 @@
             // textBoxAddress
             // 
             this.textBoxAddress.Location = new System.Drawing.Point(66, 251);
-            this.textBoxAddress.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxAddress.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(111, 20);
             this.textBoxAddress.TabIndex = 7;
@@ -269,7 +269,7 @@
             // textBoxJMBG
             // 
             this.textBoxJMBG.Location = new System.Drawing.Point(66, 192);
-            this.textBoxJMBG.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxJMBG.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxJMBG.Name = "textBoxJMBG";
             this.textBoxJMBG.Size = new System.Drawing.Size(111, 20);
             this.textBoxJMBG.TabIndex = 4;
@@ -288,7 +288,7 @@
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(66, 125);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(111, 20);
             this.textBoxName.TabIndex = 1;
@@ -310,8 +310,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "InsertClient";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InsertClient";
             this.Load += new System.EventHandler(this.InsertClient_Load);
             this.panel1.ResumeLayout(false);
