@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.panelLogIn = new System.Windows.Forms.Panel();
+            this.comboBoxLogin = new System.Windows.Forms.ComboBox();
             this.RegisterLabel = new System.Windows.Forms.LinkLabel();
             this.labelDontHaveAnAcc = new System.Windows.Forms.Label();
             this.buttonLogIn = new System.Windows.Forms.Button();
@@ -43,7 +44,6 @@
             this.panelAgency = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.comboBoxLogin = new System.Windows.Forms.ComboBox();
             this.panelLogIn.SuspendLayout();
             this.panelAgency.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -69,6 +69,18 @@
             this.panelLogIn.Size = new System.Drawing.Size(481, 493);
             this.panelLogIn.TabIndex = 0;
             this.panelLogIn.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
+            // comboBoxLogin
+            // 
+            this.comboBoxLogin.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxLogin.FormattingEnabled = true;
+            this.comboBoxLogin.Items.AddRange(new object[] {
+            "Admin",
+            "Client"});
+            this.comboBoxLogin.Location = new System.Drawing.Point(187, 80);
+            this.comboBoxLogin.Name = "comboBoxLogin";
+            this.comboBoxLogin.Size = new System.Drawing.Size(121, 30);
+            this.comboBoxLogin.TabIndex = 9;
             // 
             // RegisterLabel
             // 
@@ -110,7 +122,7 @@
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(95, 208);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(118, 31);
+            this.label2.Size = new System.Drawing.Size(94, 25);
             this.label2.TabIndex = 5;
             this.label2.Text = "Password";
             // 
@@ -120,7 +132,7 @@
             this.Username.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Username.Location = new System.Drawing.Point(95, 118);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(74, 31);
+            this.Username.Size = new System.Drawing.Size(59, 25);
             this.Username.TabIndex = 4;
             this.Username.Text = "Email";
             // 
@@ -198,18 +210,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // comboBoxLogin
-            // 
-            this.comboBoxLogin.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxLogin.FormattingEnabled = true;
-            this.comboBoxLogin.Items.AddRange(new object[] {
-            "Admin",
-            "Client"});
-            this.comboBoxLogin.Location = new System.Drawing.Point(187, 80);
-            this.comboBoxLogin.Name = "comboBoxLogin";
-            this.comboBoxLogin.Size = new System.Drawing.Size(121, 30);
-            this.comboBoxLogin.TabIndex = 9;
             // 
             // Login
             // 

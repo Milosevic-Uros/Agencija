@@ -54,5 +54,11 @@ namespace PresentationLayer
             ArrangementManagement arrangementManagementForm = new ArrangementManagement(adminBusiness);
             arrangementManagementForm.Show();
         }
+
+        private void buttonTicketManagement_Click(object sender, EventArgs e)
+        {
+            TicketManagement ticketManagementForm = new TicketManagement(adminBusiness);
+            ticketManagementForm.Show();
+        }
     }
 }

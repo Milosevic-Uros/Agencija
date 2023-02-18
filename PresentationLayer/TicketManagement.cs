@@ -94,9 +94,9 @@ namespace PresentationLayer
 
                 DataGridViewRow row = this.dataGridViewTickets.Rows[e.RowIndex];
                 textBoxTicketID.Text = row.Cells[0].Value.ToString();
-                dateTimePickerDeparture.Text = row.Cells[1].Value.ToString();
-                dateTimePickerReturnDate.Text = row.Cells[2].Value.ToString();
-                //comboBoxTransport. = row.Cells[3].Value.ToString();
+                dateTimePickerDeparture.Text = row.Cells[2].Value.ToString();
+                dateTimePickerReturnDate.Text = row.Cells[3].Value.ToString();
+                //comboBoxTransport. = row.Cells[5].Value.ToString();
 
             }
         }

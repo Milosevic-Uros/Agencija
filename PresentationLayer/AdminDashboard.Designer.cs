@@ -90,6 +90,7 @@
             this.buttonTicketManagement.TabIndex = 2;
             this.buttonTicketManagement.Text = "Ticket management";
             this.buttonTicketManagement.UseVisualStyleBackColor = false;
+            this.buttonTicketManagement.Click += new System.EventHandler(this.buttonTicketManagement_Click);
             // 
             // buttonArrangement
             // 
