@@ -29,6 +29,11 @@
         private void InitializeComponent()
         {
             this.panelClientManagement = new System.Windows.Forms.Panel();
+            this.comboBoxTransport = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerReturnDate = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerDeparture = new System.Windows.Forms.DateTimePicker();
+            this.labelReturnDate = new System.Windows.Forms.Label();
+            this.labelDeparture = new System.Windows.Forms.Label();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonInsert = new System.Windows.Forms.Button();
@@ -36,11 +41,6 @@
             this.textBoxTicketID = new System.Windows.Forms.TextBox();
             this.labelTicketID = new System.Windows.Forms.Label();
             this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
-            this.dateTimePickerReturnDate = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerDeparture = new System.Windows.Forms.DateTimePicker();
-            this.labelReturnDate = new System.Windows.Forms.Label();
-            this.labelDeparture = new System.Windows.Forms.Label();
-            this.comboBoxTransport = new System.Windows.Forms.ComboBox();
             this.panelClientManagement.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
             this.SuspendLayout();
@@ -60,18 +60,68 @@
             this.panelClientManagement.Controls.Add(this.textBoxTicketID);
             this.panelClientManagement.Controls.Add(this.labelTicketID);
             this.panelClientManagement.Controls.Add(this.dataGridViewTickets);
-            this.panelClientManagement.Location = new System.Drawing.Point(-1, 3);
+            this.panelClientManagement.Location = new System.Drawing.Point(-1, 2);
+            this.panelClientManagement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelClientManagement.Name = "panelClientManagement";
-            this.panelClientManagement.Size = new System.Drawing.Size(802, 445);
+            this.panelClientManagement.Size = new System.Drawing.Size(602, 362);
             this.panelClientManagement.TabIndex = 1;
+            // 
+            // comboBoxTransport
+            // 
+            this.comboBoxTransport.FormattingEnabled = true;
+            this.comboBoxTransport.Location = new System.Drawing.Point(457, 222);
+            this.comboBoxTransport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxTransport.Name = "comboBoxTransport";
+            this.comboBoxTransport.Size = new System.Drawing.Size(92, 21);
+            this.comboBoxTransport.TabIndex = 18;
+            this.comboBoxTransport.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // dateTimePickerReturnDate
+            // 
+            this.dateTimePickerReturnDate.Location = new System.Drawing.Point(311, 222);
+            this.dateTimePickerReturnDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerReturnDate.Name = "dateTimePickerReturnDate";
+            this.dateTimePickerReturnDate.Size = new System.Drawing.Size(122, 20);
+            this.dateTimePickerReturnDate.TabIndex = 17;
+            // 
+            // dateTimePickerDeparture
+            // 
+            this.dateTimePickerDeparture.Location = new System.Drawing.Point(172, 222);
+            this.dateTimePickerDeparture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerDeparture.Name = "dateTimePickerDeparture";
+            this.dateTimePickerDeparture.Size = new System.Drawing.Size(122, 20);
+            this.dateTimePickerDeparture.TabIndex = 16;
+            // 
+            // labelReturnDate
+            // 
+            this.labelReturnDate.AutoSize = true;
+            this.labelReturnDate.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelReturnDate.Location = new System.Drawing.Point(308, 197);
+            this.labelReturnDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelReturnDate.Name = "labelReturnDate";
+            this.labelReturnDate.Size = new System.Drawing.Size(86, 18);
+            this.labelReturnDate.TabIndex = 15;
+            this.labelReturnDate.Text = "Return date";
+            // 
+            // labelDeparture
+            // 
+            this.labelDeparture.AutoSize = true;
+            this.labelDeparture.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelDeparture.Location = new System.Drawing.Point(169, 196);
+            this.labelDeparture.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelDeparture.Name = "labelDeparture";
+            this.labelDeparture.Size = new System.Drawing.Size(110, 18);
+            this.labelDeparture.TabIndex = 14;
+            this.labelDeparture.Text = "Departure date";
             // 
             // buttonDelete
             // 
             this.buttonDelete.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(498, 354);
+            this.buttonDelete.Location = new System.Drawing.Point(374, 288);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(145, 49);
+            this.buttonDelete.Size = new System.Drawing.Size(109, 40);
             this.buttonDelete.TabIndex = 11;
             this.buttonDelete.Text = "Delete ticket";
             this.buttonDelete.UseVisualStyleBackColor = false;
@@ -81,9 +131,10 @@
             // 
             this.buttonUpdate.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.Location = new System.Drawing.Point(307, 354);
+            this.buttonUpdate.Location = new System.Drawing.Point(230, 288);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(145, 49);
+            this.buttonUpdate.Size = new System.Drawing.Size(109, 40);
             this.buttonUpdate.TabIndex = 10;
             this.buttonUpdate.Text = "Update ticket";
             this.buttonUpdate.UseVisualStyleBackColor = false;
@@ -93,9 +144,10 @@
             // 
             this.buttonInsert.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonInsert.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsert.Location = new System.Drawing.Point(115, 355);
+            this.buttonInsert.Location = new System.Drawing.Point(86, 288);
+            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonInsert.Name = "buttonInsert";
-            this.buttonInsert.Size = new System.Drawing.Size(145, 49);
+            this.buttonInsert.Size = new System.Drawing.Size(109, 40);
             this.buttonInsert.TabIndex = 9;
             this.buttonInsert.Text = "Insert ticket";
             this.buttonInsert.UseVisualStyleBackColor = false;
@@ -105,26 +157,29 @@
             // 
             this.labelTransportType.AutoSize = true;
             this.labelTransportType.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTransportType.Location = new System.Drawing.Point(605, 242);
+            this.labelTransportType.Location = new System.Drawing.Point(454, 197);
+            this.labelTransportType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTransportType.Name = "labelTransportType";
-            this.labelTransportType.Size = new System.Drawing.Size(189, 28);
+            this.labelTransportType.Size = new System.Drawing.Size(125, 18);
             this.labelTransportType.TabIndex = 7;
             this.labelTransportType.Text = "Type of transport";
             // 
             // textBoxTicketID
             // 
-            this.textBoxTicketID.Location = new System.Drawing.Point(41, 272);
+            this.textBoxTicketID.Location = new System.Drawing.Point(31, 221);
+            this.textBoxTicketID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxTicketID.Name = "textBoxTicketID";
-            this.textBoxTicketID.Size = new System.Drawing.Size(147, 22);
+            this.textBoxTicketID.Size = new System.Drawing.Size(111, 20);
             this.textBoxTicketID.TabIndex = 2;
             // 
             // labelTicketID
             // 
             this.labelTicketID.AutoSize = true;
             this.labelTicketID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTicketID.Location = new System.Drawing.Point(37, 241);
+            this.labelTicketID.Location = new System.Drawing.Point(28, 196);
+            this.labelTicketID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTicketID.Name = "labelTicketID";
-            this.labelTicketID.Size = new System.Drawing.Size(103, 28);
+            this.labelTicketID.Size = new System.Drawing.Size(66, 18);
             this.labelTicketID.TabIndex = 1;
             this.labelTicketID.Text = "Ticket ID";
             // 
@@ -132,64 +187,24 @@
             // 
             this.dataGridViewTickets.BackgroundColor = System.Drawing.Color.Silver;
             this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTickets.Location = new System.Drawing.Point(3, 0);
+            this.dataGridViewTickets.Location = new System.Drawing.Point(2, 0);
+            this.dataGridViewTickets.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewTickets.Name = "dataGridViewTickets";
             this.dataGridViewTickets.RowHeadersWidth = 51;
             this.dataGridViewTickets.RowTemplate.Height = 24;
-            this.dataGridViewTickets.Size = new System.Drawing.Size(796, 177);
+            this.dataGridViewTickets.Size = new System.Drawing.Size(597, 144);
             this.dataGridViewTickets.TabIndex = 0;
             this.dataGridViewTickets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellContentClick);
             // 
-            // dateTimePickerReturnDate
-            // 
-            this.dateTimePickerReturnDate.Location = new System.Drawing.Point(415, 273);
-            this.dateTimePickerReturnDate.Name = "dateTimePickerReturnDate";
-            this.dateTimePickerReturnDate.Size = new System.Drawing.Size(162, 22);
-            this.dateTimePickerReturnDate.TabIndex = 17;
-            // 
-            // dateTimePickerDeparture
-            // 
-            this.dateTimePickerDeparture.Location = new System.Drawing.Point(229, 273);
-            this.dateTimePickerDeparture.Name = "dateTimePickerDeparture";
-            this.dateTimePickerDeparture.Size = new System.Drawing.Size(162, 22);
-            this.dateTimePickerDeparture.TabIndex = 16;
-            // 
-            // labelReturnDate
-            // 
-            this.labelReturnDate.AutoSize = true;
-            this.labelReturnDate.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelReturnDate.Location = new System.Drawing.Point(411, 242);
-            this.labelReturnDate.Name = "labelReturnDate";
-            this.labelReturnDate.Size = new System.Drawing.Size(105, 22);
-            this.labelReturnDate.TabIndex = 15;
-            this.labelReturnDate.Text = "Return date";
-            // 
-            // labelDeparture
-            // 
-            this.labelDeparture.AutoSize = true;
-            this.labelDeparture.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDeparture.Location = new System.Drawing.Point(225, 241);
-            this.labelDeparture.Name = "labelDeparture";
-            this.labelDeparture.Size = new System.Drawing.Size(133, 22);
-            this.labelDeparture.TabIndex = 14;
-            this.labelDeparture.Text = "Departure date";
-            // 
-            // comboBoxTransport
-            // 
-            this.comboBoxTransport.FormattingEnabled = true;
-            this.comboBoxTransport.Location = new System.Drawing.Point(609, 273);
-            this.comboBoxTransport.Name = "comboBoxTransport";
-            this.comboBoxTransport.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxTransport.TabIndex = 18;
-            this.comboBoxTransport.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // TicketManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panelClientManagement);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TicketManagement";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TicketManagement";
             this.Load += new System.EventHandler(this.TicketManagement_Load);
             this.panelClientManagement.ResumeLayout(false);

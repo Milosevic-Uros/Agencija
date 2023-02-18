@@ -76,39 +76,44 @@
             this.panel1.Controls.Add(this.textBoxTicketID);
             this.panel1.Controls.Add(this.labelTciketID);
             this.panel1.Location = new System.Drawing.Point(1, 0);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(798, 451);
+            this.panel1.Size = new System.Drawing.Size(598, 366);
             this.panel1.TabIndex = 1;
             // 
             // comboBoxTransport
             // 
             this.comboBoxTransport.FormattingEnabled = true;
-            this.comboBoxTransport.Location = new System.Drawing.Point(535, 236);
+            this.comboBoxTransport.Location = new System.Drawing.Point(401, 192);
+            this.comboBoxTransport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.comboBoxTransport.Name = "comboBoxTransport";
-            this.comboBoxTransport.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxTransport.Size = new System.Drawing.Size(92, 21);
             this.comboBoxTransport.TabIndex = 27;
             // 
             // dateTimePickerReturn
             // 
-            this.dateTimePickerReturn.Location = new System.Drawing.Point(88, 236);
+            this.dateTimePickerReturn.Location = new System.Drawing.Point(66, 192);
+            this.dateTimePickerReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePickerReturn.Name = "dateTimePickerReturn";
-            this.dateTimePickerReturn.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePickerReturn.Size = new System.Drawing.Size(151, 20);
             this.dateTimePickerReturn.TabIndex = 26;
             // 
             // dateTimePickerDeparture
             // 
-            this.dateTimePickerDeparture.Location = new System.Drawing.Point(535, 154);
+            this.dateTimePickerDeparture.Location = new System.Drawing.Point(401, 125);
+            this.dateTimePickerDeparture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dateTimePickerDeparture.Name = "dateTimePickerDeparture";
-            this.dateTimePickerDeparture.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePickerDeparture.Size = new System.Drawing.Size(151, 20);
             this.dateTimePickerDeparture.TabIndex = 25;
             // 
             // buttonInsert
             // 
             this.buttonInsert.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonInsert.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsert.Location = new System.Drawing.Point(418, 363);
+            this.buttonInsert.Location = new System.Drawing.Point(314, 295);
+            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonInsert.Name = "buttonInsert";
-            this.buttonInsert.Size = new System.Drawing.Size(145, 49);
+            this.buttonInsert.Size = new System.Drawing.Size(109, 40);
             this.buttonInsert.TabIndex = 23;
             this.buttonInsert.Text = "Insert ticket";
             this.buttonInsert.UseVisualStyleBackColor = false;
@@ -118,9 +123,10 @@
             // 
             this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(202, 363);
+            this.buttonClose.Location = new System.Drawing.Point(152, 295);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(145, 49);
+            this.buttonClose.Size = new System.Drawing.Size(109, 40);
             this.buttonClose.TabIndex = 22;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = false;
@@ -130,18 +136,20 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.labelINSERT);
-            this.panel2.Location = new System.Drawing.Point(3, 0);
+            this.panel2.Location = new System.Drawing.Point(2, 0);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(795, 89);
+            this.panel2.Size = new System.Drawing.Size(596, 72);
             this.panel2.TabIndex = 21;
             // 
             // labelINSERT
             // 
             this.labelINSERT.AutoSize = true;
             this.labelINSERT.Font = new System.Drawing.Font("Microsoft Tai Le", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelINSERT.Location = new System.Drawing.Point(219, 21);
+            this.labelINSERT.Location = new System.Drawing.Point(164, 17);
+            this.labelINSERT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelINSERT.Name = "labelINSERT";
-            this.labelINSERT.Size = new System.Drawing.Size(361, 55);
+            this.labelINSERT.Size = new System.Drawing.Size(296, 45);
             this.labelINSERT.TabIndex = 0;
             this.labelINSERT.Text = "Insert new ticket";
             // 
@@ -149,9 +157,10 @@
             // 
             this.labelTicketType.AutoSize = true;
             this.labelTicketType.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTicketType.Location = new System.Drawing.Point(531, 205);
+            this.labelTicketType.Location = new System.Drawing.Point(398, 167);
+            this.labelTicketType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTicketType.Name = "labelTicketType";
-            this.labelTicketType.Size = new System.Drawing.Size(100, 22);
+            this.labelTicketType.Size = new System.Drawing.Size(82, 18);
             this.labelTicketType.TabIndex = 17;
             this.labelTicketType.Text = "Ticket type";
             // 
@@ -159,77 +168,86 @@
             // 
             this.labelDeparture.AutoSize = true;
             this.labelDeparture.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDeparture.Location = new System.Drawing.Point(531, 123);
+            this.labelDeparture.Location = new System.Drawing.Point(398, 100);
+            this.labelDeparture.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelDeparture.Name = "labelDeparture";
-            this.labelDeparture.Size = new System.Drawing.Size(133, 22);
+            this.labelDeparture.Size = new System.Drawing.Size(110, 18);
             this.labelDeparture.TabIndex = 15;
             this.labelDeparture.Text = "Departure date";
             // 
             // textBoxVacancies
             // 
-            this.textBoxVacancies.Location = new System.Drawing.Point(439, 309);
+            this.textBoxVacancies.Location = new System.Drawing.Point(329, 251);
+            this.textBoxVacancies.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxVacancies.Name = "textBoxVacancies";
-            this.textBoxVacancies.Size = new System.Drawing.Size(147, 22);
+            this.textBoxVacancies.Size = new System.Drawing.Size(111, 20);
             this.textBoxVacancies.TabIndex = 14;
             // 
             // labelVacancies
             // 
             this.labelVacancies.AutoSize = true;
             this.labelVacancies.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelVacancies.Location = new System.Drawing.Point(435, 278);
+            this.labelVacancies.Location = new System.Drawing.Point(326, 226);
+            this.labelVacancies.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelVacancies.Name = "labelVacancies";
-            this.labelVacancies.Size = new System.Drawing.Size(86, 22);
+            this.labelVacancies.Size = new System.Drawing.Size(73, 18);
             this.labelVacancies.TabIndex = 13;
             this.labelVacancies.Text = "Vacancies";
             // 
             // textBoxLocationID
             // 
-            this.textBoxLocationID.Location = new System.Drawing.Point(319, 236);
+            this.textBoxLocationID.Location = new System.Drawing.Point(239, 192);
+            this.textBoxLocationID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxLocationID.Name = "textBoxLocationID";
-            this.textBoxLocationID.Size = new System.Drawing.Size(147, 22);
+            this.textBoxLocationID.Size = new System.Drawing.Size(111, 20);
             this.textBoxLocationID.TabIndex = 12;
             // 
             // labelLocationID
             // 
             this.labelLocationID.AutoSize = true;
             this.labelLocationID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLocationID.Location = new System.Drawing.Point(315, 205);
+            this.labelLocationID.Location = new System.Drawing.Point(236, 167);
+            this.labelLocationID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelLocationID.Name = "labelLocationID";
-            this.labelLocationID.Size = new System.Drawing.Size(101, 22);
+            this.labelLocationID.Size = new System.Drawing.Size(83, 18);
             this.labelLocationID.TabIndex = 11;
             this.labelLocationID.Text = "Location ID";
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(319, 154);
+            this.textBoxName.Location = new System.Drawing.Point(239, 125);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxName.Name = "textBoxName";
-            this.textBoxName.Size = new System.Drawing.Size(147, 22);
+            this.textBoxName.Size = new System.Drawing.Size(111, 20);
             this.textBoxName.TabIndex = 10;
             // 
             // labelName
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(315, 123);
+            this.labelName.Location = new System.Drawing.Point(236, 100);
+            this.labelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(57, 22);
+            this.labelName.Size = new System.Drawing.Size(48, 18);
             this.labelName.TabIndex = 9;
             this.labelName.Text = "Name";
             // 
             // textBoxPrice
             // 
-            this.textBoxPrice.Location = new System.Drawing.Point(208, 309);
+            this.textBoxPrice.Location = new System.Drawing.Point(156, 251);
+            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxPrice.Name = "textBoxPrice";
-            this.textBoxPrice.Size = new System.Drawing.Size(147, 22);
+            this.textBoxPrice.Size = new System.Drawing.Size(111, 20);
             this.textBoxPrice.TabIndex = 8;
             // 
             // labelPrice
             // 
             this.labelPrice.AutoSize = true;
             this.labelPrice.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPrice.Location = new System.Drawing.Point(204, 278);
+            this.labelPrice.Location = new System.Drawing.Point(153, 226);
+            this.labelPrice.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(49, 22);
+            this.labelPrice.Size = new System.Drawing.Size(42, 18);
             this.labelPrice.TabIndex = 7;
             this.labelPrice.Text = "Price";
             // 
@@ -237,36 +255,41 @@
             // 
             this.labelReturn.AutoSize = true;
             this.labelReturn.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelReturn.Location = new System.Drawing.Point(84, 205);
+            this.labelReturn.Location = new System.Drawing.Point(63, 167);
+            this.labelReturn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelReturn.Name = "labelReturn";
-            this.labelReturn.Size = new System.Drawing.Size(105, 22);
+            this.labelReturn.Size = new System.Drawing.Size(86, 18);
             this.labelReturn.TabIndex = 5;
             this.labelReturn.Text = "Return date";
             // 
             // textBoxTicketID
             // 
-            this.textBoxTicketID.Location = new System.Drawing.Point(88, 154);
+            this.textBoxTicketID.Location = new System.Drawing.Point(66, 125);
+            this.textBoxTicketID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxTicketID.Name = "textBoxTicketID";
-            this.textBoxTicketID.Size = new System.Drawing.Size(147, 22);
+            this.textBoxTicketID.Size = new System.Drawing.Size(111, 20);
             this.textBoxTicketID.TabIndex = 4;
             // 
             // labelTciketID
             // 
             this.labelTciketID.AutoSize = true;
             this.labelTciketID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelTciketID.Location = new System.Drawing.Point(84, 123);
+            this.labelTciketID.Location = new System.Drawing.Point(63, 100);
+            this.labelTciketID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelTciketID.Name = "labelTciketID";
-            this.labelTciketID.Size = new System.Drawing.Size(82, 22);
+            this.labelTciketID.Size = new System.Drawing.Size(66, 18);
             this.labelTciketID.TabIndex = 3;
             this.labelTciketID.Text = "Ticket ID";
             // 
             // InsertTicket
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "InsertTicket";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "InsertTicket";
             this.Load += new System.EventHandler(this.InsertTicket_Load);
             this.panel1.ResumeLayout(false);

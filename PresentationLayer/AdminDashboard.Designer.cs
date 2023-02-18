@@ -40,9 +40,10 @@
             // 
             // panel1
             // 
-            this.panel1.Location = new System.Drawing.Point(220, 2);
+            this.panel1.Location = new System.Drawing.Point(165, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(514, 402);
+            this.panel1.Size = new System.Drawing.Size(386, 327);
             this.panel1.TabIndex = 0;
             // 
             // panel2
@@ -52,18 +53,20 @@
             this.panel2.Controls.Add(this.buttonTicketManagement);
             this.panel2.Controls.Add(this.buttonArrangement);
             this.panel2.Controls.Add(this.buttonClientManagement);
-            this.panel2.Location = new System.Drawing.Point(12, 2);
+            this.panel2.Location = new System.Drawing.Point(9, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 510);
+            this.panel2.Size = new System.Drawing.Size(150, 414);
             this.panel2.TabIndex = 1;
             // 
             // buttonLogOut
             // 
             this.buttonLogOut.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonLogOut.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogOut.Location = new System.Drawing.Point(-1, 344);
+            this.buttonLogOut.Location = new System.Drawing.Point(-1, 280);
+            this.buttonLogOut.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonLogOut.Name = "buttonLogOut";
-            this.buttonLogOut.Size = new System.Drawing.Size(202, 51);
+            this.buttonLogOut.Size = new System.Drawing.Size(152, 41);
             this.buttonLogOut.TabIndex = 4;
             this.buttonLogOut.Text = "Log out";
             this.buttonLogOut.UseVisualStyleBackColor = false;
@@ -73,9 +76,10 @@
             // 
             this.buttonTransactionManagement.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonTransactionManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTransactionManagement.Location = new System.Drawing.Point(-1, 248);
+            this.buttonTransactionManagement.Location = new System.Drawing.Point(-1, 202);
+            this.buttonTransactionManagement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonTransactionManagement.Name = "buttonTransactionManagement";
-            this.buttonTransactionManagement.Size = new System.Drawing.Size(202, 51);
+            this.buttonTransactionManagement.Size = new System.Drawing.Size(152, 41);
             this.buttonTransactionManagement.TabIndex = 3;
             this.buttonTransactionManagement.Text = "Transaction management";
             this.buttonTransactionManagement.UseVisualStyleBackColor = false;
@@ -84,9 +88,10 @@
             // 
             this.buttonTicketManagement.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonTicketManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonTicketManagement.Location = new System.Drawing.Point(-1, 170);
+            this.buttonTicketManagement.Location = new System.Drawing.Point(-1, 138);
+            this.buttonTicketManagement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonTicketManagement.Name = "buttonTicketManagement";
-            this.buttonTicketManagement.Size = new System.Drawing.Size(202, 51);
+            this.buttonTicketManagement.Size = new System.Drawing.Size(152, 41);
             this.buttonTicketManagement.TabIndex = 2;
             this.buttonTicketManagement.Text = "Ticket management";
             this.buttonTicketManagement.UseVisualStyleBackColor = false;
@@ -95,9 +100,10 @@
             // 
             this.buttonArrangement.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonArrangement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonArrangement.Location = new System.Drawing.Point(0, 88);
+            this.buttonArrangement.Location = new System.Drawing.Point(0, 72);
+            this.buttonArrangement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonArrangement.Name = "buttonArrangement";
-            this.buttonArrangement.Size = new System.Drawing.Size(202, 51);
+            this.buttonArrangement.Size = new System.Drawing.Size(152, 41);
             this.buttonArrangement.TabIndex = 1;
             this.buttonArrangement.Text = "Arrangement management";
             this.buttonArrangement.UseVisualStyleBackColor = false;
@@ -107,9 +113,10 @@
             // 
             this.buttonClientManagement.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClientManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClientManagement.Location = new System.Drawing.Point(0, 10);
+            this.buttonClientManagement.Location = new System.Drawing.Point(0, 8);
+            this.buttonClientManagement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonClientManagement.Name = "buttonClientManagement";
-            this.buttonClientManagement.Size = new System.Drawing.Size(200, 51);
+            this.buttonClientManagement.Size = new System.Drawing.Size(150, 41);
             this.buttonClientManagement.TabIndex = 0;
             this.buttonClientManagement.Text = "Client management";
             this.buttonClientManagement.UseVisualStyleBackColor = false;
@@ -117,14 +124,16 @@
             // 
             // AdminDashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
-            this.ClientSize = new System.Drawing.Size(735, 410);
+            this.ClientSize = new System.Drawing.Size(551, 333);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "AdminDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminDashboard";
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
             this.panel2.ResumeLayout(false);
