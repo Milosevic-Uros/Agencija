@@ -77,9 +77,11 @@ namespace PresentationLayer
 
             else if (usernameLog.Text == "milosevicurosit@gmail.com" || usernameLog.Text == "milicasebicit@gmail.com" && passwordLog.Text == "admin123")
             {
-                AdminDashboard adminDashboard = new AdminDashboard(adminBusiness, clientBusiness);
-                adminDashboard.Show();
-                this.Hide();
+                InsertClient insertClient = new InsertClient(adminBusiness);
+                insertClient.Show();
+                //AdminDashboard adminDashboard = new AdminDashboard(adminBusiness, clientBusiness);
+                //adminDashboard.Show();
+                //this.Hide();
             }
 
             Client client = adminBusiness.GetClient(usernameLog.Text, passwordLog.Text);

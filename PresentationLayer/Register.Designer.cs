@@ -53,6 +53,7 @@
             this.buttonRegister = new System.Windows.Forms.Button();
             this.panel5 = new System.Windows.Forms.Panel();
             this.labelSignUp = new System.Windows.Forms.Label();
+            this.LoginLabel = new System.Windows.Forms.LinkLabel();
             labelPassword = new System.Windows.Forms.Label();
             labelEmail = new System.Windows.Forms.Label();
             labelSurname = new System.Windows.Forms.Label();
@@ -159,6 +160,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Window;
+            this.panel1.Controls.Add(this.LoginLabel);
             this.panel1.Controls.Add(this.textBoxPhone);
             this.panel1.Controls.Add(labelPhone);
             this.panel1.Controls.Add(this.panel3);
@@ -284,7 +286,7 @@
             // 
             this.buttonRegister.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
             this.buttonRegister.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonRegister.Location = new System.Drawing.Point(154, 393);
+            this.buttonRegister.Location = new System.Drawing.Point(154, 373);
             this.buttonRegister.Name = "buttonRegister";
             this.buttonRegister.Size = new System.Drawing.Size(136, 36);
             this.buttonRegister.TabIndex = 32;
@@ -308,6 +310,18 @@
             this.labelSignUp.Size = new System.Drawing.Size(188, 39);
             this.labelSignUp.TabIndex = 29;
             this.labelSignUp.Text = "REGISTER";
+            // 
+            // LoginLabel
+            // 
+            this.LoginLabel.AutoSize = true;
+            this.LoginLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LoginLabel.Location = new System.Drawing.Point(134, 430);
+            this.LoginLabel.Name = "LoginLabel";
+            this.LoginLabel.Size = new System.Drawing.Size(180, 25);
+            this.LoginLabel.TabIndex = 48;
+            this.LoginLabel.TabStop = true;
+            this.LoginLabel.Text = "Back to log in page";
+            this.LoginLabel.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LoginLabel_LinkClicked);
             // 
             // Register
             // 
@@ -350,5 +364,6 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox textBoxID;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.LinkLabel LoginLabel;
     }
 }

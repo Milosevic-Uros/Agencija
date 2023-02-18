@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Shared.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -13,8 +14,12 @@ namespace PresentationLayer
 {
     public partial class Register : Form
     {
-        public Register()
+        private readonly IAdminBusiness adminBusiness;
+        private readonly IClientBusiness clientBusiness;
+        public Register(IAdminBusiness _adminBusiness, IClientBusiness _clientBusiness)
         {
+            adminBusiness = _adminBusiness;
+            clientBusiness = _clientBusiness;
             InitializeComponent();
         }
 
@@ -90,6 +95,13 @@ namespace PresentationLayer
         private void Register_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void LoginLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Hide();
+            Login l = new Login(adminBusiness, clientBusiness);
+            l.ShowDialog();
         }
     }
 }

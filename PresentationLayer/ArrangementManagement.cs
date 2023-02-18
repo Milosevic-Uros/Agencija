@@ -48,7 +48,7 @@ namespace PresentationLayer
         private void ArrangementManagement_Load(object sender, EventArgs e)
         {
             List<Arrangement> accomodationList = adminBusiness.GetAllArrangements();
-            dataGridViewArrangemet.DataSource= accomodationList;
+            dataGridViewArrangemet.DataSource = accomodationList;
         }
 
         private void dataGridViewArrangemet_CellContentClick(object sender, DataGridViewCellEventArgs e)
