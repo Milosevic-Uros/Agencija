@@ -129,6 +129,8 @@ namespace PresentationLayer
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            ClientManagement clientManagement = new ClientManagement(adminBusiness);
+            clientManagement.Show();
         }
 
         private void InsertClient_Load(object sender, EventArgs e)

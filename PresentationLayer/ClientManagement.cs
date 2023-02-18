@@ -99,6 +99,7 @@ namespace PresentationLayer
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
+            this.Close();
             InsertClient insertClientForm = new InsertClient(adminBusiness);
             insertClientForm.Show();
         }
