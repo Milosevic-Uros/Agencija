@@ -13,7 +13,7 @@ namespace BusinessLayer
     {
         private readonly IClientRepository clientRepository;
 
-        public ClientBusiness(IClientBusiness _clientRepository)
+        public ClientBusiness(IClientRepository _clientRepository)
         {
             clientRepository = _clientRepository;
         }
