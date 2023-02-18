@@ -208,7 +208,7 @@
             this.buttonClose.TabIndex = 33;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
+
             // 
             // TicketManagement
             // 
