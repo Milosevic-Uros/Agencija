@@ -23,6 +23,8 @@ namespace PresentationLayer
 
         private void InsertTicket_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'aGENCIJADataSet.LOCATIONS' table. You can move, or remove it, as needed.
+            this.lOCATIONSTableAdapter.Fill(this.aGENCIJADataSet.LOCATIONS);
 
         }
 
@@ -33,8 +35,8 @@ namespace PresentationLayer
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
-            if (textBoxTicketID.Text == "" || textBoxName.Text == ""  || dateTimePickerDeparture.Text == "" || dateTimePickerReturn.Text == "" || textBoxLocationID.Text == ""
-                || comboBoxTransport.Text == "" || textBoxPrice.Text == "" || textBoxVacancies.Text == "") 
+            if (textBoxName.Text == ""  || comboBoxLocation.ValueMember ==null
+                || comboBoxTransport.ValueMember ==null || textBoxPrice.Text == "" || textBoxVacancies.Text == "") 
             {
                 MessageBox.Show("Fill in all required fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxName.Focus();
@@ -42,11 +44,10 @@ namespace PresentationLayer
             }
 
             Ticket ticket = new Ticket();
-            ticket.ticketId = Convert.ToInt32(textBoxTicketID.Text);
             ticket.name = textBoxName.Text;
             ticket.dateOfDeparture = dateTimePickerDeparture.Value;
             ticket.returnDate = dateTimePickerReturn.Value;
-            ticket.locationId = Convert.ToInt32(textBoxLocationID.Text);
+            ticket.locationId = Convert.ToInt32(comboBoxLocation.ValueMember);
             ticket.typeOfTransport = comboBoxTransport.SelectedItem.ToString();
             ticket.price = Convert.ToInt32(textBoxPrice.Text);
             ticket.numberOfVacancies = Convert.ToInt32(textBoxVacancies.Text);
@@ -54,12 +55,11 @@ namespace PresentationLayer
             string result = adminBusiness.InsertTicket(ticket);
             MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            textBoxTicketID.Text = "";
             textBoxName.Text = "";
             dateTimePickerDeparture.Text = "";
             dateTimePickerReturn.Text = "";
-            textBoxLocationID.Text = "";
-            comboBoxTransport.SelectedItem= null;
+            comboBoxLocation.DisplayMember = "";
+            comboBoxTransport.DisplayMember = "";
             textBoxPrice.Text = "";
             textBoxVacancies.Text = "";
 

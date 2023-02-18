@@ -29,34 +29,21 @@ namespace PresentationLayer
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
-            if (textBoxArrangementID.Text == "" || textBoxName.Text == "" || dateTimePickerDeparture.Text == "" || dateTimePickerReturn.Text == "" ||
-                textBoxLocationID.Text == "" || textBoxTransportType.Text == "" || textBoxArrangement.Text == "" || textBoxVacancies.Text == "" || textBoxPrice.Text == "")
+            if (textBoxName.Text == ""  || comboBoxLocation.DisplayMember == "" || comboBoxArrangement.DisplayMember == "" || comboBoxTransport.DisplayMember == "" || textBoxVacancies.Text == "" || textBoxPrice.Text == "")
             {
                     MessageBox.Show("Fill in all required fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     textBoxName.Focus();
                     return;
             }
-            else if (!Regex.Match(textBoxArrangementID.Text, "^\\d{4}$").Success)
-            {
-                MessageBox.Show("The ID number field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxArrangementID.Focus();
-                return;
-            }
-            else if (!Regex.Match(textBoxLocationID.Text, "^\\d{4}$").Success)
-            {
-                MessageBox.Show("The ID number field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxLocationID.Focus();
-                return;
-            }
+            
 
             Arrangement arrangement = new Arrangement();
-            arrangement.arrangementId = Convert.ToInt32(textBoxArrangementID.Text);
             arrangement.name = textBoxName.Text;
             arrangement.dateOfDeparture = dateTimePickerDeparture.Value;
             arrangement.returnDate = dateTimePickerReturn.Value;
-            arrangement.locationId = Convert.ToInt32(textBoxLocationID.Text);
-            arrangement.typeofTransport = textBoxTransportType.Text;
-            arrangement.typeOfArrangement = textBoxArrangement.Text;
+            arrangement.locationId = Convert.ToInt32(comboBoxLocation.ValueMember);
+            arrangement.typeofTransport = comboBoxTransport.SelectedItem.ToString();
+            arrangement.typeOfArrangement = comboBoxArrangement.DisplayMember;
             arrangement.numberOfVacancies = Convert.ToInt32(textBoxVacancies.Text);
             arrangement.price = Convert.ToInt32(textBoxPrice.Text);
 
@@ -64,13 +51,12 @@ namespace PresentationLayer
             string result = adminBusiness.InsertArrangement(arrangement);
             MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            textBoxArrangementID.Text = "";
             textBoxName.Text = "";
-            dateTimePickerDeparture.Text = "";
-            dateTimePickerReturn.Text = "";
-            textBoxLocationID.Text = "";
-            textBoxTransportType.Text = "";
-            textBoxArrangement.Text = "";
+            dateTimePickerDeparture.Value = DateTime.Now;
+            dateTimePickerReturn.Value = DateTime.Now;
+            comboBoxLocation.SelectedIndex = 0;
+            comboBoxTransport.SelectedIndex = 0;
+            comboBoxArrangement.SelectedIndex = 0;
             textBoxVacancies.Text = "";
             textBoxPrice.Text = "";
         }

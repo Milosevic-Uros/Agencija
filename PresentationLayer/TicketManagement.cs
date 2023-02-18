@@ -86,21 +86,12 @@ namespace PresentationLayer
         {
             List<Ticket> ticketList = adminBusiness.GetAllTickets();
             dataGridViewTickets.DataSource = ticketList;
+            comboBoxTransport.SelectedIndex = 0;
         }
 
         private void dataGridViewTickets_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0)
-            {
-
-                DataGridViewRow row = this.dataGridViewTickets.Rows[e.RowIndex];
-                MessageBox.Show(row.Cells[2].Value.ToString());
-                textBoxTicketID.Text = row.Cells[0].Value.ToString();
-                //dateTimePickerDeparture.Value=DateTime.Parse(row.Cells[2].Value.ToString(),"dd/MM/yyyy", CultureInfo.InvariantCulture);
-                //dateTimePickerReturnDate.Text = row.Cells[3].Value.ToString();
-                //comboBoxTransport. = row.Cells[5].Value.ToString();
-
-            }
+            
         }
 
         private void buttonInsert_Click(object sender, EventArgs e)
@@ -109,9 +100,17 @@ namespace PresentationLayer
             insertTicket.Show();
         }
 
-        private void buttonClose_Click(object sender, EventArgs e)
+        private void dataGridViewTickets_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            this.Close();
+            if (e.RowIndex >= 0)
+            {
+
+                DataGridViewRow row = this.dataGridViewTickets.Rows[e.RowIndex];
+                textBoxTicketID.Text = row.Cells[0].Value.ToString();
+                comboBoxTransport.SelectedIndex = comboBoxTransport.Items.IndexOf(row.Cells[5].Value.ToString());
+                    
+
+            }
         }
     }
 }

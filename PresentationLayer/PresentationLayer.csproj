@@ -67,6 +67,11 @@
     <Compile Include="AdminDashboard.Designer.cs">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="AGENCIJADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AGENCIJADataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ArrangementManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -162,6 +167,17 @@
     <EmbeddedResource Include="TicketManagement.resx">
       <DependentUpon>TicketManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="AGENCIJADataSet.xsc">
+      <DependentUpon>AGENCIJADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AGENCIJADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AGENCIJADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AGENCIJADataSet.xss">
+      <DependentUpon>AGENCIJADataSet.xsd</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

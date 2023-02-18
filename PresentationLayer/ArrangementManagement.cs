@@ -26,7 +26,7 @@ namespace PresentationLayer
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            if (textBoxArrangementID.Text == "" || textBoxLocationID.Text == "" || dateTimePickerDeparture.Text == "" || dateTimePickerReturnDate.Text == "")
+            if (textBoxArrangementID.Text == "" || comboBoxLocation.DisplayMember!="" || dateTimePickerDeparture.Text == "" || dateTimePickerReturnDate.Text == "")
             {
                 MessageBox.Show("Select arrangement!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxArrangementID.Focus();
@@ -40,7 +40,7 @@ namespace PresentationLayer
                 dataGridViewArrangemet.DataSource = adminBusiness.GetAllClients();
 
                 textBoxArrangementID.Text = "";
-                textBoxLocationID.Text = "";
+                comboBoxLocation.SelectedIndex = 0;
                 dateTimePickerDeparture.Text = "";
                 dateTimePickerReturnDate.Text = "";
             }
@@ -61,14 +61,14 @@ namespace PresentationLayer
                 textBoxArrangementID.Text = row.Cells[0].Value.ToString();
                 dateTimePickerDeparture.Text = row.Cells[1].Value.ToString();
                 dateTimePickerReturnDate.Text = row.Cells[2].Value.ToString();
-                textBoxLocationID.Text = row.Cells[3].Value.ToString();
+                comboBoxLocation.ValueMember = row.Cells[3].Value.ToString();
 
             }
         }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            if (textBoxArrangementID.Text == "" || textBoxLocationID.Text == "" || dateTimePickerDeparture.Text == "" || dateTimePickerReturnDate.Text == "")
+            if (textBoxArrangementID.Text == "" || comboBoxLocation.DisplayMember == "" )
             {
                 MessageBox.Show("Select arrangement!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxArrangementID.Focus();
@@ -80,16 +80,16 @@ namespace PresentationLayer
                 textBoxArrangementID.Focus();
                 return;
             }
-            else if (!Regex.Match(textBoxLocationID.Text, "^\\d{4}$").Success)
+            else if (!Regex.Match(comboBoxLocation.ValueMember, "^\\d{4}$").Success)
             {
                 MessageBox.Show("The ID number field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxLocationID.Focus();
+                comboBoxLocation.Focus();
                 return;
             }
 
             Arrangement arrangement = new Arrangement();
             arrangement.arrangementId = Convert.ToInt32(textBoxArrangementID.Text);
-            arrangement.locationId = Convert.ToInt32(textBoxLocationID.Text);
+            arrangement.locationId = Convert.ToInt32(comboBoxLocation.ValueMember);
             arrangement.dateOfDeparture = dateTimePickerDeparture.Value;
             arrangement.returnDate = dateTimePickerReturnDate.Value;
             string result = adminBusiness.UpdateArrangement(arrangement);
