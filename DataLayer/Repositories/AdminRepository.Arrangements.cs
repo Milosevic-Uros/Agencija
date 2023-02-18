@@ -79,17 +79,11 @@ namespace DataLayer.Repositories
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE ARRANGEMENTS SET name=@name,date_of_departure=@dateOfDeparture,return_date=@returnDate,location_id=@locationId,type_of_transport=@typeOfTransport,number_of_vacancies=@numberOfVacancies,description=@description,price=@price WHERE arrangement_id=@id";
+                string query = "UPDATE ARRANGEMENTS SET date_of_departure=CAST(@dateOfDeparture AS DATETIME),return_date=CAST(@returnDate AS DATETIME),location_id=@locationId WHERE arrangement_id=@id";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@name", arrangement.name);
-                command.Parameters.AddWithValue("@date_of_departure", arrangement.dateOfDeparture);
-                command.Parameters.AddWithValue("@return_date", arrangement.returnDate);
-                command.Parameters.AddWithValue("@location", arrangement.locationId);
-                command.Parameters.AddWithValue("@type_of_transport", arrangement.typeofTransport);
-                command.Parameters.AddWithValue("@type_of_arrangement", arrangement.typeOfArrangement);
-                command.Parameters.AddWithValue("@number_of_vacancies", arrangement.numberOfVacancies);
-                command.Parameters.AddWithValue("@description", arrangement.description);
-                command.Parameters.AddWithValue("@price", arrangement.price);
+                command.Parameters.AddWithValue("@dateOfDeparture", arrangement.dateOfDeparture);
+                command.Parameters.AddWithValue("@returnDate", arrangement.returnDate);
+                command.Parameters.AddWithValue("@locationId", arrangement.locationId);
                 command.Parameters.AddWithValue("@id", arrangement.arrangementId);
 
                 connection.Open();

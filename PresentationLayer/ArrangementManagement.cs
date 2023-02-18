@@ -48,23 +48,12 @@ namespace PresentationLayer
 
         private void ArrangementManagement_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'aGENCIJADataSet.LOCATIONS' table. You can move, or remove it, as needed.
+            this.lOCATIONSTableAdapter.Fill(this.aGENCIJADataSet.LOCATIONS);
             List<Arrangement> accomodationList = adminBusiness.GetAllArrangements();
             dataGridViewArrangemet.DataSource = accomodationList;
         }
 
-        private void dataGridViewArrangemet_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-
-                DataGridViewRow row = this.dataGridViewArrangemet.Rows[e.RowIndex];
-                textBoxArrangementID.Text = row.Cells[0].Value.ToString();
-                dateTimePickerDeparture.Text = row.Cells[1].Value.ToString();
-                dateTimePickerReturnDate.Text = row.Cells[2].Value.ToString();
-                comboBoxLocation.ValueMember = row.Cells[3].Value.ToString();
-
-            }
-        }
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
@@ -74,27 +63,22 @@ namespace PresentationLayer
                 textBoxArrangementID.Focus();
                 return;
             }
-            else if (!Regex.Match(textBoxArrangementID.Text, "^\\d{4}$").Success)
+            else if (!Regex.Match(textBoxArrangementID.Text, "^\\d{0,4}$").Success)
             {
                 MessageBox.Show("The ID number field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxArrangementID.Focus();
                 return;
             }
-            else if (!Regex.Match(comboBoxLocation.ValueMember, "^\\d{4}$").Success)
-            {
-                MessageBox.Show("The ID number field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                comboBoxLocation.Focus();
-                return;
-            }
+
 
             Arrangement arrangement = new Arrangement();
             arrangement.arrangementId = Convert.ToInt32(textBoxArrangementID.Text);
-            arrangement.locationId = Convert.ToInt32(comboBoxLocation.ValueMember);
+            arrangement.locationId = Convert.ToInt32(comboBoxLocation.SelectedValue);
             arrangement.dateOfDeparture = dateTimePickerDeparture.Value;
             arrangement.returnDate = dateTimePickerReturnDate.Value;
             string result = adminBusiness.UpdateArrangement(arrangement);
             MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            dataGridViewArrangemet.DataSource = adminBusiness.GetAllClients();
+            dataGridViewArrangemet.DataSource = adminBusiness.GetAllArrangements();
         }
 
         private void buttonInsert_Click(object sender, EventArgs e)
@@ -121,6 +105,20 @@ namespace PresentationLayer
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void dataGridViewArrangemet_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            if (e.RowIndex >= 0)
+            {
+
+                DataGridViewRow row = this.dataGridViewArrangemet.Rows[e.RowIndex];
+                textBoxArrangementID.Text = row.Cells[0].Value.ToString();
+                dateTimePickerDeparture.Value = Convert.ToDateTime(row.Cells[2].Value);
+                dateTimePickerReturnDate.Value = Convert.ToDateTime(row.Cells[3].Value);
+                comboBoxLocation.SelectedValue = Convert.ToInt32(row.Cells[4].Value);
+
+            }
         }
     }
 }
