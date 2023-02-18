@@ -45,15 +45,11 @@ namespace DataLayer.Repositories
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE TICKETS SET name=@name,date_of_departure=@dateOfDeparture,return_date=@returnDate,location_id=@locationId,type_of_transport=@typeOfTransport,price=@price,number_of_vacancies=@numOfVacancies WHERE ticket_id=@id";
+                string query = "UPDATE TICKETS SET date_of_departure=@dateOfDeparture,return_date=@returnDate,type_of_transport=@typeOfTransport WHERE ticket_id=@id";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@name", ticket.name);
-                command.Parameters.AddWithValue("@date_of_departure", ticket.dateOfDeparture);
-                command.Parameters.AddWithValue("@return_date", ticket.returnDate);
-                command.Parameters.AddWithValue("@location_id", ticket.locationId);
-                command.Parameters.AddWithValue("@type_of_transport", ticket.typeOfTransport);
-                command.Parameters.AddWithValue("@price", ticket.price);
-                command.Parameters.AddWithValue("@numberOfVacancies", ticket.numberOfVacancies);
+                command.Parameters.AddWithValue("@dateOfDeparture", ticket.dateOfDeparture.ToString());
+                command.Parameters.AddWithValue("@returnDate", ticket.returnDate.ToString());
+                command.Parameters.AddWithValue("@typeOfTransport", ticket.typeOfTransport);
                 command.Parameters.AddWithValue("@id", ticket.ticketId);
 
                 connection.Open();

@@ -31,7 +31,7 @@ namespace PresentationLayer
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            if (textBoxTicketID.Text == "" || comboBoxTransport.Text == "" || dateTimePickerDeparture.Text == "" || dateTimePickerReturnDate.Text == "")
+            if (textBoxTicketID.Text == "" || comboBoxTransport.Text == "" || dateTimePickerDeparture.Value == null || dateTimePickerReturnDate.Value ==null)
             {
                 MessageBox.Show("Select ticket!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxTicketID.Focus();
@@ -59,7 +59,7 @@ namespace PresentationLayer
                 textBoxTicketID.Focus();
                 return;
             }
-            else if (!Regex.Match(textBoxTicketID.Text, "^\\d{4}$").Success)
+            else if (!Regex.Match(textBoxTicketID.Text, "^\\d{0,4}$").Success)
             {
                 MessageBox.Show("The ID number field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxTicketID.Focus();
