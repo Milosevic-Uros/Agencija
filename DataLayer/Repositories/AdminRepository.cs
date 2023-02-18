@@ -92,15 +92,10 @@ namespace DataLayer.Repositories
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE CLIENTS SET first_name=@firstName, last_name=@lastName, id_number=@idNumber, unique_id_number=@jmbg, passport_number=@passportNumber,address=@address,email=@email,password=@password WHERE client_id=@id";
+                string query = "UPDATE CLIENTS SET phone_number=@phoneNumber,email=@email,password=@password WHERE client_id=@id";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@firstName", client.firstName);
-                command.Parameters.AddWithValue("@lastName", client.lastName);
-                command.Parameters.AddWithValue("@idNumber", client.idNumber);
-                command.Parameters.AddWithValue("@jmbg", client.uniqueIdNumber);
-                command.Parameters.AddWithValue("@passportNumber", client.passportNumber);
-                command.Parameters.AddWithValue("@address", client.address);
-                command.Parameters.AddWithValue("@email", client.address);
+                command.Parameters.AddWithValue("@phoneNumber", client.phoneNumber);
+                command.Parameters.AddWithValue("@email", client.email);
                 command.Parameters.AddWithValue("@password", client.password);
                 command.Parameters.AddWithValue("@id", client.clientId);
 
