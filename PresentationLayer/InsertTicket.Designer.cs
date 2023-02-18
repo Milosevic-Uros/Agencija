@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.comboBoxTransport = new System.Windows.Forms.ComboBox();
+            this.dateTimePickerReturn = new System.Windows.Forms.DateTimePicker();
+            this.dateTimePickerDeparture = new System.Windows.Forms.DateTimePicker();
             this.buttonInsert = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -46,9 +49,6 @@
             this.labelReturn = new System.Windows.Forms.Label();
             this.textBoxTicketID = new System.Windows.Forms.TextBox();
             this.labelTciketID = new System.Windows.Forms.Label();
-            this.dateTimePickerDeparture = new System.Windows.Forms.DateTimePicker();
-            this.dateTimePickerReturn = new System.Windows.Forms.DateTimePicker();
-            this.comboBoxTransport = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -80,6 +80,28 @@
             this.panel1.Size = new System.Drawing.Size(798, 451);
             this.panel1.TabIndex = 1;
             // 
+            // comboBoxTransport
+            // 
+            this.comboBoxTransport.FormattingEnabled = true;
+            this.comboBoxTransport.Location = new System.Drawing.Point(535, 236);
+            this.comboBoxTransport.Name = "comboBoxTransport";
+            this.comboBoxTransport.Size = new System.Drawing.Size(121, 24);
+            this.comboBoxTransport.TabIndex = 27;
+            // 
+            // dateTimePickerReturn
+            // 
+            this.dateTimePickerReturn.Location = new System.Drawing.Point(88, 236);
+            this.dateTimePickerReturn.Name = "dateTimePickerReturn";
+            this.dateTimePickerReturn.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePickerReturn.TabIndex = 26;
+            // 
+            // dateTimePickerDeparture
+            // 
+            this.dateTimePickerDeparture.Location = new System.Drawing.Point(535, 154);
+            this.dateTimePickerDeparture.Name = "dateTimePickerDeparture";
+            this.dateTimePickerDeparture.Size = new System.Drawing.Size(200, 22);
+            this.dateTimePickerDeparture.TabIndex = 25;
+            // 
             // buttonInsert
             // 
             this.buttonInsert.BackColor = System.Drawing.Color.SteelBlue;
@@ -90,6 +112,7 @@
             this.buttonInsert.TabIndex = 23;
             this.buttonInsert.Text = "Insert ticket";
             this.buttonInsert.UseVisualStyleBackColor = false;
+            this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
             // buttonClose
             // 
@@ -101,6 +124,7 @@
             this.buttonClose.TabIndex = 22;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // panel2
             // 
@@ -117,7 +141,7 @@
             this.labelINSERT.Font = new System.Drawing.Font("Microsoft Tai Le", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelINSERT.Location = new System.Drawing.Point(219, 21);
             this.labelINSERT.Name = "labelINSERT";
-            this.labelINSERT.Size = new System.Drawing.Size(451, 69);
+            this.labelINSERT.Size = new System.Drawing.Size(361, 55);
             this.labelINSERT.TabIndex = 0;
             this.labelINSERT.Text = "Insert new ticket";
             // 
@@ -127,7 +151,7 @@
             this.labelTicketType.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTicketType.Location = new System.Drawing.Point(531, 205);
             this.labelTicketType.Name = "labelTicketType";
-            this.labelTicketType.Size = new System.Drawing.Size(125, 28);
+            this.labelTicketType.Size = new System.Drawing.Size(100, 22);
             this.labelTicketType.TabIndex = 17;
             this.labelTicketType.Text = "Ticket type";
             // 
@@ -137,7 +161,7 @@
             this.labelDeparture.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelDeparture.Location = new System.Drawing.Point(531, 123);
             this.labelDeparture.Name = "labelDeparture";
-            this.labelDeparture.Size = new System.Drawing.Size(166, 28);
+            this.labelDeparture.Size = new System.Drawing.Size(133, 22);
             this.labelDeparture.TabIndex = 15;
             this.labelDeparture.Text = "Departure date";
             // 
@@ -154,7 +178,7 @@
             this.labelVacancies.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelVacancies.Location = new System.Drawing.Point(435, 278);
             this.labelVacancies.Name = "labelVacancies";
-            this.labelVacancies.Size = new System.Drawing.Size(108, 28);
+            this.labelVacancies.Size = new System.Drawing.Size(86, 22);
             this.labelVacancies.TabIndex = 13;
             this.labelVacancies.Text = "Vacancies";
             // 
@@ -171,7 +195,7 @@
             this.labelLocationID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelLocationID.Location = new System.Drawing.Point(315, 205);
             this.labelLocationID.Name = "labelLocationID";
-            this.labelLocationID.Size = new System.Drawing.Size(126, 28);
+            this.labelLocationID.Size = new System.Drawing.Size(101, 22);
             this.labelLocationID.TabIndex = 11;
             this.labelLocationID.Text = "Location ID";
             // 
@@ -188,7 +212,7 @@
             this.labelName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelName.Location = new System.Drawing.Point(315, 123);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(71, 28);
+            this.labelName.Size = new System.Drawing.Size(57, 22);
             this.labelName.TabIndex = 9;
             this.labelName.Text = "Name";
             // 
@@ -205,7 +229,7 @@
             this.labelPrice.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelPrice.Location = new System.Drawing.Point(204, 278);
             this.labelPrice.Name = "labelPrice";
-            this.labelPrice.Size = new System.Drawing.Size(61, 28);
+            this.labelPrice.Size = new System.Drawing.Size(49, 22);
             this.labelPrice.TabIndex = 7;
             this.labelPrice.Text = "Price";
             // 
@@ -215,7 +239,7 @@
             this.labelReturn.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelReturn.Location = new System.Drawing.Point(84, 205);
             this.labelReturn.Name = "labelReturn";
-            this.labelReturn.Size = new System.Drawing.Size(131, 28);
+            this.labelReturn.Size = new System.Drawing.Size(105, 22);
             this.labelReturn.TabIndex = 5;
             this.labelReturn.Text = "Return date";
             // 
@@ -232,31 +256,9 @@
             this.labelTciketID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTciketID.Location = new System.Drawing.Point(84, 123);
             this.labelTciketID.Name = "labelTciketID";
-            this.labelTciketID.Size = new System.Drawing.Size(103, 28);
+            this.labelTciketID.Size = new System.Drawing.Size(82, 22);
             this.labelTciketID.TabIndex = 3;
             this.labelTciketID.Text = "Ticket ID";
-            // 
-            // dateTimePickerDeparture
-            // 
-            this.dateTimePickerDeparture.Location = new System.Drawing.Point(535, 154);
-            this.dateTimePickerDeparture.Name = "dateTimePickerDeparture";
-            this.dateTimePickerDeparture.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePickerDeparture.TabIndex = 25;
-            // 
-            // dateTimePickerReturn
-            // 
-            this.dateTimePickerReturn.Location = new System.Drawing.Point(88, 236);
-            this.dateTimePickerReturn.Name = "dateTimePickerReturn";
-            this.dateTimePickerReturn.Size = new System.Drawing.Size(200, 22);
-            this.dateTimePickerReturn.TabIndex = 26;
-            // 
-            // comboBoxTransport
-            // 
-            this.comboBoxTransport.FormattingEnabled = true;
-            this.comboBoxTransport.Location = new System.Drawing.Point(535, 236);
-            this.comboBoxTransport.Name = "comboBoxTransport";
-            this.comboBoxTransport.Size = new System.Drawing.Size(121, 24);
-            this.comboBoxTransport.TabIndex = 27;
             // 
             // InsertTicket
             // 
@@ -266,6 +268,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "InsertTicket";
             this.Text = "InsertTicket";
+            this.Load += new System.EventHandler(this.InsertTicket_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
