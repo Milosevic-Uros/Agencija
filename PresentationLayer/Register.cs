@@ -74,7 +74,7 @@ namespace PresentationLayer
             }
 
 
-            if (!Regex.Match(textBoxPassword.Text, "^[a-zA-Z][a-zA-Z0-9]{9,20}").Success)
+            if (!Regex.Match(textBoxPassword.Text, "^[a-zA-Z][a-zA-Z0-9]{5,15}").Success)
             {
                 MessageBox.Show("The password field is not filled in correctly! The length of the password must be between 10 and 20 characters!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxPassword.Focus();
