@@ -25,60 +25,50 @@ namespace PresentationLayer
 
         private void ClientManagement_Load(object sender, EventArgs e)
         {
+
             List<Client> clients = adminBusiness.GetAllClients();
             dataGridViewClients.DataSource = clients;
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0) {
-            
-                DataGridViewRow row = this.dataGridViewClients.Rows[e.RowIndex];
-                textBoxName.Text = row.Cells[0].Value.ToString();
-                textBoxLastname.Text = row.Cells[1].Value.ToString();
-                textBoxIDNumber.Text = row.Cells[2].Value.ToString();
-                textBoxPhoneNum.Text = row.Cells[3].Value.ToString();
-            
-            }
-        }
+
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            if (textBoxName.Text == "" || textBoxLastname.Text == "" || textBoxIDNumber.Text == "" || textBoxPhoneNum.Text == "") {
+            if (textBoxId.Text == "" || textBoxPhoneNumber.Text == "" || textBoxEmail.Text == "" || textBoxPassword.Text == "") {
                 MessageBox.Show("Fill in all required fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxName.Focus();
+                textBoxId.Focus();
                 return;
             }
-            else if(!Regex.Match(textBoxName.Text, "^[A-Z][a-z]*$").Success)
+            else if(!Regex.Match(textBoxId.Text, "\\d{0,5}").Success)
             {
-                MessageBox.Show("The name field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxName.Focus();
+                MessageBox.Show("The ID field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxId.Focus();
                 return;
             }
-            else if (!Regex.Match(textBoxLastname.Text, "^[A-Z][a-z]*$").Success)
-            {
-                MessageBox.Show("The last name field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxLastname.Focus();
-                return;
-            }
-            else if (!Regex.Match(textBoxIDNumber.Text, "^\\d{9}$").Success)
-            {
-                MessageBox.Show("The ID number field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxIDNumber.Focus();
-                return;
-            }
-            else if (!Regex.Match(textBoxPhoneNum.Text, @"^([0][6]\d{1}[0-9]\d{2,3}\d{3,4}$)?").Success)
+            else if (!Regex.Match(textBoxPhoneNumber.Text, @"^[0][6]\d{7,8}$").Success)
             {
                 MessageBox.Show("The phone number field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxPhoneNum.Focus();
+                textBoxPhoneNumber.Focus();
+                return;
+            }
+            else if (!Regex.Match(textBoxEmail.Text, "^([\\w\\.\\-]+)@([\\w\\-]+)((\\.(\\w){2,3})+)$").Success)
+            {
+                MessageBox.Show("The email field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxEmail.Focus();
+                return;
+            }
+            else if (!Regex.Match(textBoxPassword.Text, @"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{6,25}$").Success)
+            {
+                MessageBox.Show("The password field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxPassword.Focus();
                 return;
             }
 
             Client client= new Client();
-            client.firstName = textBoxName.Text;
-            client.lastName = textBoxLastname.Text;
-            client.idNumber = textBoxIDNumber.Text;
-            client.phoneNumber = textBoxPhoneNum.Text;
+            client.clientId = Int32.Parse(textBoxId.Text);
+            client.phoneNumber = textBoxPhoneNumber.Text;
+            client.email = textBoxEmail.Text;
+            client.password = textBoxPassword.Text;
 
             string result = adminBusiness.UpdateClient(client);
             MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -87,23 +77,23 @@ namespace PresentationLayer
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            if (textBoxName.Text == "" || textBoxLastname.Text == "" || textBoxIDNumber.Text == "" || textBoxPhoneNum.Text == "")
+            if (textBoxId.Text == "" || textBoxPhoneNumber.Text == "" || textBoxEmail.Text == "" || textBoxPassword.Text == "")
             {
                 MessageBox.Show("Select client!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxName.Focus();
+                textBoxId.Focus();
                 return;
             }
             else 
             {
-                int clientID = Convert.ToInt32(textBoxIDNumber.Text);
+                int clientID = Convert.ToInt32(textBoxId.Text);
                 string result = adminBusiness.DeleteClient(clientID);
                 MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dataGridViewClients.DataSource = adminBusiness.GetAllClients();
 
-                textBoxName.Text = "";
-                textBoxLastname.Text = "";
-                textBoxIDNumber.Text = "";
-                textBoxPhoneNum.Text = "";
+                textBoxId.Text = "";
+                textBoxPhoneNumber.Text = "";
+                textBoxEmail.Text = "";
+                textBoxPassword.Text = "";
             }
         }
 
@@ -113,9 +103,18 @@ namespace PresentationLayer
             insertClientForm.Show();
         }
 
-        private void textBoxIDNumber_TextChanged(object sender, EventArgs e)
+        private void dataGridViewClients_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            if (e.RowIndex >= 0)
+            {
 
+                DataGridViewRow row = this.dataGridViewClients.Rows[e.RowIndex];
+                textBoxId.Text = row.Cells[0].Value.ToString();
+                textBoxPhoneNumber.Text = row.Cells[6].Value.ToString();
+                textBoxEmail.Text = row.Cells[8].Value.ToString();
+                textBoxPassword.Text = row.Cells[9].Value.ToString();
+
+            }
         }
     }
 }

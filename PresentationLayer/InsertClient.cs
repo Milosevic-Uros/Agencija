@@ -87,6 +87,9 @@ namespace PresentationLayer
                 client.phoneNumber = textBoxPhoneNum.Text;
                 client.email = textBoxEmail.Text;
                 client.password = textBoxPassword.Text;
+                client.uniqueIdNumber = textBoxJMBG.Text;
+                client.address = textBoxAddress.Text;
+                client.passportNumber = textBoxPassportNum.Text;
 
                 string result = adminBusiness.InsertClient(client);
                 MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);

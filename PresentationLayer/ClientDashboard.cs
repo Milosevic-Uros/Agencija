@@ -17,15 +17,11 @@ namespace PresentationLayer
         private IClientBusiness clientBusiness;
         private Client client;
 
-        public ClientDashboard()
-        {
-            InitializeComponent();
-        }
-
         public ClientDashboard(IClientBusiness _clientBusiness, Client _client)
         {
             clientBusiness = _clientBusiness;
             client = _client;
+            InitializeComponent();
         }
 
         private void ClientDashboard_Load(object sender, EventArgs e)
