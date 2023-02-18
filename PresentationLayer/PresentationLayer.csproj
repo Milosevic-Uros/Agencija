@@ -73,6 +73,12 @@
     <Compile Include="ArrangementManagement.Designer.cs">
       <DependentUpon>ArrangementManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientDashboard.Designer.cs">
+      <DependentUpon>ClientDashboard.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ArrangementManagement.resx">
       <DependentUpon>ArrangementManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientDashboard.resx">
+      <DependentUpon>ClientDashboard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ClientManagement.resx">
       <DependentUpon>ClientManagement.cs</DependentUpon>
