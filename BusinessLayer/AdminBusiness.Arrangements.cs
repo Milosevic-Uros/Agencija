@@ -20,7 +20,7 @@ namespace BusinessLayer
         }
         public string UpdateArrangement(Arrangement arrangement) 
         {
-            int rowsAffected = this.adminRepository.UpdateArrangement(arrangement);
+            int rowsAffected = adminRepository.UpdateArrangement(arrangement);
 
             if (rowsAffected > 0)
             {

@@ -66,7 +66,6 @@
             this.pictureBoxSlide.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxSlide.TabIndex = 4;
             this.pictureBoxSlide.TabStop = false;
-            this.pictureBoxSlide.Click += new System.EventHandler(this.pictureBox2_Click);
             // 
             // panel3
             // 

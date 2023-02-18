@@ -66,6 +66,7 @@ namespace PresentationLayer
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
+            this.Close();
             InsertArrangement insertArrangement = new InsertArrangement(adminBusiness);
             insertArrangement.Show();
         }

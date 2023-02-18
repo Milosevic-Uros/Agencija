@@ -24,15 +24,6 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBoxName_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonRegister_Click(object sender, EventArgs e)
         {
@@ -132,11 +123,6 @@ namespace PresentationLayer
             textBoxAddress.Text = "";
             textBoxPassport.Text = "";
             textBoxPhone.Text = "";
-
-        }
-
-        private void Register_Load(object sender, EventArgs e)
-        {
 
         }
 

@@ -29,11 +29,6 @@ namespace PresentationLayer
 
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
         int count = 0;
         private void timer1_Tick(object sender, EventArgs e)
         {

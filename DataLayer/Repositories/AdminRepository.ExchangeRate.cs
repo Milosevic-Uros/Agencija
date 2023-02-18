@@ -37,38 +37,50 @@ namespace DataLayer.Repositories
         }
         public int UpdateExchangeRateItem(ExchangeRate exchangeRate)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string query = "UPDATE EXCHANGE_RATES SET currency_code=@currencyCode,country_name=@countryName,mean_exchange_rate=@meanExchangeRate WHERE arrangement_id=@id";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@currencyCode", exchangeRate.currencyCode);
-                command.Parameters.AddWithValue("@countryName", exchangeRate.countryName);
-                command.Parameters.AddWithValue("@meanExchangeRate", exchangeRate.meanExchangeRate);
-                command.Parameters.AddWithValue("@currencyId", exchangeRate.currencyId);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE EXCHANGE_RATES SET currency_code=@currencyCode,country_name=@countryName,mean_exchange_rate=@meanExchangeRate WHERE currency_id=@id";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@currencyCode", exchangeRate.currencyCode);
+                    command.Parameters.AddWithValue("@countryName", exchangeRate.countryName);
+                    command.Parameters.AddWithValue("@meanExchangeRate", exchangeRate.meanExchangeRate);
+                    command.Parameters.AddWithValue("@id", exchangeRate.currencyId);
 
-                connection.Open();
-                int rowsUpdated;
-                rowsUpdated = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsUpdated;
+                    connection.Open();
+                    int rowsUpdated;
+                    rowsUpdated = command.ExecuteNonQuery();
+                    connection.Close();
+                    return rowsUpdated;
+                }
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
         public int InsertExchangeRateItem(ExchangeRate exchangeRate)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string query = "INSERT INTO EXCHANGE_RATES (currency_id,currency_code,country_name,mean_exchange_rate) VALUES(@currencyId,@currencyCode,@countryName,@meanExchangeRate)";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@currencyId", exchangeRate.currencyId);
-                command.Parameters.AddWithValue("@currencyCode", exchangeRate.currencyCode);
-                command.Parameters.AddWithValue("@countryName", exchangeRate.countryName);
-                command.Parameters.AddWithValue("@meanExchangeRate", exchangeRate.meanExchangeRate);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "INSERT INTO EXCHANGE_RATES (currency_id,currency_code,country_name,mean_exchange_rate) VALUES(@currencyId,@currencyCode,@countryName,@meanExchangeRate)";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@currencyId", exchangeRate.currencyId);
+                    command.Parameters.AddWithValue("@currencyCode", exchangeRate.currencyCode);
+                    command.Parameters.AddWithValue("@countryName", exchangeRate.countryName);
+                    command.Parameters.AddWithValue("@meanExchangeRate", exchangeRate.meanExchangeRate);
 
-                connection.Open();
-                int rowsUpdated;
-                rowsUpdated = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsUpdated;
+                    connection.Open();
+                    int rowsUpdated;
+                    rowsUpdated = command.ExecuteNonQuery();
+                    connection.Close();
+                    return rowsUpdated;
+                }
+            }catch(Exception ex){
+                return 0;
             }
         }
         public ExchangeRate GetExchangeRate(int currencyId)
@@ -97,17 +109,23 @@ namespace DataLayer.Repositories
         }
         public int DeleteExchangeRateItem(int currencyId)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string query = "DELETE FROM EXCHANGE_RATES WHERE currency_id=@id";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@id", currencyId);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "DELETE FROM EXCHANGE_RATES WHERE currency_id=@id";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@id", currencyId);
 
-                connection.Open();
-                int rowsUpdated;
-                rowsUpdated = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsUpdated;
+                    connection.Open();
+                    int rowsUpdated;
+                    rowsUpdated = command.ExecuteNonQuery();
+                    connection.Close();
+                    return rowsUpdated;
+                }
+            }catch (Exception ex) 
+            {
+                return 0;
             }
         }
     }
