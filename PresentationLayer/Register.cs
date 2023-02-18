@@ -1,4 +1,5 @@
 ﻿using Shared.Interfaces;
+using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -62,8 +63,13 @@ namespace PresentationLayer
                 textBoxSurname.Focus();
                 return;
             }
-
-            //regex za ID 
+            
+            if (!Regex.Match(textBoxID.Text, "^\\d{9}$").Success)
+            {
+                MessageBox.Show("The ID number field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxID.Focus();
+                return;
+            }
 
 
             if (!Regex.Match(textBoxPhone.Text, @"^([0][6]\d{1}[0-9]\d{2,3}\d{3,4}$)?").Success)
@@ -89,9 +95,43 @@ namespace PresentationLayer
                 return;
             }
 
+            if (!Regex.Match(textBoxJMBG.Text, "^^(0[1-9]|[12][0-9]|3[01])(0[1-9]|1[012])[0-9]{9}$").Success)
+            {
+                MessageBox.Show("13 characters required for JMBG field!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxJMBG.Focus();
+                return;
+            }
 
-            //Client client = new Client(textBoxName.Text, textBoxSurname.Text, textBoxID.Text, textBoxPhone.Text, textBoxEmail.Text, textBoxPassword.Text);
-            // potrebna insert user metoda koja ce da kupi samo ove podatke i mapira ih u bazu
+            if (!Regex.Match(textBoxPassport.Text, "^\\d{9}$").Success)
+            {
+                MessageBox.Show("The passport number field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxID.Focus();
+                return;
+            }
+
+            Client client = new Client();
+            client.firstName = textBoxName.Text;
+            client.lastName = textBoxSurname.Text;
+            client.idNumber= textBoxID.Text;
+            client.email = textBoxEmail.Text;
+            client.password = textBoxPassword.Text;
+            client.uniqueIdNumber = textBoxJMBG.Text;
+            client.address = textBoxAddress.Text;
+            client.passportNumber = textBoxPassport.Text;
+            client.phoneNumber = textBoxPhone.Text;
+
+            string result = adminBusiness.InsertClient(client);
+            MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            textBoxName.Text = "";
+            textBoxSurname.Text = "";
+            textBoxID.Text = "";
+            textBoxEmail.Text = "";
+            textBoxPassword.Text = "";
+            textBoxJMBG.Text = "";
+            textBoxAddress.Text = "";
+            textBoxPassport.Text = "";
+            textBoxPhone.Text = "";
 
         }
 

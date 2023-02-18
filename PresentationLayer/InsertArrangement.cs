@@ -74,5 +74,10 @@ namespace PresentationLayer
             textBoxVacancies.Text = "";
             textBoxPrice.Text = "";
         }
+
+        private void InsertArrangement_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

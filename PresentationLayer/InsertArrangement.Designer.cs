@@ -37,6 +37,7 @@
             this.labelINSERT = new System.Windows.Forms.Label();
             this.textBoxPrice = new System.Windows.Forms.TextBox();
             this.labelPrice = new System.Windows.Forms.Label();
+            this.textBoxTransportType = new System.Windows.Forms.TextBox();
             this.labelTrnasportType = new System.Windows.Forms.Label();
             this.labelDepartureDate = new System.Windows.Forms.Label();
             this.textBoxVacancies = new System.Windows.Forms.TextBox();
@@ -50,7 +51,6 @@
             this.labelReturnDate = new System.Windows.Forms.Label();
             this.textBoxArrangementID = new System.Windows.Forms.TextBox();
             this.labelArrangementID = new System.Windows.Forms.Label();
-            this.textBoxTransportType = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -158,6 +158,13 @@
             this.labelPrice.Size = new System.Drawing.Size(49, 22);
             this.labelPrice.TabIndex = 19;
             this.labelPrice.Text = "Price";
+            // 
+            // textBoxTransportType
+            // 
+            this.textBoxTransportType.Location = new System.Drawing.Point(535, 236);
+            this.textBoxTransportType.Name = "textBoxTransportType";
+            this.textBoxTransportType.Size = new System.Drawing.Size(147, 22);
+            this.textBoxTransportType.TabIndex = 18;
             // 
             // labelTrnasportType
             // 
@@ -274,21 +281,15 @@
             this.labelArrangementID.TabIndex = 3;
             this.labelArrangementID.Text = "Arrangement ID";
             // 
-            // textBoxTransportType
-            // 
-            this.textBoxTransportType.Location = new System.Drawing.Point(535, 236);
-            this.textBoxTransportType.Name = "textBoxTransportType";
-            this.textBoxTransportType.Size = new System.Drawing.Size(147, 22);
-            this.textBoxTransportType.TabIndex = 18;
-            // 
             // InsertArrangement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(640, 360);
+            this.ClientSize = new System.Drawing.Size(797, 448);
             this.Controls.Add(this.panel1);
             this.Name = "InsertArrangement";
             this.Text = "InsertArrangement";
+            this.Load += new System.EventHandler(this.InsertArrangement_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

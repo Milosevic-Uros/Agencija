@@ -112,5 +112,10 @@ namespace PresentationLayer
             InsertClient insertClientForm = new InsertClient(adminBusiness);
             insertClientForm.Show();
         }
+
+        private void textBoxIDNumber_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

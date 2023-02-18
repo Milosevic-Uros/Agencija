@@ -124,6 +124,7 @@
             this.textBoxIDNumber.Name = "textBoxIDNumber";
             this.textBoxIDNumber.Size = new System.Drawing.Size(147, 22);
             this.textBoxIDNumber.TabIndex = 6;
+            this.textBoxIDNumber.TextChanged += new System.EventHandler(this.textBoxIDNumber_TextChanged);
             // 
             // labelIDnum
             // 
