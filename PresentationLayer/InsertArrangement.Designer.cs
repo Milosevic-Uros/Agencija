@@ -165,7 +165,7 @@
             // 
             this.labelINSERT.AutoSize = true;
             this.labelINSERT.Font = new System.Drawing.Font("Microsoft Tai Le", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelINSERT.Location = new System.Drawing.Point(157, 20);
+            this.labelINSERT.Location = new System.Drawing.Point(136, 20);
             this.labelINSERT.Name = "labelINSERT";
             this.labelINSERT.Size = new System.Drawing.Size(508, 55);
             this.labelINSERT.TabIndex = 0;

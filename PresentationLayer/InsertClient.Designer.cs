@@ -59,18 +59,18 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
             this.panel1.Controls.Add(this.buttonInsert);
+            this.panel1.Controls.Add(this.textBoxPhoneNum);
+            this.panel1.Controls.Add(this.labelPassportNum);
             this.panel1.Controls.Add(this.buttonClose);
+            this.panel1.Controls.Add(this.textBoxPassportNum);
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.labelPhoneNum);
             this.panel1.Controls.Add(this.textBoxPassword);
             this.panel1.Controls.Add(this.labelPassword);
-            this.panel1.Controls.Add(this.textBoxPhoneNum);
-            this.panel1.Controls.Add(this.labelPhoneNum);
             this.panel1.Controls.Add(this.textBoxIdNum);
             this.panel1.Controls.Add(this.labelIDNum);
             this.panel1.Controls.Add(this.textBoxEmail);
             this.panel1.Controls.Add(this.labelEmail);
-            this.panel1.Controls.Add(this.textBoxPassportNum);
-            this.panel1.Controls.Add(this.labelPassportNum);
             this.panel1.Controls.Add(this.textBoxLastName);
             this.panel1.Controls.Add(this.labelLastName);
             this.panel1.Controls.Add(this.textBoxAddress);
@@ -82,14 +82,14 @@
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(797, 450);
+            this.panel1.Size = new System.Drawing.Size(788, 496);
             this.panel1.TabIndex = 0;
             // 
             // buttonInsert
             // 
             this.buttonInsert.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonInsert.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsert.Location = new System.Drawing.Point(419, 363);
+            this.buttonInsert.Location = new System.Drawing.Point(427, 434);
             this.buttonInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(145, 49);
@@ -102,7 +102,7 @@
             // 
             this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(203, 363);
+            this.buttonClose.Location = new System.Drawing.Point(199, 434);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(145, 49);
@@ -125,7 +125,7 @@
             // 
             this.labelINSERT.AutoSize = true;
             this.labelINSERT.Font = new System.Drawing.Font("Microsoft Tai Le", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelINSERT.Location = new System.Drawing.Point(219, 21);
+            this.labelINSERT.Location = new System.Drawing.Point(208, 21);
             this.labelINSERT.Name = "labelINSERT";
             this.labelINSERT.Size = new System.Drawing.Size(358, 55);
             this.labelINSERT.TabIndex = 0;
@@ -133,7 +133,7 @@
             // 
             // textBoxPassword
             // 
-            this.textBoxPassword.Location = new System.Drawing.Point(535, 309);
+            this.textBoxPassword.Location = new System.Drawing.Point(429, 394);
             this.textBoxPassword.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPassword.Name = "textBoxPassword";
             this.textBoxPassword.Size = new System.Drawing.Size(147, 22);
@@ -144,7 +144,7 @@
             // 
             this.labelPassword.AutoSize = true;
             this.labelPassword.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassword.Location = new System.Drawing.Point(531, 278);
+            this.labelPassword.Location = new System.Drawing.Point(425, 363);
             this.labelPassword.Name = "labelPassword";
             this.labelPassword.Size = new System.Drawing.Size(85, 22);
             this.labelPassword.TabIndex = 19;
@@ -152,7 +152,7 @@
             // 
             // textBoxPhoneNum
             // 
-            this.textBoxPhoneNum.Location = new System.Drawing.Point(535, 236);
+            this.textBoxPhoneNum.Location = new System.Drawing.Point(431, 327);
             this.textBoxPhoneNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPhoneNum.Name = "textBoxPhoneNum";
             this.textBoxPhoneNum.Size = new System.Drawing.Size(147, 22);
@@ -162,7 +162,7 @@
             // 
             this.labelPhoneNum.AutoSize = true;
             this.labelPhoneNum.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPhoneNum.Location = new System.Drawing.Point(531, 206);
+            this.labelPhoneNum.Location = new System.Drawing.Point(427, 297);
             this.labelPhoneNum.Name = "labelPhoneNum";
             this.labelPhoneNum.Size = new System.Drawing.Size(127, 22);
             this.labelPhoneNum.TabIndex = 17;
@@ -170,7 +170,7 @@
             // 
             // textBoxIdNum
             // 
-            this.textBoxIdNum.Location = new System.Drawing.Point(535, 154);
+            this.textBoxIdNum.Location = new System.Drawing.Point(200, 195);
             this.textBoxIdNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxIdNum.Name = "textBoxIdNum";
             this.textBoxIdNum.Size = new System.Drawing.Size(147, 22);
@@ -180,7 +180,7 @@
             // 
             this.labelIDNum.AutoSize = true;
             this.labelIDNum.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelIDNum.Location = new System.Drawing.Point(531, 123);
+            this.labelIDNum.Location = new System.Drawing.Point(196, 164);
             this.labelIDNum.Name = "labelIDNum";
             this.labelIDNum.Size = new System.Drawing.Size(96, 22);
             this.labelIDNum.TabIndex = 15;
@@ -188,7 +188,7 @@
             // 
             // textBoxEmail
             // 
-            this.textBoxEmail.Location = new System.Drawing.Point(319, 309);
+            this.textBoxEmail.Location = new System.Drawing.Point(198, 394);
             this.textBoxEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(147, 22);
@@ -198,7 +198,7 @@
             // 
             this.labelEmail.AutoSize = true;
             this.labelEmail.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEmail.Location = new System.Drawing.Point(315, 278);
+            this.labelEmail.Location = new System.Drawing.Point(194, 363);
             this.labelEmail.Name = "labelEmail";
             this.labelEmail.Size = new System.Drawing.Size(54, 22);
             this.labelEmail.TabIndex = 13;
@@ -206,7 +206,7 @@
             // 
             // textBoxPassportNum
             // 
-            this.textBoxPassportNum.Location = new System.Drawing.Point(319, 236);
+            this.textBoxPassportNum.Location = new System.Drawing.Point(200, 327);
             this.textBoxPassportNum.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxPassportNum.Name = "textBoxPassportNum";
             this.textBoxPassportNum.Size = new System.Drawing.Size(147, 22);
@@ -216,7 +216,7 @@
             // 
             this.labelPassportNum.AutoSize = true;
             this.labelPassportNum.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelPassportNum.Location = new System.Drawing.Point(315, 206);
+            this.labelPassportNum.Location = new System.Drawing.Point(196, 297);
             this.labelPassportNum.Name = "labelPassportNum";
             this.labelPassportNum.Size = new System.Drawing.Size(146, 22);
             this.labelPassportNum.TabIndex = 11;
@@ -224,7 +224,7 @@
             // 
             // textBoxLastName
             // 
-            this.textBoxLastName.Location = new System.Drawing.Point(319, 154);
+            this.textBoxLastName.Location = new System.Drawing.Point(431, 123);
             this.textBoxLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxLastName.Name = "textBoxLastName";
             this.textBoxLastName.Size = new System.Drawing.Size(147, 22);
@@ -234,7 +234,7 @@
             // 
             this.labelLastName.AutoSize = true;
             this.labelLastName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLastName.Location = new System.Drawing.Point(315, 123);
+            this.labelLastName.Location = new System.Drawing.Point(427, 92);
             this.labelLastName.Name = "labelLastName";
             this.labelLastName.Size = new System.Drawing.Size(91, 22);
             this.labelLastName.TabIndex = 9;
@@ -242,17 +242,17 @@
             // 
             // textBoxAddress
             // 
-            this.textBoxAddress.Location = new System.Drawing.Point(88, 309);
+            this.textBoxAddress.Location = new System.Drawing.Point(200, 257);
             this.textBoxAddress.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxAddress.Name = "textBoxAddress";
-            this.textBoxAddress.Size = new System.Drawing.Size(147, 22);
+            this.textBoxAddress.Size = new System.Drawing.Size(376, 22);
             this.textBoxAddress.TabIndex = 7;
             // 
             // labelAddress
             // 
             this.labelAddress.AutoSize = true;
             this.labelAddress.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAddress.Location = new System.Drawing.Point(84, 278);
+            this.labelAddress.Location = new System.Drawing.Point(196, 226);
             this.labelAddress.Name = "labelAddress";
             this.labelAddress.Size = new System.Drawing.Size(74, 22);
             this.labelAddress.TabIndex = 7;
@@ -260,7 +260,7 @@
             // 
             // textBoxJMBG
             // 
-            this.textBoxJMBG.Location = new System.Drawing.Point(88, 236);
+            this.textBoxJMBG.Location = new System.Drawing.Point(431, 195);
             this.textBoxJMBG.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxJMBG.Name = "textBoxJMBG";
             this.textBoxJMBG.Size = new System.Drawing.Size(147, 22);
@@ -270,7 +270,7 @@
             // 
             this.labelJMBG.AutoSize = true;
             this.labelJMBG.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelJMBG.Location = new System.Drawing.Point(84, 206);
+            this.labelJMBG.Location = new System.Drawing.Point(427, 164);
             this.labelJMBG.Name = "labelJMBG";
             this.labelJMBG.Size = new System.Drawing.Size(57, 22);
             this.labelJMBG.TabIndex = 5;
@@ -278,7 +278,7 @@
             // 
             // textBoxName
             // 
-            this.textBoxName.Location = new System.Drawing.Point(88, 154);
+            this.textBoxName.Location = new System.Drawing.Point(200, 123);
             this.textBoxName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(147, 22);
@@ -288,7 +288,7 @@
             // 
             this.labelName.AutoSize = true;
             this.labelName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(84, 123);
+            this.labelName.Location = new System.Drawing.Point(196, 92);
             this.labelName.Name = "labelName";
             this.labelName.Size = new System.Drawing.Size(57, 22);
             this.labelName.TabIndex = 3;
@@ -298,7 +298,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(788, 496);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
