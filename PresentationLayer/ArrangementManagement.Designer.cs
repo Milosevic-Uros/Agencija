@@ -30,13 +30,11 @@
         {
             this.panelClientManagement = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
-            this.comboBoxLocation = new System.Windows.Forms.ComboBox();
             this.dateTimePickerReturnDate = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerDeparture = new System.Windows.Forms.DateTimePicker();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonInsert = new System.Windows.Forms.Button();
-            this.labelLocationID = new System.Windows.Forms.Label();
             this.labelReturnDate = new System.Windows.Forms.Label();
             this.labelDeparture = new System.Windows.Forms.Label();
             this.textBoxArrangementID = new System.Windows.Forms.TextBox();
@@ -50,13 +48,11 @@
             // 
             this.panelClientManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
             this.panelClientManagement.Controls.Add(this.buttonClose);
-            this.panelClientManagement.Controls.Add(this.comboBoxLocation);
             this.panelClientManagement.Controls.Add(this.dateTimePickerReturnDate);
             this.panelClientManagement.Controls.Add(this.dateTimePickerDeparture);
             this.panelClientManagement.Controls.Add(this.buttonDelete);
             this.panelClientManagement.Controls.Add(this.buttonUpdate);
             this.panelClientManagement.Controls.Add(this.buttonInsert);
-            this.panelClientManagement.Controls.Add(this.labelLocationID);
             this.panelClientManagement.Controls.Add(this.labelReturnDate);
             this.panelClientManagement.Controls.Add(this.labelDeparture);
             this.panelClientManagement.Controls.Add(this.textBoxArrangementID);
@@ -82,19 +78,9 @@
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
-            // comboBoxLocation
-            // 
-            this.comboBoxLocation.FormattingEnabled = true;
-            this.comboBoxLocation.Location = new System.Drawing.Point(609, 273);
-            this.comboBoxLocation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.comboBoxLocation.Name = "comboBoxLocation";
-            this.comboBoxLocation.Size = new System.Drawing.Size(148, 24);
-            this.comboBoxLocation.TabIndex = 30;
-            this.comboBoxLocation.SelectedIndexChanged += new System.EventHandler(this.comboBoxLocation_SelectedIndexChanged);
-            // 
             // dateTimePickerReturnDate
             // 
-            this.dateTimePickerReturnDate.Location = new System.Drawing.Point(419, 273);
+            this.dateTimePickerReturnDate.Location = new System.Drawing.Point(474, 273);
             this.dateTimePickerReturnDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerReturnDate.Name = "dateTimePickerReturnDate";
             this.dateTimePickerReturnDate.Size = new System.Drawing.Size(161, 22);
@@ -102,7 +88,7 @@
             // 
             // dateTimePickerDeparture
             // 
-            this.dateTimePickerDeparture.Location = new System.Drawing.Point(232, 273);
+            this.dateTimePickerDeparture.Location = new System.Drawing.Point(287, 273);
             this.dateTimePickerDeparture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerDeparture.Name = "dateTimePickerDeparture";
             this.dateTimePickerDeparture.Size = new System.Drawing.Size(161, 22);
@@ -147,21 +133,11 @@
             this.buttonInsert.UseVisualStyleBackColor = false;
             this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
-            // labelLocationID
-            // 
-            this.labelLocationID.AutoSize = true;
-            this.labelLocationID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLocationID.Location = new System.Drawing.Point(605, 242);
-            this.labelLocationID.Name = "labelLocationID";
-            this.labelLocationID.Size = new System.Drawing.Size(78, 22);
-            this.labelLocationID.TabIndex = 7;
-            this.labelLocationID.Text = "Location";
-            // 
             // labelReturnDate
             // 
             this.labelReturnDate.AutoSize = true;
             this.labelReturnDate.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelReturnDate.Location = new System.Drawing.Point(413, 242);
+            this.labelReturnDate.Location = new System.Drawing.Point(468, 242);
             this.labelReturnDate.Name = "labelReturnDate";
             this.labelReturnDate.Size = new System.Drawing.Size(105, 22);
             this.labelReturnDate.TabIndex = 5;
@@ -171,7 +147,7 @@
             // 
             this.labelDeparture.AutoSize = true;
             this.labelDeparture.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDeparture.Location = new System.Drawing.Point(228, 241);
+            this.labelDeparture.Location = new System.Drawing.Point(283, 241);
             this.labelDeparture.Name = "labelDeparture";
             this.labelDeparture.Size = new System.Drawing.Size(133, 22);
             this.labelDeparture.TabIndex = 3;
@@ -179,7 +155,7 @@
             // 
             // textBoxArrangementID
             // 
-            this.textBoxArrangementID.Location = new System.Drawing.Point(41, 272);
+            this.textBoxArrangementID.Location = new System.Drawing.Point(96, 272);
             this.textBoxArrangementID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxArrangementID.Name = "textBoxArrangementID";
             this.textBoxArrangementID.Size = new System.Drawing.Size(147, 22);
@@ -189,7 +165,7 @@
             // 
             this.labelArrangementID.AutoSize = true;
             this.labelArrangementID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelArrangementID.Location = new System.Drawing.Point(37, 241);
+            this.labelArrangementID.Location = new System.Drawing.Point(92, 241);
             this.labelArrangementID.Name = "labelArrangementID";
             this.labelArrangementID.Size = new System.Drawing.Size(140, 22);
             this.labelArrangementID.TabIndex = 1;
@@ -234,7 +210,6 @@
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonInsert;
-        private System.Windows.Forms.Label labelLocationID;
         private System.Windows.Forms.Label labelReturnDate;
         private System.Windows.Forms.Label labelDeparture;
         private System.Windows.Forms.TextBox textBoxArrangementID;
@@ -242,7 +217,6 @@
         private System.Windows.Forms.DataGridView dataGridViewArrangemet;
         private System.Windows.Forms.DateTimePicker dateTimePickerReturnDate;
         private System.Windows.Forms.DateTimePicker dateTimePickerDeparture;
-        private System.Windows.Forms.ComboBox comboBoxLocation;
         private System.Windows.Forms.Button buttonClose;
     }
 }
