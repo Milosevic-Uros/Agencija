@@ -38,8 +38,9 @@ namespace PresentationLayer
         public Login RefLoginForm { get; set; }
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
-            this.RefLoginForm.Show();
             this.Close();
+            Login login = new Login(adminBusiness, clientBusiness);
+            login.ShowDialog();  
         }
 
         private void buttonClientManagement_Click(object sender, EventArgs e)
