@@ -17,6 +17,11 @@ namespace BusinessLayer
             adminRepository = _adminRepository;
         }
 
+        public Admin GetAdmin(string email,string password)
+        {
+            return adminRepository.GetAdmin(email,password);
+        }
+
         public string UpdateAdmin(Admin admin)
         {
             int rowsAffected = adminRepository.UpdateAdmin(admin);

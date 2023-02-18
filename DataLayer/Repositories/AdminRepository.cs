@@ -12,6 +12,31 @@ namespace DataLayer.Repositories
     public partial class AdminRepository : IAdminRepository
     {
         string connectionString = Constants.ConnectionString;
+
+        public Admin GetAdmin(string email, string password)
+        {
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT * FROM ADMINS WHERE email=@email AND password=@password";
+                SqlCommand command = new SqlCommand(query, connection);
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+                Admin admin = new Admin();
+                while (reader.Read())
+                {
+                    admin.adminId = reader.GetInt32(0);
+                    admin.name = reader.GetString(1);
+                    admin.lastName = reader.GetString(2);
+                    admin.email = reader.GetString(3);
+                    admin.password = reader.GetString(4);
+                }
+                reader.Close();
+                connection.Close();
+
+                return admin;
+            }
+        }
         public int UpdateAdmin(Admin admin)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))

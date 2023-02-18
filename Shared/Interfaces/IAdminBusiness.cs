@@ -10,6 +10,7 @@ namespace Shared.Interfaces
     public interface IAdminBusiness
     {
         //Admin and users
+        Admin GetAdmin(string email, string password);
         string UpdateAdmin(Admin admin);
         List<Client> GetAllClients();
         string UpdateClient(Client client);
