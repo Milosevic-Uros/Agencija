@@ -197,7 +197,7 @@
             this.dataGridViewTickets.RowTemplate.Height = 24;
             this.dataGridViewTickets.Size = new System.Drawing.Size(597, 144);
             this.dataGridViewTickets.TabIndex = 0;
-            this.dataGridViewTickets.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTickets_CellContentClick);
+            this.dataGridViewTickets.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewTickets_RowHeaderMouseClick);
             // 
             // TicketManagement
             // 
