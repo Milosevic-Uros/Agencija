@@ -19,6 +19,8 @@ namespace DataLayer.Repositories
             {
                 string query = "SELECT * FROM ADMINS WHERE email=@email AND password=@password";
                 SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@password",password);
                 connection.Open();
 
                 SqlDataReader reader = command.ExecuteReader();
