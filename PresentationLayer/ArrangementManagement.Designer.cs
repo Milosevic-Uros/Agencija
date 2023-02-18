@@ -31,47 +31,43 @@
             this.components = new System.ComponentModel.Container();
             this.panelClientManagement = new System.Windows.Forms.Panel();
             this.buttonClose = new System.Windows.Forms.Button();
-            this.comboBoxLocation = new System.Windows.Forms.ComboBox();
+            this.lOCATIONSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aGENCIJADataSet = new PresentationLayer.AGENCIJADataSet();
             this.dateTimePickerReturnDate = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerDeparture = new System.Windows.Forms.DateTimePicker();
             this.buttonDelete = new System.Windows.Forms.Button();
             this.buttonUpdate = new System.Windows.Forms.Button();
             this.buttonInsert = new System.Windows.Forms.Button();
-            this.labelLocationID = new System.Windows.Forms.Label();
             this.labelReturnDate = new System.Windows.Forms.Label();
             this.labelDeparture = new System.Windows.Forms.Label();
             this.textBoxArrangementID = new System.Windows.Forms.TextBox();
             this.labelArrangementID = new System.Windows.Forms.Label();
             this.dataGridViewArrangemet = new System.Windows.Forms.DataGridView();
-            this.aGENCIJADataSet = new PresentationLayer.AGENCIJADataSet();
-            this.lOCATIONSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOCATIONSTableAdapter = new PresentationLayer.AGENCIJADataSetTableAdapters.LOCATIONSTableAdapter();
             this.panelClientManagement.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArrangemet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOCATIONSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArrangemet)).BeginInit();
             this.SuspendLayout();
             // 
             // panelClientManagement
             // 
             this.panelClientManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
             this.panelClientManagement.Controls.Add(this.buttonClose);
-            this.panelClientManagement.Controls.Add(this.comboBoxLocation);
             this.panelClientManagement.Controls.Add(this.dateTimePickerReturnDate);
             this.panelClientManagement.Controls.Add(this.dateTimePickerDeparture);
             this.panelClientManagement.Controls.Add(this.buttonDelete);
             this.panelClientManagement.Controls.Add(this.buttonUpdate);
             this.panelClientManagement.Controls.Add(this.buttonInsert);
-            this.panelClientManagement.Controls.Add(this.labelLocationID);
             this.panelClientManagement.Controls.Add(this.labelReturnDate);
             this.panelClientManagement.Controls.Add(this.labelDeparture);
             this.panelClientManagement.Controls.Add(this.textBoxArrangementID);
             this.panelClientManagement.Controls.Add(this.labelArrangementID);
             this.panelClientManagement.Controls.Add(this.dataGridViewArrangemet);
             this.panelClientManagement.Location = new System.Drawing.Point(-1, 2);
-            this.panelClientManagement.Margin = new System.Windows.Forms.Padding(2);
+            this.panelClientManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelClientManagement.Name = "panelClientManagement";
-            this.panelClientManagement.Size = new System.Drawing.Size(602, 362);
+            this.panelClientManagement.Size = new System.Drawing.Size(803, 446);
             this.panelClientManagement.TabIndex = 1;
             this.panelClientManagement.Paint += new System.Windows.Forms.PaintEventHandler(this.panelClientManagement_Paint);
             // 
@@ -79,54 +75,51 @@
             // 
             this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(10, 315);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonClose.Location = new System.Drawing.Point(13, 388);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(61, 40);
+            this.buttonClose.Size = new System.Drawing.Size(81, 49);
             this.buttonClose.TabIndex = 32;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
-            // comboBoxLocation
+            // lOCATIONSBindingSource
             // 
-            this.comboBoxLocation.DataSource = this.lOCATIONSBindingSource;
-            this.comboBoxLocation.DisplayMember = "location_name";
-            this.comboBoxLocation.FormattingEnabled = true;
-            this.comboBoxLocation.Location = new System.Drawing.Point(457, 222);
-            this.comboBoxLocation.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBoxLocation.Name = "comboBoxLocation";
-            this.comboBoxLocation.Size = new System.Drawing.Size(112, 21);
-            this.comboBoxLocation.TabIndex = 30;
-            this.comboBoxLocation.ValueMember = "location_id";
-            this.comboBoxLocation.SelectedIndexChanged += new System.EventHandler(this.comboBoxLocation_SelectedIndexChanged);
+            this.lOCATIONSBindingSource.DataMember = "LOCATIONS";
+            this.lOCATIONSBindingSource.DataSource = this.aGENCIJADataSet;
+            // 
+            // aGENCIJADataSet
+            // 
+            this.aGENCIJADataSet.DataSetName = "AGENCIJADataSet";
+            this.aGENCIJADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dateTimePickerReturnDate
             // 
             this.dateTimePickerReturnDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerReturnDate.Location = new System.Drawing.Point(314, 222);
-            this.dateTimePickerReturnDate.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerReturnDate.Location = new System.Drawing.Point(505, 273);
+            this.dateTimePickerReturnDate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerReturnDate.Name = "dateTimePickerReturnDate";
-            this.dateTimePickerReturnDate.Size = new System.Drawing.Size(122, 20);
+            this.dateTimePickerReturnDate.Size = new System.Drawing.Size(161, 22);
             this.dateTimePickerReturnDate.TabIndex = 13;
             // 
             // dateTimePickerDeparture
             // 
             this.dateTimePickerDeparture.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDeparture.Location = new System.Drawing.Point(174, 222);
-            this.dateTimePickerDeparture.Margin = new System.Windows.Forms.Padding(2);
+            this.dateTimePickerDeparture.Location = new System.Drawing.Point(318, 273);
+            this.dateTimePickerDeparture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerDeparture.Name = "dateTimePickerDeparture";
-            this.dateTimePickerDeparture.Size = new System.Drawing.Size(122, 20);
+            this.dateTimePickerDeparture.Size = new System.Drawing.Size(161, 22);
             this.dateTimePickerDeparture.TabIndex = 12;
             // 
             // buttonDelete
             // 
             this.buttonDelete.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(410, 277);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonDelete.Location = new System.Drawing.Point(514, 341);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(109, 46);
+            this.buttonDelete.Size = new System.Drawing.Size(145, 57);
             this.buttonDelete.TabIndex = 11;
             this.buttonDelete.Text = "Delete arrangement";
             this.buttonDelete.UseVisualStyleBackColor = false;
@@ -136,10 +129,10 @@
             // 
             this.buttonUpdate.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.Location = new System.Drawing.Point(266, 277);
-            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonUpdate.Location = new System.Drawing.Point(322, 341);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(109, 46);
+            this.buttonUpdate.Size = new System.Drawing.Size(145, 57);
             this.buttonUpdate.TabIndex = 10;
             this.buttonUpdate.Text = "Update arrangement";
             this.buttonUpdate.UseVisualStyleBackColor = false;
@@ -149,34 +142,22 @@
             // 
             this.buttonInsert.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonInsert.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsert.Location = new System.Drawing.Point(122, 277);
-            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonInsert.Location = new System.Drawing.Point(130, 341);
+            this.buttonInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonInsert.Name = "buttonInsert";
-            this.buttonInsert.Size = new System.Drawing.Size(109, 46);
+            this.buttonInsert.Size = new System.Drawing.Size(145, 57);
             this.buttonInsert.TabIndex = 9;
             this.buttonInsert.Text = "Insert arrangement";
             this.buttonInsert.UseVisualStyleBackColor = false;
             this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
             // 
-            // labelLocationID
-            // 
-            this.labelLocationID.AutoSize = true;
-            this.labelLocationID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLocationID.Location = new System.Drawing.Point(454, 197);
-            this.labelLocationID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelLocationID.Name = "labelLocationID";
-            this.labelLocationID.Size = new System.Drawing.Size(65, 18);
-            this.labelLocationID.TabIndex = 7;
-            this.labelLocationID.Text = "Location";
-            // 
             // labelReturnDate
             // 
             this.labelReturnDate.AutoSize = true;
             this.labelReturnDate.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelReturnDate.Location = new System.Drawing.Point(310, 197);
-            this.labelReturnDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelReturnDate.Location = new System.Drawing.Point(499, 242);
             this.labelReturnDate.Name = "labelReturnDate";
-            this.labelReturnDate.Size = new System.Drawing.Size(86, 18);
+            this.labelReturnDate.Size = new System.Drawing.Size(105, 22);
             this.labelReturnDate.TabIndex = 5;
             this.labelReturnDate.Text = "Return date";
             // 
@@ -184,29 +165,27 @@
             // 
             this.labelDeparture.AutoSize = true;
             this.labelDeparture.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDeparture.Location = new System.Drawing.Point(171, 196);
-            this.labelDeparture.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelDeparture.Location = new System.Drawing.Point(314, 241);
             this.labelDeparture.Name = "labelDeparture";
-            this.labelDeparture.Size = new System.Drawing.Size(110, 18);
+            this.labelDeparture.Size = new System.Drawing.Size(133, 22);
             this.labelDeparture.TabIndex = 3;
             this.labelDeparture.Text = "Departure date";
             // 
             // textBoxArrangementID
             // 
-            this.textBoxArrangementID.Location = new System.Drawing.Point(31, 221);
-            this.textBoxArrangementID.Margin = new System.Windows.Forms.Padding(2);
+            this.textBoxArrangementID.Location = new System.Drawing.Point(127, 272);
+            this.textBoxArrangementID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.textBoxArrangementID.Name = "textBoxArrangementID";
-            this.textBoxArrangementID.Size = new System.Drawing.Size(111, 20);
+            this.textBoxArrangementID.Size = new System.Drawing.Size(147, 22);
             this.textBoxArrangementID.TabIndex = 2;
             // 
             // labelArrangementID
             // 
             this.labelArrangementID.AutoSize = true;
             this.labelArrangementID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelArrangementID.Location = new System.Drawing.Point(28, 196);
-            this.labelArrangementID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelArrangementID.Location = new System.Drawing.Point(123, 241);
             this.labelArrangementID.Name = "labelArrangementID";
-            this.labelArrangementID.Size = new System.Drawing.Size(115, 18);
+            this.labelArrangementID.Size = new System.Drawing.Size(140, 22);
             this.labelArrangementID.TabIndex = 1;
             this.labelArrangementID.Text = "Arrangement ID";
             // 
@@ -214,24 +193,14 @@
             // 
             this.dataGridViewArrangemet.BackgroundColor = System.Drawing.Color.Silver;
             this.dataGridViewArrangemet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewArrangemet.Location = new System.Drawing.Point(2, 0);
-            this.dataGridViewArrangemet.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridViewArrangemet.Location = new System.Drawing.Point(3, 0);
+            this.dataGridViewArrangemet.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewArrangemet.Name = "dataGridViewArrangemet";
             this.dataGridViewArrangemet.RowHeadersWidth = 51;
             this.dataGridViewArrangemet.RowTemplate.Height = 24;
-            this.dataGridViewArrangemet.Size = new System.Drawing.Size(597, 144);
+            this.dataGridViewArrangemet.Size = new System.Drawing.Size(796, 177);
             this.dataGridViewArrangemet.TabIndex = 0;
             this.dataGridViewArrangemet.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewArrangemet_RowHeaderMouseClick);
-            // 
-            // aGENCIJADataSet
-            // 
-            this.aGENCIJADataSet.DataSetName = "AGENCIJADataSet";
-            this.aGENCIJADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lOCATIONSBindingSource
-            // 
-            this.lOCATIONSBindingSource.DataMember = "LOCATIONS";
-            this.lOCATIONSBindingSource.DataSource = this.aGENCIJADataSet;
             // 
             // lOCATIONSTableAdapter
             // 
@@ -239,20 +208,20 @@
             // 
             // ArrangementManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.panelClientManagement);
-            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ArrangementManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ArrangementManagement";
             this.Load += new System.EventHandler(this.ArrangementManagement_Load);
             this.panelClientManagement.ResumeLayout(false);
             this.panelClientManagement.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArrangemet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOCATIONSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArrangemet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -263,7 +232,6 @@
         private System.Windows.Forms.Button buttonDelete;
         private System.Windows.Forms.Button buttonUpdate;
         private System.Windows.Forms.Button buttonInsert;
-        private System.Windows.Forms.Label labelLocationID;
         private System.Windows.Forms.Label labelReturnDate;
         private System.Windows.Forms.Label labelDeparture;
         private System.Windows.Forms.TextBox textBoxArrangementID;
@@ -271,7 +239,6 @@
         private System.Windows.Forms.DataGridView dataGridViewArrangemet;
         private System.Windows.Forms.DateTimePicker dateTimePickerReturnDate;
         private System.Windows.Forms.DateTimePicker dateTimePickerDeparture;
-        private System.Windows.Forms.ComboBox comboBoxLocation;
         private System.Windows.Forms.Button buttonClose;
         private AGENCIJADataSet aGENCIJADataSet;
         private System.Windows.Forms.BindingSource lOCATIONSBindingSource;

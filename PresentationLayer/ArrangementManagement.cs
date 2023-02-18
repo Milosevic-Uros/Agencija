@@ -26,7 +26,7 @@ namespace PresentationLayer
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            if (textBoxArrangementID.Text == "" || comboBoxLocation.DisplayMember!="" || dateTimePickerDeparture.Text == "" || dateTimePickerReturnDate.Text == "")
+            if (textBoxArrangementID.Text == "" || dateTimePickerDeparture.Text == "" || dateTimePickerReturnDate.Text == "")
             {
                 MessageBox.Show("Select arrangement!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxArrangementID.Focus();
@@ -40,7 +40,6 @@ namespace PresentationLayer
                 dataGridViewArrangemet.DataSource = adminBusiness.GetAllClients();
 
                 textBoxArrangementID.Text = "";
-                comboBoxLocation.SelectedIndex = 0;
                 dateTimePickerDeparture.Text = "";
                 dateTimePickerReturnDate.Text = "";
             }
@@ -57,23 +56,8 @@ namespace PresentationLayer
 
         private void buttonUpdate_Click(object sender, EventArgs e)
         {
-            if (textBoxArrangementID.Text == "" || comboBoxLocation.DisplayMember == "" )
-            {
-                MessageBox.Show("Select arrangement!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxArrangementID.Focus();
-                return;
-            }
-            else if (!Regex.Match(textBoxArrangementID.Text, "^\\d{0,4}$").Success)
-            {
-                MessageBox.Show("The ID number field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                textBoxArrangementID.Focus();
-                return;
-            }
-
-
             Arrangement arrangement = new Arrangement();
             arrangement.arrangementId = Convert.ToInt32(textBoxArrangementID.Text);
-            arrangement.locationId = Convert.ToInt32(comboBoxLocation.SelectedValue);
             arrangement.dateOfDeparture = dateTimePickerDeparture.Value;
             arrangement.returnDate = dateTimePickerReturnDate.Value;
             string result = adminBusiness.UpdateArrangement(arrangement);
@@ -87,10 +71,6 @@ namespace PresentationLayer
             insertArrangement.Show();
         }
 
-        private void comboBoxLocation_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void panelClientManagement_Paint(object sender, PaintEventArgs e)
         {
@@ -116,7 +96,6 @@ namespace PresentationLayer
                 textBoxArrangementID.Text = row.Cells[0].Value.ToString();
                 dateTimePickerDeparture.Value = Convert.ToDateTime(row.Cells[2].Value);
                 dateTimePickerReturnDate.Value = Convert.ToDateTime(row.Cells[3].Value);
-                comboBoxLocation.SelectedValue = Convert.ToInt32(row.Cells[4].Value);
 
             }
         }
