@@ -83,6 +83,7 @@
             this.buttonTransactionManagement.TabIndex = 3;
             this.buttonTransactionManagement.Text = "Transaction management";
             this.buttonTransactionManagement.UseVisualStyleBackColor = false;
+            this.buttonTransactionManagement.Click += new System.EventHandler(this.buttonTransactionManagement_Click);
             // 
             // buttonTicketManagement
             // 

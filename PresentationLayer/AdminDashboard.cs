@@ -60,5 +60,11 @@ namespace PresentationLayer
             TicketManagement ticketManagementForm = new TicketManagement(adminBusiness);
             ticketManagementForm.Show();
         }
+
+        private void buttonTransactionManagement_Click(object sender, EventArgs e)
+        {
+            TransactionManagement transactionManagement = new TransactionManagement(adminBusiness);
+            transactionManagement.Show();
+        }
     }
 }
