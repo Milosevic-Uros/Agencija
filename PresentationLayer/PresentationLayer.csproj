@@ -172,6 +172,10 @@
       <Project>{132A15D6-2DA3-49E0-98E3-F857333F21CC}</Project>
       <Name>BusinessLayer</Name>
     </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{1CF2C8D8-35C9-4531-8898-6CB9E536C1DC}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Shared\Shared.csproj">
       <Project>{B732ED8E-8195-421E-B5BD-EF8EB2634F0F}</Project>
       <Name>Shared</Name>
