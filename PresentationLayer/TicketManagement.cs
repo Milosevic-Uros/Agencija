@@ -103,7 +103,7 @@ namespace PresentationLayer
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
-            InsertTicket insertTicket = new InsertTicket();
+            InsertTicket insertTicket = new InsertTicket(adminBusiness);
             insertTicket.Show();
         }
     }
