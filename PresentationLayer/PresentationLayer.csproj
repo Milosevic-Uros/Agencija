@@ -90,6 +90,12 @@
     <Compile Include="ClientManagement.Designer.cs">
       <DependentUpon>ClientManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExchangeOffice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExchangeOffice.Designer.cs">
+      <DependentUpon>ExchangeOffice.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,12 @@
     </Compile>
     <Compile Include="TicketManagement.Designer.cs">
       <DependentUpon>TicketManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionManagement.Designer.cs">
+      <DependentUpon>TransactionManagement.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="AdminDashboard.resx">
       <DependentUpon>AdminDashboard.cs</DependentUpon>
@@ -166,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TicketManagement.resx">
       <DependentUpon>TicketManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionManagement.resx">
+      <DependentUpon>TransactionManagement.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="AGENCIJADataSet.xsc">
       <DependentUpon>AGENCIJADataSet.xsd</DependentUpon>
