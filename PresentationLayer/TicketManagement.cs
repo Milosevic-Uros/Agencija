@@ -22,6 +22,7 @@ namespace PresentationLayer
         {
             adminBusiness = _adminBusiness;
             InitializeComponent();
+            MaximizeBox = false;
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -87,10 +88,6 @@ namespace PresentationLayer
             comboBoxTransport.SelectedIndex = 0;
         }
 
-        private void dataGridViewTickets_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            
-        }
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
@@ -109,6 +106,11 @@ namespace PresentationLayer
                     
 
             }
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

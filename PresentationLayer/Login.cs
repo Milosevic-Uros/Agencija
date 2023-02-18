@@ -24,6 +24,7 @@ namespace PresentationLayer
             adminBusiness= _adminBusiness;
             clientBusiness= _clientBusiness;
             InitializeComponent();
+            MaximizeBox = false;
         }
 
         public string connString = "Data Source=MNS-AWS-L02\\SQLEXPRESS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
