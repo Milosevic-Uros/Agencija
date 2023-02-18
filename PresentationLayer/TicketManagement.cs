@@ -70,16 +70,14 @@ namespace PresentationLayer
             Ticket ticket = new Ticket();
             ticket.ticketId = Convert.ToInt32(textBoxTicketID.Text);
             ticket.dateOfDeparture = dateTimePickerDeparture.Value;
-            ticket.returnDate = dateTimePickerDeparture.Value;
+            ticket.returnDate = dateTimePickerReturnDate.Value;
+            ticket.typeOfTransport = comboBoxTransport.Text;
 
-            if (comboBoxTransport.SelectedItem.ToString() == "Autobus")
-                ticket.typeOfTransport = "Autobus";
-            else
-                ticket.typeOfTransport = "Avion";
-
+       
             string result = adminBusiness.UpdateTicket(ticket);
             MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            dataGridViewTickets.DataSource = adminBusiness.GetAllTickets();
+            List<Ticket> ticketList = adminBusiness.GetAllTickets();
+            dataGridViewTickets.DataSource = ticketList;
 
         }
 
