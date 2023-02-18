@@ -40,7 +40,10 @@ namespace PresentationLayer
                 textBoxID.Text == "" ||
                 textBoxPhone.Text == "" ||
                 textBoxEmail.Text == "" ||
-                textBoxPassword.Text == "") {
+                textBoxPassword.Text == "" ||
+                textBoxJMBG.Text == "" ||
+                textBoxPassport.Text == "" ||
+                textBoxAddress.Text == "") {
                 MessageBox.Show("Fill in all required fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxName.Focus();
                 return;

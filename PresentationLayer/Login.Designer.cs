@@ -41,17 +41,19 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panelAgency = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.comboBoxLogin = new System.Windows.Forms.ComboBox();
             this.panelLogIn.SuspendLayout();
             this.panelAgency.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelLogIn
             // 
             this.panelLogIn.BackColor = System.Drawing.SystemColors.Window;
+            this.panelLogIn.Controls.Add(this.comboBoxLogin);
             this.panelLogIn.Controls.Add(this.RegisterLabel);
             this.panelLogIn.Controls.Add(this.labelDontHaveAnAcc);
             this.panelLogIn.Controls.Add(this.buttonLogIn);
@@ -72,7 +74,7 @@
             // 
             this.RegisterLabel.AutoSize = true;
             this.RegisterLabel.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RegisterLabel.Location = new System.Drawing.Point(194, 406);
+            this.RegisterLabel.Location = new System.Drawing.Point(194, 426);
             this.RegisterLabel.Name = "RegisterLabel";
             this.RegisterLabel.Size = new System.Drawing.Size(126, 25);
             this.RegisterLabel.TabIndex = 8;
@@ -84,7 +86,7 @@
             // 
             this.labelDontHaveAnAcc.AutoSize = true;
             this.labelDontHaveAnAcc.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDontHaveAnAcc.Location = new System.Drawing.Point(139, 371);
+            this.labelDontHaveAnAcc.Location = new System.Drawing.Point(139, 391);
             this.labelDontHaveAnAcc.Name = "labelDontHaveAnAcc";
             this.labelDontHaveAnAcc.Size = new System.Drawing.Size(235, 26);
             this.labelDontHaveAnAcc.TabIndex = 7;
@@ -94,7 +96,7 @@
             // 
             this.buttonLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
             this.buttonLogIn.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonLogIn.Location = new System.Drawing.Point(187, 297);
+            this.buttonLogIn.Location = new System.Drawing.Point(187, 317);
             this.buttonLogIn.Name = "buttonLogIn";
             this.buttonLogIn.Size = new System.Drawing.Size(136, 36);
             this.buttonLogIn.TabIndex = 6;
@@ -105,37 +107,37 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(95, 188);
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(95, 208);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 30);
+            this.label2.Size = new System.Drawing.Size(118, 31);
             this.label2.TabIndex = 5;
             this.label2.Text = "Password";
             // 
             // Username
             // 
             this.Username.AutoSize = true;
-            this.Username.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Username.Location = new System.Drawing.Point(95, 98);
+            this.Username.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Username.Location = new System.Drawing.Point(95, 118);
             this.Username.Name = "Username";
-            this.Username.Size = new System.Drawing.Size(69, 30);
+            this.Username.Size = new System.Drawing.Size(74, 31);
             this.Username.TabIndex = 4;
             this.Username.Text = "Email";
             // 
             // passwordLog
             // 
             this.passwordLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.passwordLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLog.Location = new System.Drawing.Point(100, 221);
+            this.passwordLog.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.passwordLog.Location = new System.Drawing.Point(100, 248);
             this.passwordLog.Name = "passwordLog";
-            this.passwordLog.Size = new System.Drawing.Size(297, 38);
+            this.passwordLog.Size = new System.Drawing.Size(371, 30);
             this.passwordLog.TabIndex = 2;
             this.passwordLog.UseSystemPasswordChar = true;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
-            this.panel4.Location = new System.Drawing.Point(100, 252);
+            this.panel4.Location = new System.Drawing.Point(100, 272);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(297, 10);
             this.panel4.TabIndex = 3;
@@ -143,17 +145,17 @@
             // usernameLog
             // 
             this.usernameLog.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.usernameLog.Font = new System.Drawing.Font("Microsoft Sans Serif", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLog.Location = new System.Drawing.Point(100, 130);
+            this.usernameLog.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.usernameLog.Location = new System.Drawing.Point(100, 161);
             this.usernameLog.Name = "usernameLog";
-            this.usernameLog.Size = new System.Drawing.Size(297, 38);
+            this.usernameLog.Size = new System.Drawing.Size(371, 26);
             this.usernameLog.TabIndex = 0;
             this.usernameLog.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
-            this.panel3.Location = new System.Drawing.Point(100, 161);
+            this.panel3.Location = new System.Drawing.Point(100, 181);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(297, 10);
             this.panel3.TabIndex = 1;
@@ -177,16 +179,6 @@
             this.panelAgency.Size = new System.Drawing.Size(431, 504);
             this.panelAgency.TabIndex = 1;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 68);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(428, 163);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
@@ -197,7 +189,29 @@
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
-            // Form1
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 68);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(428, 163);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // comboBoxLogin
+            // 
+            this.comboBoxLogin.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBoxLogin.FormattingEnabled = true;
+            this.comboBoxLogin.Items.AddRange(new object[] {
+            "Admin",
+            "Client"});
+            this.comboBoxLogin.Location = new System.Drawing.Point(187, 80);
+            this.comboBoxLogin.Name = "comboBoxLogin";
+            this.comboBoxLogin.Size = new System.Drawing.Size(121, 30);
+            this.comboBoxLogin.TabIndex = 9;
+            // 
+            // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -207,14 +221,14 @@
             this.Controls.Add(this.panelLogIn);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Name = "Form1";
+            this.Name = "Login";
             this.Text = "Banja Travel";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelLogIn.ResumeLayout(false);
             this.panelLogIn.PerformLayout();
             this.panelAgency.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -235,6 +249,7 @@
         private System.Windows.Forms.Label labelDontHaveAnAcc;
         private System.Windows.Forms.Button buttonLogIn;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.ComboBox comboBoxLogin;
     }
 }
 

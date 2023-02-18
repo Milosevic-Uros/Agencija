@@ -46,7 +46,7 @@ namespace PresentationLayer
         private void RegisterLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
-            Register r = new Register();
+            Register r = new Register(adminBusiness, clientBusiness);
             r.ShowDialog();
            
         }
@@ -75,29 +75,44 @@ namespace PresentationLayer
                 return;
             }
 
-            else if (usernameLog.Text == "milosevicurosit@gmail.com" || usernameLog.Text == "milicasebicit@gmail.com" && passwordLog.Text == "admin123")
-            {
-                InsertClient insertClient = new InsertClient(adminBusiness);
-                insertClient.Show();
-                //AdminDashboard adminDashboard = new AdminDashboard(adminBusiness, clientBusiness);
-                //adminDashboard.Show();
-                //this.Hide();
-            }
+            else { 
 
-            Client client = adminBusiness.GetClient(usernameLog.Text, passwordLog.Text);
-            if (client.clientId == 0)
-            {
-                MessageBox.Show("The entered data does not match any user!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                usernameLog.Text = "";
-                passwordLog.Text = "";
-                usernameLog.Focus();
-            }
-            else
-            { 
-                ClientDashboard clientDashboard = new ClientDashboard(clientBusiness, client);
-                clientDashboard.Show();
-            }
+                if (comboBoxLogin.SelectedItem.ToString() == "Admin")
+                {
+                    Admin admin = adminBusiness.GetAdmin(usernameLog.Text, passwordLog.Text);
+                    if (admin.adminId == 0)
+                    {
+                        MessageBox.Show("The entered data does not match any user!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    else
+                    {
+                        AdminDashboard adminDashboard = new AdminDashboard(adminBusiness, clientBusiness);
+                        adminDashboard.Show();
+                        this.Hide();
+                        usernameLog.Text = "";
+                        passwordLog.Text = "";
+                        comboBoxLogin.SelectedIndex = -1;
+                    }
+                }
 
+                else if (comboBoxLogin.SelectedItem.ToString() == "Client")
+                {
+                    Client client = adminBusiness.GetClient(usernameLog.Text, passwordLog.Text);
+                    if (client.clientId == 0)
+                    {
+                        MessageBox.Show("The entered data does not match any user!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        usernameLog.Text = "";
+                        passwordLog.Text = "";
+                        usernameLog.Focus();
+                    }
+                    else
+                    {
+                        ClientDashboard clientDashboard = new ClientDashboard(clientBusiness, client);
+                        clientDashboard.Show();
+                        this.Hide();
+                    }
+                }
+            }
 
         }
     }
