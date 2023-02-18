@@ -79,11 +79,10 @@ namespace DataLayer.Repositories
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE ARRANGEMENTS SET date_of_departure=CAST(@dateOfDeparture AS DATETIME),return_date=CAST(@returnDate AS DATETIME),location_id=@locationId WHERE arrangement_id=@id";
+                string query = "UPDATE ARRANGEMENTS SET date_of_departure=CAST(@dateOfDeparture AS DATETIME),return_date=CAST(@returnDate AS DATETIME) WHERE arrangement_id=@id";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@dateOfDeparture", arrangement.dateOfDeparture);
                 command.Parameters.AddWithValue("@returnDate", arrangement.returnDate);
-                command.Parameters.AddWithValue("@locationId", arrangement.locationId);
                 command.Parameters.AddWithValue("@id", arrangement.arrangementId);
 
                 connection.Open();

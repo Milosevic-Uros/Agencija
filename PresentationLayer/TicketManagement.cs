@@ -85,7 +85,6 @@ namespace PresentationLayer
         {
             List<Ticket> ticketList = adminBusiness.GetAllTickets();
             dataGridViewTickets.DataSource = ticketList;
-            comboBoxTransport.SelectedIndex = 0;
         }
 
 
@@ -104,8 +103,6 @@ namespace PresentationLayer
                 DataGridViewRow row = this.dataGridViewTickets.Rows[e.RowIndex];
                 textBoxTicketID.Text = row.Cells[0].Value.ToString();
                 comboBoxTransport.SelectedIndex = comboBoxTransport.Items.IndexOf(row.Cells[5].Value.ToString());
-                    
-
             }
         }
 

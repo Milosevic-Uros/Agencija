@@ -17,7 +17,7 @@ namespace DataLayer.Repositories
             List<Ticket> ListOfTickets = new List<Ticket>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT t.ticket_id,t.name,t.date_of_departure,t.return_date,t.type_of_transport,t.price,t.number_of_vacancies FROM TICKETS t JOIN LOCATIONS l ON t.location_id=l.location_id;";
+                string query = "SELECT t.ticket_id,t.name,t.date_of_departure,t.return_date,t.location_id,t.type_of_transport,t.price,t.number_of_vacancies FROM TICKETS t JOIN LOCATIONS l ON t.location_id=l.location_id;";
                 SqlCommand command = new SqlCommand(query, connection);
                 connection.Open();
 
@@ -29,9 +29,10 @@ namespace DataLayer.Repositories
                     ticket.name = reader.GetString(1);
                     ticket.dateOfDeparture = reader.GetDateTime(2);
                     ticket.returnDate = reader.GetDateTime(3);
-                    ticket.typeOfTransport = reader.GetString(4);
-                    ticket.price = reader.GetDecimal(5);
-                    ticket.numberOfVacancies = reader.GetInt32(6);
+                    ticket.locationId = reader.GetInt32(4);
+                    ticket.typeOfTransport = reader.GetString(5);
+                    ticket.price = reader.GetDecimal(6);
+                    ticket.numberOfVacancies = reader.GetInt32(7);
 
                     ListOfTickets.Add(ticket);
                 }
@@ -63,11 +64,12 @@ namespace DataLayer.Repositories
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "INSERT INTO TICKETS (name,date_of_departure,return_date,location_id,type_of_transport,price,number_of_vacancies) VALUES(@name,@dateOfDeparture,@returnDate,@locationId,@typeOfTransport,@price,@numberOfVacancies)";
+                string query = "INSERT INTO TICKETS (name,date_of_departure,return_date,location_id,type_of_transport,price,number_of_vacancies) " +
+                    "VALUES(@name,@dateOfDeparture,@returnDate,@locationId,@typeOfTransport,@price,@numberOfVacancies)";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@name", ticket.name);
-                command.Parameters.AddWithValue("@dateOfDeparture", ticket.dateOfDeparture);
-                command.Parameters.AddWithValue("@returnDate", ticket.returnDate);
+                command.Parameters.AddWithValue("@dateOfDeparture", ticket.dateOfDeparture.ToString("yyyy'-'MM'-'dd"));
+                command.Parameters.AddWithValue("@returnDate", ticket.returnDate.ToString("yyyy'-'MM'-'dd"));
                 command.Parameters.AddWithValue("@locationId", ticket.locationId);
                 command.Parameters.AddWithValue("@typeOfTransport", ticket.typeOfTransport);
                 command.Parameters.AddWithValue("@price", ticket.price);
