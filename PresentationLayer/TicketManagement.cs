@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -93,9 +94,10 @@ namespace PresentationLayer
             {
 
                 DataGridViewRow row = this.dataGridViewTickets.Rows[e.RowIndex];
+                MessageBox.Show(row.Cells[2].Value.ToString());
                 textBoxTicketID.Text = row.Cells[0].Value.ToString();
-                dateTimePickerDeparture.Text = row.Cells[2].Value.ToString();
-                dateTimePickerReturnDate.Text = row.Cells[3].Value.ToString();
+                //dateTimePickerDeparture.Value=DateTime.Parse(row.Cells[2].Value.ToString(),"dd/MM/yyyy", CultureInfo.InvariantCulture);
+                //dateTimePickerReturnDate.Text = row.Cells[3].Value.ToString();
                 //comboBoxTransport. = row.Cells[5].Value.ToString();
 
             }

@@ -17,7 +17,7 @@ namespace DataLayer.Repositories
             List<Ticket> ListOfTickets = new List<Ticket>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT t.ticket_id,t.name,t.date_of_departure,t.return_date,l.location_name,t.type_of_transport,t.price,t.number_of_vacancies FROM TICKETS t JOIN LOCATIONS l ON t.location_id=l.location_id;";
+                string query = "SELECT t.ticket_id,t.name,t.date_of_departure,t.return_date,t.type_of_transport,t.price,t.number_of_vacancies FROM TICKETS t JOIN LOCATIONS l ON t.location_id=l.location_id;";
                 SqlCommand command = new SqlCommand(query, connection);
                 connection.Open();
 
@@ -29,10 +29,9 @@ namespace DataLayer.Repositories
                     ticket.name = reader.GetString(1);
                     ticket.dateOfDeparture = reader.GetDateTime(2);
                     ticket.returnDate = reader.GetDateTime(3);
-                    ticket.locationId = reader.GetInt32(4);
-                    ticket.typeOfTransport = reader.GetString(5);
-                    ticket.price = reader.GetDecimal(6);
-                    ticket.numberOfVacancies = reader.GetInt32(7);
+                    ticket.typeOfTransport = reader.GetString(4);
+                    ticket.price = reader.GetDecimal(5);
+                    ticket.numberOfVacancies = reader.GetInt32(6);
 
                     ListOfTickets.Add(ticket);
                 }

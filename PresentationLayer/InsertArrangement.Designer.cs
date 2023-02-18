@@ -155,7 +155,6 @@
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(111, 20);
             this.textBoxPrice.TabIndex = 20;
-            this.textBoxPrice.UseSystemPasswordChar = true;
             // 
             // labelPrice
             // 
