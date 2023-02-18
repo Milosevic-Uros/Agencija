@@ -10,7 +10,7 @@ namespace Shared.Interfaces
     public interface IAdminRepository
     {
         //Admin and users
-        
+        Admin GetAdmin(string email, string password);
         int UpdateAdmin(Admin admin);
         List<Client> GetAllClients();
         int UpdateClient(Client client);

@@ -1,4 +1,5 @@
-﻿using Shared.Interfaces;
+﻿using DataLayer.Repositories;
+using Shared.Interfaces;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -11,6 +12,11 @@ namespace BusinessLayer
     public partial class ClientBusiness : IClientBusiness
     {
         private readonly IClientRepository clientRepository;
+
+        public ClientBusiness(IClientRepository _clientRepository)
+        {
+            clientRepository = _clientRepository;
+        }
         public string UpdateInfo(Client client)
         {
             int rowsAffected = this.clientRepository.UpdateInfo(client);
