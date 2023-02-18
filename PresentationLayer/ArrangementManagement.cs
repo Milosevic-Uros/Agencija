@@ -101,5 +101,10 @@ namespace PresentationLayer
             InsertArrangement insertArrangement = new InsertArrangement(adminBusiness);
             insertArrangement.Show();
         }
+
+        private void comboBoxLocation_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
