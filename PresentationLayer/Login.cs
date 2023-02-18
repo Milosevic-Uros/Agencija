@@ -86,7 +86,7 @@ namespace PresentationLayer
                     }
                     else
                     {
-                        AdminDashboard adminDashboard = new AdminDashboard(adminBusiness, clientBusiness);
+                        AdminDashboard adminDashboard = new AdminDashboard(adminBusiness, clientBusiness,admin);
                         adminDashboard.Show();
                         this.Hide();
                         usernameLog.Text = "";

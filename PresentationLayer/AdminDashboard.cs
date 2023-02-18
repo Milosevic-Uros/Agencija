@@ -18,10 +18,11 @@ namespace PresentationLayer
         private readonly IAdminBusiness adminBusiness;
         private readonly IClientBusiness clientBusiness;
         Admin admin;
-        public AdminDashboard(IAdminBusiness _adminBusiness, IClientBusiness _clientBusiness)
+        public AdminDashboard(IAdminBusiness _adminBusiness, IClientBusiness _clientBusiness,Admin _admin)
         {
             adminBusiness= _adminBusiness;
             clientBusiness= _clientBusiness;
+            admin = _admin;
             InitializeComponent();
         }
 
