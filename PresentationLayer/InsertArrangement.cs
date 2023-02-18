@@ -24,12 +24,14 @@ namespace PresentationLayer
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
+            ArrangementManagement arrangementManagement = new ArrangementManagement(adminBusiness);
+            arrangementManagement.ShowDialog();
             this.Close();
         }
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
-            if (textBoxName.Text == ""  || comboBoxLocation.DisplayMember == "" || comboBoxArrangement.DisplayMember == "" || comboBoxTransport.DisplayMember == "" || textBoxVacancies.Text == "" || textBoxPrice.Text == "")
+            if (textBoxName.Text == ""  || comboBoxLocation.SelectedValue == "" || comboBoxArrangement.SelectedValue == "" || comboBoxTransport.SelectedValue == "" || textBoxVacancies.Text == "" || textBoxPrice.Text == "")
             {
                     MessageBox.Show("Fill in all required fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     textBoxName.Focus();
@@ -41,11 +43,12 @@ namespace PresentationLayer
             arrangement.name = textBoxName.Text;
             arrangement.dateOfDeparture = dateTimePickerDeparture.Value;
             arrangement.returnDate = dateTimePickerReturn.Value;
-            arrangement.locationId = Convert.ToInt32(comboBoxLocation.ValueMember);
+            arrangement.locationId = Convert.ToInt32(comboBoxLocation.SelectedValue);
             arrangement.typeofTransport = comboBoxTransport.SelectedItem.ToString();
-            arrangement.typeOfArrangement = comboBoxArrangement.DisplayMember;
+            arrangement.typeOfArrangement = comboBoxArrangement.SelectedItem.ToString();
             arrangement.numberOfVacancies = Convert.ToInt32(textBoxVacancies.Text);
             arrangement.price = Convert.ToInt32(textBoxPrice.Text);
+            arrangement.description = "Trip to " + arrangement.name;
 
 
             string result = adminBusiness.InsertArrangement(arrangement);
@@ -63,12 +66,15 @@ namespace PresentationLayer
 
         private void InsertArrangement_Load(object sender, EventArgs e)
         {
-
+            this.lOCATIONSTableAdapter.Fill(this.aGENCIJADataSet.LOCATIONS);
+            comboBoxTransport.SelectedIndex = 0;
+            comboBoxArrangement.SelectedIndex = 0;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
+
     }
 }

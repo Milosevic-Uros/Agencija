@@ -37,34 +37,48 @@ namespace DataLayer.Repositories
         }
         public int UpdateLocation(Location location)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string query = "UPDATE LOCATIONS SET location_name=@locationName WHERE location_id=@id";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@locationName", location.locationName);
-                command.Parameters.AddWithValue("@id", location.locationId);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE LOCATIONS SET location_name=@locationName WHERE location_id=@id";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@locationName", location.locationName);
+                    command.Parameters.AddWithValue("@id", location.locationId);
 
-                connection.Open();
-                int rowsUpdated;
-                rowsUpdated = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsUpdated;
+                    connection.Open();
+                    int rowsUpdated;
+                    rowsUpdated = command.ExecuteNonQuery();
+                    connection.Close();
+                    return rowsUpdated;
+                }
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
         public int InsertLocation(Location location)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string query = "INSERT INTO LOCATIONS (location_id,location_name) VALUES (@locationId,@locationName)";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@locationId", location.locationId);
-                command.Parameters.AddWithValue("@locationName", location.locationName);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "INSERT INTO LOCATIONS (location_id,location_name) VALUES (@locationId,@locationName)";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@locationId", location.locationId);
+                    command.Parameters.AddWithValue("@locationName", location.locationName);
 
-                connection.Open();
-                int rowsUpdated;
-                rowsUpdated = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsUpdated;
+                    connection.Open();
+                    int rowsUpdated;
+                    rowsUpdated = command.ExecuteNonQuery();
+                    connection.Close();
+                    return rowsUpdated;
+                }
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
         public Location GetLocation(int locationId)
@@ -90,17 +104,24 @@ namespace DataLayer.Repositories
         }
         public int DeleteLocation(int locationId)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string query = "DELETE FROM LOCATIONS WHERE location_id=@id";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@id", locationId);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "DELETE FROM LOCATIONS WHERE location_id=@id";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@id", locationId);
 
-                connection.Open();
-                int rowsUpdated;
-                rowsUpdated = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsUpdated;
+                    connection.Open();
+                    int rowsUpdated;
+                    rowsUpdated = command.ExecuteNonQuery();
+                    connection.Close();
+                    return rowsUpdated;
+                }
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
     }

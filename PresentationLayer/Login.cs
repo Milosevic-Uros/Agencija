@@ -1,10 +1,12 @@
 ﻿using BusinessLayer;
+using DataLayer;
 using Shared.Interfaces;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -29,19 +31,11 @@ namespace PresentationLayer
 
         public string connString = "Data Source=MNS-AWS-L02\\SQLEXPRESS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-                
-        }
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void RegisterLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -119,14 +113,24 @@ namespace PresentationLayer
 
         private void Login_Load(object sender, EventArgs e)
         {
+            connString = Constants.ConnectionString;
+            SqlConnection con = new SqlConnection(connString);
+            try
+            {
+                con.Open();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An unexpected error occured withing the database, please contact your database administrator", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Application.Exit();
+            }
+            finally 
+            {
+                con.Close();
+            }
             //comboBoxLogin.SelectedItem = true;
             comboBoxLogin.SelectedItem = null;
             comboBoxLogin.SelectedText = "--select--";
-        }
-
-        private void comboBoxLogin_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

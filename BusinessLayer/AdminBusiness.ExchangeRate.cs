@@ -36,7 +36,7 @@ namespace BusinessLayer
             }
             else
             {
-                return "Adding an exchange rate item failed!";
+                return "Adding an exchange rate item failed!\nYou might have tried to insert a duplicate record";
             }
         }
         public ExchangeRate GetExchangeRate(int currencyId)

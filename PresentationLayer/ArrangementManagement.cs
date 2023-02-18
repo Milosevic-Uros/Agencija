@@ -37,7 +37,7 @@ namespace PresentationLayer
                 int arrangementID = Convert.ToInt32(textBoxArrangementID.Text);
                 string result = adminBusiness.DeleteArrangement(arrangementID);
                 MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                dataGridViewArrangemet.DataSource = adminBusiness.GetAllClients();
+                dataGridViewArrangemet.DataSource = adminBusiness.GetAllArrangements();
 
                 textBoxArrangementID.Text = "";
                 dateTimePickerDeparture.Text = "";
@@ -49,8 +49,7 @@ namespace PresentationLayer
         {
             // TODO: This line of code loads data into the 'aGENCIJADataSet.LOCATIONS' table. You can move, or remove it, as needed.
             this.lOCATIONSTableAdapter.Fill(this.aGENCIJADataSet.LOCATIONS);
-            List<Arrangement> accomodationList = adminBusiness.GetAllArrangements();
-            dataGridViewArrangemet.DataSource = accomodationList;
+            dataGridViewArrangemet.DataSource = adminBusiness.GetAllArrangements();
         }
 
 
@@ -67,6 +66,7 @@ namespace PresentationLayer
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
+            this.Close();
             InsertArrangement insertArrangement = new InsertArrangement(adminBusiness);
             insertArrangement.Show();
         }

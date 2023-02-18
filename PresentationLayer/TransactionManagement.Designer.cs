@@ -63,64 +63,65 @@
             this.panelClientManagement.Controls.Add(this.labelCurrencyID);
             this.panelClientManagement.Controls.Add(this.dataGridViewTransaction);
             this.panelClientManagement.Location = new System.Drawing.Point(-1, 2);
-            this.panelClientManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelClientManagement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panelClientManagement.Name = "panelClientManagement";
-            this.panelClientManagement.Size = new System.Drawing.Size(803, 446);
+            this.panelClientManagement.Size = new System.Drawing.Size(602, 362);
             this.panelClientManagement.TabIndex = 2;
             // 
             // textBoxExchangeRate
             // 
-            this.textBoxExchangeRate.Location = new System.Drawing.Point(600, 272);
-            this.textBoxExchangeRate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxExchangeRate.Location = new System.Drawing.Point(450, 221);
+            this.textBoxExchangeRate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxExchangeRate.Name = "textBoxExchangeRate";
-            this.textBoxExchangeRate.Size = new System.Drawing.Size(147, 22);
+            this.textBoxExchangeRate.Size = new System.Drawing.Size(111, 20);
             this.textBoxExchangeRate.TabIndex = 39;
-            this.textBoxExchangeRate.TextChanged += new System.EventHandler(this.textBoxExchangeRate_TextChanged);
             // 
             // labelExchangeRate
             // 
             this.labelExchangeRate.AutoSize = true;
             this.labelExchangeRate.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelExchangeRate.Location = new System.Drawing.Point(596, 241);
+            this.labelExchangeRate.Location = new System.Drawing.Point(447, 196);
+            this.labelExchangeRate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelExchangeRate.Name = "labelExchangeRate";
-            this.labelExchangeRate.Size = new System.Drawing.Size(122, 22);
+            this.labelExchangeRate.Size = new System.Drawing.Size(102, 18);
             this.labelExchangeRate.TabIndex = 38;
             this.labelExchangeRate.Text = "Exchange rate";
-            this.labelExchangeRate.Click += new System.EventHandler(this.labelExchangeRate_Click);
             // 
             // textBoxCountryName
             // 
-            this.textBoxCountryName.Location = new System.Drawing.Point(408, 272);
-            this.textBoxCountryName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCountryName.Location = new System.Drawing.Point(306, 221);
+            this.textBoxCountryName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCountryName.Name = "textBoxCountryName";
-            this.textBoxCountryName.Size = new System.Drawing.Size(147, 22);
+            this.textBoxCountryName.Size = new System.Drawing.Size(111, 20);
             this.textBoxCountryName.TabIndex = 37;
             // 
             // labelCountryName
             // 
             this.labelCountryName.AutoSize = true;
             this.labelCountryName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCountryName.Location = new System.Drawing.Point(404, 241);
+            this.labelCountryName.Location = new System.Drawing.Point(303, 196);
+            this.labelCountryName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCountryName.Name = "labelCountryName";
-            this.labelCountryName.Size = new System.Drawing.Size(123, 22);
+            this.labelCountryName.Size = new System.Drawing.Size(102, 18);
             this.labelCountryName.TabIndex = 36;
             this.labelCountryName.Text = "Country name";
             // 
             // textBoxCurrencyCode
             // 
-            this.textBoxCurrencyCode.Location = new System.Drawing.Point(227, 272);
-            this.textBoxCurrencyCode.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCurrencyCode.Location = new System.Drawing.Point(170, 221);
+            this.textBoxCurrencyCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCurrencyCode.Name = "textBoxCurrencyCode";
-            this.textBoxCurrencyCode.Size = new System.Drawing.Size(147, 22);
+            this.textBoxCurrencyCode.Size = new System.Drawing.Size(111, 20);
             this.textBoxCurrencyCode.TabIndex = 35;
             // 
             // labelCurrencyCode
             // 
             this.labelCurrencyCode.AutoSize = true;
             this.labelCurrencyCode.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCurrencyCode.Location = new System.Drawing.Point(223, 241);
+            this.labelCurrencyCode.Location = new System.Drawing.Point(167, 196);
+            this.labelCurrencyCode.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCurrencyCode.Name = "labelCurrencyCode";
-            this.labelCurrencyCode.Size = new System.Drawing.Size(124, 22);
+            this.labelCurrencyCode.Size = new System.Drawing.Size(105, 18);
             this.labelCurrencyCode.TabIndex = 34;
             this.labelCurrencyCode.Text = "Currency code";
             // 
@@ -128,10 +129,10 @@
             // 
             this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(13, 388);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonClose.Location = new System.Drawing.Point(10, 315);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(81, 49);
+            this.buttonClose.Size = new System.Drawing.Size(61, 40);
             this.buttonClose.TabIndex = 33;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = false;
@@ -141,10 +142,10 @@
             // 
             this.buttonDelete.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonDelete.Location = new System.Drawing.Point(507, 350);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonDelete.Location = new System.Drawing.Point(380, 284);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(145, 49);
+            this.buttonDelete.Size = new System.Drawing.Size(109, 40);
             this.buttonDelete.TabIndex = 11;
             this.buttonDelete.Text = "Delete ";
             this.buttonDelete.UseVisualStyleBackColor = false;
@@ -154,10 +155,10 @@
             // 
             this.buttonUpdate.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonUpdate.Location = new System.Drawing.Point(315, 350);
-            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonUpdate.Location = new System.Drawing.Point(236, 284);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(145, 49);
+            this.buttonUpdate.Size = new System.Drawing.Size(109, 40);
             this.buttonUpdate.TabIndex = 10;
             this.buttonUpdate.Text = "Update ";
             this.buttonUpdate.UseVisualStyleBackColor = false;
@@ -167,10 +168,10 @@
             // 
             this.buttonInsert.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonInsert.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonInsert.Location = new System.Drawing.Point(123, 350);
-            this.buttonInsert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonInsert.Location = new System.Drawing.Point(92, 284);
+            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonInsert.Name = "buttonInsert";
-            this.buttonInsert.Size = new System.Drawing.Size(145, 49);
+            this.buttonInsert.Size = new System.Drawing.Size(109, 40);
             this.buttonInsert.TabIndex = 9;
             this.buttonInsert.Text = "Insert ";
             this.buttonInsert.UseVisualStyleBackColor = false;
@@ -178,19 +179,20 @@
             // 
             // textBoxCurrencyID
             // 
-            this.textBoxCurrencyID.Location = new System.Drawing.Point(41, 272);
-            this.textBoxCurrencyID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxCurrencyID.Location = new System.Drawing.Point(31, 221);
+            this.textBoxCurrencyID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxCurrencyID.Name = "textBoxCurrencyID";
-            this.textBoxCurrencyID.Size = new System.Drawing.Size(147, 22);
+            this.textBoxCurrencyID.Size = new System.Drawing.Size(111, 20);
             this.textBoxCurrencyID.TabIndex = 2;
             // 
             // labelCurrencyID
             // 
             this.labelCurrencyID.AutoSize = true;
             this.labelCurrencyID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelCurrencyID.Location = new System.Drawing.Point(37, 241);
+            this.labelCurrencyID.Location = new System.Drawing.Point(28, 196);
+            this.labelCurrencyID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelCurrencyID.Name = "labelCurrencyID";
-            this.labelCurrencyID.Size = new System.Drawing.Size(104, 22);
+            this.labelCurrencyID.Size = new System.Drawing.Size(86, 18);
             this.labelCurrencyID.TabIndex = 1;
             this.labelCurrencyID.Text = "Currency ID";
             // 
@@ -198,21 +200,22 @@
             // 
             this.dataGridViewTransaction.BackgroundColor = System.Drawing.Color.Silver;
             this.dataGridViewTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTransaction.Location = new System.Drawing.Point(3, 0);
-            this.dataGridViewTransaction.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewTransaction.Location = new System.Drawing.Point(2, 0);
+            this.dataGridViewTransaction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewTransaction.Name = "dataGridViewTransaction";
             this.dataGridViewTransaction.RowHeadersWidth = 51;
             this.dataGridViewTransaction.RowTemplate.Height = 24;
-            this.dataGridViewTransaction.Size = new System.Drawing.Size(796, 177);
+            this.dataGridViewTransaction.Size = new System.Drawing.Size(597, 144);
             this.dataGridViewTransaction.TabIndex = 0;
-            this.dataGridViewTransaction.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewTransaction_CellContentClick);
+            this.dataGridViewTransaction.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewTransaction_RowHeaderMouseClick_1);
             // 
             // TransactionManagement
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panelClientManagement);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "TransactionManagement";
             this.Text = "TransactionManagement";
             this.Load += new System.EventHandler(this.TransactionManagement_Load);

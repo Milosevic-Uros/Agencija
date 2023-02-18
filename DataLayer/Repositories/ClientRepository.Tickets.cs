@@ -75,30 +75,30 @@ namespace DataLayer.Repositories
  
         public Ticket GetTicket(int ticketId)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = "SELECT TOP 1 t.ticket_id,t.name,t.date_of_departure,t.return_date,l.location_name,t.type_of_transport,t.price,t.number_of_vacancies FROM TICKETS t JOIN LOCATIONS l ON t.location_id=l.location_id WHERE ticket_id=@ticketId";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@ticketId", ticketId);
-                connection.Open();
-                Ticket ticket = new Ticket();
-
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    ticket.ticketId = reader.GetInt32(0);
-                    ticket.name = reader.GetString(1);
-                    ticket.dateOfDeparture = reader.GetDateTime(2);
-                    ticket.returnDate = reader.GetDateTime(3);
-                    ticket.locationId = reader.GetInt32(4);
-                    ticket.typeOfTransport = reader.GetString(5);
-                    ticket.price = reader.GetDecimal(6);
-                    ticket.numberOfVacancies = reader.GetInt32(7);
+                    string query = "SELECT TOP 1 t.ticket_id,t.name,t.date_of_departure,t.return_date,l.location_name,t.type_of_transport,t.price,t.number_of_vacancies FROM TICKETS t JOIN LOCATIONS l ON t.location_id=l.location_id WHERE ticket_id=@ticketId";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@ticketId", ticketId);
+                    connection.Open();
+                    Ticket ticket = new Ticket();
+
+                    SqlDataReader reader = command.ExecuteReader();
+                    while (reader.Read())
+                    {
+                        ticket.ticketId = reader.GetInt32(0);
+                        ticket.name = reader.GetString(1);
+                        ticket.dateOfDeparture = reader.GetDateTime(2);
+                        ticket.returnDate = reader.GetDateTime(3);
+                        ticket.locationId = reader.GetInt32(4);
+                        ticket.typeOfTransport = reader.GetString(5);
+                        ticket.price = reader.GetDecimal(6);
+                        ticket.numberOfVacancies = reader.GetInt32(7);
+                    }
+                    reader.Close();
+                    connection.Close();
+                    return ticket;
                 }
-                reader.Close();
-                connection.Close();
-                return ticket;
-            }
         }
         public int BookATicket(Client client,int ticketId, int numberOfPeople)
         {

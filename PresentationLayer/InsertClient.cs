@@ -132,10 +132,5 @@ namespace PresentationLayer
             ClientManagement clientManagement = new ClientManagement(adminBusiness);
             clientManagement.Show();
         }
-
-        private void InsertClient_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
