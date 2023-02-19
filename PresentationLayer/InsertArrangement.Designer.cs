@@ -33,6 +33,8 @@
             this.comboBoxArrangement = new System.Windows.Forms.ComboBox();
             this.comboBoxTransport = new System.Windows.Forms.ComboBox();
             this.comboBoxLocation = new System.Windows.Forms.ComboBox();
+            this.lOCATIONSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aGENCIJADataSet = new PresentationLayer.AGENCIJADataSet();
             this.dateTimePickerReturn = new System.Windows.Forms.DateTimePicker();
             this.dateTimePickerDeparture = new System.Windows.Forms.DateTimePicker();
             this.buttonInsert = new System.Windows.Forms.Button();
@@ -50,13 +52,11 @@
             this.labelName = new System.Windows.Forms.Label();
             this.labelArrangementType = new System.Windows.Forms.Label();
             this.labelReturnDate = new System.Windows.Forms.Label();
-            this.aGENCIJADataSet = new PresentationLayer.AGENCIJADataSet();
-            this.lOCATIONSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOCATIONSTableAdapter = new PresentationLayer.AGENCIJADataSetTableAdapters.LOCATIONSTableAdapter();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.lOCATIONSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -82,7 +82,7 @@
             this.panel1.Controls.Add(this.labelArrangementType);
             this.panel1.Controls.Add(this.labelReturnDate);
             this.panel1.Location = new System.Drawing.Point(1, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(598, 366);
             this.panel1.TabIndex = 1;
@@ -96,10 +96,10 @@
             "Last minute",
             "Middle minute"});
             this.comboBoxArrangement.Location = new System.Drawing.Point(223, 193);
-            this.comboBoxArrangement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxArrangement.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxArrangement.Name = "comboBoxArrangement";
             this.comboBoxArrangement.Size = new System.Drawing.Size(132, 21);
-            this.comboBoxArrangement.TabIndex = 31;
+            this.comboBoxArrangement.TabIndex = 5;
             // 
             // comboBoxTransport
             // 
@@ -108,10 +108,10 @@
             "Airplane",
             "Bus"});
             this.comboBoxTransport.Location = new System.Drawing.Point(401, 193);
-            this.comboBoxTransport.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxTransport.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTransport.Name = "comboBoxTransport";
             this.comboBoxTransport.Size = new System.Drawing.Size(132, 21);
-            this.comboBoxTransport.TabIndex = 30;
+            this.comboBoxTransport.TabIndex = 6;
             // 
             // comboBoxLocation
             // 
@@ -119,37 +119,47 @@
             this.comboBoxLocation.DisplayMember = "location_name";
             this.comboBoxLocation.FormattingEnabled = true;
             this.comboBoxLocation.Location = new System.Drawing.Point(73, 193);
-            this.comboBoxLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxLocation.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxLocation.Name = "comboBoxLocation";
             this.comboBoxLocation.Size = new System.Drawing.Size(117, 21);
-            this.comboBoxLocation.TabIndex = 29;
+            this.comboBoxLocation.TabIndex = 4;
             this.comboBoxLocation.ValueMember = "location_id";
+            // 
+            // lOCATIONSBindingSource
+            // 
+            this.lOCATIONSBindingSource.DataMember = "LOCATIONS";
+            this.lOCATIONSBindingSource.DataSource = this.aGENCIJADataSet;
+            // 
+            // aGENCIJADataSet
+            // 
+            this.aGENCIJADataSet.DataSetName = "AGENCIJADataSet";
+            this.aGENCIJADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dateTimePickerReturn
             // 
             this.dateTimePickerReturn.Location = new System.Drawing.Point(401, 125);
-            this.dateTimePickerReturn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerReturn.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerReturn.Name = "dateTimePickerReturn";
             this.dateTimePickerReturn.Size = new System.Drawing.Size(132, 20);
-            this.dateTimePickerReturn.TabIndex = 25;
+            this.dateTimePickerReturn.TabIndex = 3;
             // 
             // dateTimePickerDeparture
             // 
             this.dateTimePickerDeparture.Location = new System.Drawing.Point(223, 125);
-            this.dateTimePickerDeparture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerDeparture.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerDeparture.Name = "dateTimePickerDeparture";
             this.dateTimePickerDeparture.Size = new System.Drawing.Size(132, 20);
-            this.dateTimePickerDeparture.TabIndex = 24;
+            this.dateTimePickerDeparture.TabIndex = 2;
             // 
             // buttonInsert
             // 
             this.buttonInsert.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonInsert.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInsert.Location = new System.Drawing.Point(314, 295);
-            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(109, 54);
-            this.buttonInsert.TabIndex = 23;
+            this.buttonInsert.TabIndex = 9;
             this.buttonInsert.Text = "Insert arrangement";
             this.buttonInsert.UseVisualStyleBackColor = false;
             this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
@@ -159,10 +169,10 @@
             this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.Location = new System.Drawing.Point(152, 295);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(109, 54);
-            this.buttonClose.TabIndex = 22;
+            this.buttonClose.TabIndex = 10;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
@@ -172,7 +182,7 @@
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.labelINSERT);
             this.panel2.Location = new System.Drawing.Point(2, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(596, 72);
             this.panel2.TabIndex = 21;
@@ -191,10 +201,10 @@
             // textBoxPrice
             // 
             this.textBoxPrice.Location = new System.Drawing.Point(314, 254);
-            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxPrice.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxPrice.Name = "textBoxPrice";
             this.textBoxPrice.Size = new System.Drawing.Size(111, 20);
-            this.textBoxPrice.TabIndex = 20;
+            this.textBoxPrice.TabIndex = 8;
             // 
             // labelPrice
             // 
@@ -232,10 +242,10 @@
             // textBoxVacancies
             // 
             this.textBoxVacancies.Location = new System.Drawing.Point(151, 254);
-            this.textBoxVacancies.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxVacancies.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxVacancies.Name = "textBoxVacancies";
             this.textBoxVacancies.Size = new System.Drawing.Size(111, 20);
-            this.textBoxVacancies.TabIndex = 14;
+            this.textBoxVacancies.TabIndex = 7;
             // 
             // labelVacancies
             // 
@@ -262,10 +272,10 @@
             // textBoxName
             // 
             this.textBoxName.Location = new System.Drawing.Point(73, 127);
-            this.textBoxName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxName.Name = "textBoxName";
             this.textBoxName.Size = new System.Drawing.Size(117, 20);
-            this.textBoxName.TabIndex = 10;
+            this.textBoxName.TabIndex = 1;
             // 
             // labelName
             // 
@@ -300,16 +310,6 @@
             this.labelReturnDate.TabIndex = 5;
             this.labelReturnDate.Text = "Return date";
             // 
-            // aGENCIJADataSet
-            // 
-            this.aGENCIJADataSet.DataSetName = "AGENCIJADataSet";
-            this.aGENCIJADataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lOCATIONSBindingSource
-            // 
-            this.lOCATIONSBindingSource.DataMember = "LOCATIONS";
-            this.lOCATIONSBindingSource.DataSource = this.aGENCIJADataSet;
-            // 
             // lOCATIONSTableAdapter
             // 
             this.lOCATIONSTableAdapter.ClearBeforeFill = true;
@@ -321,7 +321,7 @@
             this.ClientSize = new System.Drawing.Size(598, 364);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "InsertArrangement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -329,10 +329,10 @@
             this.Load += new System.EventHandler(this.InsertArrangement_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lOCATIONSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOCATIONSBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
