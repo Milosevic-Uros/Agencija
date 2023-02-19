@@ -95,7 +95,6 @@ namespace PresentationLayer
             int index = comboBoxType.Items.IndexOf(item);
             string type = comboBoxType.Items[index].ToString();
             DateTime date = dateTimePickerDeparture.Value;
-            MessageBox.Show($"{locationId}        {type}         {date.ToString("yyyy'-'MM'-'dd")}");
             List<Object> lista= clientBusiness.GetAllArrangementsByLocationTypeAndDate(locationId, type, date);
             dataGridViewArrangements.DataSource = lista;
 
