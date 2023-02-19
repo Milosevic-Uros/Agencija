@@ -224,7 +224,7 @@
             this.MaximizeBox = false;
             this.Name = "TicketManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TicketManagement";
+            this.Text = "Ticket Management";
             this.Load += new System.EventHandler(this.TicketManagement_Load);
             this.panelClientManagement.ResumeLayout(false);
             this.panelClientManagement.PerformLayout();

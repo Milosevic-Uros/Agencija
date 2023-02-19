@@ -53,7 +53,7 @@ namespace PresentationLayer
             arrangement.typeOfArrangement = comboBoxArrangement.SelectedItem.ToString();
             arrangement.numberOfVacancies = Convert.ToInt32(textBoxVacancies.Text);
             arrangement.price = Convert.ToInt32(textBoxPrice.Text);
-            arrangement.description = "Trip to " + arrangement.name;
+            arrangement.description = (arrangement.returnDate - arrangement.dateOfDeparture).Days.ToString() + " day trip to " + arrangement.name;
 
 
             string result = adminBusiness.InsertArrangement(arrangement);

@@ -308,7 +308,7 @@
             this.MaximizeBox = false;
             this.Name = "InsertClient";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InsertClient";
+            this.Text = "Insert Client";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);

@@ -319,7 +319,7 @@
             this.MaximizeBox = false;
             this.Name = "InsertArrangement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InsertArrangement";
+            this.Text = "Insert Arrangement";
             this.Load += new System.EventHandler(this.InsertArrangement_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
