@@ -25,10 +25,6 @@ namespace PresentationLayer
             MaximizeBox = false;
         }
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
@@ -85,6 +81,7 @@ namespace PresentationLayer
         {
             List<Ticket> ticketList = adminBusiness.GetAllTickets();
             dataGridViewTickets.DataSource = ticketList;
+            comboBoxTransport.SelectedIndex = 0;
         }
 
 
