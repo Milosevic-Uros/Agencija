@@ -51,7 +51,7 @@ namespace DataLayer.Repositories
             List<Object> ListOfArrangements = new List<Object>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT  a.arrangement_id,a.name,a.date_of_departure,a.return_date,l.location_id,a.type_of_transport,a.type_of_arrangement,c.number_of_people,a.description,a.price FROM CLIENTS_ARRANGEMENTS c JOIN ARRANGEMENTS a ON c.arrangement_id=a.arrangement_id JOIN LOCATIONS l on a.location_id=l.location_id WHERE c.client_id=@clientId;";
+                string query = "SELECT  a.arrangement_id,a.name,a.date_of_departure,a.return_date,l.location_name,a.type_of_transport,a.type_of_arrangement,c.number_of_people,a.description,a.price FROM CLIENTS_ARRANGEMENTS c JOIN ARRANGEMENTS a ON c.arrangement_id=a.arrangement_id JOIN LOCATIONS l on a.location_id=l.location_id WHERE c.client_id=@clientId;";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@clientId", client.clientId);
                 connection.Open();
@@ -64,13 +64,13 @@ namespace DataLayer.Repositories
                     string name = reader.GetString(1);
                     DateTime dateOfDeparture = reader.GetDateTime(2);
                     DateTime returnDate = reader.GetDateTime(3);
-                    int locationId = reader.GetInt32(4);
+                    string locationName = reader.GetString(4);
                     string typeofTransport = reader.GetString(5);
                     string typeOfArrangement = reader.GetString(6);
                     int numberOfPeople = reader.GetInt32(7);
                     string description = reader.GetString(8);
                     decimal price = reader.GetDecimal(9);
-                    Object obj = new { arrangementId, name, dateOfDeparture, returnDate, locationId, typeofTransport, typeOfArrangement, numberOfPeople, description, price };
+                    Object obj = new { arrangementId, name, dateOfDeparture, returnDate, locationName, typeofTransport, typeOfArrangement, numberOfPeople, description, price };
                     ListOfArrangements.Add(obj);
                 }
                 reader.Close();
