@@ -33,7 +33,7 @@ namespace BusinessLayer
             }
             else
             {
-                return "Booking a ticket ticket!";
+                return "Booking a ticket failed!";
             }
         }
     }

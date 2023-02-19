@@ -135,7 +135,7 @@ namespace DataLayer.Repositories
                     command.Parameters.AddWithValue("@passportNumber", client.passportNumber);
                     command.Parameters.AddWithValue("@phoneNumber", client.phoneNumber);
                     command.Parameters.AddWithValue("@address", client.address);
-                    command.Parameters.AddWithValue("@email", client.address);
+                    command.Parameters.AddWithValue("@email", client.email);
                     command.Parameters.AddWithValue("@password", client.password);
 
                     connection.Open();

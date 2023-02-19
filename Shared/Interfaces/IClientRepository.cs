@@ -18,7 +18,7 @@ namespace Shared.Interfaces
         //Arrangements
         List<Arrangement> GetAllArrangements();
         List<Object> GetAllClientArrangements(Client client);
-        List<Object> GetAllArrangementsByLocationTypeAndDate(string location,string typeOfArrangement, DateTime from);
+        List<Object> GetAllArrangementsByLocationTypeAndDate(int locationId,string typeOfArrangement, DateTime from);
         List<Arrangement> GetArrangementsOfType(string type);
         Arrangement GetAClientArrangement(Client client,int arrangementId);
         int BookAnArrangement(int clientId, int arrangementId,int numberOfPeople);

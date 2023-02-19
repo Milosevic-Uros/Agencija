@@ -48,7 +48,12 @@ namespace PresentationLayer
 
         private void buttonBuy_Click(object sender, EventArgs e)
         {
-            if (textBoxAmount.Text == "")
+            if (textBoxTicketID.Text == "" || !Regex.Match(textBoxTicketID.Text, "^[0-9]*$").Success) 
+            {
+                MessageBox.Show("Please select ticket you would like to buy!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else if (textBoxAmount.Text == "")
             {
                 MessageBox.Show("Provide amount that you want to buy!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxAmount.Focus();
@@ -62,8 +67,12 @@ namespace PresentationLayer
             }
             else
             {
-                string result = clientBusiness.BookATicket(client, Convert.ToInt32(textBoxTicketID.Text), Convert.ToInt32(textBoxAmount.Text));
-                MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DialogResult dialogres = MessageBox.Show("Are you sure you want to reserve this ticket?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogres == DialogResult.Yes)
+                {
+                    string result = clientBusiness.BookATicket(client, Convert.ToInt32(textBoxTicketID.Text), Convert.ToInt32(textBoxAmount.Text));
+                    MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
         }
 

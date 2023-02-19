@@ -101,19 +101,25 @@ namespace DataLayer.Repositories
         }
         public int BookATicket(Client client,int ticketId, int numberOfPeople)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string query = "INSERT INTO CLIENTS_TICKETS (ticket_id,client_id,number_of_people) VALUES(@ticketId,@clientId,@numOfPeople)";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@ticketId", ticketId);
-                command.Parameters.AddWithValue("@clientId", client.clientId);
-                command.Parameters.AddWithValue("@numOfPeople", numberOfPeople);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "INSERT INTO CLIENTS_TICKETS (ticket_id,client_id,number_of_people) VALUES(@ticketId,@clientId,@numOfPeople)";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@ticketId", ticketId);
+                    command.Parameters.AddWithValue("@clientId", client.clientId);
+                    command.Parameters.AddWithValue("@numOfPeople", numberOfPeople);
 
-                connection.Open();
-                int rowsUpdated;
-                rowsUpdated = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsUpdated;
+                    connection.Open();
+                    int rowsUpdated;
+                    rowsUpdated = command.ExecuteNonQuery();
+                    connection.Close();
+                    return rowsUpdated;
+                }
+            }catch
+            {
+                return 0;
             }
         }
     }

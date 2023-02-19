@@ -185,6 +185,7 @@
             // 
             // textBoxTicketID
             // 
+            this.textBoxTicketID.Enabled = false;
             this.textBoxTicketID.Location = new System.Drawing.Point(31, 221);
             this.textBoxTicketID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTicketID.Name = "textBoxTicketID";

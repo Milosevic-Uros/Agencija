@@ -37,7 +37,7 @@ namespace PresentationLayer
             this.eXCHANGE_RATESTableAdapter.Fill(this.aGENCIJADataSet1.EXCHANGE_RATES);
             List<ExchangeRate> transactions = adminBusiness.GetExchangeRates();
             dataGridViewExchange.DataSource = transactions;
-            labelHeadline.Text += DateTime.Now.ToString("dd'-'MM'-'yyyy");
+            labelHeadline.Text += DateTime.Now.ToString("dd'/'MM'/'yyyy");
 
         }
 

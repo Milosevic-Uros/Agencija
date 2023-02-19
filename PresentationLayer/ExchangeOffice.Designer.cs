@@ -45,23 +45,22 @@
             this.textBoxAmount = new System.Windows.Forms.TextBox();
             this.labelValue = new System.Windows.Forms.Label();
             this.dataGridViewExchange = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.labelDate = new System.Windows.Forms.Label();
-            this.labelHeadline = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelINSERT = new System.Windows.Forms.Label();
             this.eXCHANGERATESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eXCHANGE_RATESTableAdapter = new PresentationLayer.AGENCIJADataSet1TableAdapters.EXCHANGE_RATESTableAdapter();
             this.eXCHANGE_RATESTableAdapter1 = new PresentationLayer.AGENCIJADataSet3TableAdapters.EXCHANGE_RATESTableAdapter();
+            this.labelHeadline = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExchange)).BeginInit();
-            this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -81,7 +80,7 @@
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(601, 367);
             this.panel1.TabIndex = 0;
@@ -91,7 +90,7 @@
             this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.Location = new System.Drawing.Point(9, 317);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(61, 40);
             this.buttonClose.TabIndex = 35;
@@ -115,7 +114,7 @@
             this.buttonConvert.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonConvert.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonConvert.Location = new System.Drawing.Point(260, 322);
-            this.buttonConvert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonConvert.Margin = new System.Windows.Forms.Padding(2);
             this.buttonConvert.Name = "buttonConvert";
             this.buttonConvert.Size = new System.Drawing.Size(86, 28);
             this.buttonConvert.TabIndex = 4;
@@ -162,7 +161,7 @@
             this.comboBoxTo.DisplayMember = "currency_code";
             this.comboBoxTo.FormattingEnabled = true;
             this.comboBoxTo.Location = new System.Drawing.Point(260, 272);
-            this.comboBoxTo.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxTo.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxTo.Name = "comboBoxTo";
             this.comboBoxTo.Size = new System.Drawing.Size(92, 21);
             this.comboBoxTo.TabIndex = 2;
@@ -184,7 +183,7 @@
             this.comboBoxFrom.DisplayMember = "currency_code";
             this.comboBoxFrom.FormattingEnabled = true;
             this.comboBoxFrom.Location = new System.Drawing.Point(136, 272);
-            this.comboBoxFrom.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxFrom.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxFrom.Name = "comboBoxFrom";
             this.comboBoxFrom.Size = new System.Drawing.Size(92, 21);
             this.comboBoxFrom.TabIndex = 1;
@@ -203,7 +202,7 @@
             // textBoxAmount
             // 
             this.textBoxAmount.Location = new System.Drawing.Point(136, 326);
-            this.textBoxAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxAmount.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmount.Name = "textBoxAmount";
             this.textBoxAmount.Size = new System.Drawing.Size(96, 20);
             this.textBoxAmount.TabIndex = 3;
@@ -224,51 +223,19 @@
             // 
             this.dataGridViewExchange.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewExchange.Location = new System.Drawing.Point(71, 120);
-            this.dataGridViewExchange.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewExchange.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewExchange.Name = "dataGridViewExchange";
             this.dataGridViewExchange.RowHeadersWidth = 51;
             this.dataGridViewExchange.RowTemplate.Height = 24;
             this.dataGridViewExchange.Size = new System.Drawing.Size(466, 117);
             this.dataGridViewExchange.TabIndex = 23;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel3.Controls.Add(this.labelDate);
-            this.panel3.Controls.Add(this.labelHeadline);
-            this.panel3.Location = new System.Drawing.Point(53, 71);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(503, 35);
-            this.panel3.TabIndex = 24;
-            // 
-            // labelDate
-            // 
-            this.labelDate.AutoSize = true;
-            this.labelDate.Location = new System.Drawing.Point(302, 14);
-            this.labelDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(7, 13);
-            this.labelDate.TabIndex = 1;
-            this.labelDate.Text = "\r\n";
-            // 
-            // labelHeadline
-            // 
-            this.labelHeadline.AutoSize = true;
-            this.labelHeadline.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelHeadline.Location = new System.Drawing.Point(130, 10);
-            this.labelHeadline.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelHeadline.Name = "labelHeadline";
-            this.labelHeadline.Size = new System.Drawing.Size(176, 21);
-            this.labelHeadline.TabIndex = 0;
-            this.labelHeadline.Text = "Exchange rates on date: ";
-            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.labelINSERT);
             this.panel2.Location = new System.Drawing.Point(0, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(599, 72);
             this.panel2.TabIndex = 22;
@@ -277,7 +244,7 @@
             // 
             this.labelINSERT.AutoSize = true;
             this.labelINSERT.Font = new System.Drawing.Font("Microsoft Tai Le", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelINSERT.Location = new System.Drawing.Point(164, 17);
+            this.labelINSERT.Location = new System.Drawing.Point(159, 17);
             this.labelINSERT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelINSERT.Name = "labelINSERT";
             this.labelINSERT.Size = new System.Drawing.Size(280, 45);
@@ -296,6 +263,27 @@
             // 
             this.eXCHANGE_RATESTableAdapter1.ClearBeforeFill = true;
             // 
+            // labelHeadline
+            // 
+            this.labelHeadline.AutoSize = true;
+            this.labelHeadline.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelHeadline.Location = new System.Drawing.Point(115, 10);
+            this.labelHeadline.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelHeadline.Name = "labelHeadline";
+            this.labelHeadline.Size = new System.Drawing.Size(176, 21);
+            this.labelHeadline.TabIndex = 0;
+            this.labelHeadline.Text = "Exchange rates on date: ";
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel3.Controls.Add(this.labelHeadline);
+            this.panel3.Location = new System.Drawing.Point(53, 71);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(503, 35);
+            this.panel3.TabIndex = 24;
+            // 
             // ExchangeOffice
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -303,7 +291,7 @@
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "ExchangeOffice";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -316,11 +304,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExchange)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -328,12 +316,9 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.DataGridView dataGridViewExchange;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelINSERT;
-        private System.Windows.Forms.Label labelDate;
-        private System.Windows.Forms.Label labelHeadline;
         private System.Windows.Forms.Label labelFrom;
         private System.Windows.Forms.ComboBox comboBoxTo;
         private System.Windows.Forms.ComboBox comboBoxFrom;
@@ -351,5 +336,7 @@
         private System.Windows.Forms.BindingSource eXCHANGERATESBindingSource2;
         private AGENCIJADataSet3TableAdapters.EXCHANGE_RATESTableAdapter eXCHANGE_RATESTableAdapter1;
         private System.Windows.Forms.Button buttonClose;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label labelHeadline;
     }
 }

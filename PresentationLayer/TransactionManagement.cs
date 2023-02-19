@@ -87,7 +87,7 @@ namespace PresentationLayer
                 return;
             }
 
-            else if (!Regex.Match(textBoxCurrencyCode.Text, "^[A-Z]{3}$").Success)
+            else if (!Regex.Match(textBoxCurrencyCode.Text, "^[A-Z]{2,3}$").Success)
             {
                 MessageBox.Show("The ID number field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxCurrencyID.Focus();
@@ -119,13 +119,13 @@ namespace PresentationLayer
                 textBoxCurrencyID.Focus();
                 return;
             }
-            else if (!Regex.Match(textBoxCurrencyID.Text, "^[0-9]{0,3}$").Success)
+            else if (!Regex.Match(textBoxCurrencyID.Text, "^[0-9]{2,3}$").Success)
             {
                 MessageBox.Show("The ID number field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxCurrencyID.Focus();
                 return;
             }
-            else if (!Regex.Match(textBoxCurrencyCode.Text, "^[A-Z]{3}$").Success)
+            else if (!Regex.Match(textBoxCurrencyCode.Text, "^[A-Z]{2,3}$").Success)
             {
                 MessageBox.Show("The currency code field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxCurrencyID.Focus();

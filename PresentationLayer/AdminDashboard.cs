@@ -36,6 +36,7 @@ namespace PresentationLayer
             labelNumOfRegisteredClients.Text = "      " + adminBusiness.GetAllClients().Count.ToString();
             labelAvailableArrangements.Text = "Number of available\narrangements";
             labelRegisteredClients.Text = "Number of registered\nclients";
+            labelAvailableTickets.Text = "Number of available\ntickets";
 
 
 

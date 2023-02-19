@@ -161,7 +161,7 @@
             // 
             this.labelAvailableArrangements.AutoSize = true;
             this.labelAvailableArrangements.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F);
-            this.labelAvailableArrangements.Location = new System.Drawing.Point(3, 4);
+            this.labelAvailableArrangements.Location = new System.Drawing.Point(3, 0);
             this.labelAvailableArrangements.Name = "labelAvailableArrangements";
             this.labelAvailableArrangements.Size = new System.Drawing.Size(211, 16);
             this.labelAvailableArrangements.TabIndex = 2;
@@ -192,7 +192,7 @@
             // 
             this.labelRegisteredClients.AutoSize = true;
             this.labelRegisteredClients.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegisteredClients.Location = new System.Drawing.Point(4, 4);
+            this.labelRegisteredClients.Location = new System.Drawing.Point(3, 0);
             this.labelRegisteredClients.Name = "labelRegisteredClients";
             this.labelRegisteredClients.Size = new System.Drawing.Size(175, 16);
             this.labelRegisteredClients.TabIndex = 0;
@@ -300,7 +300,7 @@
             // 
             // pictureBox2
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
+            this.pictureBox2.BackColor = System.Drawing.Color.SteelBlue;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(4, 2);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);

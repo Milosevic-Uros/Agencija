@@ -17,9 +17,7 @@ namespace DataLayer.Repositories
             List<Arrangement> ListOfArrangements = new List<Arrangement>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT a.arrangement_id,a.name,a.date_of_departure,a.return_date," +
-                    "l.location_id,a.type_of_transport,a.type_of_arrangement,a.number_of_vacancies,a.description,a.price  " +
-                    "FROM CLIENTS_ARRANGEMENTS c JOIN ARRANGEMENTS a ON c.client_id=a.arrangement_id JOIN LOCATIONS l on a.location_id=l.location_id";
+                string query = "SELECT a.arrangement_id,a.name,a.date_of_departure,a.return_date,l.location_id,a.type_of_transport,a.type_of_arrangement,a.number_of_vacancies,a.description,a.price\r\nFROM ARRANGEMENTS a JOIN LOCATIONS l ON a.location_id=l.location_id";
                 SqlCommand command = new SqlCommand(query, connection);
                 connection.Open();
 
@@ -81,16 +79,16 @@ namespace DataLayer.Repositories
         }
 
 
-        public List<Object> GetAllArrangementsByLocationTypeAndDate(string location, string typeOfArrangement, DateTime from)
+        public List<Object> GetAllArrangementsByLocationTypeAndDate(int locationId, string typeOfArrangement, DateTime from)
         {
             List<Object> ListOfArrangements = new List<Object>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT  a.arrangement_id,a.name,a.date_of_departure,a.return_date,l.location_name,a.type_of_transport,a.type_of_arrangement,c.number_of_people,a.description,a.price \r\nFROM CLIENTS_ARRANGEMENTS c JOIN ARRANGEMENTS a ON c.arrangement_id=a.arrangement_id JOIN LOCATIONS l on a.location_id=l.location_id \r\nWHERE l.location_id=@locationId AND a.type_of_arrangement=@type AND a.date_of_departure>=@from ";
+                string query = "SELECT  a.arrangement_id,a.name,a.date_of_departure,a.return_date,l.location_name,a.type_of_transport,a.type_of_arrangement,c.number_of_people,a.description,a.price FROM CLIENTS_ARRANGEMENTS c JOIN ARRANGEMENTS a ON c.arrangement_id=a.arrangement_id JOIN LOCATIONS l on a.location_id=l.location_id WHERE l.location_id=@locationId AND a.type_of_arrangement=@type AND a.date_of_departure>=@from";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@locationID", location);
+                command.Parameters.AddWithValue("@locationID", locationId);
                 command.Parameters.AddWithValue("@type", typeOfArrangement);
-                command.Parameters.AddWithValue("@from", from);
+                command.Parameters.AddWithValue("@from", from.ToString("yyyy'-'MM'-'dd"));
                 
                 connection.Open();
 
@@ -192,11 +190,10 @@ namespace DataLayer.Repositories
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string query = "INSERT INTO CLIENTS_ARRANGEMENTS (arrangement_id,client_id,number_of_people) " +
-                        "VALUES(@arrangementId,@clientId,@numOfPeople)";
+                    string query = "INSERT INTO CLIENTS_ARRANGEMENTS (arrangement_id,client_id,number_of_people) VALUES(@arrangementId,@clientId,@numOfPeople)";
                     SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@arrangement_id", arrangementId);
-                    command.Parameters.AddWithValue("@client_id", clientId);
+                    command.Parameters.AddWithValue("@arrangementId", arrangementId);
+                    command.Parameters.AddWithValue("@clientId", clientId);
                     command.Parameters.AddWithValue("@numOfPeople", numberOfPeople);
 
                     connection.Open();

@@ -30,7 +30,7 @@ namespace PresentationLayer
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            if (textBoxArrangementID.Text == "" || dateTimePickerDeparture.Text == "" || dateTimePickerReturnDate.Text == "")
+            if (textBoxArrangementID.Text == "")
             {
                 MessageBox.Show("Select arrangement!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 textBoxArrangementID.Focus();

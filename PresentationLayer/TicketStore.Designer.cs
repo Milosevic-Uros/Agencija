@@ -79,6 +79,7 @@
             this.dataGridViewTickets.RowTemplate.Height = 24;
             this.dataGridViewTickets.Size = new System.Drawing.Size(956, 118);
             this.dataGridViewTickets.TabIndex = 41;
+            this.dataGridViewTickets.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewTickets_RowHeaderMouseClick);
             // 
             // buttonClose
             // 

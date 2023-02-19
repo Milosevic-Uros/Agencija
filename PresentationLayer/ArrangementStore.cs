@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -35,11 +36,13 @@ namespace PresentationLayer
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            ClientDashboard clientDashboard = new ClientDashboard(adminBusiness, clientBusiness, client);
+            clientDashboard.Show();
         }
 
         private void buttonBuy_Click(object sender, EventArgs e)
         {
-            if (comboBoxLocation.Text == "" || comboBoxType.Text == "" || dateTimePickerDeparture.Text == "")
+            if (textBoxArrangementID.Text=="" || comboBoxType.Text == "" || !Regex.Match(textBoxArrangementID.Text, "^[0-9]*$").Success)
             {
                 MessageBox.Show("Fill in all required fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 comboBoxLocation.Focus();
@@ -47,9 +50,14 @@ namespace PresentationLayer
             }
             else
             {
-                
-               /* string result = clientBusiness.BookAnArrangement(client,   );
-                MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
+                DialogResult dialogres = MessageBox.Show("Are you sure you want to reserve this arrangement?", "Question", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogres == DialogResult.Yes)
+                {
+                    string result = clientBusiness.BookAnArrangement(client.clientId, Convert.ToInt32(textBoxArrangementID.Text), 1);
+                    MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    List<Arrangement> arrangements = clientBusiness.GetAllArrangements();
+                    dataGridViewArrangements.DataSource = arrangements;
+                }
             }
         }
 
@@ -67,10 +75,7 @@ namespace PresentationLayer
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridViewArrangements.Rows[e.RowIndex];
-                //nema location u tabeli arrangements, dataset
-                //comboBoxLocation.SelectedItem = row.Cells[4].Value.Equals();
-                comboBoxType.SelectedItem = row.Cells[6].Value.ToString();
-                dateTimePickerDeparture.Value = Convert.ToDateTime(row.Cells[2].Value.ToString());
+                textBoxArrangementID.Text = row.Cells[0].Value.ToString();
 
             }
         }
@@ -84,7 +89,18 @@ namespace PresentationLayer
 
         private void buttonSearch_Click(object sender, EventArgs e)
         {
+            int locationId = Convert.ToInt32(comboBoxLocation.SelectedValue);
 
+            string item = comboBoxType.SelectedItem.ToString();
+            int index = comboBoxType.Items.IndexOf(item);
+            string type = comboBoxType.Items[index].ToString();
+            DateTime date = dateTimePickerDeparture.Value;
+            MessageBox.Show($"{locationId}        {type}         {date.ToString("yyyy'-'MM'-'dd")}");
+            List<Object> lista= clientBusiness.GetAllArrangementsByLocationTypeAndDate(locationId, type, date);
+            dataGridViewArrangements.DataSource = lista;
+
+
+            
         }
     }
 }
