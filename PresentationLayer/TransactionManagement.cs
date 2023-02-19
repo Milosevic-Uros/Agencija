@@ -33,8 +33,6 @@ namespace PresentationLayer
                 textBoxCurrencyCode.Text = row.Cells[1].Value.ToString();
                 textBoxCountryName.Text = row.Cells[2].Value.ToString();
                 textBoxExchangeRate.Text = row.Cells[3].Value.ToString();
-
-
             }
         }
 
@@ -101,8 +99,6 @@ namespace PresentationLayer
             textBoxCurrencyCode.Text = "";
             textBoxCountryName.Text = "";
             textBoxExchangeRate.Text = "";
-
-
         }
 
         private void buttonInsert_Click(object sender, EventArgs e)
@@ -125,7 +121,6 @@ namespace PresentationLayer
                 textBoxCurrencyID.Focus();
                 return;
             }
-            
 
             ExchangeRate exchangeRate = new ExchangeRate();
             exchangeRate.currencyId = textBoxCurrencyID.Text;

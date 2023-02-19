@@ -35,13 +35,13 @@ namespace DataLayer.Repositories
                 return ListOfExchangeRates;
             }
         }
-        public ExchangeRate GetExchangeRate(int currencyId)
+        public ExchangeRate GetExchangeRate(string currencyCode)
         {
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT TOP 1 * FROM EXCHANGE_RATES WHERE currency_id=@currencyId";
+                string query = "SELECT TOP 1 * FROM EXCHANGE_RATES WHERE currency_code=@currencyCode";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@currencyId", currencyId);
+                command.Parameters.AddWithValue("@currencyId", currencyCode);
                 connection.Open();
                 ExchangeRate exchangeRateItem = new ExchangeRate();
 

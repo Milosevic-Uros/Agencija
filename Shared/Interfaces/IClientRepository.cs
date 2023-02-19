@@ -30,7 +30,7 @@ namespace Shared.Interfaces
 
         //Exchange Rate
         List<ExchangeRate> GetExchangeRates();
-        ExchangeRate GetExchangeRate(int currencyId);
+        ExchangeRate GetExchangeRate(string currencyCode);
 
     }
 }

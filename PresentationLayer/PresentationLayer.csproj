@@ -72,6 +72,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AGENCIJADataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="AGENCIJADataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AGENCIJADataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ArrangementManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -195,6 +200,17 @@
     </None>
     <None Include="AGENCIJADataSet.xss">
       <DependentUpon>AGENCIJADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AGENCIJADataSet1.xsc">
+      <DependentUpon>AGENCIJADataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="AGENCIJADataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AGENCIJADataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AGENCIJADataSet1.xss">
+      <DependentUpon>AGENCIJADataSet1.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

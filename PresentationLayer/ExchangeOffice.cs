@@ -35,6 +35,9 @@ namespace PresentationLayer
 
         private void ExchangeOffice_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'aGENCIJADataSet1.EXCHANGE_RATES' table. You can move, or remove it, as needed.
+            this.eXCHANGE_RATESTableAdapter.Fill(this.aGENCIJADataSet1.EXCHANGE_RATES);
+
             List<ExchangeRate> rates = adminBusiness.GetExchangeRates();
             dataGridViewExchange.DataSource= rates;
         }

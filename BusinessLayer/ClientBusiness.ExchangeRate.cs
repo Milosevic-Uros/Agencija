@@ -14,9 +14,9 @@ namespace BusinessLayer
         {
             return clientRepository.GetExchangeRates();
         }
-        public ExchangeRate GetExchangeRate(int currencyId)
+        public ExchangeRate GetExchangeRate(string currencyCode)
         {
-            return clientRepository.GetExchangeRate(currencyId);
+            return clientRepository.GetExchangeRate(currencyCode);
         }
     }
 }
