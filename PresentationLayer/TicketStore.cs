@@ -27,23 +27,23 @@ namespace PresentationLayer
 
         private void TicketStore_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'aGENCIJADataSet1.EXCHANGE_RATES' table. You can move, or remove it, as needed.
-            this.eXCHANGE_RATESTableAdapter.Fill(this.aGENCIJADataSet1.EXCHANGE_RATES);
-            List<ExchangeRate> transactions = adminBusiness.GetExchangeRates();
-            dataGridViewExchange.DataSource = transactions;
+            List<Ticket> tickets = adminBusiness.GetAllTickets();
+            dataGridViewTickets.DataSource = tickets;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            labelDate.Text = DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss");
-        }
-        private void dataGridViewExchange_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+
+        private void dataGridViewTickets_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
             if (e.RowIndex >= 0)
             {
-                DataGridViewRow row = this.dataGridViewExchange.Rows[e.RowIndex];
+                DataGridViewRow row = this.dataGridViewTickets.Rows[e.RowIndex];
 
             }
+        }
+
+        private void buttonBuy_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
