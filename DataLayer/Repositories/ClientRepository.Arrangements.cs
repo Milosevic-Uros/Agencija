@@ -79,6 +79,44 @@ namespace DataLayer.Repositories
                 return ListOfArrangements;
             }
         }
+
+
+        public List<Object> GetAllArrangementsByLocationTypeAndDate(string location, string typeOfArrangement, DateTime from)
+        {
+            List<Object> ListOfArrangements = new List<Object>();
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                string query = "SELECT  a.arrangement_id,a.name,a.date_of_departure,a.return_date,l.location_name,a.type_of_transport,a.type_of_arrangement,c.number_of_people,a.description,a.price \r\nFROM CLIENTS_ARRANGEMENTS c JOIN ARRANGEMENTS a ON c.arrangement_id=a.arrangement_id JOIN LOCATIONS l on a.location_id=l.location_id \r\nWHERE l.location_id=@locationId AND a.type_of_arrangement=@type AND a.date_of_departure>=@from ";
+                SqlCommand command = new SqlCommand(query, connection);
+                command.Parameters.AddWithValue("@locationID", location);
+                command.Parameters.AddWithValue("@type", typeOfArrangement);
+                command.Parameters.AddWithValue("@from", from);
+                
+                connection.Open();
+
+                SqlDataReader reader = command.ExecuteReader();
+                while (reader.Read())
+                {
+
+                    int arrangementId = reader.GetInt32(0);
+                    string name = reader.GetString(1);
+                    DateTime dateOfDeparture = reader.GetDateTime(2);
+                    DateTime returnDate = reader.GetDateTime(3);
+                    string locationName = reader.GetString(4);
+                    string typeofTransport = reader.GetString(5);
+                    string type = reader.GetString(6);
+                    int numberOfPeople = reader.GetInt32(7);
+                    string description = reader.GetString(8);
+                    decimal price = reader.GetDecimal(9);
+                    Object obj = new { arrangementId, name, dateOfDeparture, returnDate, locationName, typeofTransport, type, numberOfPeople, description, price };
+                    ListOfArrangements.Add(obj);
+                }
+                reader.Close();
+                connection.Close();
+
+                return ListOfArrangements;
+            }
+        }
         public List<Arrangement> GetArrangementsOfType(string type)
         {
             List<Arrangement> ListOfArrangements = new List<Arrangement>();

@@ -18,6 +18,10 @@ namespace BusinessLayer
         {
             return clientRepository.GetAllClientArrangements(client);
         }
+        public List<Object> GetAllArrangementsByLocationTypeAndDate(string location, string typeOfArrangement, DateTime from)
+        {
+            return clientRepository.GetAllArrangementsByLocationTypeAndDate(location, typeOfArrangement, from);
+        }
         public List<Arrangement> GetArrangementsOfType(string type)
         {
             return clientRepository.GetArrangementsOfType(type);
