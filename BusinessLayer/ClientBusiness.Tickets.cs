@@ -16,7 +16,7 @@ namespace BusinessLayer
         {
             return clientRepository.GetAllTickets();
         }
-        public List<Ticket> GetAllClientTickets(Client client)
+        public List<Object> GetAllClientTickets(Client client)
         {
             return clientRepository.GetAllClientTickets(client);
         }
