@@ -68,13 +68,13 @@ namespace PresentationLayer
 
         private void buttonBoughtTickets_Click(object sender, EventArgs e)
         {
-            BoughtTickets boughtTickets = new BoughtTickets(clientBusiness, client);
+            BoughtTickets boughtTickets = new BoughtTickets(clientBusiness, adminBusiness, client);
             boughtTickets.Show();
         }
 
         private void buttonBoughtArrangements_Click(object sender, EventArgs e)
         {
-            BoughtArrangements boughtArrangements= new BoughtArrangements();
+            BoughtArrangements boughtArrangements= new BoughtArrangements(clientBusiness, adminBusiness, client);
             boughtArrangements.Show();
         }
     }

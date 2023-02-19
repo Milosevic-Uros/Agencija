@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Shared.Interfaces;
+using Shared.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +14,40 @@ namespace PresentationLayer
 {
     public partial class BoughtArrangements : Form
     {
-        public BoughtArrangements()
+        private readonly IClientBusiness clientBusiness;
+        private readonly IAdminBusiness adminBusiness;
+        Client client;
+        public BoughtArrangements(IClientBusiness _clientBusiness, IAdminBusiness _adminBusiness, Client _client)
         {
+            clientBusiness = _clientBusiness;
+            adminBusiness = _adminBusiness;
+            client = _client;
             InitializeComponent();
+        }
+
+        private void BoughtArrangements_Load(object sender, EventArgs e)
+        {
+            List<object> arrangements = clientBusiness.GetAllClientArrangements(client);
+            dataGridViewBoughtArrangements.DataSource = arrangements;
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            BoughtTickets boughtTickets = new BoughtTickets(clientBusiness, adminBusiness, client);
+            boughtTickets.Show();
+            this.Close();
+        }
+
+        private void buttonBuyMore_Click(object sender, EventArgs e)
+        {
+            ArrangementStore arrangementStore = new ArrangementStore();
+            arrangementStore.Show();
+            this.Close();
         }
     }
 }

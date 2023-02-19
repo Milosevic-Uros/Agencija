@@ -93,6 +93,12 @@
     <Compile Include="ArrangementManagement.Designer.cs">
       <DependentUpon>ArrangementManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="ArrangementStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArrangementStore.Designer.cs">
+      <DependentUpon>ArrangementStore.cs</DependentUpon>
+    </Compile>
     <Compile Include="BoughtArrangements.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="ArrangementManagement.resx">
       <DependentUpon>ArrangementManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoughtArrangements.resx">
+      <DependentUpon>BoughtArrangements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="BoughtTickets.resx">
       <DependentUpon>BoughtTickets.cs</DependentUpon>

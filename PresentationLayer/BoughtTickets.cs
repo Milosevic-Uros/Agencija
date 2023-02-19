@@ -15,11 +15,13 @@ namespace PresentationLayer
     public partial class BoughtTickets : Form
     {
         private readonly IClientBusiness clientBusiness;
+        private readonly IAdminBusiness adminBusiness;
         Client client;
-        public BoughtTickets(IClientBusiness _clientBusiness, Client _client)
+        public BoughtTickets(IClientBusiness _clientBusiness, IAdminBusiness _adminBusiness, Client _client)
         {
             clientBusiness = _clientBusiness;
             client = _client;
+            adminBusiness= _adminBusiness;
             InitializeComponent();
             
         }
@@ -31,7 +33,7 @@ namespace PresentationLayer
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            BoughtArrangements boughtArrangements = new BoughtArrangements();
+            BoughtArrangements boughtArrangements = new BoughtArrangements(clientBusiness, adminBusiness, client);
             boughtArrangements.Show();
             this.Close();
         }
@@ -40,6 +42,13 @@ namespace PresentationLayer
         {
             List<object> tickets = clientBusiness.GetAllClientTickets(client);
             dataGridViewBoughtTickets.DataSource = tickets;
+        }
+
+        private void buttonBuyMore_Click(object sender, EventArgs e)
+        {
+            TicketStore ticketStore = new TicketStore(adminBusiness, clientBusiness,  client);
+            ticketStore.Show();
+            this.Close();
         }
     }
 }

@@ -68,7 +68,7 @@ namespace PresentationLayer
 
         private void labelBought_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            BoughtTickets boughtTickets = new BoughtTickets(clientBusiness, client);
+            BoughtTickets boughtTickets = new BoughtTickets(clientBusiness, adminBusiness, client);
             boughtTickets.Show();
             this.Close();
         }
