@@ -76,15 +76,6 @@ namespace PresentationLayer
         }
 
 
-        private void panelClientManagement_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void RegisterLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            this.Hide();
-        }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
@@ -106,9 +97,5 @@ namespace PresentationLayer
             }
         }
 
-        private void dataGridViewArrangemet_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
     }
 }

@@ -69,7 +69,6 @@
             this.panelLogIn.Name = "panelLogIn";
             this.panelLogIn.Size = new System.Drawing.Size(361, 401);
             this.panelLogIn.TabIndex = 0;
-            this.panelLogIn.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // comboBoxLogin
             // 

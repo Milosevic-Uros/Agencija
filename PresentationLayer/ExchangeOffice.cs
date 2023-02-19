@@ -29,8 +29,6 @@ namespace PresentationLayer
             
         }
 
-
-
         private void ExchangeOffice_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'aGENCIJADataSet3.EXCHANGE_RATES' table. You can move, or remove it, as needed.

@@ -40,7 +40,6 @@ namespace PresentationLayer
 
 
         }
-        public Login RefLoginForm { get; set; }
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
             this.Close();

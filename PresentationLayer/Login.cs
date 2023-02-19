@@ -29,15 +29,6 @@ namespace PresentationLayer
             MaximizeBox = false;
         }
 
-        public string connString = "Data Source=MNS-AWS-L02\\SQLEXPRESS;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
-
-
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void RegisterLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             this.Hide();
@@ -117,7 +108,7 @@ namespace PresentationLayer
 
         private void Login_Load(object sender, EventArgs e)
         {
-            connString = Constants.ConnectionString;
+            string connString = Constants.ConnectionString;
             SqlConnection con = new SqlConnection(connString);
             try
             {
@@ -132,7 +123,6 @@ namespace PresentationLayer
             {
                 con.Close();
             }
-            //comboBoxLogin.SelectedItem = true;
             comboBoxLogin.SelectedItem = null;
             comboBoxLogin.SelectedText = "--select--";
         }

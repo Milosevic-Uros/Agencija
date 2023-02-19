@@ -81,5 +81,11 @@ namespace PresentationLayer
             boughtArrangements.Show();
         }
 
+        private void buttonArrangements_Click(object sender, EventArgs e)
+        {
+            ArrangementStore arrangementStore = new ArrangementStore(adminBusiness, clientBusiness, client);
+            arrangementStore.Show();
+            this.Close();
+        }
     }
 }

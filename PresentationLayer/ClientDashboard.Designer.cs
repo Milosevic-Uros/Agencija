@@ -81,7 +81,7 @@
             // 
             this.labelLoggedIn.AutoSize = true;
             this.labelLoggedIn.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLoggedIn.Location = new System.Drawing.Point(25, 25);
+            this.labelLoggedIn.Location = new System.Drawing.Point(23, 238);
             this.labelLoggedIn.Name = "labelLoggedIn";
             this.labelLoggedIn.Size = new System.Drawing.Size(121, 23);
             this.labelLoggedIn.TabIndex = 7;
@@ -91,7 +91,7 @@
             // 
             this.buttonBoughtArrangements.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
             this.buttonBoughtArrangements.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBoughtArrangements.Location = new System.Drawing.Point(27, 148);
+            this.buttonBoughtArrangements.Location = new System.Drawing.Point(27, 34);
             this.buttonBoughtArrangements.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBoughtArrangements.Name = "buttonBoughtArrangements";
             this.buttonBoughtArrangements.Size = new System.Drawing.Size(167, 57);
@@ -104,7 +104,7 @@
             // 
             this.buttonBoughtTickets.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
             this.buttonBoughtTickets.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBoughtTickets.Location = new System.Drawing.Point(28, 225);
+            this.buttonBoughtTickets.Location = new System.Drawing.Point(28, 111);
             this.buttonBoughtTickets.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBoughtTickets.Name = "buttonBoughtTickets";
             this.buttonBoughtTickets.Size = new System.Drawing.Size(167, 44);
@@ -173,6 +173,7 @@
             this.buttonArrangements.TabIndex = 1;
             this.buttonArrangements.Text = "Arrangement catalog";
             this.buttonArrangements.UseVisualStyleBackColor = false;
+            this.buttonArrangements.Click += new System.EventHandler(this.buttonArrangements_Click);
             // 
             // buttonExchange
             // 
@@ -193,7 +194,7 @@
             this.pictureBoxLogo.Location = new System.Drawing.Point(0, 0);
             this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
-            this.pictureBoxLogo.Size = new System.Drawing.Size(228, 90);
+            this.pictureBoxLogo.Size = new System.Drawing.Size(221, 90);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxLogo.TabIndex = 2;
             this.pictureBoxLogo.TabStop = false;

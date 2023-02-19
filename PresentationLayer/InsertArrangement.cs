@@ -75,11 +75,5 @@ namespace PresentationLayer
             comboBoxTransport.SelectedIndex = 0;
             comboBoxArrangement.SelectedIndex = 0;
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
     }
 }

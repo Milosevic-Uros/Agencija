@@ -29,7 +29,6 @@ namespace PresentationLayer
 
         private void ClientManagement_Load(object sender, EventArgs e)
         {
-
             List<Client> clients = adminBusiness.GetAllClients();
             dataGridViewClients.DataSource = clients;
         }

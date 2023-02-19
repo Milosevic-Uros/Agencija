@@ -47,7 +47,7 @@ namespace PresentationLayer
 
         private void buttonBuyMore_Click(object sender, EventArgs e)
         {
-            ArrangementStore arrangementStore = new ArrangementStore();
+            ArrangementStore arrangementStore = new ArrangementStore(adminBusiness, clientBusiness, client);
             arrangementStore.Show();
             this.Close();
         }

@@ -69,7 +69,6 @@
             this.panelClientManagement.Name = "panelClientManagement";
             this.panelClientManagement.Size = new System.Drawing.Size(602, 362);
             this.panelClientManagement.TabIndex = 1;
-            this.panelClientManagement.Paint += new System.Windows.Forms.PaintEventHandler(this.panelClientManagement_Paint);
             // 
             // buttonClose
             // 
@@ -193,7 +192,6 @@
             this.dataGridViewArrangemet.RowTemplate.Height = 24;
             this.dataGridViewArrangemet.Size = new System.Drawing.Size(597, 144);
             this.dataGridViewArrangemet.TabIndex = 0;
-            this.dataGridViewArrangemet.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewArrangemet_CellContentClick);
             this.dataGridViewArrangemet.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewArrangemet_RowHeaderMouseClick);
             // 
             // lOCATIONSBindingSource
