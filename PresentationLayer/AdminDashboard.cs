@@ -61,6 +61,7 @@ namespace PresentationLayer
         {
             TransactionManagement transactionManagement = new TransactionManagement(adminBusiness);
             transactionManagement.Show();
+
         }
     }
 }
