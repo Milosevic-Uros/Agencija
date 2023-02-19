@@ -28,7 +28,7 @@ namespace PresentationLayer
 
         private void ClientDashboard_Load(object sender, EventArgs e)
         {
-            labelName.Text = client.firstName.ToString() + client.lastName.ToString();
+            labelLoggedIn.Text += "\n" + client.firstName.ToString() + " " + client.lastName.ToString();
         }
 
         int count = 0;
