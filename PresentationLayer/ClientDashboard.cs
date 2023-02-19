@@ -14,6 +14,7 @@ namespace PresentationLayer
 {
     public partial class ClientDashboard : Form
     {
+        private readonly IAdminBusiness adminBusiness;
         private IClientBusiness clientBusiness;
         private Client client;
 
@@ -42,6 +43,13 @@ namespace PresentationLayer
                 count = 0;
             }
             
+        }
+
+        private void buttonExchange_Click(object sender, EventArgs e)
+        {
+            ExchangeOffice exchangeOffice = new ExchangeOffice(clientBusiness, adminBusiness);
+            exchangeOffice.Show();
+            this.Close();
         }
     }
 }
