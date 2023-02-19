@@ -35,11 +35,25 @@
             this.buttonTicketManagement = new System.Windows.Forms.Button();
             this.buttonArrangement = new System.Windows.Forms.Button();
             this.buttonClientManagement = new System.Windows.Forms.Button();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.labelWelcome = new System.Windows.Forms.Label();
+            this.labelName = new System.Windows.Forms.Label();
+            this.panelLocations = new System.Windows.Forms.Panel();
+            this.panelClients = new System.Windows.Forms.Panel();
+            this.panelTckets = new System.Windows.Forms.Panel();
+            this.panelArrangements = new System.Windows.Forms.Panel();
+            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.panelTckets);
+            this.panel1.Controls.Add(this.panelArrangements);
+            this.panel1.Controls.Add(this.panelClients);
+            this.panel1.Controls.Add(this.panelLocations);
+            this.panel1.Controls.Add(this.panel3);
             this.panel1.Location = new System.Drawing.Point(220, 2);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
@@ -124,6 +138,73 @@
             this.buttonClientManagement.UseVisualStyleBackColor = false;
             this.buttonClientManagement.Click += new System.EventHandler(this.buttonClientManagement_Click);
             // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel3.Controls.Add(this.labelName);
+            this.panel3.Controls.Add(this.labelWelcome);
+            this.panel3.Location = new System.Drawing.Point(-2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(569, 89);
+            this.panel3.TabIndex = 23;
+            // 
+            // labelWelcome
+            // 
+            this.labelWelcome.AutoSize = true;
+            this.labelWelcome.Font = new System.Drawing.Font("Microsoft Tai Le", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWelcome.Location = new System.Drawing.Point(106, 15);
+            this.labelWelcome.Name = "labelWelcome";
+            this.labelWelcome.Size = new System.Drawing.Size(294, 69);
+            this.labelWelcome.TabIndex = 24;
+            this.labelWelcome.Text = "Welcome, ";
+            // 
+            // labelName
+            // 
+            this.labelName.AutoSize = true;
+            this.labelName.Font = new System.Drawing.Font("Microsoft Tai Le", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(340, 27);
+            this.labelName.Name = "labelName";
+            this.labelName.Size = new System.Drawing.Size(163, 39);
+            this.labelName.TabIndex = 25;
+            this.labelName.Text = "Welcome, ";
+            // 
+            // panelLocations
+            // 
+            this.panelLocations.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelLocations.Location = new System.Drawing.Point(64, 109);
+            this.panelLocations.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelLocations.Name = "panelLocations";
+            this.panelLocations.Size = new System.Drawing.Size(191, 128);
+            this.panelLocations.TabIndex = 24;
+            // 
+            // panelClients
+            // 
+            this.panelClients.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelClients.Location = new System.Drawing.Point(310, 109);
+            this.panelClients.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelClients.Name = "panelClients";
+            this.panelClients.Size = new System.Drawing.Size(191, 128);
+            this.panelClients.TabIndex = 25;
+            // 
+            // panelTckets
+            // 
+            this.panelTckets.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelTckets.Location = new System.Drawing.Point(310, 266);
+            this.panelTckets.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelTckets.Name = "panelTckets";
+            this.panelTckets.Size = new System.Drawing.Size(191, 128);
+            this.panelTckets.TabIndex = 27;
+            // 
+            // panelArrangements
+            // 
+            this.panelArrangements.BackColor = System.Drawing.Color.SteelBlue;
+            this.panelArrangements.Location = new System.Drawing.Point(64, 266);
+            this.panelArrangements.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panelArrangements.Name = "panelArrangements";
+            this.panelArrangements.Size = new System.Drawing.Size(191, 128);
+            this.panelArrangements.TabIndex = 26;
+            // 
             // AdminDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -139,7 +220,10 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminDashboard";
             this.Load += new System.EventHandler(this.AdminDashboard_Load);
+            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -153,5 +237,12 @@
         private System.Windows.Forms.Button buttonArrangement;
         private System.Windows.Forms.Button buttonClientManagement;
         private System.Windows.Forms.Button buttonLogOut;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelWelcome;
+        private System.Windows.Forms.Panel panelTckets;
+        private System.Windows.Forms.Panel panelArrangements;
+        private System.Windows.Forms.Panel panelClients;
+        private System.Windows.Forms.Panel panelLocations;
     }
 }

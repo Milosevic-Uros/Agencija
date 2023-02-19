@@ -25,11 +25,7 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
-        {
-            //labelDate.Text = DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss");
-            
-        }
+
 
         private void ExchangeOffice_Load(object sender, EventArgs e)
         {
@@ -54,6 +50,14 @@ namespace PresentationLayer
 
         private void buttonConvert_Click(object sender, EventArgs e)
         {
+            if(textBoxAmount.Text == "")
+            {
+                MessageBox.Show("Provide amount that you want to convert!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxAmount.Focus();
+                return;
+            }
+
+
             decimal value = Convert.ToDecimal(comboBoxFrom.SelectedValue.ToString()) * Convert.ToDecimal(textBoxAmount.Text) / Convert.ToDecimal(comboBoxTo.SelectedValue.ToString());
             labelValue.Text = Math.Round(value,2).ToString();
             labelValue.Visible = true;
