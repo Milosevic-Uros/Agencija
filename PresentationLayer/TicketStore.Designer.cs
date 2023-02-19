@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.labelBought = new System.Windows.Forms.LinkLabel();
             this.buttonBuy = new System.Windows.Forms.Button();
             this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -38,7 +39,10 @@
             this.aGENCIJADataSet1 = new PresentationLayer.AGENCIJADataSet1();
             this.eXCHANGERATESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eXCHANGE_RATESTableAdapter = new PresentationLayer.AGENCIJADataSet1TableAdapters.EXCHANGE_RATESTableAdapter();
-            this.labelBought = new System.Windows.Forms.LinkLabel();
+            this.textBoxTicketID = new System.Windows.Forms.TextBox();
+            this.labelID = new System.Windows.Forms.Label();
+            this.textBoxAmount = new System.Windows.Forms.TextBox();
+            this.labelAmount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
             this.panel2.SuspendLayout();
@@ -49,6 +53,10 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
+            this.panel1.Controls.Add(this.textBoxAmount);
+            this.panel1.Controls.Add(this.labelAmount);
+            this.panel1.Controls.Add(this.textBoxTicketID);
+            this.panel1.Controls.Add(this.labelID);
             this.panel1.Controls.Add(this.labelBought);
             this.panel1.Controls.Add(this.buttonBuy);
             this.panel1.Controls.Add(this.dataGridViewTickets);
@@ -58,6 +66,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1340, 452);
             this.panel1.TabIndex = 1;
+            // 
+            // labelBought
+            // 
+            this.labelBought.AutoSize = true;
+            this.labelBought.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBought.Location = new System.Drawing.Point(493, 411);
+            this.labelBought.Name = "labelBought";
+            this.labelBought.Size = new System.Drawing.Size(319, 25);
+            this.labelBought.TabIndex = 35;
+            this.labelBought.TabStop = true;
+            this.labelBought.Text = "Click to see list of all bought tickets";
             // 
             // buttonBuy
             // 
@@ -80,7 +99,7 @@
             this.dataGridViewTickets.Name = "dataGridViewTickets";
             this.dataGridViewTickets.RowHeadersWidth = 51;
             this.dataGridViewTickets.RowTemplate.Height = 24;
-            this.dataGridViewTickets.Size = new System.Drawing.Size(1275, 176);
+            this.dataGridViewTickets.Size = new System.Drawing.Size(1275, 155);
             this.dataGridViewTickets.TabIndex = 23;
             // 
             // panel2
@@ -121,16 +140,42 @@
             // 
             this.eXCHANGE_RATESTableAdapter.ClearBeforeFill = true;
             // 
-            // labelBought
+            // textBoxTicketID
             // 
-            this.labelBought.AutoSize = true;
-            this.labelBought.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBought.Location = new System.Drawing.Point(493, 411);
-            this.labelBought.Name = "labelBought";
-            this.labelBought.Size = new System.Drawing.Size(319, 25);
-            this.labelBought.TabIndex = 35;
-            this.labelBought.TabStop = true;
-            this.labelBought.Text = "Click to see list of all bought tickets";
+            this.textBoxTicketID.Location = new System.Drawing.Point(378, 310);
+            this.textBoxTicketID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxTicketID.Name = "textBoxTicketID";
+            this.textBoxTicketID.ReadOnly = true;
+            this.textBoxTicketID.Size = new System.Drawing.Size(175, 22);
+            this.textBoxTicketID.TabIndex = 37;
+            // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelID.Location = new System.Drawing.Point(372, 278);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(103, 28);
+            this.labelID.TabIndex = 36;
+            this.labelID.Text = "Ticket ID";
+            // 
+            // textBoxAmount
+            // 
+            this.textBoxAmount.Location = new System.Drawing.Point(665, 310);
+            this.textBoxAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxAmount.Name = "textBoxAmount";
+            this.textBoxAmount.Size = new System.Drawing.Size(175, 22);
+            this.textBoxAmount.TabIndex = 39;
+            // 
+            // labelAmount
+            // 
+            this.labelAmount.AutoSize = true;
+            this.labelAmount.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAmount.Location = new System.Drawing.Point(659, 278);
+            this.labelAmount.Name = "labelAmount";
+            this.labelAmount.Size = new System.Drawing.Size(94, 28);
+            this.labelAmount.TabIndex = 38;
+            this.labelAmount.Text = "Amount";
             // 
             // TicketStore
             // 
@@ -165,5 +210,9 @@
         private System.Windows.Forms.BindingSource eXCHANGERATESBindingSource;
         private AGENCIJADataSet1TableAdapters.EXCHANGE_RATESTableAdapter eXCHANGE_RATESTableAdapter;
         private System.Windows.Forms.LinkLabel labelBought;
+        private System.Windows.Forms.TextBox textBoxAmount;
+        private System.Windows.Forms.Label labelAmount;
+        private System.Windows.Forms.TextBox textBoxTicketID;
+        private System.Windows.Forms.Label labelID;
     }
 }
