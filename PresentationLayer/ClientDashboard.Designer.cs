@@ -46,6 +46,7 @@
             this.buttonBoughtArrangements = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.labelName = new System.Windows.Forms.Label();
+            this.labelLastname = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxSlide)).BeginInit();
             this.panel3.SuspendLayout();
@@ -165,6 +166,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.SteelBlue;
+            this.panel4.Controls.Add(this.labelLastname);
             this.panel4.Controls.Add(this.labelName);
             this.panel4.Controls.Add(this.label2);
             this.panel4.Controls.Add(this.buttonBoughtArrangements);
@@ -187,6 +189,7 @@
             this.buttonLogOut.TabIndex = 6;
             this.buttonLogOut.Text = "Log out";
             this.buttonLogOut.UseVisualStyleBackColor = false;
+            this.buttonLogOut.Click += new System.EventHandler(this.buttonLogOut_Click);
             // 
             // buttonBoughtTickets
             // 
@@ -199,6 +202,7 @@
             this.buttonBoughtTickets.TabIndex = 7;
             this.buttonBoughtTickets.Text = "Bought tickets";
             this.buttonBoughtTickets.UseVisualStyleBackColor = false;
+            this.buttonBoughtTickets.Click += new System.EventHandler(this.buttonBoughtTickets_Click);
             // 
             // buttonBoughtArrangements
             // 
@@ -211,6 +215,7 @@
             this.buttonBoughtArrangements.TabIndex = 8;
             this.buttonBoughtArrangements.Text = "Bought arrangements";
             this.buttonBoughtArrangements.UseVisualStyleBackColor = false;
+            this.buttonBoughtArrangements.Click += new System.EventHandler(this.buttonBoughtArrangements_Click);
             // 
             // label2
             // 
@@ -225,11 +230,22 @@
             // labelName
             // 
             this.labelName.AutoSize = true;
-            this.labelName.Location = new System.Drawing.Point(27, 67);
+            this.labelName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelName.Location = new System.Drawing.Point(27, 62);
             this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(44, 16);
+            this.labelName.Size = new System.Drawing.Size(61, 23);
             this.labelName.TabIndex = 9;
             this.labelName.Text = "label1";
+            // 
+            // labelLastname
+            // 
+            this.labelLastname.AutoSize = true;
+            this.labelLastname.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLastname.Location = new System.Drawing.Point(83, 88);
+            this.labelLastname.Name = "labelLastname";
+            this.labelLastname.Size = new System.Drawing.Size(61, 23);
+            this.labelLastname.TabIndex = 10;
+            this.labelLastname.Text = "label1";
             // 
             // ClientDashboard
             // 
@@ -273,5 +289,6 @@
         private System.Windows.Forms.Button buttonBoughtArrangements;
         private System.Windows.Forms.Button buttonBoughtTickets;
         private System.Windows.Forms.Label labelName;
+        private System.Windows.Forms.Label labelLastname;
     }
 }

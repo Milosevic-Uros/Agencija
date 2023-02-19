@@ -28,7 +28,8 @@ namespace PresentationLayer
 
         private void ClientDashboard_Load(object sender, EventArgs e)
         {
-
+            labelName.Text = client.firstName.ToString();
+            labelLastname.Text = client.lastName.ToString();
         }
 
         int count = 0;
@@ -57,6 +58,25 @@ namespace PresentationLayer
         {
             TicketStore ticketStore = new TicketStore(adminBusiness, clientBusiness);
             ticketStore.Show();
+        }
+
+        private void buttonLogOut_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login login = new Login(adminBusiness, clientBusiness);
+            login.ShowDialog();
+        }
+
+        private void buttonBoughtTickets_Click(object sender, EventArgs e)
+        {
+            BoughtTickets boughtTickets = new BoughtTickets();
+            boughtTickets.Show();
+        }
+
+        private void buttonBoughtArrangements_Click(object sender, EventArgs e)
+        {
+            BoughtArrangements boughtArrangements= new BoughtArrangements();
+            boughtArrangements.Show();
         }
     }
 }
