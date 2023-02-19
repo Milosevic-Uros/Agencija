@@ -185,6 +185,9 @@
     <EmbeddedResource Include="ArrangementManagement.resx">
       <DependentUpon>ArrangementManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ArrangementStore.resx">
+      <DependentUpon>ArrangementStore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="BoughtArrangements.resx">
       <DependentUpon>BoughtArrangements.cs</DependentUpon>
     </EmbeddedResource>

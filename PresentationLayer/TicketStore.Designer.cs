@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
             this.buttonClose = new System.Windows.Forms.Button();
             this.textBoxAmount = new System.Windows.Forms.TextBox();
             this.labelAmount = new System.Windows.Forms.Label();
@@ -43,12 +44,11 @@
             this.aGENCIJADataSet1 = new PresentationLayer.AGENCIJADataSet1();
             this.eXCHANGERATESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eXCHANGE_RATESTableAdapter = new PresentationLayer.AGENCIJADataSet1TableAdapters.EXCHANGE_RATESTableAdapter();
-            this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -64,19 +64,30 @@
             this.panel1.Controls.Add(this.buttonBuy);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1340, 452);
+            this.panel1.Size = new System.Drawing.Size(1005, 367);
             this.panel1.TabIndex = 1;
+            // 
+            // dataGridViewTickets
+            // 
+            this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewTickets.Location = new System.Drawing.Point(2, 78);
+            this.dataGridViewTickets.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewTickets.Name = "dataGridViewTickets";
+            this.dataGridViewTickets.RowHeadersWidth = 51;
+            this.dataGridViewTickets.RowTemplate.Height = 24;
+            this.dataGridViewTickets.Size = new System.Drawing.Size(956, 118);
+            this.dataGridViewTickets.TabIndex = 41;
             // 
             // buttonClose
             // 
             this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(278, 354);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonClose.Location = new System.Drawing.Point(208, 288);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(341, 34);
+            this.buttonClose.Size = new System.Drawing.Size(256, 28);
             this.buttonClose.TabIndex = 40;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = false;
@@ -84,39 +95,41 @@
             // 
             // textBoxAmount
             // 
-            this.textBoxAmount.Location = new System.Drawing.Point(723, 310);
-            this.textBoxAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxAmount.Location = new System.Drawing.Point(542, 252);
+            this.textBoxAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAmount.Name = "textBoxAmount";
-            this.textBoxAmount.Size = new System.Drawing.Size(175, 22);
+            this.textBoxAmount.Size = new System.Drawing.Size(132, 20);
             this.textBoxAmount.TabIndex = 39;
             // 
             // labelAmount
             // 
             this.labelAmount.AutoSize = true;
             this.labelAmount.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAmount.Location = new System.Drawing.Point(717, 278);
+            this.labelAmount.Location = new System.Drawing.Point(538, 226);
+            this.labelAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAmount.Name = "labelAmount";
-            this.labelAmount.Size = new System.Drawing.Size(75, 22);
+            this.labelAmount.Size = new System.Drawing.Size(61, 18);
             this.labelAmount.TabIndex = 38;
             this.labelAmount.Text = "Amount";
             // 
             // textBoxTicketID
             // 
             this.textBoxTicketID.Enabled = false;
-            this.textBoxTicketID.Location = new System.Drawing.Point(354, 310);
-            this.textBoxTicketID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxTicketID.Location = new System.Drawing.Point(266, 252);
+            this.textBoxTicketID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxTicketID.Name = "textBoxTicketID";
             this.textBoxTicketID.ReadOnly = true;
-            this.textBoxTicketID.Size = new System.Drawing.Size(175, 22);
+            this.textBoxTicketID.Size = new System.Drawing.Size(132, 20);
             this.textBoxTicketID.TabIndex = 37;
             // 
             // labelID
             // 
             this.labelID.AutoSize = true;
             this.labelID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelID.Location = new System.Drawing.Point(347, 278);
+            this.labelID.Location = new System.Drawing.Point(260, 226);
+            this.labelID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(82, 22);
+            this.labelID.Size = new System.Drawing.Size(66, 18);
             this.labelID.TabIndex = 36;
             this.labelID.Text = "Ticket ID";
             // 
@@ -124,9 +137,10 @@
             // 
             this.labelBought.AutoSize = true;
             this.labelBought.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBought.Location = new System.Drawing.Point(493, 411);
+            this.labelBought.Location = new System.Drawing.Point(370, 334);
+            this.labelBought.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelBought.Name = "labelBought";
-            this.labelBought.Size = new System.Drawing.Size(319, 25);
+            this.labelBought.Size = new System.Drawing.Size(252, 21);
             this.labelBought.TabIndex = 35;
             this.labelBought.TabStop = true;
             this.labelBought.Text = "Click to see list of all bought tickets";
@@ -136,10 +150,10 @@
             // 
             this.buttonBuy.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonBuy.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuy.Location = new System.Drawing.Point(643, 354);
-            this.buttonBuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonBuy.Location = new System.Drawing.Point(482, 288);
+            this.buttonBuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuy.Name = "buttonBuy";
-            this.buttonBuy.Size = new System.Drawing.Size(341, 34);
+            this.buttonBuy.Size = new System.Drawing.Size(256, 28);
             this.buttonBuy.TabIndex = 33;
             this.buttonBuy.Text = "Buy ticket";
             this.buttonBuy.UseVisualStyleBackColor = false;
@@ -150,18 +164,19 @@
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.labelINSERT);
             this.panel2.Location = new System.Drawing.Point(0, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1277, 89);
+            this.panel2.Size = new System.Drawing.Size(958, 72);
             this.panel2.TabIndex = 22;
             // 
             // labelINSERT
             // 
             this.labelINSERT.AutoSize = true;
             this.labelINSERT.Font = new System.Drawing.Font("Microsoft Tai Le", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelINSERT.Location = new System.Drawing.Point(512, 18);
+            this.labelINSERT.Location = new System.Drawing.Point(384, 15);
+            this.labelINSERT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelINSERT.Name = "labelINSERT";
-            this.labelINSERT.Size = new System.Drawing.Size(260, 55);
+            this.labelINSERT.Size = new System.Drawing.Size(214, 45);
             this.labelINSERT.TabIndex = 0;
             this.labelINSERT.Text = "Ticket store";
             // 
@@ -183,34 +198,25 @@
             // 
             this.eXCHANGE_RATESTableAdapter.ClearBeforeFill = true;
             // 
-            // dataGridViewTickets
-            // 
-            this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTickets.Location = new System.Drawing.Point(3, 96);
-            this.dataGridViewTickets.Name = "dataGridViewTickets";
-            this.dataGridViewTickets.RowHeadersWidth = 51;
-            this.dataGridViewTickets.RowTemplate.Height = 24;
-            this.dataGridViewTickets.Size = new System.Drawing.Size(1274, 145);
-            this.dataGridViewTickets.TabIndex = 41;
-            // 
             // TicketStore
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1278, 449);
+            this.ClientSize = new System.Drawing.Size(958, 365);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "TicketStore";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TicketStore";
             this.Load += new System.EventHandler(this.TicketStore_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).EndInit();
             this.ResumeLayout(false);
 
         }

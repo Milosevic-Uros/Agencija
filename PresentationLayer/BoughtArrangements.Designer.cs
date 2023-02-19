@@ -51,7 +51,7 @@
             this.panelClientManagement.Controls.Add(this.panel2);
             this.panelClientManagement.Controls.Add(this.dataGridViewBoughtArrangements);
             this.panelClientManagement.Location = new System.Drawing.Point(-1, 2);
-            this.panelClientManagement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelClientManagement.Margin = new System.Windows.Forms.Padding(2);
             this.panelClientManagement.Name = "panelClientManagement";
             this.panelClientManagement.Size = new System.Drawing.Size(602, 362);
             this.panelClientManagement.TabIndex = 3;
@@ -61,7 +61,7 @@
             this.buttonBuyMore.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonBuyMore.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuyMore.Location = new System.Drawing.Point(91, 284);
-            this.buttonBuyMore.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuyMore.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuyMore.Name = "buttonBuyMore";
             this.buttonBuyMore.Size = new System.Drawing.Size(198, 40);
             this.buttonBuyMore.TabIndex = 38;
@@ -74,7 +74,7 @@
             this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.Location = new System.Drawing.Point(336, 284);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(198, 40);
             this.buttonClose.TabIndex = 37;
@@ -111,7 +111,7 @@
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.labelBought);
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(602, 72);
             this.panel2.TabIndex = 22;
@@ -131,7 +131,7 @@
             // 
             this.dataGridViewBoughtArrangements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewBoughtArrangements.Location = new System.Drawing.Point(-8, 121);
-            this.dataGridViewBoughtArrangements.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewBoughtArrangements.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewBoughtArrangements.Name = "dataGridViewBoughtArrangements";
             this.dataGridViewBoughtArrangements.RowHeadersWidth = 51;
             this.dataGridViewBoughtArrangements.RowTemplate.Height = 24;
@@ -145,9 +145,10 @@
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panelClientManagement);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "BoughtArrangements";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BoughtArrangements";
             this.Load += new System.EventHandler(this.BoughtArrangements_Load);
             this.panelClientManagement.ResumeLayout(false);
