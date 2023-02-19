@@ -49,7 +49,14 @@ namespace PresentationLayer
 
         private void buttonLogIn_Click(object sender, EventArgs e)
         {
-            if (usernameLog.Text == "" || passwordLog.Text == "") {
+            if (comboBoxLogin.SelectedIndex != 0 && comboBoxLogin.SelectedIndex != 1) 
+            {
+                MessageBox.Show("Please select your role at the top of the page", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                usernameLog.Focus();
+                return;
+            }
+            else if (usernameLog.Text == "" || passwordLog.Text == "")
+            {
                 MessageBox.Show("Fill in all required fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 usernameLog.Focus();
                 return;
@@ -70,7 +77,8 @@ namespace PresentationLayer
                 return;
             }
 
-            else { 
+            else
+            {
 
                 if (comboBoxLogin.SelectedItem.ToString() == "Admin")
                 {
@@ -81,7 +89,7 @@ namespace PresentationLayer
                     }
                     else
                     {
-                        AdminDashboard adminDashboard = new AdminDashboard(adminBusiness, clientBusiness,admin);
+                        AdminDashboard adminDashboard = new AdminDashboard(adminBusiness, clientBusiness, admin);
                         adminDashboard.Show();
                         this.Hide();
                         usernameLog.Text = "";
@@ -102,7 +110,7 @@ namespace PresentationLayer
                     }
                     else
                     {
-                        ClientDashboard clientDashboard = new ClientDashboard(adminBusiness,clientBusiness, client);
+                        ClientDashboard clientDashboard = new ClientDashboard(adminBusiness, clientBusiness, client);
                         clientDashboard.Show();
                         this.Hide();
                     }
