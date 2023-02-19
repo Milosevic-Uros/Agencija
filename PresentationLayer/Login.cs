@@ -92,8 +92,6 @@ namespace PresentationLayer
                         AdminDashboard adminDashboard = new AdminDashboard(adminBusiness, clientBusiness, admin);
                         adminDashboard.Show();
                         this.Hide();
-                        usernameLog.Text = "";
-                        passwordLog.Text = "";
                         comboBoxLogin.SelectedIndex = -1;
                     }
                 }
@@ -104,8 +102,6 @@ namespace PresentationLayer
                     if (client.clientId == 0)
                     {
                         MessageBox.Show("The entered data does not match any user!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                        usernameLog.Text = "";
-                        passwordLog.Text = "";
                         usernameLog.Focus();
                     }
                     else
