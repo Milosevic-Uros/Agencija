@@ -281,6 +281,25 @@
             // 
             this.lOCATIONSTableAdapter.ClearBeforeFill = true;
             // 
+            // textBoxArrangementID
+            // 
+            this.textBoxArrangementID.Location = new System.Drawing.Point(633, 644);
+            this.textBoxArrangementID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxArrangementID.Name = "textBoxArrangementID";
+            this.textBoxArrangementID.ReadOnly = true;
+            this.textBoxArrangementID.Size = new System.Drawing.Size(147, 22);
+            this.textBoxArrangementID.TabIndex = 51;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(623, 616);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(176, 22);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Chosen arrangement";
+            // 
             // ArrangementStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
