@@ -93,6 +93,12 @@
     <Compile Include="ArrangementManagement.Designer.cs">
       <DependentUpon>ArrangementManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="BoughtTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoughtTickets.Designer.cs">
+      <DependentUpon>BoughtTickets.cs</DependentUpon>
+    </Compile>
     <Compile Include="ClientDashboard.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -40,5 +40,10 @@ namespace PresentationLayer
 
             }
         }
+
+        private void buttonBuy_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

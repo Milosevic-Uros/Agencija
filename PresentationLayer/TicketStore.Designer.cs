@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.buttonConvert = new System.Windows.Forms.Button();
+            this.buttonBuy = new System.Windows.Forms.Button();
             this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelINSERT = new System.Windows.Forms.Label();
@@ -38,6 +38,7 @@
             this.aGENCIJADataSet1 = new PresentationLayer.AGENCIJADataSet1();
             this.eXCHANGERATESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eXCHANGE_RATESTableAdapter = new PresentationLayer.AGENCIJADataSet1TableAdapters.EXCHANGE_RATESTableAdapter();
+            this.labelBought = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
             this.panel2.SuspendLayout();
@@ -48,36 +49,38 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
-            this.panel1.Controls.Add(this.buttonConvert);
+            this.panel1.Controls.Add(this.labelBought);
+            this.panel1.Controls.Add(this.buttonBuy);
             this.panel1.Controls.Add(this.dataGridViewTickets);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, -1);
             this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(801, 452);
+            this.panel1.Size = new System.Drawing.Size(1340, 452);
             this.panel1.TabIndex = 1;
             // 
-            // buttonConvert
+            // buttonBuy
             // 
-            this.buttonConvert.BackColor = System.Drawing.Color.SteelBlue;
-            this.buttonConvert.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonConvert.Location = new System.Drawing.Point(347, 377);
-            this.buttonConvert.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonConvert.Name = "buttonConvert";
-            this.buttonConvert.Size = new System.Drawing.Size(115, 34);
-            this.buttonConvert.TabIndex = 33;
-            this.buttonConvert.Text = "Convert";
-            this.buttonConvert.UseVisualStyleBackColor = false;
+            this.buttonBuy.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonBuy.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuy.Location = new System.Drawing.Point(286, 355);
+            this.buttonBuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonBuy.Name = "buttonBuy";
+            this.buttonBuy.Size = new System.Drawing.Size(699, 34);
+            this.buttonBuy.TabIndex = 33;
+            this.buttonBuy.Text = "Buy ticket";
+            this.buttonBuy.UseVisualStyleBackColor = false;
+            this.buttonBuy.Click += new System.EventHandler(this.buttonBuy_Click);
             // 
             // dataGridViewTickets
             // 
             this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTickets.Location = new System.Drawing.Point(3, 95);
+            this.dataGridViewTickets.Location = new System.Drawing.Point(3, 106);
             this.dataGridViewTickets.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewTickets.Name = "dataGridViewTickets";
             this.dataGridViewTickets.RowHeadersWidth = 51;
             this.dataGridViewTickets.RowTemplate.Height = 24;
-            this.dataGridViewTickets.Size = new System.Drawing.Size(795, 176);
+            this.dataGridViewTickets.Size = new System.Drawing.Size(1275, 176);
             this.dataGridViewTickets.TabIndex = 23;
             // 
             // panel2
@@ -87,14 +90,14 @@
             this.panel2.Location = new System.Drawing.Point(0, 2);
             this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(799, 89);
+            this.panel2.Size = new System.Drawing.Size(1278, 89);
             this.panel2.TabIndex = 22;
             // 
             // labelINSERT
             // 
             this.labelINSERT.AutoSize = true;
             this.labelINSERT.Font = new System.Drawing.Font("Microsoft Tai Le", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelINSERT.Location = new System.Drawing.Point(265, 21);
+            this.labelINSERT.Location = new System.Drawing.Point(512, 19);
             this.labelINSERT.Name = "labelINSERT";
             this.labelINSERT.Size = new System.Drawing.Size(260, 55);
             this.labelINSERT.TabIndex = 0;
@@ -118,16 +121,29 @@
             // 
             this.eXCHANGE_RATESTableAdapter.ClearBeforeFill = true;
             // 
+            // labelBought
+            // 
+            this.labelBought.AutoSize = true;
+            this.labelBought.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelBought.Location = new System.Drawing.Point(493, 411);
+            this.labelBought.Name = "labelBought";
+            this.labelBought.Size = new System.Drawing.Size(319, 25);
+            this.labelBought.TabIndex = 35;
+            this.labelBought.TabStop = true;
+            this.labelBought.Text = "Click to see list of all bought tickets";
+            // 
             // TicketStore
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1276, 450);
             this.Controls.Add(this.panel1);
+            this.MaximizeBox = false;
             this.Name = "TicketStore";
             this.Text = "TicketStore";
             this.Load += new System.EventHandler(this.TicketStore_Load);
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -140,7 +156,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button buttonConvert;
+        private System.Windows.Forms.Button buttonBuy;
         private System.Windows.Forms.DataGridView dataGridViewTickets;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label labelINSERT;
@@ -148,5 +164,6 @@
         private AGENCIJADataSet1 aGENCIJADataSet1;
         private System.Windows.Forms.BindingSource eXCHANGERATESBindingSource;
         private AGENCIJADataSet1TableAdapters.EXCHANGE_RATESTableAdapter eXCHANGE_RATESTableAdapter;
+        private System.Windows.Forms.LinkLabel labelBought;
     }
 }
