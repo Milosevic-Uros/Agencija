@@ -24,7 +24,7 @@ namespace Shared.Interfaces
 
         //Tickets
         List<Ticket> GetAllTickets();
-        List<Ticket> GetAllClientTickets(Client client);
+        List<Object> GetAllClientTickets(Client client);
         Ticket GetTicket(int ticketId);
         int BookATicket(Client client,int ticketId, int numberOfPeople);
 
