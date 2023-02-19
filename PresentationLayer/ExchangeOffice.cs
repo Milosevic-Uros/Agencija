@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Net.NetworkInformation;
+using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -19,8 +20,8 @@ namespace PresentationLayer
         private readonly IClientBusiness clientBusiness;
         public ExchangeOffice(IAdminBusiness _adminBusiness,IClientBusiness _clientBusiness)
         {
-            _adminBusiness = adminBusiness;
-            _clientBusiness = clientBusiness;
+            adminBusiness = _adminBusiness;
+            clientBusiness= _clientBusiness;
             InitializeComponent();
         }
 

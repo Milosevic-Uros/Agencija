@@ -52,5 +52,11 @@ namespace PresentationLayer
             exchangeOffice.ShowDialog();
             this.Close();
         }
+
+        private void buttonTicket_Click(object sender, EventArgs e)
+        {
+            TicketStore ticketStore = new TicketStore(adminBusiness, clientBusiness);
+            ticketStore.Show();
+        }
     }
 }

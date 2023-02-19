@@ -20,8 +20,8 @@ namespace PresentationLayer
         private readonly IClientBusiness clientBusiness;
         public TicketStore(IAdminBusiness _adminBusiness, IClientBusiness _clientBusiness)
         {
-            _adminBusiness = adminBusiness;
-            _clientBusiness = clientBusiness;
+            adminBusiness = _adminBusiness;
+            clientBusiness = _clientBusiness;
             InitializeComponent();
         }
 
