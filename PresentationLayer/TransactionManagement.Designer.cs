@@ -63,7 +63,7 @@
             this.panelClientManagement.Controls.Add(this.labelCurrencyID);
             this.panelClientManagement.Controls.Add(this.dataGridViewTransaction);
             this.panelClientManagement.Location = new System.Drawing.Point(-1, 2);
-            this.panelClientManagement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelClientManagement.Margin = new System.Windows.Forms.Padding(2);
             this.panelClientManagement.Name = "panelClientManagement";
             this.panelClientManagement.Size = new System.Drawing.Size(602, 362);
             this.panelClientManagement.TabIndex = 2;
@@ -71,10 +71,10 @@
             // textBoxExchangeRate
             // 
             this.textBoxExchangeRate.Location = new System.Drawing.Point(450, 221);
-            this.textBoxExchangeRate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxExchangeRate.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxExchangeRate.Name = "textBoxExchangeRate";
             this.textBoxExchangeRate.Size = new System.Drawing.Size(111, 20);
-            this.textBoxExchangeRate.TabIndex = 39;
+            this.textBoxExchangeRate.TabIndex = 4;
             // 
             // labelExchangeRate
             // 
@@ -90,10 +90,10 @@
             // textBoxCountryName
             // 
             this.textBoxCountryName.Location = new System.Drawing.Point(306, 221);
-            this.textBoxCountryName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCountryName.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCountryName.Name = "textBoxCountryName";
             this.textBoxCountryName.Size = new System.Drawing.Size(111, 20);
-            this.textBoxCountryName.TabIndex = 37;
+            this.textBoxCountryName.TabIndex = 3;
             // 
             // labelCountryName
             // 
@@ -109,10 +109,10 @@
             // textBoxCurrencyCode
             // 
             this.textBoxCurrencyCode.Location = new System.Drawing.Point(170, 221);
-            this.textBoxCurrencyCode.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCurrencyCode.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCurrencyCode.Name = "textBoxCurrencyCode";
             this.textBoxCurrencyCode.Size = new System.Drawing.Size(111, 20);
-            this.textBoxCurrencyCode.TabIndex = 35;
+            this.textBoxCurrencyCode.TabIndex = 2;
             // 
             // labelCurrencyCode
             // 
@@ -130,10 +130,10 @@
             this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.Location = new System.Drawing.Point(10, 315);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(61, 40);
-            this.buttonClose.TabIndex = 33;
+            this.buttonClose.TabIndex = 8;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = false;
             this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
@@ -143,10 +143,10 @@
             this.buttonDelete.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDelete.Location = new System.Drawing.Point(380, 284);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(109, 40);
-            this.buttonDelete.TabIndex = 11;
+            this.buttonDelete.TabIndex = 7;
             this.buttonDelete.Text = "Delete ";
             this.buttonDelete.UseVisualStyleBackColor = false;
             this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
@@ -156,10 +156,10 @@
             this.buttonUpdate.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.Location = new System.Drawing.Point(236, 284);
-            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(109, 40);
-            this.buttonUpdate.TabIndex = 10;
+            this.buttonUpdate.TabIndex = 6;
             this.buttonUpdate.Text = "Update ";
             this.buttonUpdate.UseVisualStyleBackColor = false;
             this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
@@ -169,10 +169,10 @@
             this.buttonInsert.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonInsert.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInsert.Location = new System.Drawing.Point(92, 284);
-            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(109, 40);
-            this.buttonInsert.TabIndex = 9;
+            this.buttonInsert.TabIndex = 5;
             this.buttonInsert.Text = "Insert ";
             this.buttonInsert.UseVisualStyleBackColor = false;
             this.buttonInsert.Click += new System.EventHandler(this.buttonInsert_Click);
@@ -180,10 +180,10 @@
             // textBoxCurrencyID
             // 
             this.textBoxCurrencyID.Location = new System.Drawing.Point(31, 221);
-            this.textBoxCurrencyID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxCurrencyID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxCurrencyID.Name = "textBoxCurrencyID";
             this.textBoxCurrencyID.Size = new System.Drawing.Size(111, 20);
-            this.textBoxCurrencyID.TabIndex = 2;
+            this.textBoxCurrencyID.TabIndex = 1;
             // 
             // labelCurrencyID
             // 
@@ -201,7 +201,7 @@
             this.dataGridViewTransaction.BackgroundColor = System.Drawing.Color.Silver;
             this.dataGridViewTransaction.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTransaction.Location = new System.Drawing.Point(2, 0);
-            this.dataGridViewTransaction.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewTransaction.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewTransaction.Name = "dataGridViewTransaction";
             this.dataGridViewTransaction.RowHeadersWidth = 51;
             this.dataGridViewTransaction.RowTemplate.Height = 24;
@@ -215,7 +215,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panelClientManagement);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TransactionManagement";
             this.Text = "TransactionManagement";
             this.Load += new System.EventHandler(this.TransactionManagement_Load);
