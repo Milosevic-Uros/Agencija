@@ -30,6 +30,10 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxAmount = new System.Windows.Forms.TextBox();
+            this.labelAmount = new System.Windows.Forms.Label();
+            this.textBoxTicketID = new System.Windows.Forms.TextBox();
+            this.labelID = new System.Windows.Forms.Label();
             this.labelBought = new System.Windows.Forms.LinkLabel();
             this.buttonBuy = new System.Windows.Forms.Button();
             this.dataGridViewTickets = new System.Windows.Forms.DataGridView();
@@ -39,10 +43,6 @@
             this.aGENCIJADataSet1 = new PresentationLayer.AGENCIJADataSet1();
             this.eXCHANGERATESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eXCHANGE_RATESTableAdapter = new PresentationLayer.AGENCIJADataSet1TableAdapters.EXCHANGE_RATESTableAdapter();
-            this.textBoxTicketID = new System.Windows.Forms.TextBox();
-            this.labelID = new System.Windows.Forms.Label();
-            this.textBoxAmount = new System.Windows.Forms.TextBox();
-            this.labelAmount = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewTickets)).BeginInit();
             this.panel2.SuspendLayout();
@@ -67,6 +67,43 @@
             this.panel1.Size = new System.Drawing.Size(1340, 452);
             this.panel1.TabIndex = 1;
             // 
+            // textBoxAmount
+            // 
+            this.textBoxAmount.Location = new System.Drawing.Point(665, 310);
+            this.textBoxAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxAmount.Name = "textBoxAmount";
+            this.textBoxAmount.Size = new System.Drawing.Size(175, 22);
+            this.textBoxAmount.TabIndex = 39;
+            // 
+            // labelAmount
+            // 
+            this.labelAmount.AutoSize = true;
+            this.labelAmount.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelAmount.Location = new System.Drawing.Point(659, 278);
+            this.labelAmount.Name = "labelAmount";
+            this.labelAmount.Size = new System.Drawing.Size(75, 22);
+            this.labelAmount.TabIndex = 38;
+            this.labelAmount.Text = "Amount";
+            // 
+            // textBoxTicketID
+            // 
+            this.textBoxTicketID.Location = new System.Drawing.Point(378, 310);
+            this.textBoxTicketID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxTicketID.Name = "textBoxTicketID";
+            this.textBoxTicketID.ReadOnly = true;
+            this.textBoxTicketID.Size = new System.Drawing.Size(175, 22);
+            this.textBoxTicketID.TabIndex = 37;
+            // 
+            // labelID
+            // 
+            this.labelID.AutoSize = true;
+            this.labelID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelID.Location = new System.Drawing.Point(372, 278);
+            this.labelID.Name = "labelID";
+            this.labelID.Size = new System.Drawing.Size(82, 22);
+            this.labelID.TabIndex = 36;
+            this.labelID.Text = "Ticket ID";
+            // 
             // labelBought
             // 
             this.labelBought.AutoSize = true;
@@ -77,6 +114,7 @@
             this.labelBought.TabIndex = 35;
             this.labelBought.TabStop = true;
             this.labelBought.Text = "Click to see list of all bought tickets";
+            this.labelBought.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.labelBought_LinkClicked);
             // 
             // buttonBuy
             // 
@@ -139,43 +177,6 @@
             // eXCHANGE_RATESTableAdapter
             // 
             this.eXCHANGE_RATESTableAdapter.ClearBeforeFill = true;
-            // 
-            // textBoxTicketID
-            // 
-            this.textBoxTicketID.Location = new System.Drawing.Point(378, 310);
-            this.textBoxTicketID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxTicketID.Name = "textBoxTicketID";
-            this.textBoxTicketID.ReadOnly = true;
-            this.textBoxTicketID.Size = new System.Drawing.Size(175, 22);
-            this.textBoxTicketID.TabIndex = 37;
-            // 
-            // labelID
-            // 
-            this.labelID.AutoSize = true;
-            this.labelID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelID.Location = new System.Drawing.Point(372, 278);
-            this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(103, 28);
-            this.labelID.TabIndex = 36;
-            this.labelID.Text = "Ticket ID";
-            // 
-            // textBoxAmount
-            // 
-            this.textBoxAmount.Location = new System.Drawing.Point(665, 310);
-            this.textBoxAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.textBoxAmount.Name = "textBoxAmount";
-            this.textBoxAmount.Size = new System.Drawing.Size(175, 22);
-            this.textBoxAmount.TabIndex = 39;
-            // 
-            // labelAmount
-            // 
-            this.labelAmount.AutoSize = true;
-            this.labelAmount.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAmount.Location = new System.Drawing.Point(659, 278);
-            this.labelAmount.Name = "labelAmount";
-            this.labelAmount.Size = new System.Drawing.Size(94, 28);
-            this.labelAmount.TabIndex = 38;
-            this.labelAmount.Text = "Amount";
             // 
             // TicketStore
             // 
