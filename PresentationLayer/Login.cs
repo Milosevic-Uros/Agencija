@@ -102,7 +102,7 @@ namespace PresentationLayer
                     }
                     else
                     {
-                        ClientDashboard clientDashboard = new ClientDashboard(clientBusiness, client);
+                        ClientDashboard clientDashboard = new ClientDashboard(adminBusiness,clientBusiness, client);
                         clientDashboard.Show();
                         this.Hide();
                     }

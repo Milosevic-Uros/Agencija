@@ -6,6 +6,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,11 +17,11 @@ namespace PresentationLayer
     {
         private readonly IAdminBusiness adminBusiness;
         private readonly IClientBusiness clientBusiness;
-        public ExchangeOffice(IClientBusiness _clientBusiness, IAdminBusiness _adminBusiness)
+        public ExchangeOffice(IAdminBusiness _adminBusiness,IClientBusiness _clientBusiness)
         {
-            InitializeComponent();
-            _clientBusiness = clientBusiness;
             _adminBusiness = adminBusiness;
+            _clientBusiness = clientBusiness;
+            InitializeComponent();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -35,11 +36,9 @@ namespace PresentationLayer
 
         private void ExchangeOffice_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'aGENCIJADataSet1.EXCHANGE_RATES' table. You can move, or remove it, as needed.
-            this.eXCHANGE_RATESTableAdapter.Fill(this.aGENCIJADataSet1.EXCHANGE_RATES);
-
-            List<ExchangeRate> rates = adminBusiness.GetExchangeRates();
-            dataGridViewExchange.DataSource= rates;
+            List<ExchangeRate> transactions = adminBusiness.GetExchangeRates();
+            dataGridViewExchange.DataSource = transactions;
+            
         }
 
         private void dataGridViewExchange_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
