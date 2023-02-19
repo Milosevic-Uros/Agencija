@@ -208,10 +208,10 @@
             // 
             this.buttonBoughtArrangements.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
             this.buttonBoughtArrangements.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBoughtArrangements.Location = new System.Drawing.Point(26, 147);
+            this.buttonBoughtArrangements.Location = new System.Drawing.Point(26, 148);
             this.buttonBoughtArrangements.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBoughtArrangements.Name = "buttonBoughtArrangements";
-            this.buttonBoughtArrangements.Size = new System.Drawing.Size(167, 58);
+            this.buttonBoughtArrangements.Size = new System.Drawing.Size(167, 57);
             this.buttonBoughtArrangements.TabIndex = 8;
             this.buttonBoughtArrangements.Text = "Bought arrangements";
             this.buttonBoughtArrangements.UseVisualStyleBackColor = false;
