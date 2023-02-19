@@ -29,7 +29,7 @@ namespace PresentationLayer
 
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
-            labelName.Text = admin.name.ToString();
+            labelWelcome.Text += admin.name.ToString();
         }
         public Login RefLoginForm { get; set; }
         private void buttonLogOut_Click(object sender, EventArgs e)
