@@ -72,10 +72,10 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>AGENCIJADataSet.xsd</DependentUpon>
     </Compile>
-    <Compile Include="AGENCIJADataSet1.Designer.cs">
+    <Compile Include="AGENCIJADataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>AGENCIJADataSet1.xsd</DependentUpon>
+      <DependentUpon>AGENCIJADataSet11.xsd</DependentUpon>
     </Compile>
     <Compile Include="ArrangementManagement.cs">
       <SubType>Form</SubType>
@@ -139,6 +139,12 @@
     <Compile Include="TicketManagement.Designer.cs">
       <DependentUpon>TicketManagement.cs</DependentUpon>
     </Compile>
+    <Compile Include="TicketStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketStore.Designer.cs">
+      <DependentUpon>TicketStore.cs</DependentUpon>
+    </Compile>
     <Compile Include="TransactionManagement.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     <EmbeddedResource Include="TicketManagement.resx">
       <DependentUpon>TicketManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="TicketStore.resx">
+      <DependentUpon>TicketStore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TransactionManagement.resx">
       <DependentUpon>TransactionManagement.cs</DependentUpon>
     </EmbeddedResource>
@@ -201,16 +210,16 @@
     <None Include="AGENCIJADataSet.xss">
       <DependentUpon>AGENCIJADataSet.xsd</DependentUpon>
     </None>
-    <None Include="AGENCIJADataSet1.xsc">
-      <DependentUpon>AGENCIJADataSet1.xsd</DependentUpon>
+    <None Include="AGENCIJADataSet11.xsc">
+      <DependentUpon>AGENCIJADataSet11.xsd</DependentUpon>
     </None>
-    <None Include="AGENCIJADataSet1.xsd">
+    <None Include="AGENCIJADataSet11.xsd">
       <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>AGENCIJADataSet1.Designer.cs</LastGenOutput>
+      <LastGenOutput>AGENCIJADataSet11.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
     </None>
-    <None Include="AGENCIJADataSet1.xss">
-      <DependentUpon>AGENCIJADataSet1.xsd</DependentUpon>
+    <None Include="AGENCIJADataSet11.xss">
+      <DependentUpon>AGENCIJADataSet11.xsd</DependentUpon>
     </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

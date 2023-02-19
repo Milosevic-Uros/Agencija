@@ -46,14 +46,11 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelINSERT = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.aGENCIJADataSet1 = new PresentationLayer.AGENCIJADataSet1();
             this.eXCHANGERATESBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.eXCHANGE_RATESTableAdapter = new PresentationLayer.AGENCIJADataSet1TableAdapters.EXCHANGE_RATESTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExchange)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -250,17 +247,13 @@
             // 
             // aGENCIJADataSet1
             // 
-            this.aGENCIJADataSet1.DataSetName = "AGENCIJADataSet1";
-            this.aGENCIJADataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // eXCHANGERATESBindingSource
             // 
             this.eXCHANGERATESBindingSource.DataMember = "EXCHANGE_RATES";
-            this.eXCHANGERATESBindingSource.DataSource = this.aGENCIJADataSet1;
             // 
             // eXCHANGE_RATESTableAdapter
             // 
-            this.eXCHANGE_RATESTableAdapter.ClearBeforeFill = true;
             // 
             // ExchangeOffice
             // 
@@ -281,7 +274,6 @@
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource)).EndInit();
             this.ResumeLayout(false);
 
@@ -306,8 +298,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelConvertedValue;
         private System.Windows.Forms.Button buttonConvert;
-        private AGENCIJADataSet1 aGENCIJADataSet1;
         private System.Windows.Forms.BindingSource eXCHANGERATESBindingSource;
-        private AGENCIJADataSet1TableAdapters.EXCHANGE_RATESTableAdapter eXCHANGE_RATESTableAdapter;
     }
 }
