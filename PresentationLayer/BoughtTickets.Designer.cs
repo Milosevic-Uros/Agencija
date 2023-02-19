@@ -29,13 +29,13 @@
         private void InitializeComponent()
         {
             this.panelClientManagement = new System.Windows.Forms.Panel();
+            this.buttonBuyMore = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelBought = new System.Windows.Forms.Label();
             this.dataGridViewBoughtTickets = new System.Windows.Forms.DataGridView();
-            this.buttonBuyMore = new System.Windows.Forms.Button();
             this.panelClientManagement.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewBoughtTickets)).BeginInit();
@@ -56,11 +56,24 @@
             this.panelClientManagement.Size = new System.Drawing.Size(803, 446);
             this.panelClientManagement.TabIndex = 2;
             // 
+            // buttonBuyMore
+            // 
+            this.buttonBuyMore.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonBuyMore.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonBuyMore.Location = new System.Drawing.Point(421, 350);
+            this.buttonBuyMore.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonBuyMore.Name = "buttonBuyMore";
+            this.buttonBuyMore.Size = new System.Drawing.Size(264, 49);
+            this.buttonBuyMore.TabIndex = 38;
+            this.buttonBuyMore.Text = "Buy more";
+            this.buttonBuyMore.UseVisualStyleBackColor = false;
+            this.buttonBuyMore.Click += new System.EventHandler(this.buttonBuyMore_Click);
+            // 
             // buttonClose
             // 
             this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(407, 350);
+            this.buttonClose.Location = new System.Drawing.Point(107, 350);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(264, 49);
@@ -120,19 +133,6 @@
             this.dataGridViewBoughtTickets.RowTemplate.Height = 24;
             this.dataGridViewBoughtTickets.Size = new System.Drawing.Size(814, 176);
             this.dataGridViewBoughtTickets.TabIndex = 0;
-            // 
-            // buttonBuyMore
-            // 
-            this.buttonBuyMore.BackColor = System.Drawing.Color.SteelBlue;
-            this.buttonBuyMore.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuyMore.Location = new System.Drawing.Point(117, 350);
-            this.buttonBuyMore.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonBuyMore.Name = "buttonBuyMore";
-            this.buttonBuyMore.Size = new System.Drawing.Size(264, 49);
-            this.buttonBuyMore.TabIndex = 38;
-            this.buttonBuyMore.Text = "Buy more";
-            this.buttonBuyMore.UseVisualStyleBackColor = false;
-            this.buttonBuyMore.Click += new System.EventHandler(this.buttonBuyMore_Click);
             // 
             // BoughtTickets
             // 

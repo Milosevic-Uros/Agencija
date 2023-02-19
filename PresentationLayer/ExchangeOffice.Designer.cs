@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonClose = new System.Windows.Forms.Button();
             this.labelConvertedValue = new System.Windows.Forms.Label();
             this.buttonConvert = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -52,7 +53,6 @@
             this.eXCHANGERATESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.eXCHANGE_RATESTableAdapter = new PresentationLayer.AGENCIJADataSet1TableAdapters.EXCHANGE_RATESTableAdapter();
             this.eXCHANGE_RATESTableAdapter1 = new PresentationLayer.AGENCIJADataSet3TableAdapters.EXCHANGE_RATESTableAdapter();
-            this.buttonClose = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet3)).BeginInit();
@@ -85,6 +85,19 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(801, 452);
             this.panel1.TabIndex = 0;
+            // 
+            // buttonClose
+            // 
+            this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
+            this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonClose.Location = new System.Drawing.Point(12, 390);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonClose.Name = "buttonClose";
+            this.buttonClose.Size = new System.Drawing.Size(81, 49);
+            this.buttonClose.TabIndex = 35;
+            this.buttonClose.Text = "Close";
+            this.buttonClose.UseVisualStyleBackColor = false;
+            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // labelConvertedValue
             // 
@@ -205,12 +218,12 @@
             // dataGridViewExchange
             // 
             this.dataGridViewExchange.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewExchange.Location = new System.Drawing.Point(105, 148);
+            this.dataGridViewExchange.Location = new System.Drawing.Point(95, 148);
             this.dataGridViewExchange.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewExchange.Name = "dataGridViewExchange";
             this.dataGridViewExchange.RowHeadersWidth = 51;
             this.dataGridViewExchange.RowTemplate.Height = 24;
-            this.dataGridViewExchange.Size = new System.Drawing.Size(605, 144);
+            this.dataGridViewExchange.Size = new System.Drawing.Size(622, 144);
             this.dataGridViewExchange.TabIndex = 23;
             // 
             // panel3
@@ -274,19 +287,6 @@
             // eXCHANGE_RATESTableAdapter1
             // 
             this.eXCHANGE_RATESTableAdapter1.ClearBeforeFill = true;
-            // 
-            // buttonClose
-            // 
-            this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
-            this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(12, 390);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(81, 49);
-            this.buttonClose.TabIndex = 35;
-            this.buttonClose.Text = "Close";
-            this.buttonClose.UseVisualStyleBackColor = false;
-            this.buttonClose.Click += new System.EventHandler(this.buttonClose_Click);
             // 
             // ExchangeOffice
             // 

@@ -16,5 +16,15 @@ namespace PresentationLayer
         {
             InitializeComponent();
         }
+
+        private void labelBought_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
