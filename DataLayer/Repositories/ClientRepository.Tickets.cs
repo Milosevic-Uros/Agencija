@@ -61,8 +61,8 @@ namespace DataLayer.Repositories
                     int locationId = reader.GetInt32(4);
                     string typeOfTransport = reader.GetString(5);
                     decimal price = reader.GetDecimal(6);
-                    int numberOfVacancies = reader.GetInt32(7);
-                    Object ticket = new { id, name, dateOfDeparture, returnDate, locationId, typeOfTransport, price, numberOfVacancies };
+                    int numberOfTickets = reader.GetInt32(7);
+                    Object ticket = new { id, name, dateOfDeparture, returnDate, locationId, typeOfTransport, price, numberOfTickets };
                     ListOfTickets.Add(ticket);
                 }
                 reader.Close();

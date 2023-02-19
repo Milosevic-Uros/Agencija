@@ -14,7 +14,7 @@ namespace BusinessLayer
         {
             return clientRepository.GetAllArrangements();
         }
-        public List<Arrangement> GetAllClientArrangements(Client client)
+        public List<Object> GetAllClientArrangements(Client client)
         {
             return clientRepository.GetAllClientArrangements(client);
         }

@@ -32,8 +32,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClientDashboard));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.labelName = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelLoggedIn = new System.Windows.Forms.Label();
             this.buttonBoughtArrangements = new System.Windows.Forms.Button();
             this.buttonBoughtTickets = new System.Windows.Forms.Button();
             this.buttonLogOut = new System.Windows.Forms.Button();
@@ -68,8 +67,7 @@
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel4.Controls.Add(this.labelName);
-            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.labelLoggedIn);
             this.panel4.Controls.Add(this.buttonBoughtArrangements);
             this.panel4.Controls.Add(this.buttonBoughtTickets);
             this.panel4.Controls.Add(this.buttonLogOut);
@@ -79,27 +77,16 @@
             this.panel4.Size = new System.Drawing.Size(166, 328);
             this.panel4.TabIndex = 5;
             // 
-            // labelName
+            // labelLoggedIn
             // 
-            this.labelName.AutoSize = true;
-            this.labelName.Font = new System.Drawing.Font("Microsoft Tai Le", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelName.Location = new System.Drawing.Point(20, 50);
-            this.labelName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelName.Name = "labelName";
-            this.labelName.Size = new System.Drawing.Size(51, 19);
-            this.labelName.TabIndex = 9;
-            this.labelName.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 20);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(110, 21);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "Logged in as:";
+            this.labelLoggedIn.AutoSize = true;
+            this.labelLoggedIn.Font = new System.Drawing.Font("Microsoft Tai Le", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelLoggedIn.Location = new System.Drawing.Point(19, 20);
+            this.labelLoggedIn.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelLoggedIn.Name = "labelLoggedIn";
+            this.labelLoggedIn.Size = new System.Drawing.Size(97, 19);
+            this.labelLoggedIn.TabIndex = 7;
+            this.labelLoggedIn.Text = "Logged in as:";
             // 
             // buttonBoughtArrangements
             // 
@@ -275,9 +262,8 @@
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button buttonLogOut;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelLoggedIn;
         private System.Windows.Forms.Button buttonBoughtArrangements;
         private System.Windows.Forms.Button buttonBoughtTickets;
-        private System.Windows.Forms.Label labelName;
     }
 }
