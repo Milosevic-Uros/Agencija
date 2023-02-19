@@ -25,14 +25,10 @@ namespace PresentationLayer
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void timer1_Tick(object sender, EventArgs e)
         {
-            labelDate.Text = DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss");
+            //labelDate.Text = DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss");
+            
         }
 
         private void ExchangeOffice_Load(object sender, EventArgs e)
@@ -43,7 +39,8 @@ namespace PresentationLayer
             this.eXCHANGE_RATESTableAdapter.Fill(this.aGENCIJADataSet1.EXCHANGE_RATES);
             List<ExchangeRate> transactions = adminBusiness.GetExchangeRates();
             dataGridViewExchange.DataSource = transactions;
-            
+            labelHeadline.Text += DateTime.Now.ToString("dd'-'MM'-'yyyy");
+
         }
 
         private void dataGridViewExchange_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -53,11 +50,6 @@ namespace PresentationLayer
                 DataGridViewRow row = this.dataGridViewExchange.Rows[e.RowIndex];
 
             }
-        }
-
-        private void labelFrom_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void buttonConvert_Click(object sender, EventArgs e)
