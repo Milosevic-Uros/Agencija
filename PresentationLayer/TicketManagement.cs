@@ -18,9 +18,13 @@ namespace PresentationLayer
     public partial class TicketManagement : Form
     {
         private readonly IAdminBusiness adminBusiness;
-        public TicketManagement(IAdminBusiness _adminBusiness)
+        private readonly IClientBusiness clientBusiness;
+        Admin admin;
+        public TicketManagement(IAdminBusiness _adminBusiness, IClientBusiness _clientBusiness, Admin _admin)
         {
             adminBusiness = _adminBusiness;
+            clientBusiness = _clientBusiness;
+            admin = _admin;
             InitializeComponent();
             MaximizeBox = false;
         }
@@ -87,7 +91,7 @@ namespace PresentationLayer
 
         private void buttonInsert_Click(object sender, EventArgs e)
         {
-            InsertTicket insertTicket = new InsertTicket(adminBusiness);
+            InsertTicket insertTicket = new InsertTicket(adminBusiness, clientBusiness, admin);
             insertTicket.Show();
             this.Close();
         }
@@ -106,6 +110,8 @@ namespace PresentationLayer
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            AdminDashboard adminDashboard = new AdminDashboard(adminBusiness, clientBusiness, admin);
+            adminDashboard.Show();
         }
     }
 }

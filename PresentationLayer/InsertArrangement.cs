@@ -1,4 +1,5 @@
-﻿using Shared.Interfaces;
+﻿using BusinessLayer;
+using Shared.Interfaces;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -16,15 +17,19 @@ namespace PresentationLayer
     public partial class InsertArrangement : Form
     {
         private readonly IAdminBusiness adminBusiness;
-        public InsertArrangement(IAdminBusiness _adminBusiness)
+        private readonly IClientBusiness clientBusiness;
+        Admin admin;
+        public InsertArrangement(IAdminBusiness _adminBusiness, IClientBusiness _clientBusiness, Admin _admin)
         {
-            adminBusiness= _adminBusiness;
+            adminBusiness = _adminBusiness;
+            clientBusiness = _clientBusiness;
+            admin = _admin;
             InitializeComponent();
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
-            ArrangementManagement arrangementManagement = new ArrangementManagement(adminBusiness);
+            ArrangementManagement arrangementManagement = new ArrangementManagement(adminBusiness,clientBusiness,admin);
             arrangementManagement.ShowDialog();
             this.Close();
         }

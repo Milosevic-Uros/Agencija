@@ -1,4 +1,5 @@
-﻿using Shared.Interfaces;
+﻿using BusinessLayer;
+using Shared.Interfaces;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -17,9 +18,14 @@ namespace PresentationLayer
     public partial class InsertClient : Form
     {
         private readonly IAdminBusiness adminBusiness;
-        public InsertClient(IAdminBusiness _adminBusiness)
+        private readonly IClientBusiness clientBusiness;
+        Admin admin;
+        public InsertClient(IAdminBusiness _adminBusiness, IClientBusiness _clientBusiness, Admin _admin)
         {
             adminBusiness= _adminBusiness;
+            adminBusiness = _adminBusiness;
+            clientBusiness = _clientBusiness;
+            admin = _admin;
             InitializeComponent();
         }
 
@@ -129,7 +135,7 @@ namespace PresentationLayer
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
-            ClientManagement clientManagement = new ClientManagement(adminBusiness);
+            ClientManagement clientManagement = new ClientManagement(adminBusiness, clientBusiness, admin);
             clientManagement.Show();
         }
     }

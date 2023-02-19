@@ -77,6 +77,8 @@ namespace PresentationLayer
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            ClientDashboard clientDashboard = new ClientDashboard(adminBusiness, clientBusiness, client);
+            clientDashboard.Show();
         }
     }
 }

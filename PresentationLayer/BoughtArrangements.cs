@@ -34,6 +34,8 @@ namespace PresentationLayer
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            ClientDashboard clientDashboard = new ClientDashboard(adminBusiness, clientBusiness, client);
+            clientDashboard.Show();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

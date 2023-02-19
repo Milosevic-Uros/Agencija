@@ -1,4 +1,5 @@
-﻿using Shared.Interfaces;
+﻿using BusinessLayer;
+using Shared.Interfaces;
 using Shared.Models;
 using System;
 using System.Collections.Generic;
@@ -16,10 +17,14 @@ namespace PresentationLayer
     public partial class TransactionManagement : Form
     {
         private readonly IAdminBusiness adminBusiness;
-        
-        public TransactionManagement(IAdminBusiness _adminBusiness)
+        private readonly IClientBusiness clientBusiness;
+        Admin admin;
+
+        public TransactionManagement(IAdminBusiness _adminBusiness, IClientBusiness _clientBusiness, Admin _admin)
         {
             adminBusiness = _adminBusiness;
+            clientBusiness = _clientBusiness;
+            admin = _admin;
             InitializeComponent();
         }
 
@@ -40,11 +45,14 @@ namespace PresentationLayer
         {
             List<ExchangeRate> transactions = adminBusiness.GetExchangeRates();
             dataGridViewTransaction.DataSource = transactions;
+            dataGridViewTransaction.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
 
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            AdminDashboard adminDashboard = new AdminDashboard(adminBusiness, clientBusiness, admin);
+            adminDashboard.Show();
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
@@ -61,6 +69,7 @@ namespace PresentationLayer
                 string result = adminBusiness.DeleteExchangeRateItem(transactionID);
                 MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 dataGridViewTransaction.DataSource = adminBusiness.GetExchangeRates();
+                dataGridViewTransaction.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
                 textBoxCurrencyID.Text = "";
                 textBoxCurrencyCode.Text = "";
@@ -94,6 +103,7 @@ namespace PresentationLayer
             string result = adminBusiness.UpdateExchangeRateItem(exchangeRate);
             MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dataGridViewTransaction.DataSource = adminBusiness.GetExchangeRates();
+            dataGridViewTransaction.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             textBoxCurrencyID.Text = "";
             textBoxCurrencyCode.Text = "";
@@ -131,6 +141,7 @@ namespace PresentationLayer
             string result = adminBusiness.InsertExchangeRateItem(exchangeRate);
             MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dataGridViewTransaction.DataSource = adminBusiness.GetExchangeRates();
+            dataGridViewTransaction.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
             textBoxCurrencyID.Text = "";
             textBoxCurrencyCode.Text = "";

@@ -19,11 +19,14 @@ namespace PresentationLayer
     {
         private readonly IAdminBusiness adminBusiness;
         private readonly IClientBusiness clientBusiness;
-        public ExchangeOffice(IAdminBusiness _adminBusiness,IClientBusiness _clientBusiness)
+        Client client;
+        public ExchangeOffice(IAdminBusiness _adminBusiness,IClientBusiness _clientBusiness, Client _client)
         {
             adminBusiness = _adminBusiness;
-            clientBusiness= _clientBusiness;
+            clientBusiness = _clientBusiness;
+            client = _client;
             InitializeComponent();
+            
         }
 
 
@@ -74,6 +77,8 @@ namespace PresentationLayer
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            ClientDashboard clientDashboard = new ClientDashboard(adminBusiness, clientBusiness, client);
+            clientDashboard.Show();
         }
     }
 }

@@ -50,25 +50,29 @@ namespace PresentationLayer
 
         private void buttonClientManagement_Click(object sender, EventArgs e)
         {
-            ClientManagement clientManagementForm = new ClientManagement(adminBusiness);
+            this.Close();
+            ClientManagement clientManagementForm = new ClientManagement(adminBusiness, clientBusiness, admin);
             clientManagementForm.Show();
         }
 
         private void buttonArrangement_Click(object sender, EventArgs e)
         {
-            ArrangementManagement arrangementManagementForm = new ArrangementManagement(adminBusiness);
+            this.Close();
+            ArrangementManagement arrangementManagementForm = new ArrangementManagement(adminBusiness, clientBusiness, admin);
             arrangementManagementForm.Show();
         }
 
         private void buttonTicketManagement_Click(object sender, EventArgs e)
         {
-            TicketManagement ticketManagementForm = new TicketManagement(adminBusiness);
+            this.Close();
+            TicketManagement ticketManagementForm = new TicketManagement(adminBusiness, clientBusiness, admin);
             ticketManagementForm.Show();
         }
 
         private void buttonTransactionManagement_Click(object sender, EventArgs e)
         {
-            TransactionManagement transactionManagement = new TransactionManagement(adminBusiness);
+            this.Close();
+            TransactionManagement transactionManagement = new TransactionManagement(adminBusiness, clientBusiness, admin);
             transactionManagement.Show();
 
         }

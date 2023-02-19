@@ -48,13 +48,14 @@ namespace PresentationLayer
 
         private void buttonExchange_Click(object sender, EventArgs e)
         {
-            ExchangeOffice exchangeOffice = new ExchangeOffice(adminBusiness, clientBusiness);
-            exchangeOffice.ShowDialog();
             this.Close();
+            ExchangeOffice exchangeOffice = new ExchangeOffice(adminBusiness, clientBusiness, client);
+            exchangeOffice.ShowDialog(); 
         }
 
         private void buttonTicket_Click(object sender, EventArgs e)
         {
+            this.Close();
             TicketStore ticketStore = new TicketStore(adminBusiness, clientBusiness, client);
             ticketStore.Show();
         }
@@ -68,14 +69,17 @@ namespace PresentationLayer
 
         private void buttonBoughtTickets_Click(object sender, EventArgs e)
         {
+            this.Close();
             BoughtTickets boughtTickets = new BoughtTickets(clientBusiness, adminBusiness, client);
             boughtTickets.Show();
         }
 
         private void buttonBoughtArrangements_Click(object sender, EventArgs e)
         {
+            this.Close();
             BoughtArrangements boughtArrangements= new BoughtArrangements(clientBusiness, adminBusiness, client);
             boughtArrangements.Show();
         }
+
     }
 }

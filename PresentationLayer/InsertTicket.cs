@@ -15,9 +15,15 @@ namespace PresentationLayer
     public partial class InsertTicket : Form
     {
         private readonly IAdminBusiness adminBusiness;
-        public InsertTicket(IAdminBusiness _adminBusiness)
+        private readonly IClientBusiness clientBusiness;
+        Admin admin;
+
+        public InsertTicket(IAdminBusiness _adminBusiness, IClientBusiness _clientBusiness, Admin _admin)
         {
             adminBusiness = _adminBusiness;
+            adminBusiness = _adminBusiness;
+            clientBusiness = _clientBusiness;
+            admin = _admin;
             InitializeComponent();
         }
 
@@ -32,7 +38,7 @@ namespace PresentationLayer
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
-            TicketManagement ticketManagement = new TicketManagement(adminBusiness);
+            TicketManagement ticketManagement = new TicketManagement(adminBusiness,clientBusiness, admin);
             ticketManagement.ShowDialog();
         }
 

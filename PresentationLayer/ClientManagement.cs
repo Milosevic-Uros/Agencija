@@ -17,9 +17,13 @@ namespace PresentationLayer
     public partial class ClientManagement : Form
     {
         private readonly IAdminBusiness adminBusiness;
-        public ClientManagement(IAdminBusiness _adminBusiness)
+        private readonly IClientBusiness clientBusiness;
+        Admin admin;
+        public ClientManagement(IAdminBusiness _adminBusiness, IClientBusiness _clientBusiness, Admin _admin)
         {
             adminBusiness = _adminBusiness;
+            clientBusiness = _clientBusiness;
+            admin = _admin;
             InitializeComponent();
         }
 
@@ -100,7 +104,7 @@ namespace PresentationLayer
         private void buttonInsert_Click(object sender, EventArgs e)
         {
             this.Close();
-            InsertClient insertClientForm = new InsertClient(adminBusiness);
+            InsertClient insertClientForm = new InsertClient(adminBusiness, clientBusiness,admin);
             insertClientForm.Show();
         }
 
@@ -121,6 +125,8 @@ namespace PresentationLayer
         private void buttonClose_Click(object sender, EventArgs e)
         {
             this.Close();
+            AdminDashboard adminDashboard = new AdminDashboard(adminBusiness, clientBusiness, admin);
+            adminDashboard.Show();
         }
     }
 }
