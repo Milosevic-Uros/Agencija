@@ -266,7 +266,7 @@
             this.MaximizeBox = false;
             this.Name = "ArrangementStore";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ArrangementStore";
+            this.Text = "Arrangement Store";
             this.Load += new System.EventHandler(this.ArrangementStore_Load);
             this.panelClientManagement.ResumeLayout(false);
             this.panelClientManagement.PerformLayout();

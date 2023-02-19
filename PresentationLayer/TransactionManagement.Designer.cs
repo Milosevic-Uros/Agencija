@@ -218,7 +218,7 @@
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "TransactionManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TransactionManagement";
+            this.Text = "Transaction Management";
             this.Load += new System.EventHandler(this.TransactionManagement_Load);
             this.panelClientManagement.ResumeLayout(false);
             this.panelClientManagement.PerformLayout();

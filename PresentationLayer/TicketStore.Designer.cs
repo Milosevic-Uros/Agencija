@@ -64,7 +64,7 @@
             this.panel1.Controls.Add(this.buttonBuy);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1005, 367);
             this.panel1.TabIndex = 1;
@@ -73,7 +73,7 @@
             // 
             this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewTickets.Location = new System.Drawing.Point(2, 78);
-            this.dataGridViewTickets.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewTickets.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewTickets.Name = "dataGridViewTickets";
             this.dataGridViewTickets.RowHeadersWidth = 51;
             this.dataGridViewTickets.RowTemplate.Height = 24;
@@ -85,7 +85,7 @@
             this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.Location = new System.Drawing.Point(208, 288);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(256, 28);
             this.buttonClose.TabIndex = 40;
@@ -96,7 +96,7 @@
             // textBoxAmount
             // 
             this.textBoxAmount.Location = new System.Drawing.Point(542, 252);
-            this.textBoxAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxAmount.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxAmount.Name = "textBoxAmount";
             this.textBoxAmount.Size = new System.Drawing.Size(132, 20);
             this.textBoxAmount.TabIndex = 39;
@@ -116,7 +116,7 @@
             // 
             this.textBoxTicketID.Enabled = false;
             this.textBoxTicketID.Location = new System.Drawing.Point(266, 252);
-            this.textBoxTicketID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxTicketID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxTicketID.Name = "textBoxTicketID";
             this.textBoxTicketID.ReadOnly = true;
             this.textBoxTicketID.Size = new System.Drawing.Size(132, 20);
@@ -151,7 +151,7 @@
             this.buttonBuy.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonBuy.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonBuy.Location = new System.Drawing.Point(482, 288);
-            this.buttonBuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuy.Margin = new System.Windows.Forms.Padding(2);
             this.buttonBuy.Name = "buttonBuy";
             this.buttonBuy.Size = new System.Drawing.Size(256, 28);
             this.buttonBuy.TabIndex = 33;
@@ -164,7 +164,7 @@
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.labelINSERT);
             this.panel2.Location = new System.Drawing.Point(0, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(958, 72);
             this.panel2.TabIndex = 22;
@@ -204,11 +204,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(958, 365);
             this.Controls.Add(this.panel1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "TicketStore";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "TicketStore";
+            this.Text = "Ticket Store";
             this.Load += new System.EventHandler(this.TicketStore_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

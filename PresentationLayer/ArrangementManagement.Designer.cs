@@ -65,7 +65,7 @@
             this.panelClientManagement.Controls.Add(this.labelArrangementID);
             this.panelClientManagement.Controls.Add(this.dataGridViewArrangemet);
             this.panelClientManagement.Location = new System.Drawing.Point(-1, 2);
-            this.panelClientManagement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelClientManagement.Margin = new System.Windows.Forms.Padding(2);
             this.panelClientManagement.Name = "panelClientManagement";
             this.panelClientManagement.Size = new System.Drawing.Size(602, 362);
             this.panelClientManagement.TabIndex = 1;
@@ -75,7 +75,7 @@
             this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.Location = new System.Drawing.Point(10, 315);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(2);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(61, 40);
             this.buttonClose.TabIndex = 7;
@@ -87,7 +87,7 @@
             // 
             this.dateTimePickerReturnDate.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerReturnDate.Location = new System.Drawing.Point(379, 222);
-            this.dateTimePickerReturnDate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerReturnDate.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerReturnDate.Name = "dateTimePickerReturnDate";
             this.dateTimePickerReturnDate.Size = new System.Drawing.Size(122, 20);
             this.dateTimePickerReturnDate.TabIndex = 3;
@@ -96,7 +96,7 @@
             // 
             this.dateTimePickerDeparture.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dateTimePickerDeparture.Location = new System.Drawing.Point(238, 222);
-            this.dateTimePickerDeparture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerDeparture.Margin = new System.Windows.Forms.Padding(2);
             this.dateTimePickerDeparture.Name = "dateTimePickerDeparture";
             this.dateTimePickerDeparture.Size = new System.Drawing.Size(122, 20);
             this.dateTimePickerDeparture.TabIndex = 2;
@@ -106,7 +106,7 @@
             this.buttonDelete.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDelete.Location = new System.Drawing.Point(386, 277);
-            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonDelete.Margin = new System.Windows.Forms.Padding(2);
             this.buttonDelete.Name = "buttonDelete";
             this.buttonDelete.Size = new System.Drawing.Size(109, 46);
             this.buttonDelete.TabIndex = 6;
@@ -119,7 +119,7 @@
             this.buttonUpdate.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonUpdate.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonUpdate.Location = new System.Drawing.Point(242, 277);
-            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonUpdate.Margin = new System.Windows.Forms.Padding(2);
             this.buttonUpdate.Name = "buttonUpdate";
             this.buttonUpdate.Size = new System.Drawing.Size(109, 46);
             this.buttonUpdate.TabIndex = 5;
@@ -132,7 +132,7 @@
             this.buttonInsert.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonInsert.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonInsert.Location = new System.Drawing.Point(98, 277);
-            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonInsert.Margin = new System.Windows.Forms.Padding(2);
             this.buttonInsert.Name = "buttonInsert";
             this.buttonInsert.Size = new System.Drawing.Size(109, 46);
             this.buttonInsert.TabIndex = 4;
@@ -165,7 +165,7 @@
             // textBoxArrangementID
             // 
             this.textBoxArrangementID.Location = new System.Drawing.Point(95, 221);
-            this.textBoxArrangementID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxArrangementID.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxArrangementID.Name = "textBoxArrangementID";
             this.textBoxArrangementID.Size = new System.Drawing.Size(111, 20);
             this.textBoxArrangementID.TabIndex = 1;
@@ -186,7 +186,7 @@
             this.dataGridViewArrangemet.BackgroundColor = System.Drawing.Color.Silver;
             this.dataGridViewArrangemet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewArrangemet.Location = new System.Drawing.Point(2, 0);
-            this.dataGridViewArrangemet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewArrangemet.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewArrangemet.Name = "dataGridViewArrangemet";
             this.dataGridViewArrangemet.RowHeadersWidth = 51;
             this.dataGridViewArrangemet.RowTemplate.Height = 24;
@@ -214,10 +214,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(600, 366);
             this.Controls.Add(this.panelClientManagement);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ArrangementManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ArrangementManagement";
+            this.Text = "Arrangement Management";
             this.Load += new System.EventHandler(this.ArrangementManagement_Load);
             this.panelClientManagement.ResumeLayout(false);
             this.panelClientManagement.PerformLayout();
