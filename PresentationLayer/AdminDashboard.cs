@@ -30,6 +30,15 @@ namespace PresentationLayer
         private void AdminDashboard_Load(object sender, EventArgs e)
         {
             labelWelcome.Text += admin.name.ToString();
+            labelNumOfAvailableArrangements.Text ="      "+ adminBusiness.GetAllArrangements().Count.ToString();
+            labelNumOfAvailableLocations.Text = "      " + adminBusiness.GetLocations().Count.ToString();
+            labelNumOfAvailableTickets.Text = "      " + adminBusiness.GetAllTickets().Count.ToString();
+            labelNumOfRegisteredClients.Text = "      " + adminBusiness.GetAllClients().Count.ToString();
+            labelAvailableArrangements.Text = "Number of available\narrangements";
+            labelRegisteredClients.Text = "Number of registered\nclients";
+
+
+
         }
         public Login RefLoginForm { get; set; }
         private void buttonLogOut_Click(object sender, EventArgs e)

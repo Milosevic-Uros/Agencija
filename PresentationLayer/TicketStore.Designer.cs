@@ -62,45 +62,48 @@
             this.panel1.Controls.Add(this.dataGridViewTickets);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1340, 452);
+            this.panel1.Size = new System.Drawing.Size(1005, 367);
             this.panel1.TabIndex = 1;
             // 
             // textBoxAmount
             // 
-            this.textBoxAmount.Location = new System.Drawing.Point(665, 310);
-            this.textBoxAmount.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxAmount.Location = new System.Drawing.Point(499, 252);
+            this.textBoxAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxAmount.Name = "textBoxAmount";
-            this.textBoxAmount.Size = new System.Drawing.Size(175, 22);
+            this.textBoxAmount.Size = new System.Drawing.Size(132, 20);
             this.textBoxAmount.TabIndex = 39;
             // 
             // labelAmount
             // 
             this.labelAmount.AutoSize = true;
             this.labelAmount.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelAmount.Location = new System.Drawing.Point(659, 278);
+            this.labelAmount.Location = new System.Drawing.Point(494, 226);
+            this.labelAmount.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelAmount.Name = "labelAmount";
-            this.labelAmount.Size = new System.Drawing.Size(75, 22);
+            this.labelAmount.Size = new System.Drawing.Size(61, 18);
             this.labelAmount.TabIndex = 38;
             this.labelAmount.Text = "Amount";
             // 
             // textBoxTicketID
             // 
-            this.textBoxTicketID.Location = new System.Drawing.Point(378, 310);
-            this.textBoxTicketID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxTicketID.Enabled = false;
+            this.textBoxTicketID.Location = new System.Drawing.Point(284, 252);
+            this.textBoxTicketID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.textBoxTicketID.Name = "textBoxTicketID";
             this.textBoxTicketID.ReadOnly = true;
-            this.textBoxTicketID.Size = new System.Drawing.Size(175, 22);
+            this.textBoxTicketID.Size = new System.Drawing.Size(132, 20);
             this.textBoxTicketID.TabIndex = 37;
             // 
             // labelID
             // 
             this.labelID.AutoSize = true;
             this.labelID.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelID.Location = new System.Drawing.Point(372, 278);
+            this.labelID.Location = new System.Drawing.Point(279, 226);
+            this.labelID.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelID.Name = "labelID";
-            this.labelID.Size = new System.Drawing.Size(82, 22);
+            this.labelID.Size = new System.Drawing.Size(66, 18);
             this.labelID.TabIndex = 36;
             this.labelID.Text = "Ticket ID";
             // 
@@ -108,9 +111,10 @@
             // 
             this.labelBought.AutoSize = true;
             this.labelBought.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBought.Location = new System.Drawing.Point(493, 411);
+            this.labelBought.Location = new System.Drawing.Point(370, 334);
+            this.labelBought.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelBought.Name = "labelBought";
-            this.labelBought.Size = new System.Drawing.Size(319, 25);
+            this.labelBought.Size = new System.Drawing.Size(252, 21);
             this.labelBought.TabIndex = 35;
             this.labelBought.TabStop = true;
             this.labelBought.Text = "Click to see list of all bought tickets";
@@ -120,10 +124,10 @@
             // 
             this.buttonBuy.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonBuy.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuy.Location = new System.Drawing.Point(286, 355);
-            this.buttonBuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.buttonBuy.Location = new System.Drawing.Point(214, 288);
+            this.buttonBuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.buttonBuy.Name = "buttonBuy";
-            this.buttonBuy.Size = new System.Drawing.Size(699, 34);
+            this.buttonBuy.Size = new System.Drawing.Size(524, 28);
             this.buttonBuy.TabIndex = 33;
             this.buttonBuy.Text = "Buy ticket";
             this.buttonBuy.UseVisualStyleBackColor = false;
@@ -132,31 +136,33 @@
             // dataGridViewTickets
             // 
             this.dataGridViewTickets.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewTickets.Location = new System.Drawing.Point(3, 106);
-            this.dataGridViewTickets.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dataGridViewTickets.Location = new System.Drawing.Point(2, 86);
+            this.dataGridViewTickets.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dataGridViewTickets.Name = "dataGridViewTickets";
             this.dataGridViewTickets.RowHeadersWidth = 51;
             this.dataGridViewTickets.RowTemplate.Height = 24;
-            this.dataGridViewTickets.Size = new System.Drawing.Size(1275, 155);
+            this.dataGridViewTickets.Size = new System.Drawing.Size(956, 126);
             this.dataGridViewTickets.TabIndex = 23;
+            this.dataGridViewTickets.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewTickets_RowHeaderMouseClick);
             // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.labelINSERT);
             this.panel2.Location = new System.Drawing.Point(0, 2);
-            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1278, 89);
+            this.panel2.Size = new System.Drawing.Size(958, 72);
             this.panel2.TabIndex = 22;
             // 
             // labelINSERT
             // 
             this.labelINSERT.AutoSize = true;
             this.labelINSERT.Font = new System.Drawing.Font("Microsoft Tai Le", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelINSERT.Location = new System.Drawing.Point(512, 19);
+            this.labelINSERT.Location = new System.Drawing.Point(384, 15);
+            this.labelINSERT.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labelINSERT.Name = "labelINSERT";
-            this.labelINSERT.Size = new System.Drawing.Size(260, 55);
+            this.labelINSERT.Size = new System.Drawing.Size(214, 45);
             this.labelINSERT.TabIndex = 0;
             this.labelINSERT.Text = "Ticket store";
             // 
@@ -180,10 +186,11 @@
             // 
             // TicketStore
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1276, 450);
+            this.ClientSize = new System.Drawing.Size(957, 366);
             this.Controls.Add(this.panel1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.Name = "TicketStore";
             this.Text = "TicketStore";

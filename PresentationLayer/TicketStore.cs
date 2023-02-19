@@ -41,6 +41,7 @@ namespace PresentationLayer
             if (e.RowIndex >= 0)
             {
                 DataGridViewRow row = this.dataGridViewTickets.Rows[e.RowIndex];
+                textBoxTicketID.Text = row.Cells[0].Value.ToString();
 
             }
         }
@@ -72,5 +73,6 @@ namespace PresentationLayer
             boughtTickets.Show();
             this.Close();
         }
+
     }
 }
