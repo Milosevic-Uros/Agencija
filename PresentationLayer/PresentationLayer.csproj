@@ -179,6 +179,9 @@
     <EmbeddedResource Include="ArrangementManagement.resx">
       <DependentUpon>ArrangementManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="BoughtTickets.resx">
+      <DependentUpon>BoughtTickets.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ClientDashboard.resx">
       <DependentUpon>ClientDashboard.cs</DependentUpon>
     </EmbeddedResource>

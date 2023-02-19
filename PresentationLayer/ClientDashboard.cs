@@ -55,7 +55,7 @@ namespace PresentationLayer
 
         private void buttonTicket_Click(object sender, EventArgs e)
         {
-            TicketStore ticketStore = new TicketStore(adminBusiness, clientBusiness);
+            TicketStore ticketStore = new TicketStore(adminBusiness, clientBusiness, client);
             ticketStore.Show();
         }
 
@@ -68,7 +68,7 @@ namespace PresentationLayer
 
         private void buttonBoughtTickets_Click(object sender, EventArgs e)
         {
-            BoughtTickets boughtTickets = new BoughtTickets();
+            BoughtTickets boughtTickets = new BoughtTickets(clientBusiness, client);
             boughtTickets.Show();
         }
 

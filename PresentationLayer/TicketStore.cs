@@ -65,5 +65,12 @@ namespace PresentationLayer
                 MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void labelBought_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            BoughtTickets boughtTickets = new BoughtTickets(clientBusiness, client);
+            boughtTickets.Show();
+            this.Close();
+        }
     }
 }
