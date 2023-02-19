@@ -228,8 +228,7 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.SteelBlue;
-            this.panel3.Controls.Add(this.labelDate);
+            this.panel3.BackColor = System.Drawing.Color.SteelBlue;;
             this.panel3.Controls.Add(this.labelHeadline);
             this.panel3.Location = new System.Drawing.Point(53, 71);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
@@ -239,13 +238,6 @@
             // 
             // labelDate
             // 
-            this.labelDate.AutoSize = true;
-            this.labelDate.Location = new System.Drawing.Point(302, 14);
-            this.labelDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.labelDate.Name = "labelDate";
-            this.labelDate.Size = new System.Drawing.Size(7, 13);
-            this.labelDate.TabIndex = 1;
-            this.labelDate.Text = "\r\n";
             // 
             // labelHeadline
             // 
