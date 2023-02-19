@@ -37,6 +37,10 @@ namespace PresentationLayer
 
         private void ExchangeOffice_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'aGENCIJADataSet3.EXCHANGE_RATES' table. You can move, or remove it, as needed.
+            this.eXCHANGE_RATESTableAdapter1.Fill(this.aGENCIJADataSet3.EXCHANGE_RATES);
+            // TODO: This line of code loads data into the 'aGENCIJADataSet1.EXCHANGE_RATES' table. You can move, or remove it, as needed.
+            this.eXCHANGE_RATESTableAdapter.Fill(this.aGENCIJADataSet1.EXCHANGE_RATES);
             List<ExchangeRate> transactions = adminBusiness.GetExchangeRates();
             dataGridViewExchange.DataSource = transactions;
             
@@ -53,6 +57,14 @@ namespace PresentationLayer
 
         private void labelFrom_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void buttonConvert_Click(object sender, EventArgs e)
+        {
+            decimal value = Convert.ToDecimal(comboBoxFrom.SelectedValue.ToString()) * Convert.ToDecimal(textBoxAmount.Text) / Convert.ToDecimal(comboBoxTo.SelectedValue.ToString());
+            labelValue.Text = Math.Round(value,2).ToString();
+            labelValue.Visible = true;
 
         }
     }

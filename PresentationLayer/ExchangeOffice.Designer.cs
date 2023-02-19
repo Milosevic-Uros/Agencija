@@ -36,9 +36,10 @@
             this.label4 = new System.Windows.Forms.Label();
             this.labelFrom = new System.Windows.Forms.Label();
             this.comboBoxTo = new System.Windows.Forms.ComboBox();
+            this.eXCHANGERATESBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.comboBoxFrom = new System.Windows.Forms.ComboBox();
             this.textBoxAmount = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelValue = new System.Windows.Forms.Label();
             this.dataGridViewExchange = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
             this.labelDate = new System.Windows.Forms.Label();
@@ -46,12 +47,21 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelINSERT = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.eXCHANGERATESBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aGENCIJADataSet1 = new PresentationLayer.AGENCIJADataSet1();
+            this.eXCHANGERATESBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.eXCHANGE_RATESTableAdapter = new PresentationLayer.AGENCIJADataSet1TableAdapters.EXCHANGE_RATESTableAdapter();
+            this.aGENCIJADataSet3 = new PresentationLayer.AGENCIJADataSet3();
+            this.eXCHANGERATESBindingSource2 = new System.Windows.Forms.BindingSource(this.components);
+            this.eXCHANGE_RATESTableAdapter1 = new PresentationLayer.AGENCIJADataSet3TableAdapters.EXCHANGE_RATESTableAdapter();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExchange)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource2)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -65,7 +75,7 @@
             this.panel1.Controls.Add(this.comboBoxTo);
             this.panel1.Controls.Add(this.comboBoxFrom);
             this.panel1.Controls.Add(this.textBoxAmount);
-            this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.labelValue);
             this.panel1.Controls.Add(this.dataGridViewExchange);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel2);
@@ -97,6 +107,7 @@
             this.buttonConvert.TabIndex = 33;
             this.buttonConvert.Text = "Convert";
             this.buttonConvert.UseVisualStyleBackColor = false;
+            this.buttonConvert.Click += new System.EventHandler(this.buttonConvert_Click);
             // 
             // label5
             // 
@@ -134,7 +145,7 @@
             // 
             // comboBoxTo
             // 
-            this.comboBoxTo.DataSource = this.eXCHANGERATESBindingSource;
+            this.comboBoxTo.DataSource = this.eXCHANGERATESBindingSource2;
             this.comboBoxTo.DisplayMember = "currency_code";
             this.comboBoxTo.FormattingEnabled = true;
             this.comboBoxTo.Location = new System.Drawing.Point(260, 257);
@@ -144,9 +155,13 @@
             this.comboBoxTo.TabIndex = 28;
             this.comboBoxTo.ValueMember = "mean_exchange_rate";
             // 
+            // eXCHANGERATESBindingSource
+            // 
+            this.eXCHANGERATESBindingSource.DataMember = "EXCHANGE_RATES";
+            // 
             // comboBoxFrom
             // 
-            this.comboBoxFrom.DataSource = this.eXCHANGERATESBindingSource;
+            this.comboBoxFrom.DataSource = this.eXCHANGERATESBindingSource1;
             this.comboBoxFrom.DisplayMember = "currency_code";
             this.comboBoxFrom.FormattingEnabled = true;
             this.comboBoxFrom.Location = new System.Drawing.Point(136, 257);
@@ -164,16 +179,17 @@
             this.textBoxAmount.Size = new System.Drawing.Size(96, 20);
             this.textBoxAmount.TabIndex = 26;
             // 
-            // label2
+            // labelValue
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(393, 306);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(160, 23);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Converted value:";
+            this.labelValue.AutoSize = true;
+            this.labelValue.Font = new System.Drawing.Font("Microsoft Tai Le", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelValue.Location = new System.Drawing.Point(393, 306);
+            this.labelValue.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelValue.Name = "labelValue";
+            this.labelValue.Size = new System.Drawing.Size(160, 23);
+            this.labelValue.TabIndex = 25;
+            this.labelValue.Text = "Converted value:";
+            this.labelValue.Visible = false;
             // 
             // dataGridViewExchange
             // 
@@ -247,13 +263,31 @@
             // 
             // aGENCIJADataSet1
             // 
+            this.aGENCIJADataSet1.DataSetName = "AGENCIJADataSet1";
+            this.aGENCIJADataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // eXCHANGERATESBindingSource
+            // eXCHANGERATESBindingSource1
             // 
-            this.eXCHANGERATESBindingSource.DataMember = "EXCHANGE_RATES";
+            this.eXCHANGERATESBindingSource1.DataMember = "EXCHANGE_RATES";
+            this.eXCHANGERATESBindingSource1.DataSource = this.aGENCIJADataSet1;
             // 
             // eXCHANGE_RATESTableAdapter
             // 
+            this.eXCHANGE_RATESTableAdapter.ClearBeforeFill = true;
+            // 
+            // aGENCIJADataSet3
+            // 
+            this.aGENCIJADataSet3.DataSetName = "AGENCIJADataSet3";
+            this.aGENCIJADataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // eXCHANGERATESBindingSource2
+            // 
+            this.eXCHANGERATESBindingSource2.DataMember = "EXCHANGE_RATES";
+            this.eXCHANGERATESBindingSource2.DataSource = this.aGENCIJADataSet3;
+            // 
+            // eXCHANGE_RATESTableAdapter1
+            // 
+            this.eXCHANGE_RATESTableAdapter1.ClearBeforeFill = true;
             // 
             // ExchangeOffice
             // 
@@ -269,12 +303,16 @@
             this.Load += new System.EventHandler(this.ExchangeOffice_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewExchange)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.eXCHANGERATESBindingSource2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -293,11 +331,17 @@
         private System.Windows.Forms.ComboBox comboBoxTo;
         private System.Windows.Forms.ComboBox comboBoxFrom;
         private System.Windows.Forms.TextBox textBoxAmount;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelValue;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label labelConvertedValue;
         private System.Windows.Forms.Button buttonConvert;
         private System.Windows.Forms.BindingSource eXCHANGERATESBindingSource;
+        private AGENCIJADataSet1 aGENCIJADataSet1;
+        private System.Windows.Forms.BindingSource eXCHANGERATESBindingSource1;
+        private AGENCIJADataSet1TableAdapters.EXCHANGE_RATESTableAdapter eXCHANGE_RATESTableAdapter;
+        private AGENCIJADataSet3 aGENCIJADataSet3;
+        private System.Windows.Forms.BindingSource eXCHANGERATESBindingSource2;
+        private AGENCIJADataSet3TableAdapters.EXCHANGE_RATESTableAdapter eXCHANGE_RATESTableAdapter1;
     }
 }
