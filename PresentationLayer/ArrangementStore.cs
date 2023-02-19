@@ -47,15 +47,19 @@ namespace PresentationLayer
             }
             else
             {
-                //string result = clientBusiness.BookAnArrangement(client, )
-                //MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+               /* string result = clientBusiness.BookAnArrangement(client,   );
+                MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);*/
             }
         }
 
         private void ArrangementStore_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'aGENCIJADataSet4.LOCATIONS' table. You can move, or remove it, as needed.
+            this.lOCATIONSTableAdapter.Fill(this.aGENCIJADataSet4.LOCATIONS);
             List<Arrangement> arrangements = clientBusiness.GetAllArrangements();
             dataGridViewArrangements.DataSource = arrangements;
+            comboBoxType.SelectedIndex = 0;
         }
 
         private void dataGridViewArrangements_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -76,6 +80,11 @@ namespace PresentationLayer
             this.Close();
             BoughtArrangements boughtArrangements = new BoughtArrangements(clientBusiness, adminBusiness, client);
             boughtArrangements.Show();
+        }
+
+        private void buttonSearch_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

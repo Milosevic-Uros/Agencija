@@ -93,7 +93,9 @@
             this.comboBoxArrangement.Items.AddRange(new object[] {
             "First minute",
             "Last minute",
-            "Middle minute"});
+            "Sightseeing tour",
+            "Business travel",
+            "Field trip"});
             this.comboBoxArrangement.Location = new System.Drawing.Point(223, 193);
             this.comboBoxArrangement.Margin = new System.Windows.Forms.Padding(2);
             this.comboBoxArrangement.Name = "comboBoxArrangement";
