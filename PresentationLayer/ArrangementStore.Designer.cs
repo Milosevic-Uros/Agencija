@@ -36,6 +36,8 @@
             this.linkLabelBought = new System.Windows.Forms.LinkLabel();
             this.dateTimePickerDeparture = new System.Windows.Forms.DateTimePicker();
             this.comboBoxLocation = new System.Windows.Forms.ComboBox();
+            this.lOCATIONSBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.aGENCIJADataSet4 = new PresentationLayer.AGENCIJADataSet4();
             this.comboBoxType = new System.Windows.Forms.ComboBox();
             this.buttonSearch = new System.Windows.Forms.Button();
             this.buttonClose = new System.Windows.Forms.Button();
@@ -44,19 +46,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.labelBought = new System.Windows.Forms.Label();
-            this.aGENCIJADataSet4 = new PresentationLayer.AGENCIJADataSet4();
-            this.lOCATIONSBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.lOCATIONSTableAdapter = new PresentationLayer.AGENCIJADataSet4TableAdapters.LOCATIONSTableAdapter();
+            this.textBoxArrangementID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.panelClientManagement.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lOCATIONSBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArrangements)).BeginInit();
             this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOCATIONSBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // panelClientManagement
             // 
             this.panelClientManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(180)))), ((int)(((byte)(198)))), ((int)(((byte)(231)))));
+            this.panelClientManagement.Controls.Add(this.label2);
+            this.panelClientManagement.Controls.Add(this.textBoxArrangementID);
             this.panelClientManagement.Controls.Add(this.labelDepartureDate);
             this.panelClientManagement.Controls.Add(this.labelArrangementType);
             this.panelClientManagement.Controls.Add(this.labelLocation);
@@ -71,19 +75,18 @@
             this.panelClientManagement.Controls.Add(this.label1);
             this.panelClientManagement.Controls.Add(this.panel2);
             this.panelClientManagement.Location = new System.Drawing.Point(1, 0);
-            this.panelClientManagement.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panelClientManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelClientManagement.Name = "panelClientManagement";
-            this.panelClientManagement.Size = new System.Drawing.Size(1084, 609);
+            this.panelClientManagement.Size = new System.Drawing.Size(1445, 784);
             this.panelClientManagement.TabIndex = 4;
             // 
             // labelDepartureDate
             // 
             this.labelDepartureDate.AutoSize = true;
             this.labelDepartureDate.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelDepartureDate.Location = new System.Drawing.Point(604, 145);
-            this.labelDepartureDate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelDepartureDate.Location = new System.Drawing.Point(805, 178);
             this.labelDepartureDate.Name = "labelDepartureDate";
-            this.labelDepartureDate.Size = new System.Drawing.Size(110, 18);
+            this.labelDepartureDate.Size = new System.Drawing.Size(133, 22);
             this.labelDepartureDate.TabIndex = 50;
             this.labelDepartureDate.Text = "Departure date";
             // 
@@ -91,10 +94,9 @@
             // 
             this.labelArrangementType.AutoSize = true;
             this.labelArrangementType.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelArrangementType.Location = new System.Drawing.Point(443, 143);
-            this.labelArrangementType.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelArrangementType.Location = new System.Drawing.Point(591, 176);
             this.labelArrangementType.Name = "labelArrangementType";
-            this.labelArrangementType.Size = new System.Drawing.Size(131, 18);
+            this.labelArrangementType.Size = new System.Drawing.Size(158, 22);
             this.labelArrangementType.TabIndex = 49;
             this.labelArrangementType.Text = "Arrangement type";
             // 
@@ -102,10 +104,9 @@
             // 
             this.labelLocation.AutoSize = true;
             this.labelLocation.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLocation.Location = new System.Drawing.Point(286, 143);
-            this.labelLocation.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelLocation.Location = new System.Drawing.Point(381, 176);
             this.labelLocation.Name = "labelLocation";
-            this.labelLocation.Size = new System.Drawing.Size(115, 18);
+            this.labelLocation.Size = new System.Drawing.Size(136, 22);
             this.labelLocation.TabIndex = 48;
             this.labelLocation.Text = "Choose location";
             // 
@@ -113,10 +114,9 @@
             // 
             this.linkLabelBought.AutoSize = true;
             this.linkLabelBought.Font = new System.Drawing.Font("Microsoft Tai Le", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabelBought.Location = new System.Drawing.Point(385, 577);
-            this.linkLabelBought.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.linkLabelBought.Location = new System.Drawing.Point(513, 738);
             this.linkLabelBought.Name = "linkLabelBought";
-            this.linkLabelBought.Size = new System.Drawing.Size(305, 21);
+            this.linkLabelBought.Size = new System.Drawing.Size(383, 25);
             this.linkLabelBought.TabIndex = 47;
             this.linkLabelBought.TabStop = true;
             this.linkLabelBought.Text = "Click to see list of all bought arrangements";
@@ -125,10 +125,10 @@
             // dateTimePickerDeparture
             // 
             this.dateTimePickerDeparture.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePickerDeparture.Location = new System.Drawing.Point(608, 173);
-            this.dateTimePickerDeparture.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dateTimePickerDeparture.Location = new System.Drawing.Point(811, 213);
+            this.dateTimePickerDeparture.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dateTimePickerDeparture.Name = "dateTimePickerDeparture";
-            this.dateTimePickerDeparture.Size = new System.Drawing.Size(107, 20);
+            this.dateTimePickerDeparture.Size = new System.Drawing.Size(141, 22);
             this.dateTimePickerDeparture.TabIndex = 46;
             // 
             // comboBoxLocation
@@ -136,12 +136,22 @@
             this.comboBoxLocation.DataSource = this.lOCATIONSBindingSource;
             this.comboBoxLocation.DisplayMember = "location_name";
             this.comboBoxLocation.FormattingEnabled = true;
-            this.comboBoxLocation.Location = new System.Drawing.Point(290, 171);
-            this.comboBoxLocation.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxLocation.Location = new System.Drawing.Point(387, 210);
+            this.comboBoxLocation.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxLocation.Name = "comboBoxLocation";
-            this.comboBoxLocation.Size = new System.Drawing.Size(126, 21);
+            this.comboBoxLocation.Size = new System.Drawing.Size(167, 24);
             this.comboBoxLocation.TabIndex = 45;
             this.comboBoxLocation.ValueMember = "location_id";
+            // 
+            // lOCATIONSBindingSource
+            // 
+            this.lOCATIONSBindingSource.DataMember = "LOCATIONS";
+            this.lOCATIONSBindingSource.DataSource = this.aGENCIJADataSet4;
+            // 
+            // aGENCIJADataSet4
+            // 
+            this.aGENCIJADataSet4.DataSetName = "AGENCIJADataSet4";
+            this.aGENCIJADataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // comboBoxType
             // 
@@ -152,20 +162,20 @@
             "Sightseeing tour",
             "Business travel",
             "Field trip"});
-            this.comboBoxType.Location = new System.Drawing.Point(446, 171);
-            this.comboBoxType.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.comboBoxType.Location = new System.Drawing.Point(595, 210);
+            this.comboBoxType.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBoxType.Name = "comboBoxType";
-            this.comboBoxType.Size = new System.Drawing.Size(123, 21);
+            this.comboBoxType.Size = new System.Drawing.Size(163, 24);
             this.comboBoxType.TabIndex = 44;
             // 
             // buttonSearch
             // 
             this.buttonSearch.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonSearch.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonSearch.Location = new System.Drawing.Point(754, 167);
-            this.buttonSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonSearch.Location = new System.Drawing.Point(1005, 206);
+            this.buttonSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonSearch.Name = "buttonSearch";
-            this.buttonSearch.Size = new System.Drawing.Size(132, 26);
+            this.buttonSearch.Size = new System.Drawing.Size(176, 32);
             this.buttonSearch.TabIndex = 43;
             this.buttonSearch.Text = "Search";
             this.buttonSearch.UseVisualStyleBackColor = false;
@@ -175,10 +185,10 @@
             // 
             this.buttonClose.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonClose.Location = new System.Drawing.Point(260, 522);
-            this.buttonClose.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonClose.Location = new System.Drawing.Point(347, 670);
+            this.buttonClose.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonClose.Name = "buttonClose";
-            this.buttonClose.Size = new System.Drawing.Size(256, 38);
+            this.buttonClose.Size = new System.Drawing.Size(341, 47);
             this.buttonClose.TabIndex = 42;
             this.buttonClose.Text = "Close";
             this.buttonClose.UseVisualStyleBackColor = false;
@@ -188,10 +198,10 @@
             // 
             this.buttonBuy.BackColor = System.Drawing.Color.SteelBlue;
             this.buttonBuy.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonBuy.Location = new System.Drawing.Point(534, 522);
-            this.buttonBuy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.buttonBuy.Location = new System.Drawing.Point(712, 670);
+            this.buttonBuy.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.buttonBuy.Name = "buttonBuy";
-            this.buttonBuy.Size = new System.Drawing.Size(256, 38);
+            this.buttonBuy.Size = new System.Drawing.Size(341, 47);
             this.buttonBuy.TabIndex = 41;
             this.buttonBuy.Text = "Buy arrangement";
             this.buttonBuy.UseVisualStyleBackColor = false;
@@ -200,22 +210,21 @@
             // dataGridViewArrangements
             // 
             this.dataGridViewArrangements.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewArrangements.Location = new System.Drawing.Point(0, 230);
-            this.dataGridViewArrangements.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dataGridViewArrangements.Location = new System.Drawing.Point(0, 283);
+            this.dataGridViewArrangements.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.dataGridViewArrangements.Name = "dataGridViewArrangements";
             this.dataGridViewArrangements.RowHeadersWidth = 51;
             this.dataGridViewArrangements.RowTemplate.Height = 24;
-            this.dataGridViewArrangements.Size = new System.Drawing.Size(1084, 259);
+            this.dataGridViewArrangements.Size = new System.Drawing.Size(1445, 319);
             this.dataGridViewArrangements.TabIndex = 24;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(351, 89);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Location = new System.Drawing.Point(468, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(408, 29);
+            this.label1.Size = new System.Drawing.Size(518, 36);
             this.label1.TabIndex = 23;
             this.label1.Text = "Find and book your dream arrangement!";
             // 
@@ -224,45 +233,53 @@
             this.panel2.BackColor = System.Drawing.Color.SteelBlue;
             this.panel2.Controls.Add(this.labelBought);
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1082, 72);
+            this.panel2.Size = new System.Drawing.Size(1443, 89);
             this.panel2.TabIndex = 22;
             // 
             // labelBought
             // 
             this.labelBought.AutoSize = true;
             this.labelBought.Font = new System.Drawing.Font("Microsoft Tai Le", 25.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelBought.Location = new System.Drawing.Point(374, 15);
-            this.labelBought.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.labelBought.Location = new System.Drawing.Point(499, 18);
             this.labelBought.Name = "labelBought";
-            this.labelBought.Size = new System.Drawing.Size(372, 45);
+            this.labelBought.Size = new System.Drawing.Size(453, 55);
             this.labelBought.TabIndex = 0;
             this.labelBought.Text = "Arrangement catalog";
             this.labelBought.Click += new System.EventHandler(this.labelBought_Click);
-            // 
-            // aGENCIJADataSet4
-            // 
-            this.aGENCIJADataSet4.DataSetName = "AGENCIJADataSet4";
-            this.aGENCIJADataSet4.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lOCATIONSBindingSource
-            // 
-            this.lOCATIONSBindingSource.DataMember = "LOCATIONS";
-            this.lOCATIONSBindingSource.DataSource = this.aGENCIJADataSet4;
             // 
             // lOCATIONSTableAdapter
             // 
             this.lOCATIONSTableAdapter.ClearBeforeFill = true;
             // 
+            // textBoxArrangementID
+            // 
+            this.textBoxArrangementID.Location = new System.Drawing.Point(633, 644);
+            this.textBoxArrangementID.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.textBoxArrangementID.Name = "textBoxArrangementID";
+            this.textBoxArrangementID.ReadOnly = true;
+            this.textBoxArrangementID.Size = new System.Drawing.Size(147, 22);
+            this.textBoxArrangementID.TabIndex = 51;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(623, 616);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(176, 22);
+            this.label2.TabIndex = 52;
+            this.label2.Text = "Chosen arrangement";
+            // 
             // ArrangementStore
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1075, 609);
+            this.ClientSize = new System.Drawing.Size(1433, 784);
             this.Controls.Add(this.panelClientManagement);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.MaximizeBox = false;
             this.Name = "ArrangementStore";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -270,11 +287,11 @@
             this.Load += new System.EventHandler(this.ArrangementStore_Load);
             this.panelClientManagement.ResumeLayout(false);
             this.panelClientManagement.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.lOCATIONSBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewArrangements)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.aGENCIJADataSet4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lOCATIONSBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -299,5 +316,7 @@
         private AGENCIJADataSet4 aGENCIJADataSet4;
         private System.Windows.Forms.BindingSource lOCATIONSBindingSource;
         private AGENCIJADataSet4TableAdapters.LOCATIONSTableAdapter lOCATIONSTableAdapter;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBoxArrangementID;
     }
 }
