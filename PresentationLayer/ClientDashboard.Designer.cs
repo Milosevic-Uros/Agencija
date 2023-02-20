@@ -237,7 +237,7 @@
             this.MaximizeBox = false;
             this.Name = "ClientDashboard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ClientDashboard";
+            this.Text = "Client dashboard";
             this.Load += new System.EventHandler(this.ClientDashboard_Load);
             this.panel1.ResumeLayout(false);
             this.panel4.ResumeLayout(false);

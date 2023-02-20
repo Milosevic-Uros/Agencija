@@ -148,7 +148,7 @@
             this.MaximizeBox = false;
             this.Name = "BoughtTickets";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Bought Tickets";
+            this.Text = "Bought tickets";
             this.Load += new System.EventHandler(this.BoughtTickets_Load);
             this.panelClientManagement.ResumeLayout(false);
             this.panelClientManagement.PerformLayout();

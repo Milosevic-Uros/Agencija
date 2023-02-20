@@ -132,5 +132,15 @@ namespace PresentationLayer
             Login l = new Login(adminBusiness, clientBusiness);
             l.ShowDialog();
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void labelEmail_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

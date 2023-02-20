@@ -221,7 +221,7 @@
             this.MaximizeBox = false;
             this.Name = "ClientManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ClientManagement";
+            this.Text = "Client management";
             this.Load += new System.EventHandler(this.ClientManagement_Load);
             this.panelClientManagement.ResumeLayout(false);
             this.panelClientManagement.PerformLayout();

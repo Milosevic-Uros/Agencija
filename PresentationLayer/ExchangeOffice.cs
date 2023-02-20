@@ -78,5 +78,7 @@ namespace PresentationLayer
             ClientDashboard clientDashboard = new ClientDashboard(adminBusiness, clientBusiness, client);
             clientDashboard.Show();
         }
+
+
     }
 }

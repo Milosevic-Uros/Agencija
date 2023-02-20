@@ -218,7 +218,7 @@
             this.MaximizeBox = false;
             this.Name = "TransactionManagement";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Transaction Management";
+            this.Text = "Transaction management";
             this.Load += new System.EventHandler(this.TransactionManagement_Load);
             this.panelClientManagement.ResumeLayout(false);
             this.panelClientManagement.PerformLayout();

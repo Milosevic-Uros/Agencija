@@ -290,7 +290,7 @@
             this.MaximizeBox = false;
             this.Name = "InsertTicket";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "InsertTicket";
+            this.Text = "Insert ticket";
             this.Load += new System.EventHandler(this.InsertTicket_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
