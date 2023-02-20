@@ -59,7 +59,6 @@
     <Compile Include="Repositories\AdminRepository.Tickets.cs" />
     <Compile Include="Repositories\ClientRepository.Arrangements.cs" />
     <Compile Include="Repositories\ClientRepository.cs" />
-    <Compile Include="Repositories\ClientRepository.ExchangeRate.cs" />
     <Compile Include="Repositories\ClientRepository.Tickets.cs" />
   </ItemGroup>
   <ItemGroup>
