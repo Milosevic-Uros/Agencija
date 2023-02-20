@@ -14,18 +14,15 @@ namespace BusinessLayer
         {
             return clientRepository.GetAllArrangements();
         }
-        public List<Arrangement> GetAllClientArrangements(Client client)
+        public List<Object> GetAllClientArrangements(Client client)
         {
             return clientRepository.GetAllClientArrangements(client);
         }
-        public List<Arrangement> GetArrangementsOfType(string type)
+        public List<Object> GetAllArrangementsByLocationTypeAndDate(int locationId, string typeOfArrangement, DateTime from)
         {
-            return clientRepository.GetArrangementsOfType(type);
+            return clientRepository.GetAllArrangementsByLocationTypeAndDate(locationId, typeOfArrangement, from);
         }
-        public Arrangement GetAClientArrangement(Client client, int arrangementId)
-        {
-            return clientRepository.GetAClientArrangement(client, arrangementId);
-        }
+
         public string BookAnArrangement(int clientId, int arrangementId, int numberOfPeople)
         {
             int rowsAffected = this.clientRepository.BookAnArrangement(clientId, arrangementId,numberOfPeople);

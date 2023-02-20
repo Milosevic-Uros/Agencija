@@ -12,22 +12,32 @@ namespace DataLayer.Repositories
     public partial class AdminRepository : IAdminRepository
     {
         string connectionString = Constants.ConnectionString;
-        public int UpdateAdmin(Admin admin)
+
+        public Admin GetAdmin(string email, string password)
         {
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "UPDATE ADMINS SET email=@email, @password=@password WHERE admin_id=@admin_id";
+                string query = "SELECT * FROM ADMINS WHERE email=@email AND password=@password";
                 SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@email", admin.email);
-                command.Parameters.AddWithValue("@password", admin.password);
-                command.Parameters.AddWithValue("@admin_id", admin.adminId);
-
+                command.Parameters.AddWithValue("@email", email);
+                command.Parameters.AddWithValue("@password",password);
                 connection.Open();
-                int rowsUpdated;
-                rowsUpdated = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsUpdated;
 
+                SqlDataReader reader = command.ExecuteReader();
+                Admin admin = new Admin();
+                while (reader.Read())
+                {
+                    admin.adminId = reader.GetInt32(0);
+                    admin.name = reader.GetString(1);
+                    admin.lastName = reader.GetString(2);
+                    admin.email = reader.GetString(3);
+                    admin.password = reader.GetString(4);
+                }
+                reader.Close();
+                connection.Close();
+
+                return admin;
             }
         }
         public List<Client> GetAllClients()
@@ -63,51 +73,63 @@ namespace DataLayer.Repositories
         }
         public int UpdateClient(Client client)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string query = "UPDATE CLIENTS SET first_name=@firstName, last_name=@lastName, id_number=@idNumber, unique_id_number=@jmbg, passport_number=@passportNumber,address=@address,email=@email,password=@password WHERE client_id=@id";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@firstName", client.firstName);
-                command.Parameters.AddWithValue("@lastName", client.lastName);
-                command.Parameters.AddWithValue("@idNumber", client.idNumber);
-                command.Parameters.AddWithValue("@jmbg", client.uniqueIdNumber);
-                command.Parameters.AddWithValue("@passportNumber", client.passportNumber);
-                command.Parameters.AddWithValue("@address", client.address);
-                command.Parameters.AddWithValue("@email", client.address);
-                command.Parameters.AddWithValue("@password", client.password);
-                command.Parameters.AddWithValue("@id", client.clientId);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE CLIENTS SET phone_number=@phoneNumber,email=@email,password=@password WHERE client_id=@id";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@phoneNumber", client.phoneNumber);
+                    command.Parameters.AddWithValue("@email", client.email);
+                    command.Parameters.AddWithValue("@password", client.password);
+                    command.Parameters.AddWithValue("@id", client.clientId);
 
-                connection.Open();
-                int rowsUpdated;
-                rowsUpdated = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsUpdated;
+                    connection.Open();
+                    int rowsUpdated;
+                    rowsUpdated = command.ExecuteNonQuery();
+                    connection.Close();
+                    return rowsUpdated;
+                }
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
         public int InsertClient(Client client)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string query = "INSERT INTO CLIENTS (first_name,last_name,id_number,unique_id_number,passport_number,phone_number,address,email,password) VALUES(@firstName,@lastName,@idNumber,@idNumber,@jmbg,@passportNumber,@phoneNumber,@address,@email,@password)";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@firstName", client.firstName);
-                command.Parameters.AddWithValue("@lastName", client.lastName);
-                command.Parameters.AddWithValue("@idNumber", client.idNumber);
-                command.Parameters.AddWithValue("@jmbg", client.uniqueIdNumber);
-                command.Parameters.AddWithValue("@passportNumber", client.passportNumber);
-                command.Parameters.AddWithValue("@address", client.address);
-                command.Parameters.AddWithValue("@email", client.address);
-                command.Parameters.AddWithValue("@password", client.password);
-                
-                connection.Open();
-                int rowsUpdated;
-                rowsUpdated = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsUpdated;
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "INSERT INTO CLIENTS (first_name,last_name,id_number,unique_id_number,passport_number,phone_number,address,email,password) " +
+                        "VALUES(@firstName, @lastName, @idNumber, @jmbg, @passportNumber, @phoneNumber,@address, @email, @password)";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@firstName", client.firstName);
+                    command.Parameters.AddWithValue("@lastName", client.lastName);
+                    command.Parameters.AddWithValue("@idNumber", client.idNumber);
+                    command.Parameters.AddWithValue("@jmbg", client.uniqueIdNumber);
+                    command.Parameters.AddWithValue("@passportNumber", client.passportNumber);
+                    command.Parameters.AddWithValue("@phoneNumber", client.phoneNumber);
+                    command.Parameters.AddWithValue("@address", client.address);
+                    command.Parameters.AddWithValue("@email", client.email);
+                    command.Parameters.AddWithValue("@password", client.password);
+
+                    connection.Open();
+                    int rowsUpdated;
+                    rowsUpdated = command.ExecuteNonQuery();
+                    connection.Close();
+                    return rowsUpdated;
+                }
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
         public Client GetClient(string email, string password)
         {
+
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
                 string query = "SELECT TOP 1 * FROM CLIENTS WHERE email=@email AND password=@password";
@@ -138,17 +160,24 @@ namespace DataLayer.Repositories
         }
         public int DeleteClient(int clientId)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string query = "DELETE FROM CLIENTS WHERE client_id=@id";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@id", clientId);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "DELETE FROM CLIENTS WHERE client_id=@id";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@id", clientId);
 
-                connection.Open();
-                int rowsUpdated;
-                rowsUpdated = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsUpdated;
+                    connection.Open();
+                    int rowsUpdated;
+                    rowsUpdated = command.ExecuteNonQuery();
+                    connection.Close();
+                    return rowsUpdated;
+                }
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
     }

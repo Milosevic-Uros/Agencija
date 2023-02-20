@@ -33,8 +33,23 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.7.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.7.0.0\lib\net462\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -46,14 +61,165 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="AdminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="AdminDashboard.Designer.cs">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AGENCIJADataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AGENCIJADataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AGENCIJADataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AGENCIJADataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AGENCIJADataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AGENCIJADataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AGENCIJADataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AGENCIJADataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AGENCIJADataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AGENCIJADataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ArrangementManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArrangementManagement.Designer.cs">
+      <DependentUpon>ArrangementManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ArrangementStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ArrangementStore.Designer.cs">
+      <DependentUpon>ArrangementStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoughtArrangements.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoughtArrangements.Designer.cs">
+      <DependentUpon>BoughtArrangements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoughtTickets.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoughtTickets.Designer.cs">
+      <DependentUpon>BoughtTickets.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientDashboard.Designer.cs">
+      <DependentUpon>ClientDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientManagement.Designer.cs">
+      <DependentUpon>ClientManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExchangeOffice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExchangeOffice.Designer.cs">
+      <DependentUpon>ExchangeOffice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertArrangement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertArrangement.Designer.cs">
+      <DependentUpon>InsertArrangement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertClient.Designer.cs">
+      <DependentUpon>InsertClient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="InsertTicket.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="InsertTicket.Designer.cs">
+      <DependentUpon>InsertTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketManagement.Designer.cs">
+      <DependentUpon>TicketManagement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TicketStore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicketStore.Designer.cs">
+      <DependentUpon>TicketStore.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TransactionManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TransactionManagement.Designer.cs">
+      <DependentUpon>TransactionManagement.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AdminDashboard.resx">
+      <DependentUpon>AdminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArrangementManagement.resx">
+      <DependentUpon>ArrangementManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ArrangementStore.resx">
+      <DependentUpon>ArrangementStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoughtArrangements.resx">
+      <DependentUpon>BoughtArrangements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoughtTickets.resx">
+      <DependentUpon>BoughtTickets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientDashboard.resx">
+      <DependentUpon>ClientDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientManagement.resx">
+      <DependentUpon>ClientManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExchangeOffice.resx">
+      <DependentUpon>ExchangeOffice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertArrangement.resx">
+      <DependentUpon>InsertArrangement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertClient.resx">
+      <DependentUpon>InsertClient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="InsertTicket.resx">
+      <DependentUpon>InsertTicket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -63,6 +229,74 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketManagement.resx">
+      <DependentUpon>TicketManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TicketStore.resx">
+      <DependentUpon>TicketStore.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TransactionManagement.resx">
+      <DependentUpon>TransactionManagement.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="AGENCIJADataSet.xsc">
+      <DependentUpon>AGENCIJADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AGENCIJADataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AGENCIJADataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AGENCIJADataSet.xss">
+      <DependentUpon>AGENCIJADataSet.xsd</DependentUpon>
+    </None>
+    <None Include="AGENCIJADataSet11.xsc">
+      <DependentUpon>AGENCIJADataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="AGENCIJADataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AGENCIJADataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AGENCIJADataSet11.xss">
+      <DependentUpon>AGENCIJADataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="AGENCIJADataSet2.xsc">
+      <DependentUpon>AGENCIJADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="AGENCIJADataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AGENCIJADataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AGENCIJADataSet2.xss">
+      <DependentUpon>AGENCIJADataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="AGENCIJADataSet3.xsc">
+      <DependentUpon>AGENCIJADataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="AGENCIJADataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AGENCIJADataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AGENCIJADataSet3.xss">
+      <DependentUpon>AGENCIJADataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="AGENCIJADataSet4.xsc">
+      <DependentUpon>AGENCIJADataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="AGENCIJADataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>AGENCIJADataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AGENCIJADataSet4.xss">
+      <DependentUpon>AGENCIJADataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -75,6 +309,20 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{132A15D6-2DA3-49E0-98E3-F857333F21CC}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataLayer\DataLayer.csproj">
+      <Project>{1CF2C8D8-35C9-4531-8898-6CB9E536C1DC}</Project>
+      <Name>DataLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Shared\Shared.csproj">
+      <Project>{B732ED8E-8195-421E-B5BD-EF8EB2634F0F}</Project>
+      <Name>Shared</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

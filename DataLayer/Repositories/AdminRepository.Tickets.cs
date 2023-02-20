@@ -17,7 +17,7 @@ namespace DataLayer.Repositories
             List<Ticket> ListOfTickets = new List<Ticket>();
             using (SqlConnection connection = new SqlConnection(connectionString))
             {
-                string query = "SELECT t.ticket_id,t.name,t.date_of_departure,t.return_date,l.location_name,t.type_of_transport,t.price,t.number_of_vacancies FROM TICKETS t JOIN LOCATIONS l ON t.location_id=l.location_id;";
+                string query = "SELECT t.ticket_id,t.name,t.date_of_departure,t.return_date,t.location_id,t.type_of_transport,t.price,t.number_of_vacancies FROM TICKETS t JOIN LOCATIONS l ON t.location_id=l.location_id;";
                 SqlCommand command = new SqlCommand(query, connection);
                 connection.Open();
 
@@ -38,93 +38,83 @@ namespace DataLayer.Repositories
                 }
                 reader.Close();
                 connection.Close();
-
                 return ListOfTickets;
             }
         }
         public int UpdateTicket(Ticket ticket)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string query = "UPDATE TICKETS SET name=@name,date_of_departure=@dateOfDeparture,return_date=@returnDate,location_id=@locationId,type_of_transport=@typeOfTransport,price=@price,number_of_vacancies=@numOfVacancies WHERE ticket_id=@id";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@name", ticket.name);
-                command.Parameters.AddWithValue("@date_of_departure", ticket.dateOfDeparture);
-                command.Parameters.AddWithValue("@return_date", ticket.returnDate);
-                command.Parameters.AddWithValue("@location_id", ticket.locationId);
-                command.Parameters.AddWithValue("@type_of_transport", ticket.typeOfTransport);
-                command.Parameters.AddWithValue("@price", ticket.price);
-                command.Parameters.AddWithValue("@numberOfVacancies", ticket.numberOfVacancies);
-                command.Parameters.AddWithValue("@id", ticket.ticketId);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "UPDATE TICKETS SET date_of_departure=CAST(@dateOfDeparture AS DATETIME),return_date=CAST(@returnDate AS DATETIME),type_of_transport=@typeOfTransport WHERE ticket_id=@id";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@dateOfDeparture", ticket.dateOfDeparture.ToString("yyyy'-'MM'-'dd"));
+                    command.Parameters.AddWithValue("@returnDate", ticket.returnDate.ToString("yyyy'-'MM'-'dd"));
+                    command.Parameters.AddWithValue("@typeOfTransport", ticket.typeOfTransport);
+                    command.Parameters.AddWithValue("@id", ticket.ticketId);
 
-                connection.Open();
-                int rowsUpdated;
-                rowsUpdated = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsUpdated;
+                    connection.Open();
+                    int rowsUpdated;
+                    rowsUpdated = command.ExecuteNonQuery();
+                    connection.Close();
+                    return rowsUpdated;
+                }
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
         public int InsertTicket(Ticket ticket)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string query = "INSERT INTO TICKETS (name,date_of_departure,return_date,location_id,type_of_transport,price,number_of_vacancies) VALUES(@name,@dateOfDeparture,@returnDate,@locationId,@typeOfTransport,@price,@numberOfVacancies)";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@name", ticket.name);
-                command.Parameters.AddWithValue("@date_of_departure", ticket.dateOfDeparture);
-                command.Parameters.AddWithValue("@return_date", ticket.returnDate);
-                command.Parameters.AddWithValue("@location_id", ticket.locationId);
-                command.Parameters.AddWithValue("@type_of_transport", ticket.typeOfTransport);
-                command.Parameters.AddWithValue("@price", ticket.price);
-                command.Parameters.AddWithValue("@numberOfVacancies", ticket.numberOfVacancies);
-
-                connection.Open();
-                int rowsUpdated;
-                rowsUpdated = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsUpdated;
-            }
-        }
-        public Ticket GetTicket(int ticketId)
-        {
-            using (SqlConnection connection = new SqlConnection(connectionString))
-            {
-                string query = "SELECT TOP 1 t.ticket_id,t.name,t.date_of_departure,t.return_date,l.location_name,t.type_of_transport,t.price,t.number_of_vacancies FROM TICKETS t JOIN LOCATIONS l ON t.location_id=l.location_id WHERE ticket_id=@ticketId";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@ticketId", ticketId);
-                connection.Open();
-                Ticket ticket = new Ticket();
-
-                SqlDataReader reader = command.ExecuteReader();
-                while (reader.Read())
+                using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    ticket.ticketId = reader.GetInt32(0);
-                    ticket.name = reader.GetString(1);
-                    ticket.dateOfDeparture = reader.GetDateTime(2);
-                    ticket.returnDate = reader.GetDateTime(3);
-                    ticket.locationId = reader.GetInt32(4);
-                    ticket.typeOfTransport = reader.GetString(5);
-                    ticket.price = reader.GetDecimal(6);
-                    ticket.numberOfVacancies = reader.GetInt32(7);
+                    string query = "INSERT INTO TICKETS (name,date_of_departure,return_date,location_id,type_of_transport,price,number_of_vacancies) " +
+                        "VALUES(@name,@dateOfDeparture,@returnDate,@locationId,@typeOfTransport,@price,@numberOfVacancies)";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@name", ticket.name);
+                    command.Parameters.AddWithValue("@dateOfDeparture", ticket.dateOfDeparture.ToString("yyyy'-'MM'-'dd"));
+                    command.Parameters.AddWithValue("@returnDate", ticket.returnDate.ToString("yyyy'-'MM'-'dd"));
+                    command.Parameters.AddWithValue("@locationId", ticket.locationId);
+                    command.Parameters.AddWithValue("@typeOfTransport", ticket.typeOfTransport);
+                    command.Parameters.AddWithValue("@price", ticket.price);
+                    command.Parameters.AddWithValue("@numberOfVacancies", ticket.numberOfVacancies);
+
+                    connection.Open();
+                    int rowsUpdated;
+                    rowsUpdated = command.ExecuteNonQuery();
+                    connection.Close();
+                    return rowsUpdated;
                 }
-                reader.Close();
-                connection.Close();
-                return ticket;
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
         public int DeleteTicket(int ticketId)
         {
-            using (SqlConnection connection = new SqlConnection(connectionString))
+            try
             {
-                string query = "DELETE FROM TICKETS WHERE ticket_id=@id";
-                SqlCommand command = new SqlCommand(query, connection);
-                command.Parameters.AddWithValue("@id", ticketId);
+                using (SqlConnection connection = new SqlConnection(connectionString))
+                {
+                    string query = "DELETE FROM TICKETS WHERE ticket_id=@id";
+                    SqlCommand command = new SqlCommand(query, connection);
+                    command.Parameters.AddWithValue("@id", ticketId);
 
-                connection.Open();
-                int rowsUpdated;
-                rowsUpdated = command.ExecuteNonQuery();
-                connection.Close();
-                return rowsUpdated;
+                    connection.Open();
+                    int rowsUpdated;
+                    rowsUpdated = command.ExecuteNonQuery();
+                    connection.Close();
+                    return rowsUpdated;
+                }
+            }
+            catch (Exception ex)
+            {
+                return 0;
             }
         }
     }

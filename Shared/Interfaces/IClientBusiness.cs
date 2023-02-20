@@ -9,27 +9,15 @@ namespace Shared.Interfaces
 {
     public interface IClientBusiness
     {
-        //Self edit
-        string UpdateInfo(Client client);
-        string ChangePassword(Client client);
-        string DeleteClient(int clientId);
-
-
         //Arrangements
         List<Arrangement> GetAllArrangements();
-        List<Arrangement> GetAllClientArrangements(Client client);
-        List<Arrangement> GetArrangementsOfType(string type);
-        Arrangement GetAClientArrangement(Client client, int arrangementId);
+        List<Object> GetAllClientArrangements(Client client);
+        List<Object> GetAllArrangementsByLocationTypeAndDate(int locationId, string typeOfArrangement, DateTime from);
         string BookAnArrangement(int clientId, int arrangementId, int numberOfPeople);
 
         //Tickets
-        List<Ticket> GetAllTickets();
-        List<Ticket> GetAllClientTickets(Client client);
-        Ticket GetTicket(int ticketId);
+        List<Object> GetAllClientTickets(Client client);
         string BookATicket(Client client, int ticketId, int numberOfPeople);
 
-        //Exchange Rate
-        List<ExchangeRate> GetExchangeRates();
-        ExchangeRate GetExchangeRate(int currencyId);
     }
 }

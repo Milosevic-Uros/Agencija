@@ -14,13 +14,10 @@ namespace BusinessLayer
         { 
             return adminRepository.GetAllArrangements();
         }
-        public List<Arrangement> GetArrangementsOfType(string type) 
-        {
-            return adminRepository.GetArrangementsOfType(type);
-        }
+
         public string UpdateArrangement(Arrangement arrangement) 
         {
-            int rowsAffected = this.adminRepository.UpdateArrangement(arrangement);
+            int rowsAffected = adminRepository.UpdateArrangement(arrangement);
 
             if (rowsAffected > 0)
             {
@@ -42,10 +39,6 @@ namespace BusinessLayer
             {
                 return "Adding an arrangement failed!";
             }
-        }
-        public Arrangement GetArrangement(int arrangementId)
-        {
-            return adminRepository.GetArrangement(arrangementId);
         }
         public string DeleteArrangement(int arrangementId)
         {
