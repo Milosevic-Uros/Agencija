@@ -79,7 +79,7 @@ namespace DataLayer.Repositories
         }
 
 
-        public List<Object> GetAllArrangementsByLocationTypeAndDate(int locationId, string typeOfArrangement, DateTime from)
+        public List<Object> GetAllArrangementsByLocationTypeAndDate(int locationId, string type, DateTime from)
         {
             List<Object> ListOfArrangements = new List<Object>();
             using (SqlConnection connection = new SqlConnection(connectionString))
@@ -87,7 +87,7 @@ namespace DataLayer.Repositories
                 string query = "SELECT a.arrangement_id,a.name,a.date_of_departure,a.return_date,l.location_name,a.type_of_transport,a.type_of_arrangement,a.number_of_vacancies,a.description,a.price FROM ARRANGEMENTS a JOIN LOCATIONS l on a.location_id=@locationId WHERE l.location_id=2 AND a.type_of_arrangement=@type AND a.date_of_departure>=@from";
                 SqlCommand command = new SqlCommand(query, connection);
                 command.Parameters.AddWithValue("@locationID", locationId);
-                command.Parameters.AddWithValue("@type", typeOfArrangement);
+                command.Parameters.AddWithValue("@type", type);
                 command.Parameters.AddWithValue("@from", from.ToString("yyyy'-'MM'-'dd"));
                 
                 connection.Open();
@@ -102,11 +102,11 @@ namespace DataLayer.Repositories
                     DateTime returnDate = reader.GetDateTime(3);
                     string locationName = reader.GetString(4);
                     string typeofTransport = reader.GetString(5);
-                    string type = reader.GetString(6);
+                    string typeOfArrangement = reader.GetString(6);
                     int numberOfVacancies = reader.GetInt32(7);
                     string description = reader.GetString(8);
                     decimal price = reader.GetDecimal(9);
-                    Object obj = new { arrangementId, name, dateOfDeparture, returnDate, locationName, typeofTransport, type, numberOfVacancies, description, price };
+                    Object obj = new { arrangementId, name, dateOfDeparture, returnDate, locationName, typeofTransport, typeOfArrangement, numberOfVacancies, description, price };
                     ListOfArrangements.Add(obj);
                 }
                 reader.Close();
