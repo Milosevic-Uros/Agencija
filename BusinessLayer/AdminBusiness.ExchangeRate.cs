@@ -39,10 +39,7 @@ namespace BusinessLayer
                 return "Adding an exchange rate item failed!\nYou might have tried to insert a duplicate record";
             }
         }
-        public ExchangeRate GetExchangeRate(int currencyId)
-        {
-            return adminRepository.GetExchangeRate(currencyId);
-        }
+
         public string DeleteExchangeRateItem(int currencyId)
         {
             int rowsAffected = adminRepository.DeleteExchangeRateItem(currencyId);

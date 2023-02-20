@@ -16,45 +16,6 @@ namespace BusinessLayer
         public ClientBusiness(IClientRepository _clientRepository)
         {
             clientRepository = _clientRepository;
-        }
-        public string UpdateInfo(Client client)
-        {
-            int rowsAffected = this.clientRepository.UpdateInfo(client);
-
-            if (rowsAffected > 0)
-            {
-                return "Info successfully updated!";
-            }
-            else
-            {
-                return "Failed to update user info!";
-            }
-        }
-        public string ChangePassword(Client client)
-        {
-            int rowsAffected = this.clientRepository.ChangePassword(client);
-
-            if (rowsAffected > 0)
-            {
-                return "Password successfully updated!";
-            }
-            else
-            {
-                return "Failed to update users password!";
-            }
-        }
-        public string DeleteClient(int clientId)
-        {
-            int rowsAffected = this.clientRepository.DeleteClient(clientId);
-
-            if (rowsAffected > 0)
-            {
-                return "User successfully deleted!";
-            }
-            else
-            {
-                return "Failed to delete user!";
-            }
-        }
+        }      
     }
 }

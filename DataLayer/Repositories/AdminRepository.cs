@@ -40,30 +40,6 @@ namespace DataLayer.Repositories
                 return admin;
             }
         }
-        public int UpdateAdmin(Admin admin)
-        {
-            try
-            {
-                using (SqlConnection connection = new SqlConnection(connectionString))
-                {
-                    string query = "UPDATE ADMINS SET email=@email, @password=@password WHERE admin_id=@admin_id";
-                    SqlCommand command = new SqlCommand(query, connection);
-                    command.Parameters.AddWithValue("@email", admin.email);
-                    command.Parameters.AddWithValue("@password", admin.password);
-                    command.Parameters.AddWithValue("@admin_id", admin.adminId);
-
-                    connection.Open();
-                    int rowsUpdated;
-                    rowsUpdated = command.ExecuteNonQuery();
-                    connection.Close();
-                    return rowsUpdated;
-                }
-            }
-            catch (Exception ex)
-            {
-                return 0;
-            }
-        }
         public List<Client> GetAllClients()
         {
             List<Client> ListofClients = new List<Client>();

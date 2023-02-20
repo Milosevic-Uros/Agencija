@@ -39,10 +39,7 @@ namespace BusinessLayer
                 return "Inserting a arrangement ticket!";
             }
         }
-        public Ticket GetTicket(int ticketId)
-        {
-            return adminRepository.GetTicket(ticketId);
-        }
+
         public string DeleteTicket(int ticketId)
         {
             int rowsAffected = adminRepository.DeleteTicket(ticketId);

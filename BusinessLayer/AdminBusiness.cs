@@ -22,18 +22,6 @@ namespace BusinessLayer
             return adminRepository.GetAdmin(email,password);
         }
 
-        public string UpdateAdmin(Admin admin)
-        {
-            int rowsAffected = adminRepository.UpdateAdmin(admin);
-            if (rowsAffected > 0)
-            {
-                return "Admin successfully updated!";
-            }
-            else
-            {
-                return "Data update failed!";
-            }
-        }
         public List<Client> GetAllClients()
         { 
             return adminRepository.GetAllClients();
