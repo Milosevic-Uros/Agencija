@@ -102,7 +102,8 @@ namespace DataLayer.Repositories
             {
                 using (SqlConnection connection = new SqlConnection(connectionString))
                 {
-                    string query = "INSERT INTO CLIENTS (first_name,last_name,id_number,unique_id_number,passport_number,phone_number,address,email,password) VALUES(@firstName,@lastName,@idNumber,@jmbg,@passportNumber,@phoneNumber,@address,@email,@password)";
+                    string query = "INSERT INTO CLIENTS (first_name,last_name,id_number,unique_id_number,passport_number,phone_number,address,email,password) " +
+                        "VALUES(@firstName, @lastName, @idNumber, @jmbg, @passportNumber, @phoneNumber,@address, @email, @password)";
                     SqlCommand command = new SqlCommand(query, connection);
                     command.Parameters.AddWithValue("@firstName", client.firstName);
                     command.Parameters.AddWithValue("@lastName", client.lastName);

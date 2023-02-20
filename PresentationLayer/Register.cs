@@ -137,10 +137,5 @@ namespace PresentationLayer
         {
 
         }
-
-        private void labelEmail_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }
