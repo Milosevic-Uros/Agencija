@@ -228,7 +228,6 @@
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.SteelBlue;;
             this.panel3.Controls.Add(this.labelHeadline);
             this.panel3.Location = new System.Drawing.Point(53, 71);
             this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);

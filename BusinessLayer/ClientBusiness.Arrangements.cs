@@ -22,14 +22,7 @@ namespace BusinessLayer
         {
             return clientRepository.GetAllArrangementsByLocationTypeAndDate(locationId, typeOfArrangement, from);
         }
-        public List<Arrangement> GetArrangementsOfType(string type)
-        {
-            return clientRepository.GetArrangementsOfType(type);
-        }
-        public Arrangement GetAClientArrangement(Client client, int arrangementId)
-        {
-            return clientRepository.GetAClientArrangement(client, arrangementId);
-        }
+
         public string BookAnArrangement(int clientId, int arrangementId, int numberOfPeople)
         {
             int rowsAffected = this.clientRepository.BookAnArrangement(clientId, arrangementId,numberOfPeople);
