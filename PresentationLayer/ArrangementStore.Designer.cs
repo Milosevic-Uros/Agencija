@@ -78,14 +78,14 @@
             this.panelClientManagement.Location = new System.Drawing.Point(1, 0);
             this.panelClientManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelClientManagement.Name = "panelClientManagement";
-            this.panelClientManagement.Size = new System.Drawing.Size(1445, 791);
+            this.panelClientManagement.Size = new System.Drawing.Size(1425, 791);
             this.panelClientManagement.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(618, 615);
+            this.label2.Location = new System.Drawing.Point(620, 615);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 22);
             this.label2.TabIndex = 52;
@@ -236,7 +236,7 @@
             this.dataGridViewArrangements.Name = "dataGridViewArrangements";
             this.dataGridViewArrangements.RowHeadersWidth = 51;
             this.dataGridViewArrangements.RowTemplate.Height = 24;
-            this.dataGridViewArrangements.Size = new System.Drawing.Size(1445, 319);
+            this.dataGridViewArrangements.Size = new System.Drawing.Size(1420, 319);
             this.dataGridViewArrangements.TabIndex = 24;
             this.dataGridViewArrangements.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridViewArrangements_RowHeaderMouseClick);
             // 
@@ -279,7 +279,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1433, 733);
+            this.ClientSize = new System.Drawing.Size(1416, 733);
             this.Controls.Add(this.panelClientManagement);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
