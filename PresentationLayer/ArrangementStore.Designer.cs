@@ -78,14 +78,14 @@
             this.panelClientManagement.Location = new System.Drawing.Point(1, 0);
             this.panelClientManagement.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panelClientManagement.Name = "panelClientManagement";
-            this.panelClientManagement.Size = new System.Drawing.Size(1425, 791);
+            this.panelClientManagement.Size = new System.Drawing.Size(1415, 791);
             this.panelClientManagement.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(620, 615);
+            this.label2.Location = new System.Drawing.Point(620, 612);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(176, 22);
             this.label2.TabIndex = 52;
@@ -94,7 +94,7 @@
             // textBoxArrangementID
             // 
             this.textBoxArrangementID.Enabled = false;
-            this.textBoxArrangementID.Location = new System.Drawing.Point(614, 644);
+            this.textBoxArrangementID.Location = new System.Drawing.Point(614, 641);
             this.textBoxArrangementID.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.textBoxArrangementID.Name = "textBoxArrangementID";
             this.textBoxArrangementID.ReadOnly = true;
@@ -279,7 +279,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1416, 733);
+            this.ClientSize = new System.Drawing.Size(1406, 733);
             this.Controls.Add(this.panelClientManagement);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
