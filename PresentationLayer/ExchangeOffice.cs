@@ -41,14 +41,6 @@ namespace PresentationLayer
 
         }
 
-        private void dataGridViewExchange_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow row = this.dataGridViewExchange.Rows[e.RowIndex];
-
-            }
-        }
 
         private void buttonConvert_Click(object sender, EventArgs e)
         {
