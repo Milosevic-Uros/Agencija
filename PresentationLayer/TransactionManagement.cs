@@ -98,7 +98,7 @@ namespace PresentationLayer
             exchangeRate.currencyId = textBoxCurrencyID.Text;
             exchangeRate.countryName = textBoxCountryName.Text;
             exchangeRate.currencyCode = textBoxCurrencyCode.Text;
-            exchangeRate.meanExchangeRate = Convert.ToInt32(textBoxExchangeRate.Text);
+            exchangeRate.meanExchangeRate = Convert.ToDecimal(textBoxExchangeRate.Text);
 
             string result = adminBusiness.UpdateExchangeRateItem(exchangeRate);
             MessageBox.Show(result, "Message", MessageBoxButtons.OK, MessageBoxIcon.Information);

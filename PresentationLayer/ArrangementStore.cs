@@ -97,9 +97,6 @@ namespace PresentationLayer
             DateTime date = dateTimePickerDeparture.Value;
             List<Object> lista= clientBusiness.GetAllArrangementsByLocationTypeAndDate(locationId, type, date);
             dataGridViewArrangements.DataSource = lista;
-            /*comment*/
-
-            
         }
     }
 }

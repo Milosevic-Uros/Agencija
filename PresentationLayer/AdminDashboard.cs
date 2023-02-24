@@ -37,9 +37,6 @@ namespace PresentationLayer
             labelAvailableArrangements.Text = "Number of available\narrangements";
             labelRegisteredClients.Text = "Number of registered\nclients";
             labelAvailableTickets.Text = "Number of available\ntickets";
-
-
-
         }
         private void buttonLogOut_Click(object sender, EventArgs e)
         {
