@@ -132,10 +132,5 @@ namespace PresentationLayer
             Login l = new Login(adminBusiness, clientBusiness);
             l.ShowDialog();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
     }
 }

@@ -26,7 +26,6 @@ namespace PresentationLayer
             adminBusiness= _adminBusiness;
             clientBusiness= _clientBusiness;
             InitializeComponent();
-            MaximizeBox = false;
         }
 
         private void RegisterLabel_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

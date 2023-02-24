@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -51,6 +52,19 @@ namespace PresentationLayer
                 textBoxName.Focus();
                 return;
             }
+            else if (!Regex.Match(textBoxVacancies.Text, "^[0-9]*").Success)
+            {
+                MessageBox.Show("The vacancies field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxVacancies.Focus();
+                return;
+            }
+            else if (!Regex.Match(textBoxPrice.Text, "^[0-9]*").Success)
+            {
+                MessageBox.Show("The price field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                textBoxPrice.Focus();
+                return;
+            }
+
 
             Ticket ticket = new Ticket();
             ticket.name = textBoxName.Text;

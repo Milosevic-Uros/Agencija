@@ -51,8 +51,6 @@ namespace PresentationLayer
 
         private void ArrangementManagement_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'aGENCIJADataSet.LOCATIONS' table. You can move, or remove it, as needed.
-            this.lOCATIONSTableAdapter.Fill(this.aGENCIJADataSet.LOCATIONS);
             dataGridViewArrangemet.DataSource = adminBusiness.GetAllArrangements();
         }
 

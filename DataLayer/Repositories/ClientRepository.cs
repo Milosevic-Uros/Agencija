@@ -12,6 +12,5 @@ namespace DataLayer.Repositories
     public partial class ClientRepository : IClientRepository
     {
         string connectionString = Constants.ConnectionString;
-
     }
 }
