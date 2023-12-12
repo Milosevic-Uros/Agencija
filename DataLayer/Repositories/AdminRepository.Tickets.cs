@@ -61,7 +61,7 @@ namespace DataLayer.Repositories
                     return rowsUpdated;
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 return 0;
             }
@@ -90,7 +90,7 @@ namespace DataLayer.Repositories
                     return rowsUpdated;
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 return 0;
             }
@@ -112,7 +112,7 @@ namespace DataLayer.Repositories
                     return rowsUpdated;
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 return 0;
             }

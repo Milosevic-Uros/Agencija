@@ -43,20 +43,17 @@ namespace PresentationLayer
             {
                 MessageBox.Show("Please select your role at the top of the page", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 usernameLog.Focus();
-                return;
             }
             else if (usernameLog.Text == "" || passwordLog.Text == "")
             {
                 MessageBox.Show("Fill in all required fields!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 usernameLog.Focus();
-                return;
             }
 
             else if (!Regex.Match(usernameLog.Text, "^([\\w\\.\\-]+)@([\\w\\-]+)((\\.(\\w){2,3})+)$").Success)
             {
                 MessageBox.Show("The email field is not filled in correctly!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 usernameLog.Focus();
-                return;
             }
 
 
@@ -64,7 +61,6 @@ namespace PresentationLayer
             {
                 MessageBox.Show("The password field is not filled in correctly! The length of the password must be between 10 and 20 characters!", "Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 passwordLog.Focus();
-                return;
             }
 
             else
@@ -113,7 +109,7 @@ namespace PresentationLayer
             {
                 con.Open();
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("An unexpected error occured withing the database, please contact your database administrator", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
