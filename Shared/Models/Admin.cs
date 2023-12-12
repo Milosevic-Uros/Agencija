@@ -13,5 +13,15 @@ namespace Shared.Models
         public string lastName { get; set; }
         public string email { get; set; }
         public string password { get; set; }
+
+        public Admin() {}
+        public Admin(int adminId, string name, string lastName, string email, string password) 
+        { 
+            this.adminId = adminId;
+            this.name = name;
+            this.lastName = lastName;
+            this.email = email;
+            this.password = password;
+        }
     }
 }
