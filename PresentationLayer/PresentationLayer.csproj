@@ -241,6 +241,9 @@
     <EmbeddedResource Include="TransactionManagement.resx">
       <DependentUpon>TransactionManagement.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="AGENCIJADataSet.xsc">
       <DependentUpon>AGENCIJADataSet.xsd</DependentUpon>
     </None>

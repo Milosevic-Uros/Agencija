@@ -30,7 +30,6 @@ namespace PresentationLayer
 
         private void InsertTicket_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'aGENCIJADataSet.LOCATIONS' table. You can move, or remove it, as needed.
             this.lOCATIONSTableAdapter.Fill(this.aGENCIJADataSet.LOCATIONS);
             comboBoxTransport.SelectedIndex = 0;
 
